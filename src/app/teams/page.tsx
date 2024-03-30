@@ -1,15 +1,15 @@
-import Hero from "@/components/Pages/OurTeams/Hero";
-import Footer from "@/components/Ui/Footer/Footer";
-import MainTitle from "@/components/Ui/MainTitle";
+import Hero from '@/app/teams/Hero';
+import Footer from '@/components/Footer';
+import MainTitle from '@/components/MainTitle';
 
 const Teams = (): JSX.Element => {
-  return (
-    <>
-      <MainTitle heading={"Our Team"} />
-      <Hero />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<MainTitle heading={'Our Team'} />
+			<Hero />
+			<Footer />
+		</>
+	);
 };
 
 export default Teams;

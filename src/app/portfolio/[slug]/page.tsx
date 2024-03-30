@@ -1,15 +1,16 @@
-import Footer from "@/components/Ui/Footer/Footer";
-import ProjectTitle from "@/components/Ui/ServicesDetails/ProjectTitle";
-import React from "react";
+import Footer from '@/components/Footer';
+import ProjectTitle from '@/app/services/[slug]/ProjectTitle';
+import React from 'react';
+import ProjectDetail from './ProjectDetail';
 
 const ProjectDetails = (): React.JSX.Element => {
-  return (
-    <>
-      <ProjectTitle heading={"Business App"} />
-      <ProjectDetails />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<ProjectTitle heading={'Business App'} />
+			<ProjectDetail />
+			<Footer />
+		</>
+	);
 };
 
 export default ProjectDetails;

@@ -1,46 +1,46 @@
-"use client";
-import Heading from "@/components/Ui/Heading/Heading";
-import React, { type FC, useState } from "react";
+'use client';
+import Heading from '@/components/Heading';
+import React, { type FC, useState } from 'react';
 
 interface HeroProps {
-  plans: getAllPlans[];
+	plans: getAllPlans[];
 }
 const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
-  const [plan, setPlan] = useState<getAllPlans>(plans[0]);
+	const [plan, setPlan] = useState<getAllPlans>(plans[0]);
 
-  return (
-    <>
-      <section className="w-full h-auto ">
-        <section className="w-full h-auto py-20 px-5 xl:py-28">
-          <section className=" w-full max-w-[100rem] mx-auto h-auto flex flex-col ">
-            {/* Heading */}
-            <Heading
-              heading={"Budget Friendly"}
-              subHeading={"Choose Your Best Plan"}
-            />
+	return (
+		<>
+			<section className="h-auto w-full ">
+				<section className="h-auto w-full px-5 py-20 xl:py-28">
+					<section className=" mx-auto flex h-auto w-full max-w-[100rem] flex-col ">
+						{/* Heading */}
+						<Heading
+							heading={'Budget Friendly'}
+							subHeading={'Choose Your Best Plan'}
+						/>
 
-            <section className=" w-full h-auto mb-16 flex  gap-6  ">
-              {/* Selection Pannel */}
-              <section className=" w-fit mx-auto hidden md:flex flex-col gap-6 items-center">
-                <section className=" w-fit h-auto">
-                  <ul className="w-fit h-auto flex">
-                    {plans.map((item) => (
-                      <li key={item.id}>
-                        <button
-                          className={`w-[11rem] h-[4rem] border-2 border-secondary ${
-                            item.name === "All-in-One" ? "bg-primary" : " "
-                          }  text-secondary text-base hover:bg-primary flex items-center justify-center transition ease-in-out duration-500`}
-                          onClick={() => {
-                            setPlan(item);
-                          }}
-                        >
-                          {item.name}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-                {/* <section className="  w-fit h-auto flex ">
+						<section className=" mb-16 flex h-auto w-full  gap-6  ">
+							{/* Selection Pannel */}
+							<section className=" mx-auto hidden w-fit flex-col items-center gap-6 md:flex">
+								<section className=" h-auto w-fit">
+									<ul className="flex h-auto w-fit">
+										{plans.map((item) => (
+											<li key={item.id}>
+												<button
+													className={`h-[4rem] w-[11rem] border-2 border-secondary ${
+														item.name === 'All-in-One' ? 'bg-primary' : ' '
+													}  flex items-center justify-center text-base text-secondary transition duration-500 ease-in-out hover:bg-primary`}
+													onClick={() => {
+														setPlan(item);
+													}}
+												>
+													{item.name}
+												</button>
+											</li>
+										))}
+									</ul>
+								</section>
+								{/* <section className="  w-fit h-auto flex ">
                   <button
                     className={`
                    w-[11rem] h-[4rem] border-2 border-secondary  ${
@@ -62,30 +62,30 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
                     Annual
                   </button>
                 </section> */}
-              </section>
+							</section>
 
-              {/* Options Pannel */}
-              <section className="w-full h-auto  flex md:hidden flex-col gap-6">
-                <section className="w-full h-auto  flex justify-center">
-                  <select
-                    className=" border border-black w-full max-w-[30rem] h-[3.5rem] bg-primary text-secondary text-base leading-[16px]  text-center  "
-                    onChange={(e) => {
-                      e.preventDefault();
-                      setPlan(plans[parseInt(e.target.value)]);
-                    }}
-                    title="Package"
-                    name="Package"
-                  >
-                    {plans.map((item, index) => (
-                      <option
-                        key={item.id}
-                        value={index}
-                        className=" w-[11rem] h-[4rem] border-2 border-secondary bg-background3 text-secondary text-base flex items-center justify-center"
-                      >
-                        {item.name}
-                      </option>
-                    ))}
-                    {/* <option className=" w-[11rem] h-[4rem] border-2 border-secondary bg-background3 text-secondary text-base flex items-center justify-center">
+							{/* Options Pannel */}
+							<section className="flex h-auto  w-full flex-col gap-6 md:hidden">
+								<section className="flex h-auto  w-full justify-center">
+									<select
+										className=" h-[3.5rem] w-full max-w-[30rem] border border-black bg-primary text-center text-base leading-[16px]  text-secondary  "
+										onChange={(e) => {
+											e.preventDefault();
+											setPlan(plans[parseInt(e.target.value)]);
+										}}
+										title="Package"
+										name="Package"
+									>
+										{plans.map((item, index) => (
+											<option
+												key={item.id}
+												value={index}
+												className=" flex h-[4rem] w-[11rem] items-center justify-center border-2 border-secondary bg-background3 text-base text-secondary"
+											>
+												{item.name}
+											</option>
+										))}
+										{/* <option className=" w-[11rem] h-[4rem] border-2 border-secondary bg-background3 text-secondary text-base flex items-center justify-center">
                       All-in-One
                     </option>
                     <option className=" w-[11rem] h-[4rem] border-y-2 border-r-2 border-secondary bg-background3 text-secondary text-base  flex items-center justify-center">
@@ -97,9 +97,9 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
                     <option className=" w-[11rem] h-[4rem] border-y-2 border-r-2 border-secondary text-secondary bg-background3 text-base  flex items-center justify-center">
                       Business
                     </option> */}
-                  </select>
-                </section>
-                {/* <section className="w-full h-auto flex justify-center">
+									</select>
+								</section>
+								{/* <section className="w-full h-auto flex justify-center">
                   <select
                     className="border border-black w-full max-w-[30rem] bg-primary text-secondary text-base leading-[16px] h-[3.5rem] text-center "
                     title="Monthly Subscription"
@@ -114,63 +114,63 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
                     </option>
                   </select>
                 </section> */}
-              </section>
-            </section>
+							</section>
+						</section>
 
-            {/* Plan Cards */}
-            <section className=" w-full h-auto sm:px-10 md:px-0">
-              <section className=" w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 2xl:gap-20">
-                {plan.plans.map((item) => (
-                  <section
-                    key={item._key}
-                    className="w-full h-auto border-2  border-secondary rounded-md bg-background3 flex flex-col justify-between"
-                  >
-                    {/* heading */}
-                    <section className=" w-full h-auto pt-[4.5rem] pb-[3rem] flex flex-col gap-10 justify-center items-center border-b-2 border-black">
-                      <span className="text-secondary text-[40px] leading-[34.8px] font-semibold ">
-                        {item.name}
-                      </span>
+						{/* Plan Cards */}
+						<section className=" h-auto w-full sm:px-10 md:px-0">
+							<section className=" grid w-full grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:gap-20">
+								{plan.plans.map((item) => (
+									<section
+										key={item._key}
+										className="flex h-auto w-full  flex-col justify-between rounded-md border-2 border-secondary bg-background3"
+									>
+										{/* heading */}
+										<section className=" flex h-auto w-full flex-col items-center justify-center gap-10 border-b-2 border-black pb-[3rem] pt-[4.5rem]">
+											<span className="text-[40px] font-semibold leading-[34.8px] text-secondary ">
+												{item.name}
+											</span>
 
-                      <div className="flex gap-2">
-                        <span className="text-secondary text-[50px] leading-[40px] font-semibold">
-                          {item.months}
-                        </span>
-                        <span className="text-secondary text-[30px] leading-[26.24px]">
-                          month
-                        </span>
-                      </div>
-                    </section>
-                    {/* mid Section */}
-                    <section className=" w-full h-full py-4  text-secondary flex flex-col justify-start items-center ">
-                      <ul className=" w-full h-auto px-12 list-disc flex flex-col gap-4 items-center text-base leading-[28.8px] text-start">
-                        {item.service.map((service, index) => (
-                          <li className="w-full" key={index}>
-                            {service}
-                          </li>
-                        ))}
-                      </ul>
-                    </section>
-                    {/* button */}
-                    <section className="border-t-2 border-black w-full h-fit py-[4rem]">
-                      <button
-                        type="submit"
-                        className="w-fit h-fit  py-4 px-7 mx-auto flex items-center gap-3 border border-secondary text-secondary group hover:text-primary hover:border-primary transition ease-in-out duration-500"
-                      >
-                        <div className="w-2 h-2 rounded-full bg-primary  group-hover:bg-secondary transition ease-in-out duration-500"></div>
-                        Choose Plan
-                      </button>
-                    </section>
-                  </section>
-                ))}
+											<div className="flex gap-2">
+												<span className="text-[50px] font-semibold leading-[40px] text-secondary">
+													{item.months}
+												</span>
+												<span className="text-[30px] leading-[26.24px] text-secondary">
+													month
+												</span>
+											</div>
+										</section>
+										{/* mid Section */}
+										<section className=" flex h-full w-full  flex-col items-center justify-start py-4 text-secondary ">
+											<ul className=" flex h-auto w-full list-disc flex-col items-center gap-4 px-12 text-start text-base leading-[28.8px]">
+												{item.service.map((service, index) => (
+													<li className="w-full" key={index}>
+														{service}
+													</li>
+												))}
+											</ul>
+										</section>
+										{/* button */}
+										<section className="h-fit w-full border-t-2 border-black py-[4rem]">
+											<button
+												type="submit"
+												className="group mx-auto  flex h-fit w-fit items-center gap-3 border border-secondary px-7 py-4 text-secondary transition duration-500 ease-in-out hover:border-primary hover:text-primary"
+											>
+												<div className="h-2 w-2 rounded-full bg-primary  transition duration-500 ease-in-out group-hover:bg-secondary"></div>
+												Choose Plan
+											</button>
+										</section>
+									</section>
+								))}
 
-                {/* <section className="relative border-2  border-secondary rounded-md bg-primary w-full h-auto flex flex-col ">
+								{/* <section className="relative border-2  border-secondary rounded-md bg-primary w-full h-auto flex flex-col ">
                   <span className="absolute top-3 right-0  py-2 px-4 rounded-l-full bg-background3 -rotate-90">
                     New
                   </span>
 
                   {/* heading */}
-                {/* <section className=" w-full h-auto pt-[4.5rem] pb-[3rem] flex flex-col gap-10 justify-center items-center"> */}
-                {/* <span className="text-secondary text-[30px] leading-[34.8px] font-semibold ">
+								{/* <section className=" w-full h-auto pt-[4.5rem] pb-[3rem] flex flex-col gap-10 justify-center items-center"> */}
+								{/* <span className="text-secondary text-[30px] leading-[34.8px] font-semibold ">
                       Super Nova
                     </span>
                     <div className="w-fit h-fit rounded-full p-7 bg-background border-2 border-secondary  ">
@@ -238,8 +238,8 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
                       </span>
                     </div>
                   </section> */}
-                {/* mid Section */}
-                {/* <section className=" w-full h-auto text-secondary flex flex-col justify-center items-center">
+								{/* mid Section */}
+								{/* <section className=" w-full h-auto text-secondary flex flex-col justify-center items-center">
                     <ul className=" w-full h-auto list-disc flex flex-col gap-4 items-center text-base leading-[28.8px] text-center">
                       <li>All limited link</li>
                       <li>All limited link</li>
@@ -250,7 +250,7 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
                     </ul>
                   </section>
                   {/* button */}
-                {/* <section className=" w-full py-[4rem]"> 
+								{/* <section className=" w-full py-[4rem]"> 
                     <button
                       type="submit"
                       className="w-fit h-fit  py-4 px-7 mx-auto flex items-center gap-3 border border-secondary text-secondary group hover:text-primary hover:border-primary transition ease-in-out duration-500"
@@ -260,9 +260,9 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
                     </button>
                   </section>
                 </section> */}
-                {/* <section className="border-2  border-secondary rounded-md w-full h-auto flex flex-col "> */}
-                {/* heading */}
-                {/* <section className=" w-full h-auto pt-[4.5rem] pb-[3rem] flex flex-col gap-10 justify-center items-center">
+								{/* <section className="border-2  border-secondary rounded-md w-full h-auto flex flex-col "> */}
+								{/* heading */}
+								{/* <section className=" w-full h-auto pt-[4.5rem] pb-[3rem] flex flex-col gap-10 justify-center items-center">
                     <span className="text-secondary text-[30px] leading-[34.8px] font-semibold ">
                       Starter Pro
                     </span>
@@ -400,8 +400,8 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
                       </span>
                     </div>
                   </section> */}
-                {/* mid Section */}
-                {/* <section className=" w-full h-auto text-secondary flex flex-col justify-center items-center">
+								{/* mid Section */}
+								{/* <section className=" w-full h-auto text-secondary flex flex-col justify-center items-center">
                     <ul className=" w-full h-auto list-disc flex flex-col gap-4 items-center text-base leading-[28.8px] text-center">
                       <li>All limited link</li>
                       <li>All limited link</li>
@@ -411,8 +411,8 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
                       <li>All limited link</li>
                     </ul>
                   </section> */}
-                {/* button */}
-                {/* <section className=" w-full py-[4rem]">
+								{/* button */}
+								{/* <section className=" w-full py-[4rem]">
                     <button
                       type="submit"
                       className="w-fit h-fit  py-4 px-7 mx-auto flex items-center gap-3 border border-secondary text-secondary group hover:text-primary hover:border-primary transition ease-in-out duration-500"
@@ -422,13 +422,13 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
                     </button>
                   </section> 
                 </section> */}
-              </section>
-            </section>
-          </section>
-        </section>
-      </section>
-    </>
-  );
+							</section>
+						</section>
+					</section>
+				</section>
+			</section>
+		</>
+	);
 };
 
 export default Hero;

@@ -1,21 +1,21 @@
-import { client } from "@/config/SanityClient";
+import { client } from '@/config/SanityClient';
 
 export const getAllServices = async (): Promise<getAllServices[]> =>
-  await client.fetch(
-    `*[_type=="service"]{
+	await client.fetch(
+		`*[_type=="service"]{
       _id,name,"slug":slug.current,description,"image":image.asset->url,_updatedAt
   }`,
-    {},
-    {
-      next: { tags: ["getAllServices"], revalidate: 3600 },
-    },
-  );
+		{},
+		{
+			next: { tags: ['getAllServices'], revalidate: 3600 },
+		}
+	);
 
 export const findServiceByName = async (
-  serviceName: string,
+	serviceName: string
 ): Promise<findServiceByName> =>
-  await client.fetch(
-    `*[_type=="service" && slug.current == "${serviceName}"][0]{
+	await client.fetch(
+		`*[_type=="service" && slug.current == "${serviceName}"][0]{
       _id,
       procedure[]{
         _key,
@@ -43,8 +43,8 @@ export const findServiceByName = async (
       description,
       _updatedAt
     }`,
-    {},
-    {
-      next: { tags: ["findServiceByName"], revalidate: 3600 },
-    },
-  );
+		{},
+		{
+			next: { tags: ['findServiceByName'], revalidate: 3600 },
+		}
+	);

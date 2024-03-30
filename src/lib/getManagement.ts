@@ -1,8 +1,8 @@
-import { client } from "@/config/SanityClient";
+import { client } from '@/config/SanityClient';
 
 const getAllManagementData = async (): Promise<getAllManagementData[]> =>
-  await client.fetch(
-    `*[_type=="management"]{
+	await client.fetch(
+		`*[_type=="management"]{
       _id,
       name,
       "slug":slug.current,
@@ -13,8 +13,8 @@ const getAllManagementData = async (): Promise<getAllManagementData[]> =>
       youtube,
       instagram,
     }`,
-    {},
-    { next: { tags: ["management"], revalidate: 3600 } },
-  );
+		{},
+		{ next: { tags: ['management'], revalidate: 3600 } }
+	);
 
 export default getAllManagementData;

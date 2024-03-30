@@ -1,6 +1,6 @@
 'use client';
 import React, { type FC, useRef } from 'react';
-import PulseCircle from '../PulseCircle';
+import PulseCircle from './Ui/PulseCircle';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';

@@ -1,18 +1,18 @@
-import React, { type FC } from "react";
+import React, { type FC } from 'react';
 // import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/pagination';
 // import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import TeamPicture from "../TeamPicture";
+import TeamPicture from '../../TeamPicture';
 
 interface TeamSwiperProps {
-  allTeamsDetails: getAllManagementData[];
+	allTeamsDetails: getAllManagementData[];
 }
 
 const TeamSwiper: FC<TeamSwiperProps> = ({ allTeamsDetails }) => {
-  return (
-    <>
-      {/* <Swiper
+	return (
+		<>
+			{/* <Swiper
       slidesPerView={1}
       spaceBetween={20}
       modules={[Pagination, Navigation]}
@@ -45,13 +45,13 @@ const TeamSwiper: FC<TeamSwiperProps> = ({ allTeamsDetails }) => {
 
       {/* <SwiperButtonComponent /> 
     </Swiper> */}
-      <div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-x-5 gap-y-10 ">
-        {allTeamsDetails.map((personDetails) => (
-          <TeamPicture personDetails={personDetails} key={personDetails._id} />
-        ))}
-      </div>
-    </>
-  );
+			<div className="grid h-auto w-full grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2 2xl:grid-cols-4 ">
+				{allTeamsDetails.map((personDetails) => (
+					<TeamPicture personDetails={personDetails} key={personDetails._id} />
+				))}
+			</div>
+		</>
+	);
 };
 
 export default TeamSwiper;

@@ -1,84 +1,84 @@
-"use client";
-import Image from "next/image";
-import React from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import PulseCircle from "@/components/Ui/PulseCircle";
+'use client';
+import Image from 'next/image';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import PulseCircle from '@/components/Ui/PulseCircle';
 
 const schema = yup.object({
-  firstName: yup.string().required("First Name is Required"),
-  lastName: yup.string().required("Last Name is Required"),
-  email: yup
-    .string()
-    .email("Email format is not valid")
-    .required("Email is Required"),
-  companyName: yup.string().required("Company Name is Required"),
-  additionalMessage: yup.string().required("Message is Required"),
+	firstName: yup.string().required('First Name is Required'),
+	lastName: yup.string().required('Last Name is Required'),
+	email: yup
+		.string()
+		.email('Email format is not valid')
+		.required('Email is Required'),
+	companyName: yup.string().required('Company Name is Required'),
+	additionalMessage: yup.string().required('Message is Required'),
 });
 
 type FormInput = yup.InferType<typeof schema>;
 
 const ContactUs = (): React.JSX.Element => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormInput>({
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      companyName: "",
-      additionalMessage: "",
-    },
-    resolver: yupResolver(schema),
-  });
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<FormInput>({
+		defaultValues: {
+			firstName: '',
+			lastName: '',
+			email: '',
+			companyName: '',
+			additionalMessage: '',
+		},
+		resolver: yupResolver(schema),
+	});
 
-  const onSubmit = async (data: FormInput): Promise<void> => {
-    const formData = {
-      service_id: `${process.env.NEXT_PUBLIC_YOUR_SERVICE_ID}`,
-      template_id: `${process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID}`,
-      user_id: `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`,
-      template_params: {
-        from_name: data.firstName,
-        from_email: data.email,
-        to_name: "Tejodeep",
-        message: data.additionalMessage,
-      },
-    };
+	const onSubmit = async (data: FormInput): Promise<void> => {
+		const formData = {
+			service_id: `${process.env.NEXT_PUBLIC_YOUR_SERVICE_ID}`,
+			template_id: `${process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID}`,
+			user_id: `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`,
+			template_params: {
+				from_name: data.firstName,
+				from_email: data.email,
+				to_name: 'Tejodeep',
+				message: data.additionalMessage,
+			},
+		};
 
-    try {
-      const response = await fetch(
-        "https://api.emailjs.com/api/v1.0/email/send",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        },
-      );
+		try {
+			const response = await fetch(
+				'https://api.emailjs.com/api/v1.0/email/send',
+				{
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(formData),
+				}
+			);
 
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  return (
-    <section id={"contactUs"} className=" w-full h-auto lg:py-36">
-      <section className=" w-full h-auto lg:h-[55rem]">
-        <section className="w-full h-full flex flex-col lg:flex-row">
-          <section className=" relative w-full lg:w-[45%] xl:w-[35%] h-[40rem] lg:h-full  ">
-            <Image
-              src={"/assets/contact-form.png"}
-              width={"1000"}
-              height={"0"}
-              className="w-full h-full object-cover"
-              alt={""}
-            />
-            {/* <div className="absolute bottom-0 w-full h-[120px] flex justify-center bg-gradient-to-t from-sky-500 to-indigo-500  ">
+			const data = await response.json();
+			console.log(data);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+	return (
+		<section id={'contactUs'} className=" h-auto w-full lg:py-36">
+			<section className=" h-auto w-full lg:h-[55rem]">
+				<section className="flex h-full w-full flex-col lg:flex-row">
+					<section className=" relative h-[40rem] w-full lg:h-full lg:w-[45%] xl:w-[35%]  ">
+						<Image
+							src={'/assets/contact-form.png'}
+							width={'1000'}
+							height={'0'}
+							className="h-full w-full object-cover"
+							alt={''}
+						/>
+						{/* <div className="absolute bottom-0 w-full h-[120px] flex justify-center bg-gradient-to-t from-sky-500 to-indigo-500  ">
               <section className=" h-full border flex gap-12 justify-center text-primary">
                 <svg
                   x="0px"
@@ -100,91 +100,91 @@ const ContactUs = (): React.JSX.Element => {
                 </section>
               </section>
             </div> */}
-          </section>
-          <section className=" w-full lg:w-[55%] xl:w-[65%] h-full py-16 lg:py-0">
-            <section className="w-full h-full p-5 pb-[100px] lg:p-[50px] xl:p-[100px] flex flex-col gap-6">
-              <div className="hero1 w-full h-fit flex gap-6 items-center    ">
-                <PulseCircle />
-                <span className="text-[20px] sm:text-[26px] leading-[42.64px] text-primary">
-                  Get in Touch
-                </span>
-              </div>
+					</section>
+					<section className=" h-full w-full py-16 lg:w-[55%] lg:py-0 xl:w-[65%]">
+						<section className="flex h-full w-full flex-col gap-6 p-5 pb-[100px] lg:p-[50px] xl:p-[100px]">
+							<div className="hero1 flex h-fit w-full items-center gap-6    ">
+								<PulseCircle />
+								<span className="text-[20px] leading-[42.64px] text-primary sm:text-[26px]">
+									Get in Touch
+								</span>
+							</div>
 
-              <section className="w-full h-full flex flex-col gap-16">
-                <section className="w-full xl:pr-28 text-left ">
-                  <h3 className="text-left">
-                    Do you have any querries please reach us
-                  </h3>
-                </section>
-                <form
-                  // eslint-disable-next-line @typescript-eslint/no-misused-promises
-                  onSubmit={handleSubmit(onSubmit)}
-                  className="w-full h-fit flex flex-wrap gap-0 "
-                >
-                  <span className="w-full lg:w-1/2 h-fit  text-paragraph text-[16px] pb-10 lg:pr-11">
-                    <input
-                      type="text"
-                      id="firstName"
-                      className="w-full bg-transparent py-[15px] focus:outline-none border-b border-paragraph"
-                      placeholder="First Name"
-                      {...register("firstName")}
-                    />
-                    <p>{errors.firstName?.message}</p>
-                  </span>
-                  <span className="w-full lg:w-1/2 h-fit text-paragraph text-[16px] pb-10 lg:pl-11">
-                    <input
-                      type="text"
-                      id="lastName"
-                      className="w-full h-fit bg-transparent py-[15px] focus:outline-none border-b border-paragraph"
-                      placeholder="Last Name"
-                      {...register("lastName")}
-                    />
-                    <p>{errors.lastName?.message}</p>
-                  </span>
-                  <span className="w-full lg:w-1/2 h-fit text-paragraph text-[16px] pb-10 lg:pr-11">
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full bg-transparent py-[15px] focus:outline-none border-b border-paragraph"
-                      placeholder="Your Email"
-                      {...register("email")}
-                    />
-                    <p>{errors.email?.message}</p>
-                  </span>
-                  <span className="w-full lg:w-1/2 h-fit text-paragraph text-[16px] pb-10 lg:pl-11">
-                    <input
-                      type="text"
-                      id="companyName"
-                      className="w-full bg-transparent py-[15px] focus:outline-none border-b border-paragraph"
-                      placeholder="Company Name"
-                      {...register("companyName")}
-                    />
-                    <p>{errors.companyName?.message}</p>
-                  </span>
-                  <textarea
-                    id="additionalMessage"
-                    cols={4}
-                    rows={4}
-                    placeholder="Additional Message"
-                    className="w-full h-32 resize-y bg-transparent py-[15px] text-paragraph text-[16px] focus:outline-none border-b border-paragraph"
-                    {...register("additionalMessage")}
-                  />
-                  <p>{errors.additionalMessage?.message}</p>
-                  <button
-                    type="submit"
-                    className="w-fit h-fit py-3 px-10 mt-20 flex items-center gap-3 border border-secondary text-secondary group hover:text-primary hover:border-primary transition ease-in-out duration-500"
-                  >
-                    <div className="w-2 h-2 rounded-full bg-primary  group-hover:bg-secondary transition ease-in-out duration-500"></div>
-                    Submit
-                  </button>
-                </form>
-              </section>
-            </section>
-          </section>
-        </section>
-      </section>
-    </section>
-  );
+							<section className="flex h-full w-full flex-col gap-16">
+								<section className="w-full text-left xl:pr-28 ">
+									<h3 className="text-left">
+										Do you have any querries please reach us
+									</h3>
+								</section>
+								<form
+									// eslint-disable-next-line @typescript-eslint/no-misused-promises
+									onSubmit={handleSubmit(onSubmit)}
+									className="flex h-fit w-full flex-wrap gap-0 "
+								>
+									<span className="h-fit w-full pb-10  text-[16px] text-paragraph lg:w-1/2 lg:pr-11">
+										<input
+											type="text"
+											id="firstName"
+											className="w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
+											placeholder="First Name"
+											{...register('firstName')}
+										/>
+										<p>{errors.firstName?.message}</p>
+									</span>
+									<span className="h-fit w-full pb-10 text-[16px] text-paragraph lg:w-1/2 lg:pl-11">
+										<input
+											type="text"
+											id="lastName"
+											className="h-fit w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
+											placeholder="Last Name"
+											{...register('lastName')}
+										/>
+										<p>{errors.lastName?.message}</p>
+									</span>
+									<span className="h-fit w-full pb-10 text-[16px] text-paragraph lg:w-1/2 lg:pr-11">
+										<input
+											type="email"
+											id="email"
+											className="w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
+											placeholder="Your Email"
+											{...register('email')}
+										/>
+										<p>{errors.email?.message}</p>
+									</span>
+									<span className="h-fit w-full pb-10 text-[16px] text-paragraph lg:w-1/2 lg:pl-11">
+										<input
+											type="text"
+											id="companyName"
+											className="w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
+											placeholder="Company Name"
+											{...register('companyName')}
+										/>
+										<p>{errors.companyName?.message}</p>
+									</span>
+									<textarea
+										id="additionalMessage"
+										cols={4}
+										rows={4}
+										placeholder="Additional Message"
+										className="h-32 w-full resize-y border-b border-paragraph bg-transparent py-[15px] text-[16px] text-paragraph focus:outline-none"
+										{...register('additionalMessage')}
+									/>
+									<p>{errors.additionalMessage?.message}</p>
+									<button
+										type="submit"
+										className="group mt-20 flex h-fit w-fit items-center gap-3 border border-secondary px-10 py-3 text-secondary transition duration-500 ease-in-out hover:border-primary hover:text-primary"
+									>
+										<div className="h-2 w-2 rounded-full bg-primary  transition duration-500 ease-in-out group-hover:bg-secondary"></div>
+										Submit
+									</button>
+								</form>
+							</section>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+	);
 };
 
 export default ContactUs;
