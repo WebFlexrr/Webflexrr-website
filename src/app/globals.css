@@ -7,16 +7,17 @@
   :root {
     /* --color-primary: #dd4242; */
     --color-primary: #16ff00;
-    --color-secondary: black;
+    --color-secondary: #222831;
     --color-tertiary: #b0b0b0;
     --color-subHeading: #717171;
     /* --color-paragraph: #b5b5b5; */
     --color-paragraph: #4e4f5f;
     /* --color-paragraph: black; */
     /* --color-background: #111319; */
-    --color-background: #ffebd8;
+    --color-background: white;
     --color-background2: #faeed1;
-    --color-background3: #fefae0;
+    /* --color-background3: #fefae0; */
+    --color-background3: #f5f7f8;
   }
 }
 
@@ -231,8 +232,6 @@ h5 {
     text-align: start;
   }
 }
-
-
 
 .stroke-text {
   -webkit-text-stroke: 2px var(--color-tertiary);
