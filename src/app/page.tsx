@@ -14,7 +14,7 @@ const Home = (): JSX.Element => {
 	return (
 		<>
 			{/* <main className="main relative z-30 h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth "> */}
-			<main className="main relative z-30 h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth ">
+			<main className="main relative z-30 h-screen w-full  ">
 				<NavbarSection />
 				<Hero />
 				<Banner />
