@@ -12,22 +12,19 @@ import NavbarSection from '@/components/Ui/Navbar/NavbarSection';
 
 const Home = (): JSX.Element => {
 	return (
-		<>
-			{/* <main className="main relative z-30 h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth "> */}
-			<main className="main relative z-30 h-screen w-full  ">
-				<NavbarSection />
-				<Hero />
-				<Banner />
-				<Services />
-				<Gallery />
-				<TagLine />
-				<OurTeams />
-				<ContactUs />
-				{/* <FeedBack /> */}
-				<SocialCarousel />
-				<Footer />
-			</main>
-		</>
+		<main className="main relative h-screen w-full overflow-y-auto ">
+			<NavbarSection />
+			<Hero />
+			<Banner />
+			<Services />
+			<Gallery />
+			<TagLine />
+			<OurTeams />
+			<ContactUs />
+			{/* <FeedBack /> */}
+			<SocialCarousel />
+			<Footer />
+		</main>
 	);
 };
 

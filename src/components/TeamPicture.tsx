@@ -27,8 +27,11 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 	);
 
 	return (
-		<div ref={teamProject} className="group  flex h-auto w-full flex-col gap-9">
-			<div className="relative z-10 h-auto w-full border-4 border-transparent transition duration-700 ease-in-out group-hover:border-primary">
+		<div
+			ref={teamProject}
+			className="teamPicture  group flex h-auto w-full flex-col gap-9"
+		>
+			<div className=" relative z-10 h-auto w-full border-4 border-transparent transition duration-700 ease-in-out group-hover:border-primary">
 				<Image
 					src={personDetails.profileImage}
 					width={'790'}
