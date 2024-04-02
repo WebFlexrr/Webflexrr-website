@@ -67,7 +67,7 @@ const ContactUs = (): React.JSX.Element => {
 		}
 	};
 	return (
-		<section id={'contactUs'} className=" h-auto w-full lg:py-36">
+		<section id={'contact'} className=" h-auto w-full lg:py-36">
 			<section className=" h-auto w-full lg:h-[55rem]">
 				<section className="flex h-full w-full flex-col lg:flex-row">
 					<section className=" relative h-[40rem] w-full lg:h-full lg:w-[45%] xl:w-[35%]  ">

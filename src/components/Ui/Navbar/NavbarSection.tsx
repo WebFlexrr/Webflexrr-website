@@ -19,6 +19,9 @@ import {
 	DropdownItem,
 } from '@nextui-org/react';
 import { CiCamera } from 'react-icons/ci';
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
+import { SiCreatereactapp } from 'react-icons/si';
+import { useRouter } from 'next/navigation';
 
 const menuItems = [
 	'Services',
@@ -27,16 +30,11 @@ const menuItems = [
 	'Plans',
 	'Blog',
 	'Contact Us',
-	// 'Deployments',
-	// 'My Settings',
-	// 'Team Settings',
-	// 'Help & Feedback',
-	// 'Log Out',
 ];
 
 const NavbarSection = (): React.JSX.Element => {
-	// const [sideBarHidden, setSideBarHidden] = useState<boolean>(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const router = useRouter();
 	return (
 		<Navbar
 			// shouldHideOnScroll
@@ -45,12 +43,12 @@ const NavbarSection = (): React.JSX.Element => {
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			maxWidth={'full'}
-			className=" fixed mt-6 flex w-full max-w-7xl animate-visible-from-down rounded-full ease-in-out-expo lg:mx-auto  "
+			className=" fixed mt-6 flex w-full max-w-7xl animate-visible-from-down rounded-full bg-white ease-in-out-expo lg:mx-auto "
 		>
 			{/* <div className=" flex  justify-between"> */}
 			<NavbarContent>
 				<NavbarBrand>
-					<a href={'/'}>
+					<a href={'/#home'}>
 						<Image
 							src={'/logos/logo.png'}
 							width={'250'}
@@ -78,7 +76,7 @@ const NavbarSection = (): React.JSX.Element => {
 						</DropdownTrigger>
 					</NavbarItem>
 					<DropdownMenu
-						aria-label="ACME features"
+						aria-label="Services"
 						className="w-[340px]"
 						itemClasses={{
 							base: 'gap-4',
@@ -87,23 +85,28 @@ const NavbarSection = (): React.JSX.Element => {
 						<DropdownItem
 							key="autoscaling"
 							description="ACME scales apps to meet user demand, automagically, based on load."
-							startContent={<CiCamera />}
+							startContent={
+								<SiCreatereactapp className="text-3xl font-bold text-blue-500" />
+							}
+							onClick={() => {
+								router.push('/#services');
+							}}
 						>
-							Autoscaling
+							Web App Development
 						</DropdownItem>
 						<DropdownItem
 							key="usage_metrics"
 							description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
 							startContent={<CiCamera />}
 						>
-							Usage Metrics
+							Mobile App Development
 						</DropdownItem>
 						<DropdownItem
-							key="production_ready"
+							key="seo"
 							description="ACME runs on ACME, join us and others serving requests at web scale."
 							startContent={<CiCamera />}
 						>
-							Production Ready
+							SEO
 						</DropdownItem>
 						<DropdownItem
 							key="99_uptime"
@@ -121,18 +124,14 @@ const NavbarSection = (): React.JSX.Element => {
 						</DropdownItem>
 					</DropdownMenu>
 				</Dropdown>
-				{/* <NavbarItem isActive>
-						<Link href={'/services'} aria-current="page">
-							SERVICES
-						</Link>
-					</NavbarItem> */}
+
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={'/portfolio'}>
+					<Link className="text-lg " color="foreground" href={'/#gallery'}>
 						Portfolio
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={'/teams'}>
+					<Link className="text-lg " color="foreground" href={'/#teams'}>
 						Teams
 					</Link>
 				</NavbarItem>
@@ -147,12 +146,13 @@ const NavbarSection = (): React.JSX.Element => {
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={'/contact'}>
+					<Link className="text-lg " color="foreground" href={'/#contact'}>
 						Contact Us
 					</Link>
 				</NavbarItem>
 			</NavbarContent>
 			<NavbarContent justify={'end'}>
+				<ThemeSwitcher />
 				<NavbarItem className="hidden lg:flex">
 					<Button
 						variant={'shadow'}

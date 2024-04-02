@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { type FC } from 'react';
 import Image from 'next/image';
-import { Card, CardBody, CardHeader } from '@nextui-org/react';
+import { Card, CardFooter } from '@nextui-org/react';
 
 interface ServiceSectionProps {
 	name: string;
@@ -17,17 +17,21 @@ const ServiceSectionItem: FC<ServiceSectionProps> = ({
 }) => {
 	return (
 		<Link href={`/services/${slug}`}>
-			<Card className="w-full max-w-[22rem] border border-purple-600 ">
-				<CardBody className="overflow-visible py-2">
-					<Image
-						className="rounded-xl object-cover"
-						src={image}
-						width={1080}
-						height={1080}
-						alt={name}
-					/>
-				</CardBody>
-				<CardHeader className="flex-col items-start px-4 pb-0 pt-2">
+			<Card
+				isFooterBlurred
+				radius="lg"
+				className="w-full max-w-[22rem] border border-purple-600 "
+			>
+				{/* <CardBody className="overflow-visible py-2"> */}
+				<Image
+					className="rounded-xl object-cover"
+					src={image}
+					width={1080}
+					height={1080}
+					alt={name}
+				/>
+				{/* </CardBody> */}
+				<CardFooter className="flex-col items-start px-4 pb-0 pt-2">
 					<div className=" mx-auto flex h-fit w-full flex-col gap-5 text-center hover:text-primary md:gap-6 xl:px-11">
 						<Link
 							href={`/services/${slug}`}
@@ -41,7 +45,7 @@ const ServiceSectionItem: FC<ServiceSectionProps> = ({
 							</p>
 						</span>
 					</div>
-				</CardHeader>
+				</CardFooter>
 			</Card>
 		</Link>
 		// 	 <section className=" servicesSections  group mx-auto  mb-20 flex  w-full max-w-[20rem]  items-center gap-10 rounded-lg border border-black p-10 shadow-xl lg:gap-7 xl:px-0 ">

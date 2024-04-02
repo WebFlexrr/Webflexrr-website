@@ -12,7 +12,7 @@ import NavbarSection from '@/components/Ui/Navbar/NavbarSection';
 
 const Home = (): JSX.Element => {
 	return (
-		<main className="main relative h-screen w-full overflow-y-auto ">
+		<main className="main relative h-screen w-full overflow-y-auto scroll-smooth">
 			<NavbarSection />
 			<Hero />
 			<Banner />
