@@ -26,10 +26,27 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				start: '13% 80%',
 			},
 		});
+		gsap.from('.servicesItem', {
+			y: 20,
+			opacity: 0,
+			stagger: {
+				each: 0.2,
+				from: 'random',
+			},
+			duration: 1,
+
+			ease: 'power3.inout',
+			scrollTrigger: {
+				trigger: '.services',
+				scroller: 'main',
+				start: '40% 80%',
+				markers: true,
+			},
+		});
 	});
 
 	return (
-		<section className="servicesSections flex h-auto  w-full justify-center  xl:mt-10 ">
+		<section className="servicesSections flex h-auto  w-full justify-center  xl:mt-7 ">
 			{/* <section className=" grid h-full w-fit grid-cols-3 flex-col justify-center gap-2  border-tertiary text-secondary  md:flex-row  md:flex-wrap lg:gap-10 ">
 				{data.map((item) => (
 					<ServiceSectionItem
@@ -45,7 +62,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				<Card
 					isFooterBlurred
 					radius="lg"
-					className="col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
+					className="servicesItem col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
 				>
 					<Image
 						removeWrapper
@@ -62,7 +79,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				<Card
 					isFooterBlurred
 					radius="lg"
-					className="col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
+					className="servicesItem col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
 				>
 					<Image
 						removeWrapper
@@ -88,7 +105,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				<Card
 					isFooterBlurred
 					radius="lg"
-					className="col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
+					className="servicesItem col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
 				>
 					<Image
 						removeWrapper
@@ -105,7 +122,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				<Card
 					isFooterBlurred
 					radius="lg"
-					className="col-span-12 h-[300px] w-full hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-5"
+					className="servicesItem col-span-12 h-[300px] w-full hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-5"
 				>
 					<CardHeader className="absolute top-1 z-10 flex-col items-start">
 						<p className="text-tiny font-bold uppercase text-white/60">New</p>
@@ -163,7 +180,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				</Card> */}
 				<Card
 					isFooterBlurred
-					className="col-span-12 h-[300px] w-full sm:col-span-7"
+					className="servicesItem col-span-12 h-[300px] w-full sm:col-span-7"
 				>
 					<CardHeader className="absolute top-1 z-10 flex-col items-start">
 						<p className="text-tiny font-bold uppercase text-white/60">

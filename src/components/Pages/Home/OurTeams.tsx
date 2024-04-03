@@ -9,7 +9,7 @@ const OurTeams = async (): Promise<React.JSX.Element> => {
 	return (
 		<section id={'teams'} className=" relative h-auto w-full bg-background3 ">
 			<section className="w-full py-20 lg:py-28 ">
-				<section className="mx-auto flex w-full max-w-[100rem] flex-col gap-7 px-5 md:px-10 ">
+				<section className="mx-auto flex w-full max-w-7xl flex-col gap-7 px-5 md:px-10 ">
 					<Heading
 						heading={'Our Team'}
 						subHeading={'Speak With One of Our Experts'}
