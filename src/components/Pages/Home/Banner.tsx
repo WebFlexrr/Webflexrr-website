@@ -18,7 +18,7 @@ const Banner = (): React.JSX.Element => {
 			ease: 'power1.out',
 			scrollTrigger: {
 				trigger: banner.current,
-				scroller: 'main',
+				scroller: '.main',
 				start: '20% 75%',
 			},
 		});

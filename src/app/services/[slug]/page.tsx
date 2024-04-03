@@ -1,7 +1,8 @@
 import ServiceDetails from '@/app/services/[slug]/ServiceDetails';
 import Footer from '@/components/Footer';
 import MainTitle from '@/components/MainTitle';
-import Social_carousel from '@/components/Ui/SocialPostsCarousel/SocialCarousel';
+import SocialCarousel from '@/components/ui/SocialPostsCarousel/SocialCarousel';
+
 import { findServiceByName } from '@/lib/getServices';
 import { type Metadata } from 'next';
 import React, { type FC } from 'react';
@@ -46,7 +47,7 @@ const page: FC<PageProps> = async ({ params }) => {
 			<MainTitle heading={params.slug} />
 			<ServiceDetails serviceDetails={serviceDetails} />
 			{/* <CaseStudy/> */}
-			<Social_carousel />
+			<SocialCarousel />
 			<Footer />
 		</>
 	);

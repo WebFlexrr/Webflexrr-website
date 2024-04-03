@@ -4,7 +4,6 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import PulseCircle from '@/components/Ui/PulseCircle';
 import {
 	FaFacebookF,
 	FaInstagram,
@@ -14,6 +13,7 @@ import {
 import Link from 'next/link';
 import { BsTwitterX } from 'react-icons/bs';
 import Heading from '@/components/Heading';
+import PulseCircle from '@/components/ui/PulseCircle';
 
 const schema = yup.object({
 	firstName: yup.string().required('First Name is Required'),

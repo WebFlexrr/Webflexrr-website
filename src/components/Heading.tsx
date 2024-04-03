@@ -1,9 +1,10 @@
 'use client';
 import React, { type FC, useRef } from 'react';
-import PulseCircle from './Ui/PulseCircle';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import PulseCircle from './ui/PulseCircle';
 interface HeadingProps {
 	heading: string | null;
 	subHeading: string;
@@ -23,7 +24,7 @@ const Heading: FC<HeadingProps> = ({ heading, subHeading }) => {
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: Heading.current,
-				scroller: 'main',
+				scroller: '.main',
 				start: 'top 80%',
 			},
 		});

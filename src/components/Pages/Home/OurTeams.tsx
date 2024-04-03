@@ -1,6 +1,6 @@
 import Heading from '@/components/Heading';
 import React from 'react';
-import TeamSwiper from '@/components/Ui/Hero/TeamSwiper';
+import TeamSwiper from '@/components/ui/Hero/TeamSwiper';
 import getAllManagementData from '@/lib/getManagement';
 
 const OurTeams = async (): Promise<React.JSX.Element> => {

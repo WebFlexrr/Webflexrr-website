@@ -37,7 +37,7 @@ const SocialCarouselSwiper: FC<SocialCarouselSwiperProps> = ({
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: socialCarousel.current,
-				scroller: 'main',
+				scroller: '.main',
 				start: 'top 80%',
 			},
 		});

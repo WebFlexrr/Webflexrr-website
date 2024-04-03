@@ -1,5 +1,5 @@
 import React from 'react';
-import GalleryContentSection from '@/components/Ui/Hero/GalleryContentSection';
+import GalleryContentSection from '@/components/ui/Hero/GalleryContentSection';
 import getAllProjects from '@/lib/getProjects';
 import Heading from '@/components/Heading';
 

@@ -5,10 +5,10 @@ import { SlSocialInstagram, SlSocialFacebook } from 'react-icons/sl';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { BiPlay } from 'react-icons/bi';
 import Image from 'next/image';
-import PulseCircle from '../../Ui/PulseCircle';
 import gsap from 'gsap';
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
+import PulseCircle from '@/components/ui/PulseCircle';
 
 const Hero = (): React.JSX.Element => {
 	const hero = useRef<HTMLDivElement>(null);
@@ -34,7 +34,7 @@ const Hero = (): React.JSX.Element => {
 		>
 			{/* <section className="absolute left-0 top-0 h-full w-full bg-[url('/assets/background-home-2.jpg')] bg-cover"></section> */}
 
-			<section className=" w- mx-auto h-full w-full max-w-[100rem] px-3 sm:px-5 md:px-14 xl:px-20">
+			<section className="  mx-auto h-full w-full max-w-[100rem] px-3 sm:px-5 md:px-14 xl:px-20">
 				<section className="relative  flex h-fit w-full flex-col-reverse py-10 lg:flex-row xl:py-28">
 					{/* left */}
 					<section className=" z-10 flex h-full  w-full items-end lg:w-[50%] ">

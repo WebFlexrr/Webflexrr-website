@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading from '../../Heading';
-import FeedbackCarousel from '@/components/Ui/Hero/FeedbackCarousel';
+import FeedbackCarousel from '@/components/ui/Hero/FeedbackCarousel';
 import getAllFeedback from '@/lib/getFeedback';
 
 const FeedBack = async (): Promise<React.JSX.Element> => {

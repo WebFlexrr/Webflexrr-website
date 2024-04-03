@@ -2,7 +2,7 @@ import Process from '@/app/services/[slug]/Process';
 import Image from 'next/image';
 import React, { type FC } from 'react';
 import Core_Services from './CoreServices';
-import PulseCircle from '@/components/Ui/PulseCircle';
+import PulseCircle from '@/components/ui/PulseCircle';
 import Technologies from './Technologies';
 
 interface ServiceDetailsProps {

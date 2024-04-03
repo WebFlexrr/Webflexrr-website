@@ -1,7 +1,7 @@
 import HeroServices from '@/app/services/HeroServices';
 import Footer from '@/components/Footer';
 import MainTitle from '@/components/MainTitle';
-import SocialCarousel from '@/components/Ui/SocialPostsCarousel/SocialCarousel';
+import SocialCarousel from '@/components/ui/SocialPostsCarousel/SocialCarousel';
 import React from 'react';
 
 const Services = (): JSX.Element => {

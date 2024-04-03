@@ -17,7 +17,7 @@ const TagLine = (): React.JSX.Element => {
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: tagLine.current,
-				scroller: 'main',
+				scroller: '.main',
 				start: 'top 90%',
 			},
 		});
@@ -28,7 +28,7 @@ const TagLine = (): React.JSX.Element => {
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: tagLine.current,
-				scroller: 'main',
+				scroller: '.main',
 				start: '40% 90%',
 			},
 		});

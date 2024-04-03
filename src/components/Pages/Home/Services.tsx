@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceSection from '@/components/Ui/Hero/ServiceSection';
+import ServiceSection from '@/components/ui/Hero/ServiceSection';
 import { getAllServices } from '@/lib/getServices';
 import Heading from '@/components/Heading';
 

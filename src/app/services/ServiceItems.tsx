@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { type FC } from 'react';
-import PulseCircle from '../../components/Ui/PulseCircle';
 import Link from 'next/link';
+import PulseCircle from '@/components/ui/PulseCircle';
 
 interface ServiceItemsProps {
 	image: string;

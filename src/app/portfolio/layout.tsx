@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import '../globals.css';
 import { type ReactNode } from 'react';
-import NavbarSection from '@/components/Ui/Navbar/NavbarSection';
+import NavbarSection from '@/components/ui/Navbar/NavbarSection';
 
 export const metadata: Metadata = {
 	title: {

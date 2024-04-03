@@ -4,8 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { type FC, useRef } from 'react';
-import PulseCircle from '../PulseCircle';
 import { useGSAP } from '@gsap/react';
+import PulseCircle from '../PulseCircle';
 
 interface GalleryContentSectionProps {
 	projects: getAllProjects[];
@@ -26,7 +26,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: '.gallery',
-				scroller: 'main',
+				scroller: '.main',
 				start: '7% 80%',
 			},
 		});
@@ -36,7 +36,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 			opacity: 0,
 			scrollTrigger: {
 				trigger: '.gallery',
-				scroller: 'main',
+				scroller: '.main',
 				start: 'top 80%',
 			},
 			ease: 'power2.out',
@@ -47,7 +47,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 			opacity: 0,
 			scrollTrigger: {
 				trigger: '.gallery',
-				scroller: 'main',
+				scroller: '.main',
 				start: 'top 80%',
 			},
 			ease: 'power2.out',

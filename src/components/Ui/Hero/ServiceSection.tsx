@@ -22,27 +22,27 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 			ease: 'power3.inout',
 			scrollTrigger: {
 				trigger: '.services',
-				scroller: 'main',
+				scroller: '.main',
 				start: '13% 80%',
 			},
 		});
-		gsap.from('.servicesItem', {
-			y: 20,
-			opacity: 0,
-			stagger: {
-				each: 0.2,
-				from: 'random',
-			},
-			duration: 1,
+		// gsap.from('.servicesItem', {
+		// 	y: 20,
+		// 	opacity: 0,
+		// 	stagger: {
+		// 		each: 0.2,
+		// 		from: 'random',
+		// 	},
+		// 	duration: 1,
 
-			ease: 'power3.inout',
-			scrollTrigger: {
-				trigger: '.services',
-				scroller: 'main',
-				start: '40% 80%',
-				markers: true,
-			},
-		});
+		// 	ease: 'power3.inout',
+		// 	scrollTrigger: {
+		// 		trigger: '.services',
+		// 		scroller: 'main',
+		// 		start: '40% 80%',
+		// 		markers: true,
+		// 	},
+		// });
 	});
 
 	return (
