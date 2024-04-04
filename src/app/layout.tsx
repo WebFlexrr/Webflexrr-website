@@ -74,13 +74,9 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 	return (
-		<html lang="en">
-			<body className="main !scroll-smooth">
-				<Providers>
-					{/* <main className=" dark:bg-black"> */}
-					{children}
-					{/* </main> */}
-				</Providers>
+		<html lang="en" className="!scroll-smooth">
+			<body className="main ">
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	);

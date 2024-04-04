@@ -43,7 +43,7 @@ const NavbarSection = (): React.JSX.Element => {
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			maxWidth={'full'}
-			className=" fixed mt-6 flex w-full max-w-7xl animate-visible-from-down rounded-full bg-white ease-in-out-expo lg:mx-auto "
+			className=" fixed mt-6 flex w-full max-w-7xl animate-visible-from-down rounded-full bg-white ease-in-out-expo lg:mx-auto dark:text-black "
 		>
 			{/* <div className=" flex  justify-between"> */}
 			<NavbarContent>
@@ -126,7 +126,7 @@ const NavbarSection = (): React.JSX.Element => {
 				</Dropdown>
 
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={'/#gallery'}>
+					<Link className="text-lg " color="foreground" href={'/#portfolio'}>
 						Portfolio
 					</Link>
 				</NavbarItem>
