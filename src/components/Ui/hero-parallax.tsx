@@ -1,14 +1,14 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 import {
 	motion,
 	useScroll,
 	useTransform,
 	useSpring,
 	type MotionValue,
-} from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
+} from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 export const HeroParallax = ({
 	products,
@@ -25,7 +25,7 @@ export const HeroParallax = ({
 	const ref = React.useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: ref,
-		offset: ['start start', 'end start'],
+		offset: ["start start", "end start"],
 	});
 
 	const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
@@ -59,7 +59,7 @@ export const HeroParallax = ({
 		<div
 			ref={ref}
 			id="portfolio"
-			className="  relative flex h-[300vh] flex-col  self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d] dark:bg-black"
+			className=" relative flex h-[300vh] flex-col  self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d] dark:bg-black"
 		>
 			<Header />
 			<motion.div

@@ -1,8 +1,9 @@
-'use client';
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 // import SideBar from './Sidebar';
-import Image from 'next/image';
-import { RiArrowDropDownLine, RiWhatsappFill } from 'react-icons/ri';
+import Image from "next/image";
+// import { RiArrowDropDownLine, RiWhatsappFill } from 'react-icons/ri';
+import { RiWhatsappFill } from "react-icons/ri";
 import {
 	Navbar,
 	NavbarBrand,
@@ -11,30 +12,30 @@ import {
 	NavbarMenuToggle,
 	NavbarMenu,
 	NavbarMenuItem,
-	Dropdown,
-	DropdownTrigger,
+	// Dropdown,
+	// DropdownTrigger,
 	Button,
 	Link,
-	DropdownMenu,
-	DropdownItem,
-} from '@nextui-org/react';
-import { CiCamera } from 'react-icons/ci';
-import { ThemeSwitcher } from '@/components/ThemeSwitcher';
-import { SiCreatereactapp } from 'react-icons/si';
-import { useRouter } from 'next/navigation';
+	// DropdownMenu,
+	// DropdownItem,
+} from "@nextui-org/react";
+// import { CiCamera, CiMobile3 } from 'react-icons/ci';
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+// import { SiCreatereactapp } from 'react-icons/si';
+// import { useRouter } from 'next/navigation';
 
 const menuItems = [
-	'Services',
-	'Portfolio',
-	'Teams',
-	'Plans',
-	'Blog',
-	'Contact Us',
+	"Services",
+	"Portfolio",
+	"Teams",
+	"Plans",
+	"Blog",
+	"Contact Us",
 ];
 
 const NavbarSection = (): React.JSX.Element => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const router = useRouter();
+	// const router = useRouter();
 	return (
 		<Navbar
 			// shouldHideOnScroll
@@ -42,26 +43,26 @@ const NavbarSection = (): React.JSX.Element => {
 			isBlurred={false}
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			maxWidth={'full'}
+			maxWidth={"full"}
 			className=" fixed mt-6 flex w-full max-w-7xl animate-visible-from-down rounded-full bg-white ease-in-out-expo lg:mx-auto dark:text-black "
 		>
 			{/* <div className=" flex  justify-between"> */}
 			<NavbarContent>
 				<NavbarBrand>
-					<a href={'/#home'}>
+					<Link href={"/#home"}>
 						<Image
-							src={'/logos/logo.png'}
-							width={'250'}
-							height={'0'}
-							alt={''}
+							src={"/logos/logo.png"}
+							width={"250"}
+							height={"0"}
+							alt={""}
 							className="w-36 lg:w-48"
 						/>
-					</a>
+					</Link>
 				</NavbarBrand>
 			</NavbarContent>
 
 			<NavbarContent className="hidden gap-5  sm:flex" justify="center">
-				<Dropdown>
+				{/* <Dropdown>
 					<NavbarItem>
 						<DropdownTrigger>
 							<Button
@@ -79,7 +80,7 @@ const NavbarSection = (): React.JSX.Element => {
 						aria-label="Services"
 						className="w-[340px]"
 						itemClasses={{
-							base: 'gap-4',
+							base: "gap-4",
 						}}
 					>
 						<DropdownItem
@@ -89,7 +90,7 @@ const NavbarSection = (): React.JSX.Element => {
 								<SiCreatereactapp className="text-3xl font-bold text-blue-500" />
 							}
 							onClick={() => {
-								router.push('/#services');
+								router.push("/#services");
 							}}
 						>
 							Web App Development
@@ -97,7 +98,9 @@ const NavbarSection = (): React.JSX.Element => {
 						<DropdownItem
 							key="usage_metrics"
 							description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-							startContent={<CiCamera />}
+							startContent={
+								<CiMobile3 className="text-3xl font-bold text-blue-500" />
+							}
 						>
 							Mobile App Development
 						</DropdownItem>
@@ -123,40 +126,45 @@ const NavbarSection = (): React.JSX.Element => {
 							+Supreme Support
 						</DropdownItem>
 					</DropdownMenu>
-				</Dropdown>
+				</Dropdown> */}
 
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={'/#portfolio'}>
+					<Link className="text-lg " color="foreground" href={"/#services"}>
+						Services
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link className="text-lg " color="foreground" href={"/#portfolio"}>
 						Portfolio
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={'/#teams'}>
+					<Link className="text-lg " color="foreground" href={"/#teams"}>
 						Teams
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={'/plans'}>
+					<Link className="text-lg " color="foreground" href={"/plans"}>
 						Pricing
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={'/plans'}>
+					<Link className="text-lg " color="foreground" href={"/plans"}>
 						Blogs
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={'/#contact'}>
+					<Link className="text-lg " color="foreground" href={"/#contact"}>
 						Contact Us
 					</Link>
 				</NavbarItem>
 			</NavbarContent>
-			<NavbarContent justify={'end'}>
+			<NavbarContent justify={"end"}>
 				<ThemeSwitcher />
 				<NavbarItem className="hidden lg:flex">
 					<Button
-						variant={'shadow'}
-						color={'primary'}
+						variant={"shadow"}
+						color={"primary"}
 						radius="full"
 						className="flex items-center justify-center"
 					>
@@ -167,7 +175,7 @@ const NavbarSection = (): React.JSX.Element => {
 			</NavbarContent>
 			<NavbarContent className=" sm:hidden" justify="end">
 				<NavbarMenuToggle
-					aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
 					className="sm:hidden"
 				/>
 			</NavbarContent>
@@ -178,17 +186,14 @@ const NavbarSection = (): React.JSX.Element => {
 						<Link
 							color={
 								index === 2
-									? 'primary'
+									? "primary"
 									: index === menuItems.length - 1
-										? 'danger'
-										: 'foreground'
+										? "danger"
+										: "foreground"
 							}
 							className="w-full"
-							href={`/${item.toLowerCase()}`}
+							href={`/#${item.toLowerCase()}`}
 							size="lg"
-							onClick={() => {
-								setIsMenuOpen(false);
-							}}
 						>
 							{item.toLowerCase()}
 						</Link>

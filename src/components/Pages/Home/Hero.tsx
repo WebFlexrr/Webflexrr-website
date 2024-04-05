@@ -1,26 +1,26 @@
-'use client';
-import React, { useRef } from 'react';
-import { RiTwitterXLine } from 'react-icons/ri';
-import { SlSocialInstagram, SlSocialFacebook } from 'react-icons/sl';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { BiPlay } from 'react-icons/bi';
-import Image from 'next/image';
-import gsap from 'gsap';
-import Link from 'next/link';
-import { useGSAP } from '@gsap/react';
-import PulseCircle from '@/components/ui/PulseCircle';
+"use client";
+import React, { useRef } from "react";
+import { RiTwitterXLine } from "react-icons/ri";
+import { SlSocialInstagram, SlSocialFacebook } from "react-icons/sl";
+import { FaLinkedinIn } from "react-icons/fa";
+import { BiPlay } from "react-icons/bi";
+import Image from "next/image";
+import gsap from "gsap";
+import Link from "next/link";
+import { useGSAP } from "@gsap/react";
+import PulseCircle from "@/components/ui/PulseCircle";
 
 const Hero = (): React.JSX.Element => {
 	const hero = useRef<HTMLDivElement>(null);
 	gsap.registerPlugin(useGSAP);
 	useGSAP(
 		() => {
-			gsap.from('.hero1', {
+			gsap.from(".hero1", {
 				x: 100,
 				opacity: 0,
 				duration: 1,
 				stagger: 0.3,
-				ease: 'circ.inOut',
+				ease: "circ.inOut",
 			});
 		},
 		{ scope: hero }
@@ -29,7 +29,7 @@ const Hero = (): React.JSX.Element => {
 	return (
 		<section
 			ref={hero}
-			id={'home'}
+			id={"home"}
 			className="relative h-screen w-full pt-16 lg:pt-28"
 		>
 			{/* <section className="absolute left-0 top-0 h-full w-full bg-[url('/assets/background-home-2.jpg')] bg-cover"></section> */}
@@ -48,7 +48,7 @@ const Hero = (): React.JSX.Element => {
 										<li>
 											<Link
 												href={
-													'https://www.facebook.com/profile.php?id=61553639945217'
+													"https://www.facebook.com/profile.php?id=61553639945217"
 												}
 												target="_blank"
 												aria-label="This is Facebook"
@@ -58,7 +58,7 @@ const Hero = (): React.JSX.Element => {
 										</li>
 										<li>
 											<Link
-												href={'https://www.instagram.com/webflexrr'}
+												href={"https://www.instagram.com/webflexrr"}
 												target="_blank"
 												aria-label="This is Instagram"
 											>
@@ -67,7 +67,7 @@ const Hero = (): React.JSX.Element => {
 										</li>
 										<li>
 											<Link
-												href={'https://twitter.com/WebFlexRR'}
+												href={"https://twitter.com/WebFlexRR"}
 												target="_blank"
 												aria-label="This is Twitter"
 											>
@@ -76,7 +76,7 @@ const Hero = (): React.JSX.Element => {
 										</li>
 										<li>
 											<Link
-												href={'https://www.linkedin.com/company/webflexrr'}
+												href={"https://www.linkedin.com/company/webflexrr"}
 												target="_blank"
 												aria-label="This is Linkedin"
 											>
@@ -131,12 +131,12 @@ const Hero = (): React.JSX.Element => {
 					{/* right */}
 					<section className=" relative flex h-full w-full flex-col items-center justify-center lg:w-[50%]">
 						<Image
-							src={'/assets/home.png'}
-							width={'400'}
-							height={'400'}
+							src={"/assets/home.png"}
+							width={"400"}
+							height={"400"}
 							alt=""
 							priority={true}
-							placeholder={'empty'}
+							placeholder={"empty"}
 							className=" drop-shadow-xl-black w-full  animate-visible-from-left lg:mt-32 xl:mt-20 2xl:mt-0"
 						/>
 					</section>

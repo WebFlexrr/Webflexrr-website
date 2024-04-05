@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import React, { type FC, useRef } from 'react';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { type FC, useRef } from "react";
 
 interface PulseCircleProps {
 	flowDirection?: string;
@@ -15,19 +15,19 @@ const PulseCircle: FC<PulseCircleProps> = ({ flowDirection }) => {
 	// const pulseCircleRed = useRef<HTMLDivElement>(null);
 	// const pulseLine = useRef<HTMLDivElement>();
 	useGSAP(() => {
-		gsap.to('.pulseCircleRed', {
+		gsap.to(".pulseCircleRed", {
 			scale: 0.8,
 			repeat: -1,
 			duration: 1,
 			yoyo: true,
-			ease: 'power2.inOut',
+			ease: "power2.inOut",
 		});
-		gsap.to('.pulseLine', {
+		gsap.to(".pulseLine", {
 			scaleY: 0.8,
 			repeat: -1,
 			duration: 1,
 			yoyo: true,
-			ease: 'power2.inOut',
+			ease: "power2.inOut",
 		});
 	});
 
@@ -35,14 +35,14 @@ const PulseCircle: FC<PulseCircleProps> = ({ flowDirection }) => {
 		<div
 			ref={pulseCircleLine}
 			className={`pulseCircleLine ${
-				flowDirection === 'right'
-					? 'flex-row-reverse'
-					: flowDirection === 'bottom'
-						? 'flex-col-reverse '
-						: ''
+				flowDirection === "right"
+					? "flex-row-reverse"
+					: flowDirection === "bottom"
+						? "flex-col-reverse "
+						: ""
 			} flex w-fit  items-center justify-center gap-4`}
 		>
-			{flowDirection === 'bottom' ? (
+			{flowDirection === "bottom" ? (
 				<div className=" pulseLine h-[3rem] w-[2px] bg-subHeading" />
 			) : (
 				<div className="h-[2px] w-[2rem] bg-subHeading lg:w-[3rem]" />
