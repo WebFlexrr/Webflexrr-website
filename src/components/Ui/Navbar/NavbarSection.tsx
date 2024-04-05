@@ -137,7 +137,7 @@ const NavbarSection = (): React.JSX.Element => {
 				</NavbarItem>
 				<NavbarItem>
 					<Link className="text-lg " color="foreground" href={'/plans'}>
-						Plans
+						Pricing
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
@@ -190,7 +190,7 @@ const NavbarSection = (): React.JSX.Element => {
 								setIsMenuOpen(false);
 							}}
 						>
-							{item}
+							{item.toLowerCase()}
 						</Link>
 					</NavbarMenuItem>
 				))}

@@ -9,7 +9,10 @@ const Services = async (): Promise<React.JSX.Element> => {
 	return (
 		<section className=" services h-auto w-full " id={'services'}>
 			<section className=" h-auto w-full py-20 lg:pt-28">
-				<Heading heading={'Services'} subHeading={'What We Have to Offer'} />
+				<Heading
+					heading={'Services'}
+					subHeading={'We handle just about everything!'}
+				/>
 				<ServiceSection data={services} />
 			</section>
 		</section>

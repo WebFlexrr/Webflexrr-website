@@ -69,7 +69,6 @@ export const HeroParallax = ({
 					translateY,
 					opacity,
 				}}
-				className=" "
 			>
 				<motion.div className="mb-20 flex flex-row-reverse space-x-20 space-x-reverse">
 					{firstRow.map((product) => (
@@ -105,8 +104,8 @@ export const HeroParallax = ({
 
 export const Header = (): React.JSX.Element => {
 	return (
-		<div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
-			<h1 className="text-2xl font-bold md:text-7xl dark:text-white">
+		<div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
+			<h1 className="text-7xl font-bold md:text-7xl dark:text-white">
 				Our Ultimate <br /> Creations
 			</h1>
 			<p className="mt-8 max-w-2xl text-base md:text-xl dark:text-neutral-200">
@@ -138,7 +137,8 @@ export const ProductCard = ({
 				y: -20,
 			}}
 			key={product.title}
-			className="group/product relative h-96 w-[30rem] flex-shrink-0"
+			className="group/product relative  aspect-[3.8/2.8] w-[20rem] flex-shrink-0  lg:w-[30rem] "
+			// className="group/product relative  w-[30rem]  flex-shrink-0 lg:h-96 lg:w-[30rem]"
 		>
 			<Link
 				href={product.link}

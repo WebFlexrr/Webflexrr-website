@@ -62,6 +62,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				<Card
 					isFooterBlurred
 					radius="lg"
+					isPressable
 					className="servicesItem col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
 				>
 					<Image
@@ -79,6 +80,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				<Card
 					isFooterBlurred
 					radius="lg"
+					isPressable
 					className="servicesItem col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
 				>
 					<Image
@@ -105,6 +107,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				<Card
 					isFooterBlurred
 					radius="lg"
+					isPressable
 					className="servicesItem col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
 				>
 					<Image
@@ -122,6 +125,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 				<Card
 					isFooterBlurred
 					radius="lg"
+					isPressable
 					className="servicesItem col-span-12 h-[300px] w-full hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-5"
 				>
 					<CardHeader className="absolute top-1 z-10 flex-col items-start">
