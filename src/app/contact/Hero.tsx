@@ -1,30 +1,30 @@
-'use client';
-import Image from 'next/image';
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+"use client";
+import Image from "next/image";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import {
 	FaFacebookF,
 	FaInstagram,
 	FaLinkedinIn,
 	FaYoutube,
-} from 'react-icons/fa';
-import Link from 'next/link';
-import { BsTwitterX } from 'react-icons/bs';
-import Heading from '@/components/Heading';
-import PulseCircle from '@/components/ui/PulseCircle';
+} from "react-icons/fa";
+import Link from "next/link";
+import { BsTwitterX } from "react-icons/bs";
+import Heading from "@/components/Heading";
+import PulseCircle from "@/components/ui/PulseCircle";
 
 const schema = yup.object({
-	firstName: yup.string().required('First Name is Required'),
-	lastName: yup.string().required('Last Name is Required'),
-	number: yup.number().required('Phone Number is Required'),
+	firstName: yup.string().required("First Name is Required"),
+	lastName: yup.string().required("Last Name is Required"),
+	number: yup.number().required("Phone Number is Required"),
 	email: yup
 		.string()
-		.email('Email format is not valid')
-		.required('Email is Required'),
-	companyName: yup.string().required('Company Name is Required'),
-	additionalMessage: yup.string().required('Message is Required'),
+		.email("Email format is not valid")
+		.required("Email is Required"),
+	companyName: yup.string().required("Company Name is Required"),
+	additionalMessage: yup.string().required("Message is Required"),
 });
 
 type FormInput = yup.InferType<typeof schema>;
@@ -36,11 +36,11 @@ const ContactUs = (): React.JSX.Element => {
 		formState: { errors },
 	} = useForm<FormInput>({
 		defaultValues: {
-			firstName: '',
-			lastName: '',
-			email: '',
-			companyName: '',
-			additionalMessage: '',
+			firstName: "",
+			lastName: "",
+			email: "",
+			companyName: "",
+			additionalMessage: "",
 		},
 		resolver: yupResolver(schema),
 	});
@@ -53,18 +53,18 @@ const ContactUs = (): React.JSX.Element => {
 			template_params: {
 				from_name: data.firstName,
 				from_email: data.email,
-				to_name: 'Tejodeep',
+				to_name: "Tejodeep",
 				message: data.additionalMessage,
 			},
 		};
 
 		try {
 			const response = await fetch(
-				'https://api.emailjs.com/api/v1.0/email/send',
+				"https://api.emailjs.com/api/v1.0/email/send",
 				{
-					method: 'POST',
+					method: "POST",
 					headers: {
-						'Content-Type': 'application/json',
+						"Content-Type": "application/json",
 					},
 					body: JSON.stringify(formData),
 				}
@@ -94,112 +94,112 @@ const ContactUs = (): React.JSX.Element => {
 										className=" relative h-[110px] w-[110px] leading-[90px]"
 									>
 										<g id="Group_773" transform="translate(-1935.085 -655)">
-											{' '}
+											{" "}
 											<path
 												id="Path_748"
 												className="st0"
 												style={{
-													fill: 'none',
-													stroke: 'currentcolor',
-													strokeWidth: '2',
-													strokeLinecap: 'round',
-													strokeLinejoin: 'round',
+													fill: "none",
+													stroke: "currentcolor",
+													strokeWidth: "2",
+													strokeLinecap: "round",
+													strokeLinejoin: "round",
 												}}
 												d="M1974.5,737.5h-37.4v-73.2h55.3v34.2h35.8V679h-27.7"
-											></path>{' '}
+											></path>{" "}
 											<path
 												id="Path_749"
 												className="st0"
 												style={{
-													fill: 'none',
-													stroke: 'currentcolor',
-													strokeWidth: '2',
-													strokeLinecap: 'round',
-													strokeLinejoin: 'round',
+													fill: "none",
+													stroke: "currentcolor",
+													strokeWidth: "2",
+													strokeLinecap: "round",
+													strokeLinejoin: "round",
 												}}
 												d="M1974.5,745.7h58.6v-35.8h-58.6v27.7"
-											></path>{' '}
+											></path>{" "}
 											<path
 												id="Path_750"
 												className="st0"
 												style={{
-													fill: 'none',
-													stroke: 'currentcolor',
-													strokeWidth: '2',
-													strokeLinecap: 'round',
-													strokeLinejoin: 'round',
+													fill: "none",
+													stroke: "currentcolor",
+													strokeWidth: "2",
+													strokeLinecap: "round",
+													strokeLinejoin: "round",
 												}}
 												d="M1974.5,718l24.9,12.5c2.7,1.4,6,1.4,8.7,0l24.9-12.5"
-											></path>{' '}
+											></path>{" "}
 											<ellipse
 												id="Ellipse_56"
 												className="st0"
 												style={{
-													fill: 'none',
-													stroke: 'currentcolor',
-													strokeWidth: '2',
-													strokeLinecap: 'round',
-													strokeLinejoin: 'round',
+													fill: "none",
+													stroke: "currentcolor",
+													strokeWidth: "2",
+													strokeLinecap: "round",
+													strokeLinejoin: "round",
 												}}
 												cx="1950.4"
 												cy="678.9"
 												rx="4.7"
 												ry="5.1"
-											></ellipse>{' '}
+											></ellipse>{" "}
 											<line
 												id="Line_69"
 												className="st0"
 												style={{
-													fill: 'none',
-													stroke: 'currentcolor',
-													strokeWidth: '2',
-													strokeLinecap: 'round',
-													strokeLinejoin: 'round',
+													fill: "none",
+													stroke: "currentcolor",
+													strokeWidth: "2",
+													strokeLinecap: "round",
+													strokeLinejoin: "round",
 												}}
 												x1="1945.6"
 												y1="693.4"
 												x2="1984.2"
 												y2="693.4"
-											></line>{' '}
+											></line>{" "}
 											<line
 												id="Line_70"
 												className="st0"
 												style={{
-													fill: 'none',
-													stroke: 'currentcolor',
-													strokeWidth: '2',
-													strokeLinecap: 'round',
-													strokeLinejoin: 'round',
+													fill: "none",
+													stroke: "currentcolor",
+													strokeWidth: "2",
+													strokeLinecap: "round",
+													strokeLinejoin: "round",
 												}}
 												x1="1945.6"
 												y1="702"
 												x2="1984.2"
 												y2="702"
-											></line>{' '}
+											></line>{" "}
 											<line
 												id="Line_71"
 												className="st0"
 												style={{
-													fill: 'none',
-													stroke: 'currentcolor',
-													strokeWidth: '2',
-													strokeLinecap: 'round',
-													strokeLinejoin: 'round',
+													fill: "none",
+													stroke: "currentcolor",
+													strokeWidth: "2",
+													strokeLinecap: "round",
+													strokeLinejoin: "round",
 												}}
 												x1="1945.6"
 												y1="709.7"
 												x2="1966.2"
 												y2="709.7"
-											></line>{' '}
+											></line>{" "}
 											<line
 												id="Line_72"
 												className="st0"
 												style={{
-													fill: 'none',
-													stroke: 'currentcolor',
-													strokeWidth: '2',
-													strokeLinecap: 'round',
-													strokeLinejoin: 'round',
+													fill: "none",
+													stroke: "currentcolor",
+													strokeWidth: "2",
+													strokeLinecap: "round",
+													strokeLinejoin: "round",
 												}}
 												x1="1945.6"
 												y1="727.7"
@@ -258,7 +258,7 @@ const ContactUs = (): React.JSX.Element => {
 												id="firstName"
 												className="w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
 												placeholder="First Name"
-												{...register('firstName')}
+												{...register("firstName")}
 											/>
 											<p>{errors.firstName?.message}</p>
 										</span>
@@ -268,7 +268,7 @@ const ContactUs = (): React.JSX.Element => {
 												id="lastName"
 												className="h-fit w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
 												placeholder="Last Name"
-												{...register('lastName')}
+												{...register("lastName")}
 											/>
 											<p>{errors.lastName?.message}</p>
 										</span>
@@ -278,7 +278,7 @@ const ContactUs = (): React.JSX.Element => {
 												id="number"
 												className="w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
 												placeholder="Your Number"
-												{...register('number')}
+												{...register("number")}
 											/>
 											<p>{errors.number?.message}</p>
 										</span>
@@ -288,7 +288,7 @@ const ContactUs = (): React.JSX.Element => {
 												id="email"
 												className="w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
 												placeholder="Your Email"
-												{...register('email')}
+												{...register("email")}
 											/>
 											<p>{errors.email?.message}</p>
 										</span>
@@ -298,7 +298,7 @@ const ContactUs = (): React.JSX.Element => {
 												id="companyName"
 												className="w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
 												placeholder="Company Name"
-												{...register('companyName')}
+												{...register("companyName")}
 											/>
 											<p>{errors.companyName?.message}</p>
 										</span>
@@ -308,7 +308,7 @@ const ContactUs = (): React.JSX.Element => {
 											rows={4}
 											placeholder="Additional Message"
 											className="h-26 w-full resize-y border-b-2 border-paragraph bg-transparent py-[15px] text-[16px] text-paragraph focus:outline-none lg:h-32"
-											{...register('additionalMessage')}
+											{...register("additionalMessage")}
 										/>
 										<p>{errors.additionalMessage?.message}</p>
 										<button
@@ -331,11 +331,11 @@ const ContactUs = (): React.JSX.Element => {
 									velit laoreet.
 								</p>
 								<Image
-									src={'/assets/career-img.jpg'}
-									width={'1000'}
-									height={'0'}
+									src={"/assets/career-img.jpg"}
+									width={"1000"}
+									height={"0"}
 									className="h-full w-full object-cover"
-									alt={''}
+									alt={""}
 								/>
 							</section>
 							<section className=" mt-10 flex h-auto w-full flex-col gap-4 xl:mt-20 ">
@@ -347,7 +347,7 @@ const ContactUs = (): React.JSX.Element => {
 									<ul className="mx-auto flex w-fit flex-wrap gap-6">
 										<li>
 											<Link
-												href={'https://twitter.com/WebFlexRR'}
+												href={"https://twitter.com/WebFlexRR"}
 												target="_blank"
 												className="border-grey1 flex  h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
 												aria-label="Twitter"
@@ -357,7 +357,7 @@ const ContactUs = (): React.JSX.Element => {
 										</li>
 										<li>
 											<Link
-												href={'https://www.youtube.com/@webflexrr'}
+												href={"https://www.youtube.com/@webflexrr"}
 												target="_blank"
 												className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
 												aria-label="Linkedin"
@@ -367,7 +367,7 @@ const ContactUs = (): React.JSX.Element => {
 										</li>
 										<li>
 											<Link
-												href={'https://www.linkedin.com/company/webflexrr'}
+												href={"https://www.linkedin.com/company/webflexrr"}
 												target="_blank"
 												className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
 												aria-label="Linkedin"
@@ -378,7 +378,7 @@ const ContactUs = (): React.JSX.Element => {
 										<li>
 											<Link
 												href={
-													'https://www.facebook.com/profile.php?id=61553639945217'
+													"https://www.facebook.com/profile.php?id=61553639945217"
 												}
 												target="_blank"
 												className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
@@ -389,7 +389,7 @@ const ContactUs = (): React.JSX.Element => {
 										</li>
 										<li>
 											<Link
-												href={'https://www.instagram.com/webflexrr'}
+												href={"https://www.instagram.com/webflexrr"}
 												target="_blank"
 												className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
 												aria-label="Instagram"
@@ -407,7 +407,7 @@ const ContactUs = (): React.JSX.Element => {
 				{/* Address & Location */}
 				<section className=" mt-20 h-auto w-full lg:mt-40 ">
 					<section className=" m-auto flex h-auto w-full flex-col items-center justify-between gap-3 px-5 text-secondary">
-						<Heading heading={null} subHeading={'Our Affiliate Branches'} />
+						<Heading heading={null} subHeading={"Our Affiliate Branches"} />
 						<div className=" mx-auto w-full text-center lg:max-w-[60%] ">
 							Et tortor consequat id porta nibh venenatis cras sed felis.
 							Pharetra diam sit amet nisl suscipit. Etiam dignissim diam quis
