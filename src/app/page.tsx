@@ -5,8 +5,6 @@ import OurTeams from "@/components/Pages/Home/OurTeams";
 import ContactUs from "@/components/Pages/Home/ContactUs";
 import Gallery2 from "@/components/Pages/Home/Gallery2";
 import SocialCarousel from "@/components/ui/SocialPostsCarousel/SocialCarousel";
-import NavbarSection from "@/components/ui/Navbar/NavbarSection";
-import Footer from "@/components/Footer";
 import Process2 from "@/components/Pages/Home/Process2";
 import getAllPlans from "@/lib/getPlans";
 import Plans from "@/components/Pages/Home/Plans";
@@ -18,8 +16,7 @@ const Home = async (): Promise<React.JSX.Element> => {
 	const getPlans = await getAllPlans();
 	const allPlans = getPlans.sort((a, b) => a.id - b.id);
 	return (
-		<main className=" dark:bg-black">
-			<NavbarSection />
+		<main className=" overflow-x-hidden dark:bg-black">
 			{/* <Hero /> */}
 			<Home2 />
 			<Banner />
@@ -46,7 +43,6 @@ const Home = async (): Promise<React.JSX.Element> => {
 			<ContactUs />
 			{/* <FeedBack /> */}
 			<SocialCarousel />
-			<Footer />
 		</main>
 	);
 };

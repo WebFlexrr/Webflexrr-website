@@ -1,26 +1,26 @@
-import { useTheme } from 'next-themes';
-import { FaRegSun } from 'react-icons/fa';
-import { LuCloudMoon } from 'react-icons/lu';
+import { useTheme } from "next-themes";
+import { FaRegSun } from "react-icons/fa";
+import { LuCloudMoon } from "react-icons/lu";
 
 export const ThemeSwitcher = (): JSX.Element => {
 	const { theme, setTheme } = useTheme();
 
 	return (
 		<div>
-			{theme === 'dark' ? (
+			{theme === "dark" ? (
 				<button
-					className="rounded-full border p-2 text-xl text-white drop-shadow-2xl"
+					className="rounded-full border p-2 text-xl text-white drop-shadow-2xl dark:text-black"
 					onClick={() => {
-						setTheme('light');
+						setTheme("light");
 					}}
 				>
 					<FaRegSun />
 				</button>
 			) : (
 				<button
-					className="rounded-full border p-2 text-xl text-black drop-shadow-2xl"
+					className="rounded-full border p-2 text-xl text-black drop-shadow-2xl dark:text-black"
 					onClick={() => {
-						setTheme('dark');
+						setTheme("dark");
 					}}
 				>
 					<LuCloudMoon />

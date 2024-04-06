@@ -44,7 +44,7 @@ const NavbarSection = (): React.JSX.Element => {
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			maxWidth={"full"}
-			className=" fixed mt-6 flex w-full max-w-7xl animate-visible-from-down rounded-full bg-white ease-in-out-expo lg:mx-auto dark:text-black "
+			className=" fixed mt-6 flex w-full max-w-7xl animate-visible-from-down rounded-full border-2 border-black bg-white text-white antialiased drop-shadow-xl ease-in-out-expo lg:mx-auto   "
 		>
 			{/* <div className=" flex  justify-between"> */}
 			<NavbarContent>
@@ -55,6 +55,7 @@ const NavbarSection = (): React.JSX.Element => {
 							width={"250"}
 							height={"0"}
 							alt={""}
+							priority={true}
 							className="w-36 lg:w-48"
 						/>
 					</Link>
@@ -129,32 +130,56 @@ const NavbarSection = (): React.JSX.Element => {
 				</Dropdown> */}
 
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={"/#services"}>
+					<Link
+						className="text-lg dark:text-black "
+						color="foreground"
+						href={"/#services"}
+					>
 						Services
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={"/#portfolio"}>
+					<Link
+						className="text-lg dark:text-black"
+						color="foreground"
+						href={"/#portfolio"}
+					>
 						Portfolio
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={"/#teams"}>
+					<Link
+						className="text-lg dark:text-black"
+						color="foreground"
+						href={"/#teams"}
+					>
 						Teams
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={"/plans"}>
+					<Link
+						className="text-lg dark:text-black"
+						color="foreground"
+						href={"/plans"}
+					>
 						Pricing
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={"/plans"}>
+					<Link
+						className="text-lg dark:text-black"
+						color="foreground"
+						href={"/plans"}
+					>
 						Blogs
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link className="text-lg " color="foreground" href={"/#contact"}>
+					<Link
+						className="text-lg dark:text-black "
+						color="foreground"
+						href={"/#contact"}
+					>
 						Contact Us
 					</Link>
 				</NavbarItem>
@@ -176,7 +201,7 @@ const NavbarSection = (): React.JSX.Element => {
 			<NavbarContent className=" sm:hidden" justify="end">
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-					className="sm:hidden"
+					className="sm:hidden "
 				/>
 			</NavbarContent>
 			{/* </div> */}

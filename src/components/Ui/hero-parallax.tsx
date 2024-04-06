@@ -105,7 +105,7 @@ export const HeroParallax = ({
 export const Header = (): React.JSX.Element => {
 	return (
 		<div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
-			<h1 className="text-7xl font-bold md:text-7xl dark:text-white">
+			<h1 className="text-left text-7xl font-bold md:text-7xl dark:text-white">
 				Our Ultimate <br /> Creations
 			</h1>
 			<p className="mt-8 max-w-2xl text-base md:text-xl dark:text-neutral-200">
