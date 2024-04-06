@@ -1,6 +1,6 @@
-'use client';
-import React, { type FC } from 'react';
-import { RxCross2 } from 'react-icons/rx';
+"use client";
+import React, { type FC } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 interface SideBarProps {
 	hidden: boolean;
@@ -10,7 +10,7 @@ const SideBar: FC<SideBarProps> = ({ hidden, toggle }) => {
 	return (
 		<aside
 			className={`fixed ${
-				!hidden ? ' invisible translate-x-[15rem]' : ' visible translate-x-0'
+				!hidden ? " invisible translate-x-[15rem]" : " visible translate-x-0"
 			} z-50 flex h-full w-full justify-end bg-transparent transition-all duration-700 ease-in-out`}
 		>
 			<section className="h-full w-[15rem] bg-background2">
@@ -26,7 +26,7 @@ const SideBar: FC<SideBarProps> = ({ hidden, toggle }) => {
 						</li>
 						<li className="h-11 w-full border-b border-subHeading p-0 hover:bg-primary ">
 							<a
-								href={'/#home'}
+								href={"/#home"}
 								onClick={() => {
 									toggle(false);
 								}}
@@ -37,7 +37,7 @@ const SideBar: FC<SideBarProps> = ({ hidden, toggle }) => {
 						</li>
 						<li className="h-11 w-full border-b border-subHeading p-0 hover:bg-primary ">
 							<a
-								href={'/services'}
+								href={"/services"}
 								onClick={() => {
 									toggle(false);
 								}}
@@ -48,7 +48,7 @@ const SideBar: FC<SideBarProps> = ({ hidden, toggle }) => {
 						</li>
 						<li className="h-11 w-full border-b border-subHeading p-0 hover:bg-primary ">
 							<a
-								href={'/portfolio'}
+								href={"/portfolio"}
 								onClick={() => {
 									toggle(false);
 								}}
@@ -59,7 +59,7 @@ const SideBar: FC<SideBarProps> = ({ hidden, toggle }) => {
 						</li>
 						<li className="h-11 w-full border-b border-subHeading p-0 hover:bg-primary ">
 							<a
-								href={'/teams'}
+								href={"/teams"}
 								onClick={() => {
 									toggle(false);
 								}}
@@ -79,7 +79,7 @@ const SideBar: FC<SideBarProps> = ({ hidden, toggle }) => {
             </li> */}
 						<li className="h-11 w-full border-b border-subHeading p-0 hover:bg-primary ">
 							<a
-								href={'/plans'}
+								href={"/plans"}
 								onClick={() => {
 									toggle(false);
 								}}
@@ -90,7 +90,7 @@ const SideBar: FC<SideBarProps> = ({ hidden, toggle }) => {
 						</li>
 						<li className="h-11 w-full border-b border-subHeading p-0 hover:bg-primary ">
 							<a
-								href={'/contact'}
+								href={"/contact"}
 								onClick={() => {
 									toggle(false);
 								}}

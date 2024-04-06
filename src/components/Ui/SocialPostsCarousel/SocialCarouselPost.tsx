@@ -1,17 +1,17 @@
-import React from 'react';
-import { BsInstagram } from 'react-icons/bs';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import { BsInstagram } from "react-icons/bs";
+import Image from "next/image";
+import Link from "next/link";
 
 const SocialCarouselPost = (): React.JSX.Element => {
 	return (
 		// <div className="relative w-full h-full xl:w-[360px] xl:h-[360px] group">
 		<div className="group relative h-full w-full">
 			<Image
-				src={'/assets/home-one-instagram-1.jpg'}
-				width={'1000'}
-				height={'0'}
-				alt={''}
+				src={"/assets/home-one-instagram-1.jpg"}
+				width={"1000"}
+				height={"0"}
+				alt={""}
 				className="relative"
 			/>
 			<div className="absolute top-0 h-full w-full scale-90 bg-black  opacity-0 transition duration-700 ease-in-out group-hover:visible group-hover:scale-100 group-hover:opacity-90 ">

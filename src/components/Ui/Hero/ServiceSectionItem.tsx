@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import React, { type FC } from 'react';
-import Image from 'next/image';
-import { Card, CardFooter } from '@nextui-org/react';
+import Link from "next/link";
+import React, { type FC } from "react";
+import Image from "next/image";
+import { Card, CardFooter } from "@nextui-org/react";
 
 interface ServiceSectionProps {
 	name: string;
@@ -41,7 +41,7 @@ const ServiceSectionItem: FC<ServiceSectionProps> = ({
 						</Link>
 						<span className="">
 							<p>
-								{description.split(' ').splice(0, 20).join(' ').concat('....')}
+								{description.split(" ").splice(0, 20).join(" ").concat("....")}
 							</p>
 						</span>
 					</div>

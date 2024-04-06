@@ -1,5 +1,5 @@
-import getAllPosts from '@/lib/getPosts';
-import SocialCarouselSwiper from './SocialCarouselSwiper';
+import getAllPosts from "@/lib/getPosts";
+import SocialCarouselSwiper from "./SocialCarouselSwiper";
 
 const SocialCarousel = async (): Promise<JSX.Element> => {
 	const posts = await getAllPosts();

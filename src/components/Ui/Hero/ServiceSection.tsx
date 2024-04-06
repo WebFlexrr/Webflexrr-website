@@ -1,9 +1,9 @@
-'use client';
-import React, { type FC } from 'react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { Button, Card, CardFooter, CardHeader, Image } from '@nextui-org/react';
+"use client";
+import React, { type FC } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { Button, Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
 
 interface ServiceSectionProps {
 	data: getAllServices[];
@@ -14,16 +14,16 @@ const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
 	gsap.registerPlugin(useGSAP);
 
 	useGSAP(() => {
-		gsap.from('.servicesSections', {
+		gsap.from(".servicesSections", {
 			y: 100,
 			opacity: 0,
 			stagger: 0.3,
 			duration: 1,
-			ease: 'power3.inout',
+			ease: "power3.inout",
 			scrollTrigger: {
-				trigger: '.services',
-				scroller: '.main',
-				start: '13% 80%',
+				trigger: ".services",
+				scroller: ".main",
+				start: "13% 80%",
 			},
 		});
 		// gsap.from('.servicesItem', {

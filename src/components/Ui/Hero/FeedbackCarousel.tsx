@@ -1,11 +1,11 @@
-'use client';
-import Image from 'next/image';
-import React, { type FC } from 'react';
-import { AiOutlineStar } from 'react-icons/ai';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper/modules';
+"use client";
+import Image from "next/image";
+import React, { type FC } from "react";
+import { AiOutlineStar } from "react-icons/ai";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
 
 interface FeedbackCarouselProps {
 	feedbacks: getAllFeedback[];
@@ -15,8 +15,8 @@ const FeedbackCarousel: FC<FeedbackCarouselProps> = ({ feedbacks }) => {
 	return (
 		<section className="w-full px-10 text-white xl:px-5">
 			<Swiper
-				slidesPerView={'auto'}
-				style={{ paddingBottom: '1rem' }}
+				slidesPerView={"auto"}
+				style={{ paddingBottom: "1rem" }}
 				modules={[Pagination, Autoplay]}
 				autoplay={true}
 				breakpoints={{
@@ -46,7 +46,7 @@ const FeedbackCarousel: FC<FeedbackCarouselProps> = ({ feedbacks }) => {
 									<AiOutlineStar
 										key={rate}
 										className={`${
-											feedback.rating <= rate ? 'text-black' : 'text-white'
+											feedback.rating <= rate ? "text-black" : "text-white"
 										}`}
 									/>
 								))}
@@ -62,13 +62,13 @@ const FeedbackCarousel: FC<FeedbackCarouselProps> = ({ feedbacks }) => {
 							<section className=" flex h-auto w-full items-center gap-12 px-[20px] lg:px-[50px]">
 								<Image
 									src={feedback.image}
-									width={'1080'}
-									height={'1920'}
+									width={"1080"}
+									height={"1920"}
 									alt=""
 									className=" h-[86px] w-[86px] rounded-full bg-primary "
 								/>
 								<span className=" text-base font-normal text-secondary">
-									<span className="text-primary">{feedback.clientName}</span> -{' '}
+									<span className="text-primary">{feedback.clientName}</span> -{" "}
 									{feedback.clientPosition}
 								</span>
 							</section>

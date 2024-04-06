@@ -1,11 +1,11 @@
-'use client';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { type FC, useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import PulseCircle from '../PulseCircle';
+"use client";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import Link from "next/link";
+import React, { type FC, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import PulseCircle from "../PulseCircle";
 
 interface GalleryContentSectionProps {
 	projects: getAllProjects[];
@@ -19,38 +19,38 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 	gsap.registerPlugin(useGSAP);
 
 	useGSAP(() => {
-		gsap.from('.galleryContent', {
+		gsap.from(".galleryContent", {
 			y: 100,
 			duration: 1,
 			opacity: 0,
-			ease: 'power2.out',
+			ease: "power2.out",
 			scrollTrigger: {
-				trigger: '.gallery',
-				scroller: '.main',
-				start: '7% 80%',
+				trigger: ".gallery",
+				scroller: ".main",
+				start: "7% 80%",
 			},
 		});
-		gsap.from('.galleryContent1', {
+		gsap.from(".galleryContent1", {
 			x: -100,
 			duration: 1,
 			opacity: 0,
 			scrollTrigger: {
-				trigger: '.gallery',
-				scroller: '.main',
-				start: 'top 80%',
+				trigger: ".gallery",
+				scroller: ".main",
+				start: "top 80%",
 			},
-			ease: 'power2.out',
+			ease: "power2.out",
 		});
-		gsap.from('.galleryContent2', {
+		gsap.from(".galleryContent2", {
 			x: 100,
 			duration: 1,
 			opacity: 0,
 			scrollTrigger: {
-				trigger: '.gallery',
-				scroller: '.main',
-				start: 'top 80%',
+				trigger: ".gallery",
+				scroller: ".main",
+				start: "top 80%",
 			},
-			ease: 'power2.out',
+			ease: "power2.out",
 		});
 	});
 
@@ -60,15 +60,15 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 				<section className=" flex h-fit w-full flex-col gap-5 sm:flex-row  sm:flex-wrap md:justify-evenly xl:h-[30rem]  xl:flex-nowrap">
 					<div className="group relative h-[24rem]  w-full   md:w-[45%] xl:h-full xl:w-[25%] ">
 						<Image
-							src={'/assets/catalogue-mockup.jpg'}
-							width={'2000'}
-							height={'0'}
+							src={"/assets/catalogue-mockup.jpg"}
+							width={"2000"}
+							height={"0"}
 							alt=""
 							className=" h-full w-full  object-cover  xl:h-full"
 						/>
 						<div className="absolute -bottom-1 flex h-auto w-full translate-y-[1rem] flex-col justify-start gap-5 bg-white  bg-opacity-50  bg-clip-padding p-10 text-left opacity-0 backdrop-blur-xl backdrop-filter transition-all duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
 							<Link
-								href={'/projects'}
+								href={"/projects"}
 								className="translate-y-[1rem] text-left text-[30px] font-bold leading-[41.76px] text-secondary transition duration-500 ease-in-out hover:text-primary group-hover:translate-y-0 md:text-[36px]"
 							>
 								Catalogue Design
@@ -78,7 +78,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 							</p>
 							<section className="flex w-full justify-start">
 								<Link
-									href={'/projects'}
+									href={"/projects"}
 									className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 								>
 									<PulseCircle />
@@ -89,15 +89,15 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 					</div>
 					<div className=" group relative h-[24rem] w-full md:w-[50%] xl:h-full xl:w-[50%]">
 						<Image
-							src={'/assets/portfolio-website.jpg'}
-							width={'2000'}
-							height={'0'}
+							src={"/assets/portfolio-website.jpg"}
+							width={"2000"}
+							height={"0"}
 							alt=""
 							className="h-full w-full object-cover  xl:h-full"
 						/>
 						<div className="absolute -bottom-1 flex h-auto w-full translate-y-[1rem] flex-col justify-start gap-5 bg-white  bg-opacity-50  bg-clip-padding p-10 text-left opacity-0 backdrop-blur-xl backdrop-filter transition-all duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
 							<Link
-								href={'/projects'}
+								href={"/projects"}
 								className="translate-y-[1rem] text-left text-[30px] font-bold leading-[41.76px] text-secondary transition duration-500 ease-in-out hover:text-primary group-hover:translate-y-0 md:text-[36px]"
 							>
 								Portfolio Website
@@ -108,7 +108,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 							</p>
 							<section className="flex w-full justify-start">
 								<Link
-									href={'/projects'}
+									href={"/projects"}
 									className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 								>
 									<PulseCircle />
@@ -119,15 +119,15 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 					</div>
 					<div className=" group relative h-[24rem] w-full md:w-1/2 xl:h-full xl:w-[25%]">
 						<Image
-							src={'/assets/business-card.png'}
-							width={'2000'}
-							height={'0'}
+							src={"/assets/business-card.png"}
+							width={"2000"}
+							height={"0"}
 							alt=""
 							className="h-full w-full  object-cover xl:h-full"
 						/>
 						<div className="absolute -bottom-1 flex h-auto w-full translate-y-[1rem] flex-col justify-start gap-5 bg-white  bg-opacity-50  bg-clip-padding p-10 text-left opacity-0 backdrop-blur-xl backdrop-filter transition-all duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
 							<Link
-								href={'/projects'}
+								href={"/projects"}
 								className="translate-y-[1rem] text-left text-[30px] font-bold leading-[41.76px] text-secondary transition duration-500 ease-in-out hover:text-primary group-hover:translate-y-0 md:text-[36px]"
 							>
 								Business Card
@@ -137,7 +137,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 							</p>
 							<section className="flex w-full justify-start">
 								<Link
-									href={'/projects'}
+									href={"/projects"}
 									className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 								>
 									<PulseCircle />
@@ -165,7 +165,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 								</p>
 							</span>
 							<Link
-								href={'/projects'}
+								href={"/projects"}
 								className="flex items-center gap-2 text-secondary transition duration-500 ease-in-out hover:text-primary"
 							>
 								<PulseCircle /> View All
@@ -175,15 +175,15 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 					<section className="galleryContent2 flex w-full flex-wrap gap-5 md:flex-nowrap xl:w-1/2  ">
 						<div className="group relative aspect-square  w-full md:w-1/2 xl:h-full ">
 							<Image
-								src={'/assets/logo.png'}
-								width={'2000'}
-								height={'0'}
+								src={"/assets/logo.png"}
+								width={"2000"}
+								height={"0"}
 								alt=""
 								className="h-full  w-full  bg-white object-cover xl:h-full"
 							/>
 							<div className="absolute -bottom-1 flex h-auto w-full translate-y-[1rem] flex-col justify-start gap-5 bg-white  bg-opacity-50  bg-clip-padding p-10 text-left opacity-0 backdrop-blur-xl backdrop-filter transition-all duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
 								<Link
-									href={'/projects'}
+									href={"/projects"}
 									className="translate-y-[1rem] text-left text-[30px] font-bold leading-[41.76px] text-secondary transition duration-500 ease-in-out hover:text-primary group-hover:translate-y-0 md:text-[36px]"
 								>
 									Logo Design
@@ -194,7 +194,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 								</p>
 								<section className="flex w-full justify-start">
 									<Link
-										href={'/projects'}
+										href={"/projects"}
 										className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 									>
 										<PulseCircle />
@@ -205,15 +205,15 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 						</div>
 						<div className="group relative aspect-square  w-full md:w-1/2 xl:h-full ">
 							<Image
-								src={'/assets/poster.jpg'}
-								width={'2000'}
-								height={'0'}
+								src={"/assets/poster.jpg"}
+								width={"2000"}
+								height={"0"}
 								alt=""
 								className="object-container  h-full  w-full bg-white xl:h-full"
 							/>
 							<div className="absolute -bottom-1 flex h-auto w-full translate-y-[1rem] flex-col justify-start gap-5 bg-white  bg-opacity-50  bg-clip-padding p-10 text-left opacity-0 backdrop-blur-xl backdrop-filter transition-all duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
 								<Link
-									href={'/projects'}
+									href={"/projects"}
 									className="translate-y-[1rem] text-left text-[30px] font-bold leading-[41.76px] text-secondary transition duration-500 ease-in-out hover:text-primary group-hover:translate-y-0 md:text-[36px]"
 								>
 									Poster Design
@@ -224,7 +224,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 								</p>
 								<section className="flex w-full justify-start">
 									<Link
-										href={'/projects'}
+										href={"/projects"}
 										className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 									>
 										<PulseCircle />

@@ -1,10 +1,10 @@
-'use client';
-import React, { type FC, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper/modules';
-import Image from 'next/image';
+"use client";
+import React, { type FC, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import Image from "next/image";
 import {
 	BsFacebook,
 	BsInstagram,
@@ -12,11 +12,11 @@ import {
 	BsPinterest,
 	BsTwitterX,
 	BsYoutube,
-} from 'react-icons/bs';
-import Link from 'next/link';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+} from "react-icons/bs";
+import Link from "next/link";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 interface SocialCarouselSwiperProps {
 	posts: getAllPosts[];
@@ -34,11 +34,11 @@ const SocialCarouselSwiper: FC<SocialCarouselSwiperProps> = ({
 			x: 100,
 			duration: 1,
 			opacity: 0,
-			ease: 'power2.out',
+			ease: "power2.out",
 			scrollTrigger: {
 				trigger: socialCarousel.current,
-				scroller: '.main',
-				start: 'top 80%',
+				scroller: ".main",
+				start: "top 80%",
 			},
 		});
 	});
@@ -82,26 +82,26 @@ const SocialCarouselSwiper: FC<SocialCarouselSwiperProps> = ({
 						>
 							<Image
 								src={post.image}
-								width={'1000'}
-								height={'0'}
-								alt={''}
+								width={"1000"}
+								height={"0"}
+								alt={""}
 								className="relative h-full w-full"
 							/>
 							<div className="absolute top-0 h-full w-full scale-90 bg-black  opacity-0 transition duration-700 ease-in-out group-hover:visible group-hover:scale-100 group-hover:opacity-90 ">
 								<div className="flex h-full w-full flex-col items-center justify-center border border-primary">
 									<div className="flex h-fit  w-fit flex-col items-center gap-3 ">
 										<div className="h-24 w-24 rounded-full border-4 border-white p-6">
-											{post.socialMedia === 'facebook' ? (
+											{post.socialMedia === "facebook" ? (
 												<BsFacebook className=" h-full w-full text-white" />
-											) : post.socialMedia === 'instagram' ? (
+											) : post.socialMedia === "instagram" ? (
 												<BsInstagram className=" h-full w-full text-white" />
-											) : post.socialMedia === 'linkedIn' ? (
+											) : post.socialMedia === "linkedIn" ? (
 												<BsLinkedin className=" h-full w-full text-white" />
-											) : post.socialMedia === 'x' ? (
+											) : post.socialMedia === "x" ? (
 												<BsTwitterX className=" h-full w-full text-white" />
-											) : post.socialMedia === 'youtube' ? (
+											) : post.socialMedia === "youtube" ? (
 												<BsYoutube className=" h-full w-full text-white" />
-											) : post.socialMedia === 'pinterest' ? (
+											) : post.socialMedia === "pinterest" ? (
 												<BsPinterest className=" h-full w-full text-white" />
 											) : (
 												<></>
