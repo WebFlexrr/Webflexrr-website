@@ -44,7 +44,7 @@ const NavbarSection = (): React.JSX.Element => {
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			maxWidth={"full"}
-			className=" fixed mt-6 flex w-full max-w-7xl animate-visible-from-down rounded-full border-2 border-black bg-white text-white antialiased drop-shadow-xl ease-in-out-expo lg:mx-auto   "
+			className=" fixed mt-6 flex w-full max-w-6xl animate-visible-from-down rounded-full border-2 border-black bg-white text-white antialiased drop-shadow-xl ease-in-out-expo lg:mx-auto   "
 		>
 			{/* <div className=" flex  justify-between"> */}
 			<NavbarContent>

@@ -1,5 +1,4 @@
 // import Hero from '@/components/Pages/Home/Hero';
-import Banner from "@/components/Pages/Home/Banner";
 // import TagLine from '@/components/Pages/Home/TagLine';
 import OurTeams from "@/components/Pages/Home/OurTeams";
 import ContactUs from "@/components/Pages/Home/ContactUs";
@@ -10,6 +9,7 @@ import getAllPlans from "@/lib/getPlans";
 import Plans from "@/components/Pages/Home/Plans";
 import Services from "@/components/Pages/Home/Services";
 import Home2 from "@/components/Pages/Home/Home2";
+import Banner2 from "@/components/Pages/Home/Banner2";
 // import Gallery from '@/components/Pages/Home/Gallery';
 
 const Home = async (): Promise<React.JSX.Element> => {
@@ -19,7 +19,8 @@ const Home = async (): Promise<React.JSX.Element> => {
 		<main className=" overflow-x-hidden dark:bg-black">
 			{/* <Hero /> */}
 			<Home2 />
-			<Banner />
+			{/* <Banner /> */}
+			<Banner2 />
 			<Services />
 			{/* <Gallery /> */}
 			<Gallery2 />

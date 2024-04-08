@@ -1,12 +1,7 @@
-'use client';
-// import Image from 'next/image';
-import React from 'react';
-// import Heading from '../../../components/Heading';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-// import { Navigation, Pagination } from 'swiper/modules';
-// import SwiperButtonComponent from '../../../components/SwiperButtonComponent';
+"use client";
+import React from "react";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Process2 = (): React.JSX.Element => {
 	return (

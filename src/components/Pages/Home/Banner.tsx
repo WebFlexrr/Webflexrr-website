@@ -1,8 +1,8 @@
-'use client';
-import React, { useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+"use client";
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 const Banner = (): React.JSX.Element => {
 	gsap.registerPlugin(ScrollTrigger);
@@ -11,22 +11,22 @@ const Banner = (): React.JSX.Element => {
 	const banner = useRef<HTMLDivElement>(null);
 
 	useGSAP(() => {
-		gsap.from('.banner1', {
+		gsap.from(".banner1", {
 			y: 40,
 			opacity: 0,
 			stagger: 0.6,
-			ease: 'power1.out',
+			ease: "power1.out",
 			scrollTrigger: {
 				trigger: banner.current,
-				scroller: '.main',
-				start: '20% 75%',
+				scroller: ".main",
+				start: "20% 75%",
 			},
 		});
 	});
 
 	return (
 		<section ref={banner} className=" mt-10 h-auto w-full">
-			<section className=" mx-auto h-auto w-full max-w-[90rem]">
+			<section className=" mx-auto h-auto w-full max-w-[90rem] ">
 				<section className=" flex w-full flex-wrap justify-evenly xl:justify-between">
 					<div className="w-full sm:w-fit">
 						<div className="banner1  group mx-auto flex h-auto max-w-[28rem] flex-col gap-5 p-[25px] text-secondary sm:flex-row sm:gap-6">
@@ -53,7 +53,7 @@ const Banner = (): React.JSX.Element => {
 						</div>
 					</div>
 					<div className=" w-full sm:w-fit">
-						<div className=" banner1 group  mx-auto flex h-auto max-w-[28rem] flex-col gap-5 p-[25px] text-white sm:flex-row  sm:gap-6">
+						<div className="banner1 group  mx-auto flex h-auto max-w-[28rem] flex-col gap-5 p-[25px] text-white sm:flex-row  sm:gap-6">
 							<svg
 								className=" mx-auto h-fit  w-[110px]  fill-primary group-hover:animate-wiggle sm:w-[130px]"
 								viewBox="9 0 110 126"
