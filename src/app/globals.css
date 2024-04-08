@@ -24,10 +24,10 @@
 
 @layer base {
 	body {
-		@apply h-screen w-full bg-white font-inter;
+		@apply h-screen w-full bg-white font-inter dark:text-white dark:bg-black;
 	}
 	p {
-		@apply text-lg leading-[26.24px] text-paragraph;
+		@apply text-lg leading-[26.24px] text-paragraph dark:bg-black;
 	}
 	h1 {
 		@apply text-center text-4xl font-semibold leading-[39px] tracking-tight text-secondary sm:text-5xl  sm:leading-[55px] md:text-[60px]  md:leading-[70px] xl:text-6xl   xl:leading-[82px] dark:text-white;

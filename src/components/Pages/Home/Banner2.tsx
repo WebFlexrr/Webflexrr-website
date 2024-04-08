@@ -3,14 +3,25 @@ import React from "react";
 
 const Banner2 = (): React.JSX.Element => {
 	return (
-		<section className=" mt-10 h-auto w-full">
-			<section className=" mx-auto h-auto w-full max-w-7xl">
-				<section className=" flex w-full items-center gap-10 ">
+		<section className=" h-auto w-full py-20 ">
+			<section className=" mx-auto flex h-auto w-full max-w-7xl flex-col gap-10 ">
+				<section className="mx-auto flex w-full max-w-4xl flex-col gap-10 text-center  text-white">
+					<h4 className=" mx-5 text-center ">
+						We Always Took advantage of new technologies in your environments
+						for solve your business problem
+					</h4>
+					<p className="">
+						Leverage built-in integrations or use extensible APIs and webhooks
+						to easily integrate with the upstream and downstream applications in
+						your tech stack.
+					</p>
+				</section>
+				<section className=" flex w-full flex-wrap items-center justify-evenly gap-10 ">
 					<Image
 						width={130}
 						alt="NextUI Fruit Image with Zoom"
-						src="/com-logos/next-js.png"
-						className="rounded-none "
+						src="/com-logos/nextjs.png"
+						className="rounded-none dark:bg-white"
 					/>
 					<Image
 						width={130}
@@ -39,6 +50,18 @@ const Banner2 = (): React.JSX.Element => {
 						width={120}
 						alt="NextUI Fruit Image with Zoom"
 						src="/com-logos/stripe.png"
+						className=" "
+					/>
+					<Image
+						width={120}
+						alt="NextUI Fruit Image with Zoom"
+						src="/com-logos/sanity.png"
+						className=" "
+					/>
+					<Image
+						width={80}
+						alt="NextUI Fruit Image with Zoom"
+						src="/com-logos/aws.png"
 						className=" "
 					/>
 				</section>
