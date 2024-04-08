@@ -21,6 +21,7 @@
     "@hookform/resolvers": "^3.3.3",
     "@nextui-org/react": "^2.2.10",
     "@sanity/image-url": "^1.0.2",
+    "@studio-freight/react-lenis": "^0.0.46",
     "@tabler/icons-react": "^3.1.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.25",

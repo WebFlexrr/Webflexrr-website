@@ -4,6 +4,7 @@ import { type ReactNode } from "react";
 import { Providers } from "./providers";
 import NavbarSection from "@/components/ui/Navbar/NavbarSection";
 import Footer from "@/components/Footer";
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 export const metadata: Metadata = {
 	title: {
@@ -76,13 +77,18 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 	return (
-		<html lang="en" className="!scroll-smooth">
-			<body className="main ">
-				<Providers>
-					<NavbarSection />
-					{children}
-					<Footer />
-				</Providers>
+		<html
+			lang="en"
+			// className="!scroll-smooth"
+		>
+			<body className="main overflow-x-none">
+				<SmoothScrolling>
+					<Providers>
+						<NavbarSection />
+						{children}
+						<Footer />
+					</Providers>
+				</SmoothScrolling>
 			</body>
 		</html>
 	);

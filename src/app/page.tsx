@@ -13,6 +13,7 @@ import Banner2 from "@/components/Pages/Home/Banner2";
 
 import Services2 from "@/components/Pages/Home/Services2";
 import Plans from "@/components/Pages/Home/Plans";
+
 // import Gallery from '@/components/Pages/Home/Gallery';
 
 const Home = async (): Promise<React.JSX.Element> => {
@@ -29,7 +30,6 @@ const Home = async (): Promise<React.JSX.Element> => {
 			{/* <Gallery /> */}
 			<Gallery2 />
 			<Process2 />
-
 			<Plans plans={allPlans} />
 			{/* <TagLine /> */}
 			<OurTeams />
