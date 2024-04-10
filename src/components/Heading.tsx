@@ -1,10 +1,10 @@
-'use client';
-import React, { type FC, useRef } from 'react';
+"use client";
+import React, { type FC, useRef } from "react";
 
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
-import PulseCircle from './ui/PulseCircle';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 interface HeadingProps {
 	heading: string | null;
 	subHeading: string;
@@ -21,11 +21,11 @@ const Heading: FC<HeadingProps> = ({ heading, subHeading }) => {
 			duration: 1,
 			opacity: 0,
 			stagger: 0.3,
-			ease: 'power2.out',
+			ease: "power2.out",
 			scrollTrigger: {
 				trigger: Heading.current,
-				scroller: '.main',
-				start: 'top 80%',
+				scroller: ".main",
+				start: "top 80%",
 			},
 		});
 	});
@@ -37,15 +37,11 @@ const Heading: FC<HeadingProps> = ({ heading, subHeading }) => {
 		>
 			{heading != null ? (
 				<>
-					<span className="galleryHeading flex gap-4 text-xl leading-7 text-subHeading lg:text-2xl">
-						<PulseCircle />
-						{heading}
-						<PulseCircle flowDirection="right" />
-					</span>
-					<h2 className=" galleryHeading mb-10">{subHeading}</h2>
+					<h2 className=" galleryHeading ">{heading}</h2>
+					<p>{subHeading}</p>
 				</>
 			) : (
-				<h2 className=" galleryHeading">{subHeading}</h2>
+				<h2 className=" galleryHeading">{heading}</h2>
 			)}
 		</section>
 	);

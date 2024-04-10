@@ -33,7 +33,7 @@
 		@apply text-center text-4xl font-semibold leading-[39px] tracking-tight text-secondary sm:text-5xl  sm:leading-[55px] md:text-[60px]  md:leading-[70px] xl:text-6xl   xl:leading-[82px] dark:text-white;
 	}
 	h2 {
-		@apply text-center text-3xl font-semibold leading-[41px] text-secondary sm:text-[40px] lg:text-6xl lg:leading-[70px];
+		@apply text-center text-3xl font-semibold leading-[41px] text-secondary sm:text-[40px] lg:text-5xl lg:leading-[66px];
 	}
 	h3 {
 		@apply text-center text-4xl font-semibold leading-[41.76px] text-secondary sm:text-5xl sm:leading-[58px];

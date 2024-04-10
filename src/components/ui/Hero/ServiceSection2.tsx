@@ -1,161 +1,166 @@
 "use client";
 import React from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { Button, Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardBody } from "@nextui-org/react";
+import { RiWindow2Fill } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const ServiceSection2 = (): React.JSX.Element => {
-	gsap.registerPlugin(ScrollTrigger);
-	gsap.registerPlugin(useGSAP);
-
-	useGSAP(() => {
-		gsap.from(".servicesSections", {
-			y: 100,
-			opacity: 0,
-			stagger: 0.3,
-			duration: 1,
-			ease: "power3.inout",
-			scrollTrigger: {
-				trigger: ".services",
-				scroller: ".main",
-				start: "13% 80%",
-			},
-		});
-		// gsap.from('.servicesItem', {
-		// 	y: 20,
-		// 	opacity: 0,
-		// 	stagger: {
-		// 		each: 0.2,
-		// 		from: 'random',
-		// 	},
-		// 	duration: 1,
-
-		// 	ease: 'power3.inout',
-		// 	scrollTrigger: {
-		// 		trigger: '.services',
-		// 		scroller: 'main',
-		// 		start: '40% 80%',
-		// 		markers: true,
-		// 	},
-		// });
-	});
-
+	// const [scope, animate] = useAnimate();
+	// const firstGridAnimation = async () => {
+	// 	console.log("statet");
+	// 	await animate(".mobile", { y: "100" });
+	// };
 	return (
 		<section className="servicesSections flex h-auto  w-full justify-center  xl:mt-7 ">
-			<div className="grid max-w-7xl grid-cols-12 grid-rows-2 gap-7 px-8">
-				<Card
-					isFooterBlurred
-					radius="lg"
-					isPressable
-					className="servicesItem col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
-				>
-					<Image
-						removeWrapper
-						alt="Woman listing to music"
-						className="z-0 h-full w-full object-cover"
-						src="/assets/web-design-2.jpg"
-					/>
-					<CardFooter className="absolute bottom-1 z-10 mb-1.5 ml-1 w-[calc(100%_-_8px)] justify-center overflow-hidden rounded-large border-2 border-white/20  p-2  shadow-small before:rounded-xl before:bg-white/10">
-						<p className="text-xl font-semibold text-white">
-							Web App Development
-						</p>
-					</CardFooter>
+			<div
+				// ref={scope}
+				className="grid w-full max-w-7xl grid-cols-3 grid-rows-3 gap-7"
+			>
+				<Card className="col-span-2 row-span-1 w-full ">
+					<CardBody className="px-5 pb-0">
+						<motion.section
+							// onHoverStart={() => firstGridAnimation}
+							className="flex w-full  "
+						>
+							<section className="flex h-auto w-full max-w-xs flex-col gap-5">
+								<section className="w-full">
+									<div className="flex h-8 w-8 items-center justify-center rounded-full border bg-black  ">
+										<RiWindow2Fill className="text-lg text-white" />
+									</div>
+								</section>
+								<section className="text-lg font-medium">
+									Website Design & Development
+								</section>
+								<section>
+									<p className="text-sm">
+										We'll build you a website that's so good, it'll make all the
+										other websites jealous. Trust me, not kidding.
+									</p>
+								</section>
+							</section>
+							<section className="flex h-full w-full justify-end gap-6  ">
+								<motion.div
+									id="mobile"
+									whileHover={{
+										translateY: "1rem",
+										paddingBottom: "10px",
+									}}
+									className=" mobile border-grey-700 w-[150px] rounded-t-3xl border-4 bg-black"
+								>
+									<motion.div
+										initial={{ width: "40px", padding: "4px" }}
+										whileHover={{
+											width: "80px",
+											padding: "4px",
+										}}
+										transition={{
+											type: "just",
+										}}
+										className="mx-auto mt-2 flex w-[40px] justify-end rounded-2xl border border-white bg-gray-300 p-[3px]"
+									>
+										<div className="h-2 w-2 rounded-full border bg-white"></div>
+									</motion.div>
+
+									<div className="mx-auto mt-10 w-24 text-center text-[12px] text-white">
+										Websites that stand out and make a difference
+									</div>
+								</motion.div>
+								<motion.div
+									whileHover={{
+										translateX: "1rem",
+									}}
+									className="rounded "
+								>
+									<div className="flex h-2 w-full items-center gap-1 rounded-t-md bg-slate-300 px-2">
+										<div className="h-[3px] w-[3px] rounded-full bg-red-600"></div>
+										<div className="h-[3px] w-[3px] rounded-full bg-yellow-300"></div>
+										<div className="h-[3px] w-[3px] rounded-full bg-green-700"></div>
+									</div>
+									<section className=" h-[200px] w-[300px] border bg-gradient-to-r from-cyan-500 to-blue-500">
+										<div className="mx-auto mt-10 w-40 text-center text-sm text-white">
+											Websites that stand out and make a difference
+										</div>
+									</section>
+								</motion.div>
+							</section>
+						</motion.section>
+					</CardBody>
 				</Card>
-				<Card
-					isFooterBlurred
-					radius="lg"
-					isPressable
-					className="servicesItem col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
-				>
-					<Image
-						removeWrapper
-						alt="Woman listing to music"
-						className="z-0 h-full w-full object-cover"
-						src="/assets/phone.jpg"
-					/>
-					<CardFooter className="absolute bottom-1 z-10 mb-1.5 ml-1 w-[calc(100%_-_8px)] justify-center overflow-hidden rounded-large border-2 border-white/20 p-2 shadow-small before:rounded-xl before:bg-white/10">
-						<p className="text-xl font-semibold text-white">
-							Mobile App Development
-						</p>
-					</CardFooter>
+				<Card className=" col-span-1 row-span-2 w-full ">
+					<CardBody>
+						<section className="flex w-full  ">
+							<section className="flex h-auto w-full max-w-44 flex-col gap-5 ">
+								<section className="w-full">
+									<RiWindow2Fill className="h-7 w-7 rounded-full border p-1 text-xl" />
+								</section>
+								<section className="text-lg">Deployment</section>
+								<section>
+									<p className="text-sm">
+										We'll build you a website that's so good, it'll make all the
+										other websites jealous. Trust me, not kidding.
+									</p>
+								</section>
+							</section>
+							<section className="w-full ">dwadwa</section>
+						</section>
+					</CardBody>
 				</Card>
-				<Card
-					isFooterBlurred
-					radius="lg"
-					isPressable
-					className="servicesItem col-span-12 h-[300px] hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-4"
-				>
-					<Image
-						removeWrapper
-						alt="Woman listing to music"
-						className="z-0h-full w-full object-cover"
-						src="/assets/seo.png"
-					/>
-					<CardFooter className="absolute bottom-1 z-10 mb-1.5 ml-1 w-[calc(100%_-_8px)] justify-center overflow-hidden rounded-large border-2 border-white/20 p-2 shadow-small before:rounded-xl before:bg-white/10">
-						<p className="text-xl font-semibold text-black">
-							Search Engine Optimization
-						</p>
-					</CardFooter>
+				<Card className=" col-span-1 row-span-2 w-full ">
+					<CardBody>
+						<section className="flex w-full  ">
+							<section className="flex h-auto w-full max-w-44 flex-col gap-5 ">
+								<section className="w-full">
+									<RiWindow2Fill className="h-7 w-7 rounded-full border p-1 text-xl" />
+								</section>
+								<section className="text-lg">SEO</section>
+								<section>
+									<p className="text-sm">
+										We'll build you a website that's so good, it'll make all the
+										other websites jealous. Trust me, not kidding.
+									</p>
+								</section>
+							</section>
+							<section className="w-full ">dwadwa</section>
+						</section>
+					</CardBody>
 				</Card>
-				<Card
-					isFooterBlurred
-					radius="lg"
-					isPressable
-					className="servicesItem col-span-12 h-[300px] w-full hover:drop-shadow-2xl hover:transition-all hover:duration-400 hover:ease-in-out sm:col-span-5"
-				>
-					<CardHeader className="absolute top-1 z-10 flex-col items-start">
-						<p className="text-tiny font-bold uppercase text-white/60">New</p>
-						<h4 className="text-2xl font-medium text-white">Acme camera</h4>
-					</CardHeader>
-					<Image
-						removeWrapper
-						alt="Card example background"
-						className="z-0 h-full w-full -translate-y-6 scale-125 bg-black object-cover"
-						src="/assets/web.jpg"
-					/>
-					<CardFooter className="absolute bottom-1 z-10 mb-1.5 ml-1 w-[calc(100%_-_8px)] justify-center overflow-hidden rounded-large border-2 border-white/20  p-3  shadow-small before:rounded-xl before:bg-white/10">
-						<p className="text-xl font-semibold text-white">
-							Scalable Software Development
-						</p>
-					</CardFooter>
+				<Card className=" col-span-1 row-span-1 w-full ">
+					<CardBody>
+						<section className="flex w-full  ">
+							<section className="flex h-auto w-full max-w-44 flex-col gap-5 ">
+								<section className="w-full">
+									<RiWindow2Fill className="h-7 w-7 rounded-full border p-1 text-xl" />
+								</section>
+								<section className="text-lg">Every thing else</section>
+								<section>
+									<p className="text-sm">
+										We'll build you a website that's so good, it'll make all the
+										other websites jealous. Trust me, not kidding.
+									</p>
+								</section>
+							</section>
+							<section className="w-full ">dwadwa</section>
+						</section>
+					</CardBody>
 				</Card>
-				<Card
-					isFooterBlurred
-					className="servicesItem col-span-12 h-[300px] w-full sm:col-span-7"
-				>
-					<CardHeader className="absolute top-1 z-10 flex-col items-start">
-						<p className="text-tiny font-bold uppercase text-white/60">
-							Your day your way
-						</p>
-						<h4 className="text-xl font-medium text-white/90">
-							Your checklist for better sleep
-						</h4>
-					</CardHeader>
-					<Image
-						removeWrapper
-						alt="Relaxing app background"
-						className="z-0 h-full w-full object-cover"
-						src="/images/card-example-5.jpeg"
-					/>
-					<CardFooter className="absolute bottom-0 z-10 border-t-1 border-default-600 bg-black/40 dark:border-default-100">
-						<div className="flex flex-grow items-center gap-2">
-							<Image
-								alt="Breathing app icon"
-								className="h-11 w-10 rounded-full bg-black"
-								src="/images/breathing-app-icon.jpeg"
-							/>
-							<div className="flex flex-col">
-								<p className="text-tiny text-white/60">Breathing App</p>
-								<p className="text-tiny text-white/60">
-									Get a good night's sleep.
-								</p>
-							</div>
-						</div>
-						<Button radius="full" size="sm">
-							Get App
-						</Button>
-					</CardFooter>
+				<Card className=" col-span-2 row-span-1 w-full ">
+					<CardBody>
+						<section className="flex w-full  ">
+							<section className="flex h-auto w-full max-w-44 flex-col gap-5 ">
+								<section className="w-full">
+									<RiWindow2Fill className="h-7 w-7 rounded-full border p-1 text-xl" />
+								</section>
+								<section className="text-lg">Every thing else</section>
+								<section>
+									<p className="text-sm">
+										We'll build you a website that's so good, it'll make all the
+										other websites jealous. Trust me, not kidding.
+									</p>
+								</section>
+							</section>
+							<section className="w-full ">dwadwa</section>
+						</section>
+					</CardBody>
 				</Card>
 			</div>
 		</section>

@@ -21,7 +21,6 @@ const Home = async (): Promise<React.JSX.Element> => {
 	const allPlans = getPlans.sort((a, b) => a.id - b.id);
 	return (
 		<main className=" overflow-x-hidden ">
-			{/* <Hero /> */}
 			<Home2 />
 			{/* <Banner /> */}
 			<Banner2 />
