@@ -1,7 +1,156 @@
 import React from "react";
+import type { Metadata } from "next";
+import Heading from "@/components/Heading";
+import { BlogItem } from "@/components/ui/blog-Item";
+import Footer from "@/components/Footer";
+import { Button, Card, CardBody, Image } from "@nextui-org/react";
 
-const Blogs = (): React.JSX.Element => {
-	return <div></div>;
+export const metadata: Metadata = {
+	title: {
+		default: "Blog",
+		template: "%s | WebFlexrr Digital Services",
+	},
+	description: "This is Plan Page of Webflexrr Digital Services",
+};
+const Blog = (): React.JSX.Element => {
+	return (
+		<>
+			<main className=" mx-auto h-auto w-full max-w-7xl overflow-x-hidden py-16 lg:py-28 ">
+				<Heading
+					heading={"Everything about web apps"}
+					subHeading={
+						"We write about everything from design to deployment to get your website shipped and ready to go!"
+					}
+				/>
+				<section className="mt-20 grid w-full grid-cols-3 gap-10">
+					<Card className=" col-span-2 flex w-full ">
+						<CardBody>
+							<section className="flex w-full gap-5">
+								<section className="w-1/2 ">
+									<Image
+										className="aspect-video"
+										src={
+											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
+										}
+									/>
+								</section>
+								<section className="flex w-1/2 flex-col  gap-5">
+									<h5 className="text-3xl font-bold">
+										Thisn is how to make a portfolio
+									</h5>
+									<p className="truncate font-sans text-base font-normal text-neutral-600 dark:text-neutral-300">
+										I personally have always been a fan of great portfolio
+										websites. I'm always on the look for new ideas and
+										inspirations. Today, I've curated a list of best porfolio
+										websites from all over the internet for you to get inspired
+										from.
+									</p>
+									<section className="w-full">
+										<Button size="sm" className="bg-black text-sm text-white">
+											Read More
+										</Button>
+									</section>
+								</section>
+							</section>
+						</CardBody>
+					</Card>
+					<section className="col-span-1 flex w-full flex-col gap-3">
+						<span className="text-lg font-semibold">Features</span>
+						<Card className="border border-black">
+							<CardBody>
+								<section className="flex w-full items-center justify-start gap-5 rounded-none">
+									<Image
+										className="aspect-video"
+										width={"60"}
+										src={
+											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
+										}
+									/>
+									<section className="flex  flex-col">
+										<h6 className="text-lg font-bold">
+											Thisn is how to make a portfolio
+										</h6>
+									</section>
+								</section>
+							</CardBody>
+						</Card>
+						<Card className="border border-black">
+							<CardBody>
+								<section className="flex w-full items-center justify-start gap-5 rounded-none">
+									<Image
+										className="aspect-video"
+										width={"60"}
+										src={
+											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
+										}
+									/>
+									<section className="flex  flex-col">
+										<h6 className="text-lg font-bold">
+											Thisn is how to make a portfolio
+										</h6>
+									</section>
+								</section>
+							</CardBody>
+						</Card>
+						<Card className="border border-black">
+							<CardBody>
+								<section className="flex w-full items-center justify-start gap-5 rounded-none">
+									<Image
+										className="aspect-video"
+										width={"60"}
+										src={
+											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
+										}
+									/>
+									<section className="flex  flex-col">
+										<h6 className="text-lg font-bold">
+											Thisn is how to make a portfolio
+										</h6>
+									</section>
+								</section>
+							</CardBody>
+						</Card>
+					</section>
+				</section>
+				<section className="mt-20 grid w-full grid-cols-3 gap-10">
+					<BlogItem
+						image={
+							"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
+						}
+						title={"Amazing Tracing Beam Effect with Tailwind css"}
+						slug={"slug"}
+						description={
+							"dAmazing Tracing Beam Effect with Tailwind css ,wdbna ddwad ad wada"
+						}
+						date={"2nd Nov,2023"}
+					/>
+					<BlogItem
+						image={
+							"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
+						}
+						title={"Amazing Tracing Beam Effect with Tailwind css"}
+						slug={"slug"}
+						description={
+							"dAmazing Tracing Beam Effect with Tailwind css ,wdbna ddwad ad wada"
+						}
+						date={"2nd Nov,2023"}
+					/>
+					<BlogItem
+						image={
+							"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
+						}
+						title={"Amazing Tracing Beam Effect with Tailwind css"}
+						slug={"slug"}
+						description={
+							"dAmazing Tracing Beam Effect with Tailwind css ,wdbna ddwad ad wada"
+						}
+						date={"2nd Nov,2023"}
+					/>
+				</section>
+			</main>
+			<Footer />
+		</>
+	);
 };
 
-export default Blogs;
+export default Blog;

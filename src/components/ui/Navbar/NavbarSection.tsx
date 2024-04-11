@@ -170,7 +170,7 @@ const NavbarSection = (): React.JSX.Element => {
 						<Link
 							className="text-lg dark:text-black"
 							color="foreground"
-							href={"/plans"}
+							href={"/blogs"}
 						>
 							Blogs
 						</Link>

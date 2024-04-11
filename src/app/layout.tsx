@@ -3,7 +3,6 @@ import "./globals.css";
 import { type ReactNode } from "react";
 import { Providers } from "./providers";
 import NavbarSection from "@/components/ui/Navbar/NavbarSection";
-import Footer from "@/components/Footer";
 import SmoothScrolling from "@/components/SmoothScrolling";
 
 export const metadata: Metadata = {
@@ -86,7 +85,6 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 					<Providers>
 						<NavbarSection />
 						{children}
-						<Footer />
 					</Providers>
 				</SmoothScrolling>
 			</body>
