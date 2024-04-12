@@ -1,11 +1,11 @@
-'use client';
-import { useGSAP } from '@gsap/react';
-import { Card, CardFooter, Image } from '@nextui-org/react';
-import gsap from 'gsap';
-import Link from 'next/link';
-import React, { type FC, useRef } from 'react';
-import { BsTwitterX } from 'react-icons/bs';
-import { FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+"use client";
+import { useGSAP } from "@gsap/react";
+import { Card, CardFooter, Image } from "@nextui-org/react";
+import gsap from "gsap";
+import Link from "next/link";
+import React, { type FC, useRef } from "react";
+import { BsTwitterX } from "react-icons/bs";
+import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 interface TeamPictureProps {
 	personDetails: getAllManagementData;
@@ -17,12 +17,12 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 
 	useGSAP(
 		() => {
-			gsap.from('.teamPicture', {
+			gsap.from(".teamPicture", {
 				y: 30,
 				opacity: 0,
 				duration: 1,
 			});
-			gsap.from('.teamPicture', {
+			gsap.from(".teamPicture", {
 				y: 30,
 				opacity: 0,
 				duration: 1,
@@ -39,8 +39,8 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 			<Card isFooterBlurred radius="lg" className="border-none p-3 ">
 				<Image
 					src={personDetails.profileImage}
-					width={'790'}
-					height={'920'}
+					width={"790"}
+					height={"920"}
 					alt=""
 					radius="lg"
 					className="relative z-0 aspect-[4/5.2]  h-full w-full transition duration-700 ease-in-out group-hover:grayscale-0"

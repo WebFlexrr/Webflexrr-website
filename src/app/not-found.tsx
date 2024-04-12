@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import type { Metadata } from 'next';
+import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: '404 Error',
+	title: "404 Error",
 };
 
 const NotFound = (): JSX.Element => {
@@ -16,16 +16,16 @@ const NotFound = (): JSX.Element => {
 			<section className="relative flex h-full w-full items-center justify-center px-5">
 				<section className="flex flex-col items-center ">
 					<Image
-						src={'/assets/404-image.png'}
-						width={'750'}
-						height={'0'}
-						alt={'404 image'}
+						src={"/assets/404-image.png"}
+						width={"750"}
+						height={"0"}
+						alt={"404 image"}
 						priority={true}
 						className=""
 					/>
 					<h1>Page Not Found</h1>
 					<Link
-						href={'/'}
+						href={"/"}
 						className="group mt-10 flex h-fit w-fit items-center gap-3 border border-secondary px-7 py-3 text-secondary transition duration-500 ease-in-out hover:border-primary hover:text-primary"
 					>
 						<div className="h-2 w-2 rounded-full bg-primary  transition duration-500 ease-in-out group-hover:bg-secondary"></div>

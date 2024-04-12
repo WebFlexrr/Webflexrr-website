@@ -1,4 +1,4 @@
-import { client } from '@/config/SanityClient';
+import { client } from "@/config/SanityClient";
 
 export const getAllPosts = async (): Promise<getAllPosts[]> =>
 	await client.fetch(
@@ -10,7 +10,7 @@ export const getAllPosts = async (): Promise<getAllPosts[]> =>
       "image":image.asset->url,
     }`,
 		{},
-		{ next: { tags: ['post'], revalidate: 3600 } }
+		{ next: { tags: ["post"], revalidate: 3600 } }
 	);
 
 export default getAllPosts;

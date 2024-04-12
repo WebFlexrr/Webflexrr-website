@@ -1,4 +1,4 @@
-import { client } from '@/config/SanityClient';
+import { client } from "@/config/SanityClient";
 
 export const getAllServices = async (): Promise<getAllServices[]> =>
 	await client.fetch(
@@ -7,7 +7,7 @@ export const getAllServices = async (): Promise<getAllServices[]> =>
   }`,
 		{},
 		{
-			next: { tags: ['getAllServices'], revalidate: 3600 },
+			next: { tags: ["getAllServices"], revalidate: 3600 },
 		}
 	);
 
@@ -45,6 +45,6 @@ export const findServiceByName = async (
     }`,
 		{},
 		{
-			next: { tags: ['findServiceByName'], revalidate: 3600 },
+			next: { tags: ["findServiceByName"], revalidate: 3600 },
 		}
 	);

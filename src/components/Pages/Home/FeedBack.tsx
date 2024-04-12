@@ -1,7 +1,7 @@
-import React from 'react';
-import Heading from '../../Heading';
-import FeedbackCarousel from '@/components/ui/Hero/FeedbackCarousel';
-import getAllFeedback from '@/lib/getFeedback';
+import React from "react";
+import Heading from "../../Heading";
+import FeedbackCarousel from "@/components/ui/Hero/FeedbackCarousel";
+import getAllFeedback from "@/lib/getFeedback";
 
 const FeedBack = async (): Promise<React.JSX.Element> => {
 	const feedbacks = await getAllFeedback();
@@ -11,8 +11,8 @@ const FeedBack = async (): Promise<React.JSX.Element> => {
 			<section className="h-auto w-full py-10 lg:py-36">
 				<section className="mx-auto flex  w-full max-w-[100rem] flex-col gap-14 ">
 					<Heading
-						heading={'Client Feedback'}
-						subHeading={'Happy Words From Happy Customer'}
+						heading={"Client Feedback"}
+						subHeading={"Happy Words From Happy Customer"}
 					/>
 					<FeedbackCarousel feedbacks={feedbacks} />
 				</section>

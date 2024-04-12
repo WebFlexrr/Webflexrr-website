@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const HeadingLine = (): React.JSX.Element => {
 	return <section></section>;

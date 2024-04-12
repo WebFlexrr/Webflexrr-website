@@ -84,6 +84,18 @@ interface getAllFeedback {
 	_type: string;
 }
 
+interface getBlog {
+	_id: string;
+	title: string;
+	slug: string;
+	description: string;
+	thumbnail: string;
+	category: string;
+	content: TypedObject | TypedObject[];
+	_createdAt: string;
+	_updatedAt: string;
+}
+
 interface Plans {
 	_key: string;
 	name: string;

@@ -1,5 +1,5 @@
-import ServiceItems from '@/app/services/ServiceItems';
-import { getAllServices } from '@/lib/getServices';
+import ServiceItems from "@/app/services/ServiceItems";
+import { getAllServices } from "@/lib/getServices";
 
 const HeroServices = async (): Promise<JSX.Element> => {
 	const services = await getAllServices();
@@ -19,112 +19,112 @@ const HeroServices = async (): Promise<JSX.Element> => {
 									className=" relative block h-[90px] w-[90px] leading-[90px]"
 								>
 									<g id="Group_773" transform="translate(-1935.085 -655)">
-										{' '}
+										{" "}
 										<path
 											id="Path_748"
 											className="st0"
 											style={{
-												fill: 'none',
-												stroke: 'currentcolor',
-												strokeWidth: '2',
-												strokeLinecap: 'round',
-												strokeLinejoin: 'round',
+												fill: "none",
+												stroke: "currentcolor",
+												strokeWidth: "2",
+												strokeLinecap: "round",
+												strokeLinejoin: "round",
 											}}
 											d="M1974.5,737.5h-37.4v-73.2h55.3v34.2h35.8V679h-27.7"
-										></path>{' '}
+										></path>{" "}
 										<path
 											id="Path_749"
 											className="st0"
 											style={{
-												fill: 'none',
-												stroke: 'currentcolor',
-												strokeWidth: '2',
-												strokeLinecap: 'round',
-												strokeLinejoin: 'round',
+												fill: "none",
+												stroke: "currentcolor",
+												strokeWidth: "2",
+												strokeLinecap: "round",
+												strokeLinejoin: "round",
 											}}
 											d="M1974.5,745.7h58.6v-35.8h-58.6v27.7"
-										></path>{' '}
+										></path>{" "}
 										<path
 											id="Path_750"
 											className="st0"
 											style={{
-												fill: 'none',
-												stroke: 'currentcolor',
-												strokeWidth: '2',
-												strokeLinecap: 'round',
-												strokeLinejoin: 'round',
+												fill: "none",
+												stroke: "currentcolor",
+												strokeWidth: "2",
+												strokeLinecap: "round",
+												strokeLinejoin: "round",
 											}}
 											d="M1974.5,718l24.9,12.5c2.7,1.4,6,1.4,8.7,0l24.9-12.5"
-										></path>{' '}
+										></path>{" "}
 										<ellipse
 											id="Ellipse_56"
 											className="st0"
 											style={{
-												fill: 'none',
-												stroke: 'currentcolor',
-												strokeWidth: '2',
-												strokeLinecap: 'round',
-												strokeLinejoin: 'round',
+												fill: "none",
+												stroke: "currentcolor",
+												strokeWidth: "2",
+												strokeLinecap: "round",
+												strokeLinejoin: "round",
 											}}
 											cx="1950.4"
 											cy="678.9"
 											rx="4.7"
 											ry="5.1"
-										></ellipse>{' '}
+										></ellipse>{" "}
 										<line
 											id="Line_69"
 											className="st0"
 											style={{
-												fill: 'none',
-												stroke: 'currentcolor',
-												strokeWidth: '2',
-												strokeLinecap: 'round',
-												strokeLinejoin: 'round',
+												fill: "none",
+												stroke: "currentcolor",
+												strokeWidth: "2",
+												strokeLinecap: "round",
+												strokeLinejoin: "round",
 											}}
 											x1="1945.6"
 											y1="693.4"
 											x2="1984.2"
 											y2="693.4"
-										></line>{' '}
+										></line>{" "}
 										<line
 											id="Line_70"
 											className="st0"
 											style={{
-												fill: 'none',
-												stroke: 'currentcolor',
-												strokeWidth: '2',
-												strokeLinecap: 'round',
-												strokeLinejoin: 'round',
+												fill: "none",
+												stroke: "currentcolor",
+												strokeWidth: "2",
+												strokeLinecap: "round",
+												strokeLinejoin: "round",
 											}}
 											x1="1945.6"
 											y1="702"
 											x2="1984.2"
 											y2="702"
-										></line>{' '}
+										></line>{" "}
 										<line
 											id="Line_71"
 											className="st0"
 											style={{
-												fill: 'none',
-												stroke: 'currentcolor',
-												strokeWidth: '2',
-												strokeLinecap: 'round',
-												strokeLinejoin: 'round',
+												fill: "none",
+												stroke: "currentcolor",
+												strokeWidth: "2",
+												strokeLinecap: "round",
+												strokeLinejoin: "round",
 											}}
 											x1="1945.6"
 											y1="709.7"
 											x2="1966.2"
 											y2="709.7"
-										></line>{' '}
+										></line>{" "}
 										<line
 											id="Line_72"
 											className="st0"
 											style={{
-												fill: 'none',
-												stroke: 'currentcolor',
-												strokeWidth: '2',
-												strokeLinecap: 'round',
-												strokeLinejoin: 'round',
+												fill: "none",
+												stroke: "currentcolor",
+												strokeWidth: "2",
+												strokeLinecap: "round",
+												strokeLinejoin: "round",
 											}}
 											x1="1945.6"
 											y1="727.7"

@@ -1,10 +1,10 @@
-'use client';
-import Heading from '@/components/Heading';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
-import React, { type FC, useRef } from 'react';
+"use client";
+import Heading from "@/components/Heading";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import React, { type FC, useRef } from "react";
 
 interface CoreServicesProps {
 	services: ServiceServices[];
@@ -16,15 +16,15 @@ const CoreServices: FC<CoreServicesProps> = ({ services }) => {
 	gsap.registerPlugin(useGSAP);
 
 	useGSAP(() => {
-		gsap.from('.core_servicesSection', {
+		gsap.from(".core_servicesSection", {
 			y: 100,
 			opacity: 0,
 			stagger: 0.2,
-			ease: 'power4.out',
+			ease: "power4.out",
 			scrollTrigger: {
 				trigger: CoreServices.current,
-				scroller: 'main',
-				start: '30% 80%',
+				scroller: "main",
+				start: "30% 80%",
 			},
 		});
 	});
@@ -36,7 +36,7 @@ const CoreServices: FC<CoreServicesProps> = ({ services }) => {
 		>
 			<section className="relative h-fit w-full">
 				<section className="flex h-auto w-full flex-col items-center px-5 py-20  xl:px-0 xl:py-28 ">
-					<Heading heading={'Services'} subHeading={'We are Mastery in '} />
+					<Heading heading={"Services"} subHeading={"We are Mastery in "} />
 					{/* <h1>We can offer</h1> */}
 					<section className="h-auto w-full xl:mt-10 ">
 						{/* <section className="w-full h-full flex flex-col md:flex-row md:flex-wrap  lg:gap-0  text-secondary border-tertiary "> */}
@@ -59,9 +59,9 @@ const CoreServices: FC<CoreServicesProps> = ({ services }) => {
 										</div>
 										<Image
 											src={items.image}
-											width={'1080'}
-											height={'0'}
-											alt={''}
+											width={"1080"}
+											height={"0"}
+											alt={""}
 											className=" absolute top-0 -z-10 w-full opacity-30 transition duration-300 ease-in-out xl:absolute xl:scale-75 xl:opacity-0 xl:group-hover:visible xl:group-hover:scale-100 xl:group-hover:opacity-30 "
 										/>
 									</div>

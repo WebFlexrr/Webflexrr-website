@@ -1,4 +1,4 @@
-import { client } from '@/config/SanityClient';
+import { client } from "@/config/SanityClient";
 
 const getAllPlans = async (): Promise<getAllPlans[]> =>
 	await client.fetch(
@@ -13,7 +13,7 @@ const getAllPlans = async (): Promise<getAllPlans[]> =>
   }
 }`,
 		{},
-		{ next: { tags: ['plans'], revalidate: 3600 } }
+		{ next: { tags: ["plans"], revalidate: 3600 } }
 	);
 
 export default getAllPlans;

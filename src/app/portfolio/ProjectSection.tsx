@@ -1,8 +1,8 @@
-import Heading from '@/components/Heading';
-import ProjectItem from '@/app/portfolio/ProjectItem';
-import getAllProjects from '@/lib/getProjects';
-import Link from 'next/link';
-import React from 'react';
+import Heading from "@/components/Heading";
+import ProjectItem from "@/app/portfolio/ProjectItem";
+import getAllProjects from "@/lib/getProjects";
+import Link from "next/link";
+import React from "react";
 
 const ProjectSection = async (): Promise<React.JSX.Element> => {
 	const projects = await getAllProjects();
@@ -252,7 +252,7 @@ const ProjectSection = async (): Promise<React.JSX.Element> => {
               </section>
             </section>
           </section> */}
-					<Heading heading={'Gallery'} subHeading={'Our Project Portfolio'} />
+					<Heading heading={"Gallery"} subHeading={"Our Project Portfolio"} />
 
 					{/* Main Section */}
 					<section className="flex h-auto w-full flex-col gap-3 md:gap-4 lg:gap-6 ">
@@ -263,7 +263,7 @@ const ProjectSection = async (): Promise<React.JSX.Element> => {
 										key={item.id}
 										className="col-span-1  aspect-[4/3.3]  w-full "
 									>
-										<Link href={item.projectLink ?? ' '} target="_blank">
+										<Link href={item.projectLink ?? " "} target="_blank">
 											<ProjectItem ProjectItemData={item} />
 										</Link>
 									</div>
@@ -272,7 +272,7 @@ const ProjectSection = async (): Promise<React.JSX.Element> => {
 										key={item.id}
 										className="col-span-1 aspect-[4/3.3] w-full md:col-span-2 md:aspect-[16/6.4] "
 									>
-										<Link href={item.projectLink ?? ''} target="_blank">
+										<Link href={item.projectLink ?? ""} target="_blank">
 											<ProjectItem ProjectItemData={item} />
 										</Link>
 									</div>
@@ -282,7 +282,7 @@ const ProjectSection = async (): Promise<React.JSX.Element> => {
 										className="aspect-[4/3.3] w-full grid-cols-1 md:col-span-2  md:aspect-[16/6.4] lg:col-span-3  lg:aspect-[16/4]"
 									>
 										<div className="h-full w-full ">
-											<Link href={item.projectLink ?? ''} target="_blank">
+											<Link href={item.projectLink ?? ""} target="_blank">
 												<ProjectItem ProjectItemData={item} />
 											</Link>
 										</div>

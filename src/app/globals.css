@@ -24,7 +24,7 @@
 
 @layer base {
 	body {
-		@apply h-screen w-full bg-white font-inter dark:text-white dark:bg-black;
+		@apply h-screen w-full bg-white font-inter dark:bg-black dark:text-white;
 	}
 	p {
 		@apply text-lg leading-[26.24px] text-paragraph dark:bg-black;

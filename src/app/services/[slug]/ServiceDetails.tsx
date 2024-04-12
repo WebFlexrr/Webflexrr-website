@@ -1,9 +1,9 @@
-import Process from '@/app/services/[slug]/Process';
-import Image from 'next/image';
-import React, { type FC } from 'react';
-import Core_Services from './CoreServices';
-import PulseCircle from '@/components/ui/PulseCircle';
-import Technologies from './Technologies';
+import Process from "@/app/services/[slug]/Process";
+import Image from "next/image";
+import React, { type FC } from "react";
+import Core_Services from "./CoreServices";
+import PulseCircle from "@/components/ui/PulseCircle";
+import Technologies from "./Technologies";
 
 interface ServiceDetailsProps {
 	serviceDetails: findServiceByName;
@@ -34,8 +34,8 @@ const ServiceDetails: FC<ServiceDetailsProps> = async ({ serviceDetails }) => {
 							<div className=" flex w-full items-center justify-center px-6 xl:w-[40%] ">
 								<Image
 									src={serviceDetails.image}
-									width={'1000'}
-									height={'0'}
+									width={"1000"}
+									height={"0"}
 									alt={serviceDetails.name}
 									className=" w-full drop-shadow-lg  "
 								/>

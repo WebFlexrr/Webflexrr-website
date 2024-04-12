@@ -20,6 +20,7 @@
     "@gsap/react": "^2.1.0",
     "@hookform/resolvers": "^3.3.3",
     "@nextui-org/react": "^2.2.10",
+    "@portabletext/react": "^3.0.18",
     "@sanity/image-url": "^1.0.2",
     "@studio-freight/react-lenis": "^0.0.46",
     "@tabler/icons-react": "^3.1.0",

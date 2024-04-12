@@ -1,4 +1,4 @@
-import { client } from '@/config/SanityClient';
+import { client } from "@/config/SanityClient";
 
 const getAllProjects = async (): Promise<getAllProjects[]> =>
 	await client.fetch(
@@ -14,7 +14,7 @@ const getAllProjects = async (): Promise<getAllProjects[]> =>
   projectLink
 }`,
 		{},
-		{ next: { tags: ['project'], revalidate: 3600 } }
+		{ next: { tags: ["project"], revalidate: 3600 } }
 	);
 
 export default getAllProjects;

@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 
 const ProjectDetail = (): React.JSX.Element => {
 	return (
@@ -65,11 +65,11 @@ const ProjectDetail = (): React.JSX.Element => {
 							<section className="h-full w-1/2 border">
 								<Image
 									src={
-										'https://gaaga.wpengine.com/wp-content/uploads/2023/06/portfolio-1.jpg'
+										"https://gaaga.wpengine.com/wp-content/uploads/2023/06/portfolio-1.jpg"
 									}
-									width={'1000'}
-									height={'0'}
-									alt={''}
+									width={"1000"}
+									height={"0"}
+									alt={""}
 									className="h-full w-full"
 								/>
 							</section>

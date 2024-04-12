@@ -4,6 +4,7 @@ import Heading from "@/components/Heading";
 import { BlogItem } from "@/components/ui/blog-Item";
 import Footer from "@/components/Footer";
 import { Button, Card, CardBody, Image } from "@nextui-org/react";
+import { getAllBlogs } from "@/lib/getBlog";
 
 export const metadata: Metadata = {
 	title: {
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
 	},
 	description: "This is Plan Page of Webflexrr Digital Services",
 };
-const Blog = (): React.JSX.Element => {
+const Blog = async (): Promise<React.JSX.Element> => {
+	const blogs = await getAllBlogs();
+	console.log(blogs);
 	return (
 		<>
 			<main className=" mx-auto h-auto w-full max-w-7xl overflow-x-hidden py-16 lg:py-28 ">
@@ -22,7 +25,7 @@ const Blog = (): React.JSX.Element => {
 						"We write about everything from design to deployment to get your website shipped and ready to go!"
 					}
 				/>
-				<section className="mt-20 grid w-full grid-cols-3 gap-10">
+				<section className="mt-32 grid w-full grid-cols-3 gap-10">
 					<Card className=" col-span-2 flex w-full ">
 						<CardBody>
 							<section className="flex w-full gap-5">
@@ -65,6 +68,7 @@ const Blog = (): React.JSX.Element => {
 										src={
 											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
 										}
+										alt={"Thisn is how to make a portfolio"}
 									/>
 									<section className="flex  flex-col">
 										<h6 className="text-lg font-bold">
@@ -83,6 +87,7 @@ const Blog = (): React.JSX.Element => {
 										src={
 											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
 										}
+										alt={"Thisn is how to make a portfolio"}
 									/>
 									<section className="flex  flex-col">
 										<h6 className="text-lg font-bold">
@@ -101,6 +106,7 @@ const Blog = (): React.JSX.Element => {
 										src={
 											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
 										}
+										alt={"Thisn is how to make a portfolio"}
 									/>
 									<section className="flex  flex-col">
 										<h6 className="text-lg font-bold">
@@ -112,8 +118,19 @@ const Blog = (): React.JSX.Element => {
 						</Card>
 					</section>
 				</section>
-				<section className="mt-20 grid w-full grid-cols-3 gap-10">
-					<BlogItem
+				<section className="mt-24 grid w-full grid-cols-3 gap-10">
+					{blogs?.map((blog) => (
+						<BlogItem
+							key={blog._id}
+							image={blog.thumbnail}
+							title={blog.title}
+							slug={blog.slug}
+							description={blog.description}
+							date={blog._createdAt}
+						/>
+					))}
+
+					{/* <BlogItem
 						image={
 							"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
 						}
@@ -124,28 +141,7 @@ const Blog = (): React.JSX.Element => {
 						}
 						date={"2nd Nov,2023"}
 					/>
-					<BlogItem
-						image={
-							"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
-						}
-						title={"Amazing Tracing Beam Effect with Tailwind css"}
-						slug={"slug"}
-						description={
-							"dAmazing Tracing Beam Effect with Tailwind css ,wdbna ddwad ad wada"
-						}
-						date={"2nd Nov,2023"}
-					/>
-					<BlogItem
-						image={
-							"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
-						}
-						title={"Amazing Tracing Beam Effect with Tailwind css"}
-						slug={"slug"}
-						description={
-							"dAmazing Tracing Beam Effect with Tailwind css ,wdbna ddwad ad wada"
-						}
-						date={"2nd Nov,2023"}
-					/>
+					*/}
 				</section>
 			</main>
 			<Footer />

@@ -1,12 +1,12 @@
-'use client';
-import Image from 'next/image';
-import React, { type FC } from 'react';
-import Heading from '../../../components/Heading';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
-import SwiperButtonComponent from '../../../components/SwiperButtonComponent';
+"use client";
+import Image from "next/image";
+import React, { type FC } from "react";
+import Heading from "../../../components/Heading";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
+import SwiperButtonComponent from "../../../components/SwiperButtonComponent";
 
 interface ProcessProps {
 	process: ServiceProcedure[];
@@ -18,8 +18,8 @@ const Process: FC<ProcessProps> = ({ process }) => {
 				<section className="mx-auto h-auto w-full max-w-[100rem] ">
 					<section className="flex h-fit w-full flex-col">
 						<Heading
-							heading={'Procedure'}
-							subHeading={'Our on Going process steps '}
+							heading={"Procedure"}
+							subHeading={"Our on Going process steps "}
 						/>
 						<Swiper
 							slidesPerView={1}
@@ -54,9 +54,9 @@ const Process: FC<ProcessProps> = ({ process }) => {
 											<div className="h-[340px] w-full  pb-11">
 												<Image
 													src={steps.image}
-													width={'1000'}
-													height={'0'}
-													alt={''}
+													width={"1000"}
+													height={"0"}
+													alt={""}
 													className="h-full w-full"
 												/>
 											</div>
@@ -90,9 +90,9 @@ const Process: FC<ProcessProps> = ({ process }) => {
 											<div className="h-[340px] w-full  pt-11">
 												<Image
 													src={steps.image}
-													width={'1000'}
-													height={'0'}
-													alt={''}
+													width={"1000"}
+													height={"0"}
+													alt={""}
 													className="h-full w-full"
 												/>
 											</div>

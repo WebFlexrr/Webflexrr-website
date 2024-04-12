@@ -1,11 +1,11 @@
-import ServiceDetails from '@/app/services/[slug]/ServiceDetails';
-import Footer from '@/components/Footer';
-import MainTitle from '@/components/MainTitle';
-import SocialCarousel from '@/components/ui/SocialPostsCarousel/SocialCarousel';
+import ServiceDetails from "@/app/services/[slug]/ServiceDetails";
+import Footer from "@/components/Footer";
+import MainTitle from "@/components/MainTitle";
+import SocialCarousel from "@/components/ui/SocialPostsCarousel/SocialCarousel";
 
-import { findServiceByName } from '@/lib/getServices';
-import { type Metadata } from 'next';
-import React, { type FC } from 'react';
+import { findServiceByName } from "@/lib/getServices";
+import { type Metadata } from "next";
+import React, { type FC } from "react";
 
 interface PageProps {
 	params: {
@@ -21,8 +21,8 @@ export const generateMetadata = async ({
 	// eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
 	if (!serviceDetails) {
 		return {
-			title: 'Not Found',
-			description: 'This page is not Found',
+			title: "Not Found",
+			description: "This page is not Found",
 		};
 	}
 
@@ -32,8 +32,8 @@ export const generateMetadata = async ({
 		alternates: {
 			canonical: `/services/${params.slug}`,
 			languages: {
-				'en-US': `/en-US/services/${params.slug}`,
-				'de-DE': `/de-DE/services/${params.slug}`,
+				"en-US": `/en-US/services/${params.slug}`,
+				"de-DE": `/de-DE/services/${params.slug}`,
 			},
 		},
 	};

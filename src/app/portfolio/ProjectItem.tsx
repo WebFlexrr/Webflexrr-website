@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React, { type FC } from 'react';
+import Image from "next/image";
+import React, { type FC } from "react";
 
 interface ProjectItemProps {
 	ProjectItemData: getAllProjects;
@@ -12,9 +12,9 @@ const ProjectItem: FC<ProjectItemProps> = ({ ProjectItemData }) => {
 				<div className="relative h-full w-full after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:border-b-[2.4rem] after:border-primary after:transition-all after:duration-500 after:ease-in-out lg:after:border-0 lg:group-hover:after:border-b-[2.4rem] lg:group-hover:after:border-primary xl:group-hover:after:border-[2.5rem]">
 					<Image
 						src={ProjectItemData.preview}
-						width={'1000'}
-						height={'0'}
-						alt={''}
+						width={"1000"}
+						height={"0"}
+						alt={""}
 						className="relative h-full w-full object-cover"
 					/>
 				</div>

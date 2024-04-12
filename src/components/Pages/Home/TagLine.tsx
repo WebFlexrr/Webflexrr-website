@@ -1,8 +1,8 @@
-'use client';
-import React, { useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+"use client";
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 const TagLine = (): React.JSX.Element => {
 	const tagLine = useRef<HTMLDivElement>(null);
@@ -10,26 +10,26 @@ const TagLine = (): React.JSX.Element => {
 	gsap.registerPlugin(useGSAP);
 
 	useGSAP(() => {
-		gsap.from('.tagLineContent', {
+		gsap.from(".tagLineContent", {
 			x: -90,
 			duration: 1.3,
 			opacity: 0,
-			ease: 'power2.out',
+			ease: "power2.out",
 			scrollTrigger: {
 				trigger: tagLine.current,
-				scroller: '.main',
-				start: 'top 90%',
+				scroller: ".main",
+				start: "top 90%",
 			},
 		});
-		gsap.from('.tagLineContent2', {
+		gsap.from(".tagLineContent2", {
 			x: 90,
 			duration: 1,
 			opacity: 0,
-			ease: 'power2.out',
+			ease: "power2.out",
 			scrollTrigger: {
 				trigger: tagLine.current,
-				scroller: '.main',
-				start: '40% 90%',
+				scroller: ".main",
+				start: "40% 90%",
 			},
 		});
 	});

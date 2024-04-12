@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import { BsTwitterX } from 'react-icons/bs';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { BsTwitterX } from "react-icons/bs";
 import {
 	FaLinkedinIn,
 	FaFacebookF,
 	FaInstagram,
 	FaYoutube,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const Footer = (): React.JSX.Element => {
 	return (
@@ -18,10 +18,10 @@ const Footer = (): React.JSX.Element => {
 					<section className="h-auto w-full px-5 md:w-full lg:w-1/2">
 						<div className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-5">
 							<Image
-								src={'/logos/logo2.png'}
-								width={'120'}
-								height={'0'}
-								alt={''}
+								src={"/logos/logo2.png"}
+								width={"120"}
+								height={"0"}
+								alt={""}
 								className=""
 							/>
 							<div>
@@ -68,14 +68,14 @@ const Footer = (): React.JSX.Element => {
 									</span>
 									<ul>
 										<li>
-											<Link href={'tel:+917044785308'}>
+											<Link href={"tel:+917044785308"}>
 												<p className="text-[15px] transition duration-500 ease-in-out md:text-base lg:hover:text-primary">
 													+91 - 7044785308
 												</p>
 											</Link>
 										</li>
 										<li>
-											<Link href={'tel:+919674128921'}>
+											<Link href={"tel:+919674128921"}>
 												<p className="text-[15px] transition duration-500 ease-in-out md:text-base lg:hover:text-primary">
 													+91 - 9674128921
 												</p>
@@ -87,7 +87,7 @@ const Footer = (): React.JSX.Element => {
 									<span className="text-[15px] transition duration-500 ease-in-out md:text-base lg:hover:text-primary">
 										<p>Mail :</p>
 									</span>
-									<Link href={'mailto:contact@webflexrr.com'} target="_blank">
+									<Link href={"mailto:contact@webflexrr.com"} target="_blank">
 										<p className="text-[15px] transition duration-500 ease-in-out md:text-base lg:hover:text-primary">
 											contact@webflexrr.com
 										</p>
@@ -99,14 +99,14 @@ const Footer = (): React.JSX.Element => {
 									</span>
 									<ul>
 										<li>
-											<Link href={'https://wa.me/917044785308'} target="_blank">
+											<Link href={"https://wa.me/917044785308"} target="_blank">
 												<p className="text-[15px] transition duration-500 ease-in-out md:text-base lg:hover:text-primary">
 													+91 - 7044785308
 												</p>
 											</Link>
 										</li>
 										<li>
-											<Link href={'https://wa.me/919038007312'} target="_blank">
+											<Link href={"https://wa.me/919038007312"} target="_blank">
 												<p className="text-[15px] transition duration-500 ease-in-out md:text-base lg:hover:text-primary">
 													+91 - 9038007312
 												</p>
@@ -171,7 +171,7 @@ const Footer = (): React.JSX.Element => {
 						<ul className="py-auto  flex w-fit flex-wrap items-center gap-2">
 							<li>
 								<Link
-									href={'/home'}
+									href={"/home"}
 									className="rounded-full  border border-transparent px-2 py-1 text-secondary transition duration-500 ease-in-out hover:border-black hover:bg-primary"
 									aria-label="Home"
 								>
@@ -180,7 +180,7 @@ const Footer = (): React.JSX.Element => {
 							</li>
 							<li>
 								<Link
-									href={'/services'}
+									href={"/services"}
 									className="rounded-full  border border-transparent px-2 py-1 text-secondary transition duration-500 ease-in-out hover:border-black hover:bg-primary"
 									aria-label="Services"
 								>
@@ -189,7 +189,7 @@ const Footer = (): React.JSX.Element => {
 							</li>
 							<li>
 								<Link
-									href={'/portfolio'}
+									href={"/portfolio"}
 									className="rounded-full  border border-transparent px-2 py-1 text-secondary transition duration-500 ease-in-out hover:border-black hover:bg-primary"
 									aria-label="Portfolio"
 								>
@@ -198,7 +198,7 @@ const Footer = (): React.JSX.Element => {
 							</li>
 							<li>
 								<Link
-									href={'/teams'}
+									href={"/teams"}
 									className="rounded-full  border border-transparent px-2 py-1 text-secondary transition duration-500 ease-in-out hover:border-black hover:bg-primary"
 									aria-label="Our teams"
 								>
@@ -207,7 +207,7 @@ const Footer = (): React.JSX.Element => {
 							</li>
 							<li>
 								<Link
-									href={'/plans'}
+									href={"/plans"}
 									className="rounded-full  border border-transparent px-2 py-1 text-secondary transition duration-500 ease-in-out hover:border-black hover:bg-primary"
 									aria-label="Out Plans"
 								>
@@ -216,7 +216,7 @@ const Footer = (): React.JSX.Element => {
 							</li>
 							<li>
 								<Link
-									href={'/contact'}
+									href={"/contact"}
 									className="rounded-full  border border-transparent px-2 py-1 text-secondary transition duration-500 ease-in-out hover:border-black hover:bg-primary"
 									aria-label="Contact Us"
 								>
@@ -230,7 +230,7 @@ const Footer = (): React.JSX.Element => {
 						<ul className="mx-auto flex w-fit gap-6">
 							<li>
 								<Link
-									href={'https://twitter.com/WebFlexRR'}
+									href={"https://twitter.com/WebFlexRR"}
 									target="_blank"
 									className="border-grey1 flex  h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
 									aria-label="Twitter"
@@ -240,7 +240,7 @@ const Footer = (): React.JSX.Element => {
 							</li>
 							<li>
 								<Link
-									href={'https://www.youtube.com/@webflexrr'}
+									href={"https://www.youtube.com/@webflexrr"}
 									target="_blank"
 									className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
 									aria-label="Linkedin"
@@ -250,7 +250,7 @@ const Footer = (): React.JSX.Element => {
 							</li>
 							<li>
 								<Link
-									href={'https://www.linkedin.com/company/webflexrr'}
+									href={"https://www.linkedin.com/company/webflexrr"}
 									target="_blank"
 									className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
 									aria-label="Linkedin"
@@ -261,7 +261,7 @@ const Footer = (): React.JSX.Element => {
 							<li>
 								<Link
 									href={
-										'https://www.facebook.com/profile.php?id=61553639945217'
+										"https://www.facebook.com/profile.php?id=61553639945217"
 									}
 									target="_blank"
 									className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
@@ -272,7 +272,7 @@ const Footer = (): React.JSX.Element => {
 							</li>
 							<li>
 								<Link
-									href={'https://www.instagram.com/webflexrr'}
+									href={"https://www.instagram.com/webflexrr"}
 									target="_blank"
 									className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
 									aria-label="Instagram"

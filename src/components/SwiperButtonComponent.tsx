@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { useSwiper } from 'swiper/react';
+"use client";
+import React from "react";
+import { useSwiper } from "swiper/react";
 
 const SwiperButtonComponent = (): React.JSX.Element => {
 	const swiper = useSwiper();

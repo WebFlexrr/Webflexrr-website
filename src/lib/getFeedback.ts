@@ -1,4 +1,4 @@
-import { client } from '@/config/SanityClient';
+import { client } from "@/config/SanityClient";
 
 const getAllFeedback = async (): Promise<getAllFeedback[]> =>
 	await client.fetch(
@@ -13,7 +13,7 @@ const getAllFeedback = async (): Promise<getAllFeedback[]> =>
       _type
     }`,
 		{},
-		{ next: { tags: ['feedback'], revalidate: 3600 } }
+		{ next: { tags: ["feedback"], revalidate: 3600 } }
 	);
 
 export default getAllFeedback;

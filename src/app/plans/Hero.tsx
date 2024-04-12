@@ -1,6 +1,6 @@
-'use client';
-import Heading from '@/components/Heading';
-import React, { type FC, useState } from 'react';
+"use client";
+import Heading from "@/components/Heading";
+import React, { type FC, useState } from "react";
 
 interface HeroProps {
 	plans: getAllPlans[];
@@ -15,8 +15,8 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
 					<section className=" mx-auto flex h-auto w-full max-w-[100rem] flex-col ">
 						{/* Heading */}
 						<Heading
-							heading={'Budget Friendly'}
-							subHeading={'Choose Your Best Plan'}
+							heading={"Budget Friendly"}
+							subHeading={"Choose Your Best Plan"}
 						/>
 
 						<section className=" mb-16 flex h-auto w-full  gap-6  ">
@@ -28,7 +28,7 @@ const Hero: FC<HeroProps> = ({ plans }): React.JSX.Element => {
 											<li key={item.id}>
 												<button
 													className={`h-[4rem] w-[11rem] border-2 border-secondary ${
-														item.name === 'All-in-One' ? 'bg-primary' : ' '
+														item.name === "All-in-One" ? "bg-primary" : " "
 													}  flex items-center justify-center text-base text-secondary transition duration-500 ease-in-out hover:bg-primary`}
 													onClick={() => {
 														setPlan(item);

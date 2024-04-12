@@ -1,20 +1,20 @@
-'use client';
-import Image from 'next/image';
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import PulseCircle from '@/components/ui/PulseCircle';
+"use client";
+import Image from "next/image";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import PulseCircle from "@/components/ui/PulseCircle";
 
 const schema = yup.object({
-	firstName: yup.string().required('First Name is Required'),
-	lastName: yup.string().required('Last Name is Required'),
+	firstName: yup.string().required("First Name is Required"),
+	lastName: yup.string().required("Last Name is Required"),
 	email: yup
 		.string()
-		.email('Email format is not valid')
-		.required('Email is Required'),
-	companyName: yup.string().required('Company Name is Required'),
-	additionalMessage: yup.string().required('Message is Required'),
+		.email("Email format is not valid")
+		.required("Email is Required"),
+	companyName: yup.string().required("Company Name is Required"),
+	additionalMessage: yup.string().required("Message is Required"),
 });
 
 type FormInput = yup.InferType<typeof schema>;
@@ -26,11 +26,11 @@ const ContactUs = (): React.JSX.Element => {
 		formState: { errors },
 	} = useForm<FormInput>({
 		defaultValues: {
-			firstName: '',
-			lastName: '',
-			email: '',
-			companyName: '',
-			additionalMessage: '',
+			firstName: "",
+			lastName: "",
+			email: "",
+			companyName: "",
+			additionalMessage: "",
 		},
 		resolver: yupResolver(schema),
 	});
@@ -43,18 +43,18 @@ const ContactUs = (): React.JSX.Element => {
 			template_params: {
 				from_name: data.firstName,
 				from_email: data.email,
-				to_name: 'Tejodeep',
+				to_name: "Tejodeep",
 				message: data.additionalMessage,
 			},
 		};
 
 		try {
 			const response = await fetch(
-				'https://api.emailjs.com/api/v1.0/email/send',
+				"https://api.emailjs.com/api/v1.0/email/send",
 				{
-					method: 'POST',
+					method: "POST",
 					headers: {
-						'Content-Type': 'application/json',
+						"Content-Type": "application/json",
 					},
 					body: JSON.stringify(formData),
 				}
@@ -67,16 +67,16 @@ const ContactUs = (): React.JSX.Element => {
 		}
 	};
 	return (
-		<section id={'contact'} className=" h-auto w-full lg:py-36">
+		<section id={"contact"} className=" h-auto w-full lg:py-36">
 			<section className=" h-auto w-full lg:h-[55rem]">
 				<section className="flex h-full w-full flex-col lg:flex-row">
 					<section className=" relative h-[40rem] w-full lg:h-full lg:w-[45%] xl:w-[35%]  ">
 						<Image
-							src={'/assets/contact-form.png'}
-							width={'1000'}
-							height={'0'}
+							src={"/assets/contact-form.png"}
+							width={"1000"}
+							height={"0"}
 							className="h-full w-full object-cover"
-							alt={''}
+							alt={""}
 						/>
 						{/* <div className="absolute bottom-0 w-full h-[120px] flex justify-center bg-gradient-to-t from-sky-500 to-indigo-500  ">
               <section className=" h-full border flex gap-12 justify-center text-primary">
@@ -127,7 +127,7 @@ const ContactUs = (): React.JSX.Element => {
 											id="firstName"
 											className="w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
 											placeholder="First Name"
-											{...register('firstName')}
+											{...register("firstName")}
 										/>
 										<p>{errors.firstName?.message}</p>
 									</span>
@@ -137,7 +137,7 @@ const ContactUs = (): React.JSX.Element => {
 											id="lastName"
 											className="h-fit w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
 											placeholder="Last Name"
-											{...register('lastName')}
+											{...register("lastName")}
 										/>
 										<p>{errors.lastName?.message}</p>
 									</span>
@@ -147,7 +147,7 @@ const ContactUs = (): React.JSX.Element => {
 											id="email"
 											className="w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
 											placeholder="Your Email"
-											{...register('email')}
+											{...register("email")}
 										/>
 										<p>{errors.email?.message}</p>
 									</span>
@@ -157,7 +157,7 @@ const ContactUs = (): React.JSX.Element => {
 											id="companyName"
 											className="w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
 											placeholder="Company Name"
-											{...register('companyName')}
+											{...register("companyName")}
 										/>
 										<p>{errors.companyName?.message}</p>
 									</span>
@@ -167,7 +167,7 @@ const ContactUs = (): React.JSX.Element => {
 										rows={4}
 										placeholder="Additional Message"
 										className="h-32 w-full resize-y border-b border-paragraph bg-transparent py-[15px] text-[16px] text-paragraph focus:outline-none"
-										{...register('additionalMessage')}
+										{...register("additionalMessage")}
 									/>
 									<p>{errors.additionalMessage?.message}</p>
 									<button

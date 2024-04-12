@@ -1,14 +1,14 @@
-'use client';
-import React, { type FC } from 'react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+"use client";
+import React, { type FC } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface MainTitleProps {
 	heading: string;
 }
 const MainTitle: FC<MainTitleProps> = ({ heading }) => {
 	const pathname = usePathname();
-	const titlePathname = pathname.split('/').join(' / ');
+	const titlePathname = pathname.split("/").join(" / ");
 	return (
 		<section className=" relative h-auto w-full">
 			<div className=" flex  h-auto w-full justify-center bg-background3 px-8 md:px-5 xl:pt-0">
@@ -16,7 +16,7 @@ const MainTitle: FC<MainTitleProps> = ({ heading }) => {
 					<section className="flex h-auto w-fit flex-col  items-center gap-4 md:items-start">
 						<h1>{heading}</h1>
 						<p className="">
-							<Link href={'/'} className="text-primary">
+							<Link href={"/"} className="text-primary">
 								Home
 							</Link>
 							{titlePathname}

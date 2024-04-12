@@ -1,4 +1,4 @@
-import { getAllServices } from '@/lib/getServices';
+import { getAllServices } from "@/lib/getServices";
 
 const sitemap = async (): Promise<
 	Array<{
@@ -6,7 +6,7 @@ const sitemap = async (): Promise<
 		lastModified: Date;
 	}>
 > => {
-	const baseUrl = 'https://www.webflexrr.com';
+	const baseUrl = "https://www.webflexrr.com";
 
 	const services = await getAllServices();
 
