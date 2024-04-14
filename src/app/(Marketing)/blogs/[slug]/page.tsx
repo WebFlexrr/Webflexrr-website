@@ -1,7 +1,5 @@
 import React from "react";
-
 import { TracingBeam } from "@/components/ui/tracing-beam";
-
 import Footer from "@/components/Footer";
 import { getSingleBlog } from "@/lib/getBlog";
 import { PortableText } from "@portabletext/react";
@@ -27,7 +25,6 @@ const Blog = async ({
 							className="w-full "
 							alt={blogData.title}
 						/>
-
 						<PortableText
 							value={blogData.content}
 							components={PortableTextComponents}

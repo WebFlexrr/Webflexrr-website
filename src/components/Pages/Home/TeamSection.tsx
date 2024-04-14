@@ -3,7 +3,7 @@ import React from "react";
 import TeamSwiper from "@/components/ui/Hero/TeamSwiper";
 import getAllManagementData from "@/lib/getManagement";
 
-const OurTeams = async (): Promise<React.JSX.Element> => {
+const TeamSection = async (): Promise<React.JSX.Element> => {
 	const allTeamsDetails = await getAllManagementData();
 
 	return (
@@ -21,4 +21,4 @@ const OurTeams = async (): Promise<React.JSX.Element> => {
 	);
 };
 
-export default OurTeams;
+export default TeamSection;

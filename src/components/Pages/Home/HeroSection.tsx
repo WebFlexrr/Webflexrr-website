@@ -2,7 +2,7 @@ import { DotBackgroundDemo } from "@/components/ui/dot-background";
 
 import React from "react";
 
-const Home2 = (): React.JSX.Element => {
+const HeroSection = (): React.JSX.Element => {
 	return (
 		<section id={"home"} className="relative  w-full pt-16 lg:pt-28 ">
 			<DotBackgroundDemo />
@@ -11,4 +11,4 @@ const Home2 = (): React.JSX.Element => {
 	);
 };
 
-export default Home2;
+export default HeroSection;

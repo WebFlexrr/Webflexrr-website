@@ -19,7 +19,7 @@ const schema = yup.object({
 
 type FormInput = yup.InferType<typeof schema>;
 
-const ContactUs = (): React.JSX.Element => {
+const ContactSection = (): React.JSX.Element => {
 	const {
 		register,
 		handleSubmit,
@@ -187,4 +187,4 @@ const ContactUs = (): React.JSX.Element => {
 	);
 };
 
-export default ContactUs;
+export default ContactSection;

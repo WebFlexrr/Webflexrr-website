@@ -1,7 +1,7 @@
 import { Image } from "@nextui-org/react";
 import React from "react";
 
-const Banner2 = (): React.JSX.Element => {
+const BannerSection = (): React.JSX.Element => {
 	return (
 		<section className=" h-auto w-full py-20 ">
 			<section className=" mx-auto flex h-auto w-full max-w-7xl flex-col gap-10 ">
@@ -70,4 +70,4 @@ const Banner2 = (): React.JSX.Element => {
 	);
 };
 
-export default Banner2;
+export default BannerSection;

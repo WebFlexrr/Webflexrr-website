@@ -129,19 +129,6 @@ const Blog = async (): Promise<React.JSX.Element> => {
 							date={blog._createdAt}
 						/>
 					))}
-
-					{/* <BlogItem
-						image={
-							"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
-						}
-						title={"Amazing Tracing Beam Effect with Tailwind css"}
-						slug={"slug"}
-						description={
-							"dAmazing Tracing Beam Effect with Tailwind css ,wdbna ddwad ad wada"
-						}
-						date={"2nd Nov,2023"}
-					/>
-					*/}
 				</section>
 			</main>
 			<Footer />

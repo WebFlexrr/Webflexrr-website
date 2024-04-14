@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+import { Image, Divider } from "@nextui-org/react";
+
 import Link from "next/link";
 import React from "react";
 import { BsTwitterX } from "react-icons/bs";
@@ -11,7 +13,8 @@ import {
 
 const Footer = (): React.JSX.Element => {
 	return (
-		<footer className="h-auto w-full bg-background2 text-tertiary ">
+		<footer className="mx-auto  h-auto w-full max-w-6xl text-tertiary ">
+			<Divider className="mt-4" />
 			<section className="h-auto w-full py-[70px]">
 				<section className="mx-auto flex w-full max-w-[100rem] flex-row flex-wrap gap-10 lg:flex-row lg:gap-0">
 					{/* left */}
@@ -115,8 +118,8 @@ const Footer = (): React.JSX.Element => {
 									</ul>
 								</li>
 								{/* <li>
-                  <p>Working Hours : 8hrs</p>
-                </li> */}
+		          <p>Working Hours : 8hrs</p>
+		        </li> */}
 							</ul>
 						</address>
 					</section>

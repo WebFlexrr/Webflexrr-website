@@ -2,7 +2,7 @@ import Heading from "@/components/Heading";
 import ServiceSection2 from "@/components/ui/Hero/ServiceSection2";
 import React from "react";
 
-const Services2 = (): React.JSX.Element => {
+const ServicesSection = (): React.JSX.Element => {
 	return (
 		<section className=" services h-auto w-full " id={"services"}>
 			<section className=" h-auto w-full py-20 lg:pt-60">
@@ -16,4 +16,4 @@ const Services2 = (): React.JSX.Element => {
 	);
 };
 
-export default Services2;
+export default ServicesSection;

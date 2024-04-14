@@ -1,21 +1,13 @@
-// import Hero from '@/components/Pages/Home/Hero';
-// import TagLine from '@/components/Pages/Home/TagLine';
-import OurTeams from "@/components/Pages/Home/OurTeams";
-import ContactUs from "@/components/Pages/Home/ContactUs";
-import Gallery2 from "@/components/Pages/Home/Gallery2";
-import SocialCarousel from "@/components/ui/SocialPostsCarousel/SocialCarousel";
-import Process2 from "@/components/Pages/Home/Process2";
 import getAllPlans from "@/lib/getPlans";
 
-// import Services from "@/components/Pages/Home/Services";
-import Home2 from "@/components/Pages/Home/Home2";
-import Banner2 from "@/components/Pages/Home/Banner2";
-
-import Services2 from "@/components/Pages/Home/Services2";
-import Plans from "@/components/Pages/Home/Plans";
-import Footer from "@/components/Footer";
-
-// import Gallery from '@/components/Pages/Home/Gallery';
+import HeroSection from "@/components/Pages/Home/HeroSection";
+import BannerSection from "@/components/Pages/Home/BannerSection";
+import ServicesSection from "@/components/Pages/Home/ServicesSection";
+import GallerySection from "@/components/Pages/Home/GallerySection";
+import PlanSection from "@/components/Pages/Home/PlanSection";
+import TeamSection from "@/components/Pages/Home/TeamSection";
+import ContactSection from "@/components/Pages/Home/ContactSection";
+import Footer2 from "@/components/Footer2";
 
 const Home = async (): Promise<React.JSX.Element> => {
 	const getPlans = await getAllPlans();
@@ -23,22 +15,19 @@ const Home = async (): Promise<React.JSX.Element> => {
 	return (
 		<>
 			<main className=" overflow-x-hidden ">
-				<Home2 />
-				{/* <Banner /> */}
-				<Banner2 />
-				<Services2 />
-				{/* <Services /> */}
-				{/* <Gallery /> */}
-				<Gallery2 />
-				<Process2 />
-				<Plans plans={allPlans} />
-				{/* <TagLine /> */}
-				<OurTeams />
-				<ContactUs />
+				<HeroSection />
+				<BannerSection />
+				<ServicesSection />
+				<GallerySection />
+				{/* <Process2 /> */}
+				<PlanSection plans={allPlans} />
+				<TeamSection />
+				<ContactSection />
 				{/* <FeedBack /> */}
-				<SocialCarousel />
+				{/* <SocialCarousel /> */}
+				{/* <Footer /> */}
+				<Footer2 />
 			</main>
-			<Footer />
 		</>
 	);
 };

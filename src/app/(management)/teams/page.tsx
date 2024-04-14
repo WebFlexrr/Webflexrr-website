@@ -1,7 +1,7 @@
-import Hero from "@/app/(management)/teams/Hero";
 import Footer from "@/components/Footer";
 import MainTitle from "@/components/MainTitle";
 import type { Metadata } from "next";
+import Hero from "./Hero";
 
 export const metadata: Metadata = {
 	title: "Our team",

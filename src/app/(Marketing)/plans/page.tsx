@@ -1,9 +1,8 @@
-import Hero from "@/app/plans/Hero";
-
 import MainTitle from "@/components/MainTitle";
 import getAllPlans from "@/lib/getPlans";
 import React from "react";
 import type { Metadata } from "next";
+import Hero from "./Hero";
 
 export const metadata: Metadata = {
 	title: {

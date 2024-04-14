@@ -98,8 +98,8 @@ export const products = [
 	},
 ];
 
-const Gallery2 = (): React.JSX.Element => {
+const GallerySection = (): React.JSX.Element => {
 	return <HeroParallax products={products} />;
 };
 
-export default Gallery2;
+export default GallerySection;
