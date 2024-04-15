@@ -8,6 +8,7 @@ import PlanSection from "@/components/Pages/Home/PlanSection";
 import TeamSection from "@/components/Pages/Home/TeamSection";
 import ContactSection from "@/components/Pages/Home/ContactSection";
 import Footer2 from "@/components/Footer2";
+// import Footer from "@/components/Footer";
 
 const Home = async (): Promise<React.JSX.Element> => {
 	const getPlans = await getAllPlans();

@@ -32,6 +32,7 @@ const Blog = async (): Promise<React.JSX.Element> => {
 								<section className="w-1/2 ">
 									<Image
 										className="aspect-video"
+										alt="acernity"
 										src={
 											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
 										}

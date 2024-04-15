@@ -246,7 +246,7 @@ const Footer = (): React.JSX.Element => {
 									href={"https://www.youtube.com/@webflexrr"}
 									target="_blank"
 									className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
-									aria-label="Linkedin"
+									aria-label="Youtube"
 								>
 									<FaYoutube className="h-[16px] w-[16px] " />
 								</Link>

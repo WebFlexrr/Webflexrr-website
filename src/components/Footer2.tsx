@@ -1,7 +1,7 @@
 import { Button, Divider, Image } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
-import { FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
 
@@ -9,7 +9,7 @@ const Footer2 = (): React.JSX.Element => {
 	return (
 		<footer className="mx-auto h-auto w-full max-w-7xl   text-tertiary ">
 			<Divider />
-			<section className=" flex flex-col gap-6 py-20 ">
+			<section className=" flex flex-col gap-10 py-20 ">
 				<section className="w-full">
 					<Image
 						src={"/logos/logo.png"}
@@ -20,41 +20,60 @@ const Footer2 = (): React.JSX.Element => {
 					/>
 				</section>
 				<section className="flex h-auto w-full  ">
-					<section className="h-auto w-full  px-5 md:w-full lg:w-1/3">
-						<div className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-5">
-							<div>
-								<p className="text-sm">
-									© 2024 Aceternity Solutions Private Limited. All rights
-									reserved.
-								</p>
-							</div>
+					<section className="h-auto w-full px-5 py-2 md:w-full lg:w-1/3">
+						<div className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-5 text-black">
 							<div className=" flex w-full flex-wrap gap-5 sm:flex-nowrap xl:gap-2">
 								<input
 									type="text"
 									title="Message"
+									placeholder="Email for news letters"
 									className="w-full border-b bg-transparent text-secondary focus:border-secondary focus:outline-none  xl:w-[60%]"
 								/>
-								{/* <button
-									type="button"
-									title="button"
-									className=" font-base h-fit w-fit rounded-full border border-secondary bg-primary px-3 py-3 text-center text-[24px] leading-[24px] text-secondary transition duration-500 ease-in-out after:w-full md:border-transparent  md:bg-transparent md:hover:border-secondary md:hover:bg-primary lg:h-11 lg:w-[30%]"
-								>
-									Subscribe
-								</button> */}
-								<Button variant="ghost" color="default">
+								<Button radius="full" color="primary" variant="ghost">
 									Subscribe
 								</Button>
+							</div>
+							<div className="space-y-2">
+								<section>
+									<p className="text-sm">
+										&#169; 2024 Webflexrr Solutions Private Limited. All rights
+										reserved.
+									</p>
+								</section>
+								{/* <span>Kolkata, West Bengal, India</span> */}
+								<section>
+									<Link
+										className="text-sm"
+										href={"mailto:contact@webflexrr.com"}
+										target="_blank"
+									>
+										contact@webflexrr.com
+									</Link>
+								</section>
+								<section className="text-sm">
+									<span>WhatsApp :</span>
+									<ul>
+										<li>
+											<Link href={"https://wa.me/917044785308"} target="_blank">
+												+91 - 7044785308
+											</Link>
+										</li>
+										<li>
+											<Link href={"https://wa.me/919038007312"} target="_blank">
+												+91 - 9038007312
+											</Link>
+										</li>
+									</ul>
+								</section>
 							</div>
 						</div>
 					</section>
 					<section className="flex gap-8 py-2 text-sm">
 						<section className=" flex flex-col gap-4    text-black">
-							<span className="font-bold text-black">Company</span>
+							<span className="font-bold text-black">Pages</span>
 							<ul className=" space-y-4 ">
 								<li>
-									<Link href={"/#services"} className="p-0">
-										Services
-									</Link>
+									<Link href={"/#services"}>Services</Link>
 								</li>
 								<li>
 									<Link href={"/#Projects"}>Projects</Link>
@@ -132,25 +151,56 @@ const Footer2 = (): React.JSX.Element => {
 							<span className="font-bold text-black">Stay Connected</span>
 							<ul className=" space-y-4 ">
 								<li>
-									<Link href={"/"} className="flex items-center gap-2">
+									<Link
+										href={"https://twitter.com/WebFlexRR"}
+										target="_blank"
+										aria-label="Twitter"
+										className="flex items-center gap-2"
+									>
 										<FaXTwitter className="text-xl font-light" />
 										X.com
 									</Link>
 								</li>
 								<li>
-									<Link href={"/"} className="flex items-center gap-2">
+									<Link
+										href={"/"}
+										target="_blank"
+										aria-label="Youtube"
+										className="flex items-center gap-2"
+									>
 										<FaYoutube className="text-xl font-light" />
 										Youtube
 									</Link>
 								</li>
 								<li>
-									<Link href={"/"} className="flex items-center gap-2">
+									<Link
+										href={"/"}
+										target="_blank"
+										aria-label="Linkedin"
+										className="flex items-center gap-2"
+									>
 										<FaLinkedin className="text-xl font-light" />
 										LinkedIn
 									</Link>
 								</li>
+								<li>
+									<Link
+										href={"/"}
+										target="_blank"
+										aria-label="Facebook"
+										className="flex items-center gap-2"
+									>
+										<FaFacebookF className="text-xl font-light" />
+										Facebook
+									</Link>
+								</li>
 								<li className="flex items-center gap-2">
-									<Link href={"/"} className="flex items-center gap-2">
+									<Link
+										href={"/"}
+										target="_blank"
+										aria-label="Instagram"
+										className="flex items-center gap-2"
+									>
 										<LuInstagram className="text-xl font-light" />
 										Instagram
 									</Link>
