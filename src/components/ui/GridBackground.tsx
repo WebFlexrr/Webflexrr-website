@@ -1,9 +1,9 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-export function DotBackgroundDemo(): React.JSX.Element {
+export function GridBackground(): React.JSX.Element {
 	return (
-		<div className="relative flex h-[50rem] w-full  items-center justify-center bg-white bg-dot-black/[0.5] dark:bg-black dark:bg-dot-white/[0.2]">
+		<div className="relative flex h-[50rem] w-full  items-center justify-center bg-white bg-grid-black/[0.2] dark:bg-black dark:bg-grid-white/[0.2]">
 			{/* Radial gradient for the container to give a faded look */}
 			<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
 			<section className="mx-auto flex h-full w-full max-w-7xl flex-col items-center gap-10 text-center sm:px-5 md:px-14 xl:px-20">
