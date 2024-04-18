@@ -21,6 +21,7 @@ import {
 } from "@nextui-org/react";
 // import { CiCamera, CiMobile3 } from 'react-icons/ci';
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { useRouter } from "next/navigation";
 // import { SiCreatereactapp } from 'react-icons/si';
 // import { useRouter } from 'next/navigation';
 
@@ -30,12 +31,12 @@ const menuItems = [
 	"Teams",
 	"Plans",
 	"Blog",
-	"Contact Us",
+	"Contact",
 ];
 
 const NavbarSection = (): React.JSX.Element => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	// const router = useRouter();
+	const router = useRouter();
 	return (
 		<section>
 			<Navbar
@@ -45,7 +46,7 @@ const NavbarSection = (): React.JSX.Element => {
 				isMenuOpen={isMenuOpen}
 				onMenuOpenChange={setIsMenuOpen}
 				maxWidth={"full"}
-				className=" fixed mt-6  flex w-full max-w-80 animate-visible-from-down rounded-full border-2 border-black bg-white text-white antialiased drop-shadow-xl ease-in-out-expo lg:mx-auto lg:max-w-6xl   "
+				className=" fixed mx-auto   mt-6 flex w-full max-w-96  animate-visible-from-down rounded-full border-2 border-black bg-white text-white antialiased drop-shadow-xl ease-in-out-expo sm:max-w-xl lg:max-w-3xl xl:max-w-6xl dark:bg-black   "
 			>
 				{/* <div className=" flex  justify-between"> */}
 				<NavbarContent>
@@ -63,7 +64,7 @@ const NavbarSection = (): React.JSX.Element => {
 					</NavbarBrand>
 				</NavbarContent>
 
-				<NavbarContent className="hidden gap-5  sm:flex" justify="center">
+				<NavbarContent className="hidden gap-5  xl:flex" justify="center">
 					{/* <Dropdown>
 					<NavbarItem>
 					<DropdownTrigger>
@@ -185,9 +186,11 @@ const NavbarSection = (): React.JSX.Element => {
 						</Link>
 					</NavbarItem>
 				</NavbarContent>
-				<NavbarContent justify={"end"}>
-					<ThemeSwitcher />
-					<NavbarItem className="hidden lg:flex">
+				<NavbarContent justify={"end"} className="hidden xl:flex">
+					<span>
+						<ThemeSwitcher />
+					</span>
+					<NavbarItem>
 						<Button
 							variant={"shadow"}
 							color={"primary"}
@@ -199,30 +202,35 @@ const NavbarSection = (): React.JSX.Element => {
 						</Button>
 					</NavbarItem>
 				</NavbarContent>
-				<NavbarContent className=" md:hidden" justify="end">
+				<NavbarContent className=" xl:hidden" justify="end">
 					<NavbarMenuToggle
-						aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-						className="md:hidden "
+						// aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+						className="text-black dark:text-white"
+						isSelected={isMenuOpen}
 					/>
 				</NavbarContent>
 				{/* </div> */}
 				<NavbarMenu className="mt-10 rounded-t-3xl p-5">
 					{menuItems.map((item, index) => (
 						<NavbarMenuItem key={`${item}-${index}`}>
-							<Link
+							<Button
 								color={
 									index === 2
 										? "primary"
 										: index === menuItems.length - 1
 											? "danger"
-											: "foreground"
+											: "secondary"
 								}
 								className="w-full"
-								href={`/#${item.toLowerCase()}`}
+								// href={`/#${item.toLowerCase()}`}
 								size="lg"
+								onClick={() => {
+									setIsMenuOpen(false);
+									router.push(`/#${item.toLowerCase()}`);
+								}}
 							>
 								{item.toLowerCase()}
-							</Link>
+							</Button>
 						</NavbarMenuItem>
 					))}
 				</NavbarMenu>
