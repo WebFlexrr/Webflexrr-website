@@ -11,7 +11,7 @@ interface TeamSwiperProps {
 
 const TeamSwiper: FC<TeamSwiperProps> = ({ allTeamsDetails }) => {
 	return (
-		<div className="grid h-auto w-full grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2 2xl:grid-cols-3 ">
+		<div className="grid h-auto w-full grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-4 2xl:grid-cols-4 ">
 			{allTeamsDetails.map((personDetails) => (
 				<TeamPicture personDetails={personDetails} key={personDetails._id} />
 			))}

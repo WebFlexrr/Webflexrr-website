@@ -27,6 +27,8 @@ const config: Config = {
 			fontFamily: {
 				prompt: "Prompt, sans-serif",
 				inter: "Inter, sans-serif",
+				"schibsted-grotesk": "Schibsted Grotesk, sans-serif",
+				"dm-sans": "DM Sans, sans-serif",
 			},
 			colors: {
 				primary: "var(--color-primary)",
@@ -49,6 +51,7 @@ const config: Config = {
 					"visible-from-up 1s cubic-bezier(0.785, 0.135, 0.150, 0.860)",
 				"visible-from-down":
 					"visible-from-down 1s cubic-bezier(0.785, 0.135, 0.150, 0.860)",
+				scroll: "scroll 10s ease-in-out",
 			},
 			transitionTimingFunction: {
 				"in-out-circ": "cubic-bezier(0.785, 0.135, 0.150, 0.860)",
@@ -76,6 +79,14 @@ const config: Config = {
 				"visible-from-right": {
 					"0%": { translate: "30% 0 0", opacity: "0" },
 					"100%": { translate: "0 0 0", opacity: "1" },
+				},
+				scroll: {
+					"0%": {
+						translate: "-100% 0 0",
+					},
+					"100%": {
+						transform: "100% 0 0",
+					},
 				},
 			},
 		},

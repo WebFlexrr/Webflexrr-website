@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -33,7 +34,7 @@
 		@apply text-center text-4xl font-semibold leading-[39px] tracking-tight text-secondary sm:text-5xl  sm:leading-[55px] md:text-[60px]  md:leading-[70px] xl:text-6xl   xl:leading-[82px] dark:text-white;
 	}
 	h2 {
-		@apply text-center text-3xl font-semibold leading-[41px] text-secondary sm:text-[40px] lg:text-5xl lg:leading-[66px];
+		@apply text-center text-3xl font-semibold leading-[41px] font-schibsted-grotesk text-secondary sm:text-[40px] lg:text-6xl lg:leading-[66px];
 	}
 	h3 {
 		@apply text-center text-4xl font-semibold leading-[41.76px] text-secondary sm:text-5xl sm:leading-[58px];

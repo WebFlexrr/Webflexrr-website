@@ -5,12 +5,9 @@ const getAllPlans = async (): Promise<getAllPlans[]> =>
 		`*[_type=="plans"]{
   id,
   name,
-  plans[]{
-    _key,
-    name,
-    months,
-    service[]
-  }
+  description,
+  price,
+  service
 }`,
 		{},
 		{ next: { tags: ["plans"], revalidate: 3600 } }

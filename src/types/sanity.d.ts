@@ -96,14 +96,10 @@ interface getBlog {
 	_updatedAt: string;
 }
 
-interface Plans {
-	_key: string;
-	name: string;
-	months: number;
-	service: string[];
-}
 interface getAllPlans {
 	id: number;
-	name: name;
-	plans: Plans[];
+	name: string;
+	description: string;
+	price: number;
+	service: string[];
 }
