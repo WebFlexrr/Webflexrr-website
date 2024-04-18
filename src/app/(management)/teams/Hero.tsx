@@ -1,5 +1,5 @@
 import Heading from "@/components/Heading";
-import TeamPicture from "@/components/TeamPicture";
+import TeamPicture from "@/components/ui/TeamPicture";
 import getAllManagementData from "@/lib/getManagement";
 import React from "react";
 

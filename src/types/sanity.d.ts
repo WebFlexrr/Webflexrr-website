@@ -65,8 +65,8 @@ interface getAllPosts {
 interface getAllManagementData {
 	_id: string;
 	name: string;
-	slug: string;
 	profileImage: string;
+	about: string;
 	position: string;
 	linkedIn: string | null;
 	twitter: string | null;

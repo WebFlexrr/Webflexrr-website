@@ -5,9 +5,9 @@ const getAllManagementData = async (): Promise<getAllManagementData[]> =>
 		`*[_type=="management"]{
       _id,
       name,
-      "slug":slug.current,
       "profileImage":profileImage.asset->url,
       position,
+      about,
       linkedIn,
       twitter,
       youtube,
