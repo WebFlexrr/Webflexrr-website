@@ -1,9 +1,6 @@
-// import { useGSAP } from "@gsap/react";
 import { Card, CardBody, CardHeader, Image } from "@nextui-org/react";
-// import gsap from "gsap";
 import Link from "next/link";
 import React, { type FC } from "react";
-
 import {
 	FaInstagram,
 	FaLinkedin,
