@@ -1,5 +1,3 @@
-import getAllPlans from "@/lib/getPlans";
-
 import HeroSection from "@/components/Pages/Home/HeroSection";
 import BannerSection from "@/components/Pages/Home/BannerSection";
 import ServicesSection from "@/components/Pages/Home/ServicesSection";
@@ -13,8 +11,6 @@ import WorksFlowSection from "@/components/Pages/Home/WorksFlowSection";
 // import Footer from "@/components/Footer";
 
 const Home = async (): Promise<React.JSX.Element> => {
-	const getPlans = await getAllPlans();
-	const allPlans = getPlans.sort((a, b) => a.id - b.id);
 	return (
 		<>
 			<main className=" overflow-x-hidden ">
@@ -25,7 +21,7 @@ const Home = async (): Promise<React.JSX.Element> => {
 				{/* <GallerySection /> */}
 				{/* <Process2 /> */}
 				<WorksFlowSection />
-				<PlanSection plans={allPlans} />
+				<PlanSection />
 				<TeamSection />
 				<ContactSection />
 				{/* <FeedBack /> */}

@@ -1,20 +1,19 @@
 import Heading from "@/components/Heading";
+import getAllPlans from "@/lib/getPlans";
 import {
 	Button,
 	Card,
 	CardBody,
 	CardFooter,
 	CardHeader,
-	// Tabs,
-	// Tab,
+	Link,
 } from "@nextui-org/react";
-import React, { type FC } from "react";
+import React from "react";
 import { FaCircleCheck } from "react-icons/fa6";
-interface HeroProps {
-	plans: getAllPlans[];
-}
-const PlanSection: FC<HeroProps> = ({ plans }): React.JSX.Element => {
-	// const [plan] = useState<getAllPlans[]>(plans);
+
+const PlanSection = async (): Promise<React.JSX.Element> => {
+	const getPlans = await getAllPlans();
+	const allPlans = getPlans.sort((a, b) => a.id - b.id);
 
 	return (
 		<section id="plans" className="h-auto w-full ">
@@ -27,174 +26,62 @@ const PlanSection: FC<HeroProps> = ({ plans }): React.JSX.Element => {
 							"Simple pricing that makes sense for your business. No hidden fees."
 						}
 					/>
-
 					<section className=" mb-16 mt-10 flex h-auto w-full flex-col  gap-6  ">
 						{/* Selection Pannel */}
-						{/* <Tabs className=" mx-auto ">
-							<Tab
-								key="monthly"
-								title="Monthly"
-								className="text-xl font-medium"
-							>
-								<section className=" h-auto w-full sm:px-10 md:px-0">
-									<section className=" grid w-full grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:gap-20">
-										{plan.plans.map((item) => (
-											<Card key={item._key} className="px-3 py-5">
-												{/* heading */}
-						{/* <CardHeader className=" flex h-auto w-full flex-col items-center justify-center gap-6 pb-[3rem] ">
-													<section className="w-full">
-														<span>Pages</span>
-													</section>
-													<section className="w-full">
-														<span>Pause or cancel anytime</span>
-														<h4>$3499/mo</h4>
-													</section>
-													<section className="">
-														<p className="text-sm">
-															Best for early-stage startups and businesses that
-															need a marketing side and ongoing developmental
-															work.
-														</p>
-													</section>
-												</CardHeader> */}
-						{/* mid Section */}
-						{/* <CardBody>
-													<ul className=" flex h-auto w-full flex-col items-center gap-4  text-start text-base leading-[28.8px]">
-														{item.service.map((service, index) => (
-															<li
-																className="flex w-full gap-6 text-sm "
-																key={index}
-															>
-																<div className="flex h-4 w-4 items-center justify-center text-lg text-primary">
-																	<FaCircleCheck />
-																</div>
-																{service}
-															</li>
-														))}
-													</ul>
-												</CardBody> */}
-						{/* button */}
-						{/* <CardFooter>
-													<Button
-														type="submit"
-														color="primary"
-														variant="bordered"
-														fullWidth
-														className="mt-6 rounded-lg"
-													>
-														Buy Now
-													</Button>
-												</CardFooter>
-											</Card>
-										))}
-									</section>
-								</section>
-							</Tab>
-							<Tab key="yearly" title="Yearly" className="text-xl font-medium">
-								<section className=" h-auto w-full sm:px-10 md:px-0">
-									<section className=" grid w-full grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:gap-20">
-										{plan.plans.map((item) => (
-											<Card key={item._key} className="px-3 py-5"> */}
-						{/* heading */}
-						{/* <CardHeader className=" flex h-auto w-full flex-col items-center justify-center gap-6 pb-[3rem] ">
-													<section className="w-full">
-														<span>Pages</span>
-													</section>
-													<section className="w-full">
-														<span>Pause or cancel anytime</span>
-														<h4>$3499/mo</h4>
-													</section>
-													<section className="">
-														<p className="text-sm">
-															Best for early-stage startups and businesses that
-															need a marketing side and ongoing developmental
-															work.
-														</p>
-													</section>
-												</CardHeader> */}
-						{/* mid Section */}
-						{/* <CardBody>
-													<ul className=" flex h-auto w-full flex-col items-center gap-4  text-start text-base leading-[28.8px]">
-														{item.service.map((service, index) => (
-															<li
-																className="flex w-full gap-6 text-sm "
-																key={index}
-															>
-																<div className="flex h-4 w-4 items-center justify-center text-lg text-primary">
-																	<FaCircleCheck />
-																</div>
-																{service}
-															</li>
-														))}
-													</ul>
-												</CardBody> */}
-						{/* button */}
-						{/* <CardFooter>
-													<Button
-														type="submit"
-														color="primary"
-														variant="bordered"
-														fullWidth
-														className="mt-6 rounded-lg"
-													>
-														Buy Now
-													</Button>
-												</CardFooter>
-											</Card>
-										))}
-									</section>
-								</section>
-							</Tab> 
-						</Tabs> */}
-						<section className=" h-auto w-full sm:px-10 md:px-0">
-							<section className=" grid w-full grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:gap-20">
-								{plans.map((item) => (
-									<Card key={item.id} className="px-3 py-5">
-										{/* heading */}
-										<CardHeader className=" flex h-auto w-full flex-col items-center justify-center gap-6 pb-[3rem] ">
-											<section className="w-full">
-												<span>{item.name}</span>
-											</section>
-											<section className="w-full">
-												<span>Pause or cancel anytime</span>
-												<h4>${item.price}/month</h4>
-											</section>
-											<section className="">
-												<p className="text-sm">{item.description}</p>
-											</section>
-										</CardHeader>
-										{/* mid Section */}
-										<CardBody>
-											<ul className=" flex h-auto w-full flex-col items-center gap-4  text-start text-base leading-[28.8px]">
-												{item.service?.map((service, index) => (
-													<li
-														className="flex w-full gap-6 text-sm "
-														key={index}
-													>
-														<div className="flex h-4 w-4 items-center justify-center text-lg text-primary">
-															<FaCircleCheck />
-														</div>
-														{service}
-													</li>
-												))}
-											</ul>
-										</CardBody>
-										{/* button */}
-										<CardFooter>
-											<Button
-												type="submit"
-												color="primary"
-												variant="bordered"
-												fullWidth
-												className="mt-6 rounded-lg"
-											>
-												Buy Now
-											</Button>
-										</CardFooter>
-									</Card>
-								))}
-							</section>
+						<section className=" mx-auto grid h-auto w-full max-w-lg grid-cols-1 gap-10 sm:px-10 xl:max-w-none xl:grid-cols-3 xl:px-0 2xl:gap-20">
+							{allPlans.map((item) => (
+								<Card
+									key={item.id}
+									className="border border-pink-400 px-3 py-5"
+								>
+									{/* heading */}
+									<CardHeader className=" flex w-full flex-col items-center justify-center gap-6 pb-[3rem] ">
+										<section className="w-full">
+											<span>{item.name}</span>
+										</section>
+										<section className="w-full">
+											<span>Pause or cancel anytime</span>
+											<h4>${item.price}/month</h4>
+										</section>
+										<section className="">
+											<p className="text-sm">{item.description}</p>
+										</section>
+									</CardHeader>
+									{/* mid Section */}
+									<CardBody>
+										<ul className=" flex h-auto w-full flex-col items-center gap-4  text-start text-base leading-[28.8px]">
+											{item.service?.map((service, index) => (
+												<li className="flex w-full gap-6 text-sm " key={index}>
+													<div className="flex h-4 w-4 items-center justify-center text-lg text-primary">
+														<FaCircleCheck />
+													</div>
+													{service}
+												</li>
+											))}
+										</ul>
+									</CardBody>
+									<CardFooter>
+										<Button
+											type="submit"
+											color="primary"
+											variant="bordered"
+											fullWidth
+											className="mt-6 rounded-lg"
+										>
+											Buy Now
+										</Button>
+									</CardFooter>
+								</Card>
+							))}
 						</section>
+					</section>
+					<section className="flex h-auto w-full flex-col items-center  justify-center gap-5">
+						<div className=" text-sm text-black ">
+							Prices are per month per project.
+						</div>
+						<Link className=" cursor-pointer rounded-full border px-4 py-2 text-sm font-bold text-black">
+							✨ See all feature and compare plans
+						</Link>
 					</section>
 				</section>
 			</section>
