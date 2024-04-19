@@ -7,7 +7,7 @@ export function WavyBackgroundDemo(): React.JSX.Element {
 	return (
 		<WavyBackground
 			backgroundFill="white"
-			speed={"fast"}
+			speed={"slow"}
 			blur={5}
 			className="mx-auto  max-w-7xl pb-40"
 		>

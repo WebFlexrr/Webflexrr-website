@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Heading from "@/components/Heading";
 import { BlogItem } from "@/components/ui/blog-Item";
-import Footer from "@/components/Footer";
+
 import { Button, Card, CardBody, Image } from "@nextui-org/react";
 import { getAllBlogs } from "@/lib/getBlog";
 
@@ -132,7 +132,6 @@ const Blog = async (): Promise<React.JSX.Element> => {
 					))}
 				</section>
 			</main>
-			<Footer />
 		</>
 	);
 };

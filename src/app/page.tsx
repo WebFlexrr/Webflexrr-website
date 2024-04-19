@@ -5,9 +5,9 @@ import ServicesSection from "@/components/Pages/Home/ServicesSection";
 import PlanSection from "@/components/Pages/Home/PlanSection";
 import TeamSection from "@/components/Pages/Home/TeamSection";
 import ContactSection from "@/components/Pages/Home/ContactSection";
-import Footer2 from "@/components/Footer2";
 // import ProjectsSection from "@/components/Pages/Home/ProjectsSection";
 import WorksFlowSection from "@/components/Pages/Home/WorksFlowSection";
+// import ProjectsSection from "@/components/Pages/Home/ProjectsSection";
 // import Footer from "@/components/Footer";
 
 const Home = async (): Promise<React.JSX.Element> => {
@@ -27,7 +27,6 @@ const Home = async (): Promise<React.JSX.Element> => {
 				{/* <FeedBack /> */}
 				{/* <SocialCarousel /> */}
 				{/* <Footer /> */}
-				<Footer2 />
 			</main>
 		</>
 	);

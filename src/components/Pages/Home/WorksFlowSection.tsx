@@ -68,7 +68,7 @@ const WorksFlowSection = (): React.JSX.Element => {
 							}}
 							viewport={{
 								// amount:"all"
-								margin: "-400px",
+								margin: "-300px",
 							}}
 							className=" flex w-full rounded-xl border-2 border-black p-6"
 						>
@@ -106,7 +106,6 @@ const WorksFlowSection = (): React.JSX.Element => {
 								</div>
 							</section>
 						</motion.section>
-
 						{/* Second Step */}
 						<motion.section
 							initial={{ opacity: 0 }}
@@ -115,7 +114,7 @@ const WorksFlowSection = (): React.JSX.Element => {
 							}}
 							viewport={{
 								// amount:"all"
-								margin: "-400px",
+								margin: "-300px",
 							}}
 							className=" flex w-full rounded-xl border-2 border-black p-6"
 						>
@@ -211,7 +210,7 @@ const WorksFlowSection = (): React.JSX.Element => {
 							}}
 							viewport={{
 								// amount:"all"
-								margin: "-400px",
+								margin: "-300px",
 							}}
 							className=" flex w-full rounded-xl border-2 border-black p-6"
 						>

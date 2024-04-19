@@ -27,6 +27,7 @@ export function HoverBorderGradient({
 	const [hovered, setHovered] = useState<boolean>(false);
 	const [direction, setDirection] = useState<Direction>("TOP");
 
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const rotateDirection = (currentDirection: Direction): Direction => {
 		const directions: Direction[] = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
 		const currentIndex = directions.indexOf(currentDirection);
@@ -57,7 +58,7 @@ export function HoverBorderGradient({
 				clearInterval(interval);
 			};
 		}
-	}, [hovered]);
+	}, [duration, hovered, rotateDirection]);
 	return (
 		<Tag
 			onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {

@@ -4,6 +4,7 @@ import { type ReactNode } from "react";
 import { Providers } from "./providers";
 import NavbarSection from "@/components/ui/Navbar/NavbarSection";
 import SmoothScrolling from "@/components/SmoothScrolling";
+import Footer2 from "@/components/Footer2";
 
 export const metadata: Metadata = {
 	title: {
@@ -85,6 +86,7 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 					<Providers>
 						<NavbarSection />
 						{children}
+						<Footer2 />
 					</Providers>
 				</SmoothScrolling>
 			</body>
