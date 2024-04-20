@@ -5,27 +5,73 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@layer base {
+/* @layer base {
 	:root {
-		/* --color-primary: #dd4242; */
+		
 		--color-primary: #16ff00;
 		--color-secondary: #222831;
 		--color-tertiary: #b0b0b0;
 		--color-subHeading: #717171;
-		/* --color-paragraph: #b5b5b5; */
+		
 		--color-paragraph: #4e4f5f;
-		/* --color-paragraph: black; */
+		
 		--color-background: #f9ecec;
 
 		--color-background2: #faeed1;
-		/* --color-background3: #fefae0; */
+		
 		--color-background3: #f5f7f8;
+	}
+}  */
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 240 10% 3.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 240 10% 3.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 240 10% 3.9%;
+		--primary: 142.1 76.2% 36.3%;
+		--primary-foreground: 355.7 100% 97.3%;
+		--secondary: 240 4.8% 95.9%;
+		--secondary-foreground: 240 5.9% 10%;
+		--muted: 240 4.8% 95.9%;
+		--muted-foreground: 240 3.8% 46.1%;
+		--accent: 240 4.8% 95.9%;
+		--accent-foreground: 240 5.9% 10%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 240 5.9% 90%;
+		--input: 240 5.9% 90%;
+		--ring: 142.1 76.2% 36.3%;
+		--radius: 1rem;
+	}
+
+	.dark {
+		--background: 20 14.3% 4.1%;
+		--foreground: 0 0% 95%;
+		--card: 24 9.8% 10%;
+		--card-foreground: 0 0% 95%;
+		--popover: 0 0% 9%;
+		--popover-foreground: 0 0% 95%;
+		--primary: 142.1 70.6% 45.3%;
+		--primary-foreground: 144.9 80.4% 10%;
+		--secondary: 240 3.7% 15.9%;
+		--secondary-foreground: 0 0% 98%;
+		--muted: 0 0% 15%;
+		--muted-foreground: 240 5% 64.9%;
+		--accent: 12 6.5% 15.1%;
+		--accent-foreground: 0 0% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 85.7% 97.3%;
+		--border: 240 3.7% 15.9%;
+		--input: 240 3.7% 15.9%;
+		--ring: 142.4 71.8% 29.2%;
 	}
 }
 
 @layer base {
 	body {
-		@apply h-screen w-full bg-white font-inter dark:bg-black dark:text-white;
+		@apply h-screen w-full font-inter bg-primary dark:text-white;
 	}
 	p {
 		@apply text-lg leading-[26.24px] text-paragraph dark:bg-black;
