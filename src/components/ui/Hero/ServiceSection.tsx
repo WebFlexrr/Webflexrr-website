@@ -1,15 +1,16 @@
 "use client";
-import React, { type FC } from "react";
+import React from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Button, Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
 
-interface ServiceSectionProps {
-	data: getAllServices[];
-}
+// interface ServiceSectionProps {
+// 	data: getAllServices[];
+// }
 
-const ServiceSection: FC<ServiceSectionProps> = ({ data }) => {
+// const ServiceSection: FC<ServiceSectionProps> = () => {
+const ServiceSection = (): React.JSX.Element => {
 	gsap.registerPlugin(ScrollTrigger);
 	gsap.registerPlugin(useGSAP);
 

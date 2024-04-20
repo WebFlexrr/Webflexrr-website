@@ -1,10 +1,10 @@
 import React from "react";
 import ServiceSection from "@/components/ui/Hero/ServiceSection";
-import { getAllServices } from "@/lib/getServices";
+// import { getAllServices } from "@/lib/getServices";
 import Heading from "@/components/Heading";
 
 const Services = async (): Promise<React.JSX.Element> => {
-	const services = await getAllServices();
+	// const services = await getAllServices();
 
 	return (
 		<section className=" services h-auto w-full " id={"services"}>
@@ -13,7 +13,7 @@ const Services = async (): Promise<React.JSX.Element> => {
 					heading={"Services"}
 					subHeading={"We handle just about everything!"}
 				/>
-				<ServiceSection data={services} />
+				<ServiceSection />
 			</section>
 		</section>
 	);

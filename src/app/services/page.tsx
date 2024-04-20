@@ -1,7 +1,7 @@
 import HeroServices from "@/app/services/HeroServices";
 import Footer from "@/components/Footer";
 import MainTitle from "@/components/MainTitle";
-import NavbarSection from "@/components/ui/Navbar/NavbarSection";
+import NavbarSection from "@/components/NavbarSection";
 import SocialCarousel from "@/components/ui/SocialPostsCarousel/SocialCarousel";
 import type { Metadata } from "next";
 import React from "react";

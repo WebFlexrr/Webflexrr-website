@@ -1,15 +1,16 @@
-import Process from "@/app/services/[slug]/Process";
-import Image from "next/image";
-import React, { type FC } from "react";
-import Core_Services from "./CoreServices";
+// import Process from "@/app/services/[slug]/Process";
+// import Image from "next/image";
+import React from "react";
+// import Core_Services from "./CoreServices";
 import PulseCircle from "@/components/ui/PulseCircle";
-import Technologies from "./Technologies";
+// import Technologies from "./Technologies";
 
-interface ServiceDetailsProps {
-	serviceDetails: findServiceByName;
-}
+// interface ServiceDetailsProps {
+// 	 serviceDetails: findServiceByName;
+// }
 
-const ServiceDetails: FC<ServiceDetailsProps> = async ({ serviceDetails }) => {
+// const ServiceDetails: FC<ServiceDetailsProps> = async () => {
+const ServiceDetails = async (): Promise<React.JSX.Element> => {
 	return (
 		<section className="h-auto w-full ">
 			<section className="h-auto w-full pb-20 md:px-0 ">
@@ -21,30 +22,30 @@ const ServiceDetails: FC<ServiceDetailsProps> = async ({ serviceDetails }) => {
 								<div className="flex h-[80%] w-full flex-col gap-6 border border-primary p-6 xl:border-y xl:border-l xl:px-20 xl:py-12">
 									<section className="flex w-full gap-4 text-secondary">
 										<PulseCircle />
-										{serviceDetails.name}
+										{/* {serviceDetails.name} */}
 									</section>
 									<section className="h-auto w-full">
-										<h1 className="text-left "> {serviceDetails.name}</h1>
+										{/* <h1 className="text-left "> {serviceDetails.name}</h1> */}
 									</section>
 									<section className="  h-full w-full">
-										<p>{serviceDetails.description}</p>
+										{/* <p>{serviceDetails.description}</p> */}
 									</section>
 								</div>
 							</div>
 							<div className=" flex w-full items-center justify-center px-6 xl:w-[40%] ">
-								<Image
+								{/* <Image
 									src={serviceDetails.image}
 									width={"1000"}
 									height={"0"}
 									alt={serviceDetails.name}
 									className=" w-full drop-shadow-lg  "
-								/>
+								/> */}
 							</div>
 						</section>
 					</section>
-					<Technologies weAreUsing={serviceDetails.weAreUsing} />
+					{/* <Technologies weAreUsing={serviceDetails.weAreUsing} />
 					<Core_Services services={serviceDetails.services} />
-					<Process process={serviceDetails.procedure} />
+					<Process process={serviceDetails.procedure} /> */}
 				</section>
 			</section>
 		</section>

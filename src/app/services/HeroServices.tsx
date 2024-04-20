@@ -1,8 +1,8 @@
-import ServiceItems from "@/app/services/ServiceItems";
-import { getAllServices } from "@/lib/getServices";
+// import ServiceItems from "@/app/services/ServiceItems";
+// import { getAllServices } from "@/lib/getServices";
 
 const HeroServices = async (): Promise<JSX.Element> => {
-	const services = await getAllServices();
+	// const services = await getAllServices();
 	return (
 		<section className="h-auto w-full ">
 			<section className="h-auto w-full px-8 py-20 md:px-5 xl:py-28">
@@ -154,14 +154,14 @@ const HeroServices = async (): Promise<JSX.Element> => {
 					</section>
 
 					<section className=" grid h-auto w-full grid-cols-1 gap-y-14 md:grid-cols-2 md:gap-x-20  lg:gap-14 xl:grid-cols-3 xl:gap-x-[5rem] xl:gap-y-28 ">
-						{services.map((items) => (
+						{/* {services.map((items) => (
 							<ServiceItems
 								key={items._id}
 								title={items.name}
 								image={items.image}
 								slug={items.slug}
 							/>
-						))}
+						))} */}
 					</section>
 				</section>
 			</section>

@@ -1,4 +1,4 @@
-import { getAllServices } from "@/lib/getServices";
+// import { getAllServices } from "@/lib/getServices";
 
 const sitemap = async (): Promise<
 	Array<{
@@ -8,12 +8,12 @@ const sitemap = async (): Promise<
 > => {
 	const baseUrl = "https://www.webflexrr.com";
 
-	const services = await getAllServices();
+	// const services = await getAllServices();
 
-	const serviceUrls = services.map((service) => ({
-		url: `${baseUrl}/services/${service.slug}`,
-		lastModified: service._updatedAt,
-	}));
+	// const serviceUrls = services.map((service) => ({
+	// 	url: `${baseUrl}/services/${service.slug}`,
+	// 	lastModified: service._updatedAt,
+	// }));
 
 	return [
 		{
@@ -28,7 +28,7 @@ const sitemap = async (): Promise<
 			url: `${baseUrl}/projects`,
 			lastModified: new Date(),
 		},
-		...serviceUrls,
+		// ...serviceUrls,
 	];
 };
 

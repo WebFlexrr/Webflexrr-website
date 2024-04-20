@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import MainTitle from "@/components/MainTitle";
 import React from "react";
 import type { Metadata } from "next";
-import NavbarSection from "@/components/ui/Navbar/NavbarSection";
+import NavbarSection from "@/components/NavbarSection";
 
 export const metadata: Metadata = {
 	title: {

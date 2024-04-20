@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { type ReactNode } from "react";
 import { Providers } from "./providers";
-import NavbarSection from "@/components/ui/Navbar/NavbarSection";
+import NavbarSection from "@/components/NavbarSection";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import Footer from "@/components/Footer";
 
