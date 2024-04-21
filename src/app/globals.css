@@ -1,27 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* @layer base {
-	:root {
-		
-		--color-primary: #16ff00;
-		--color-secondary: #222831;
-		--color-tertiary: #b0b0b0;
-		--color-subHeading: #717171;
-		
-		--color-paragraph: #4e4f5f;
-		
-		--color-background: #f9ecec;
-
-		--color-background2: #faeed1;
-		
-		--color-background3: #f5f7f8;
-	}
-}  */
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -71,16 +54,16 @@
 
 @layer base {
 	body {
-		@apply h-screen w-full font-inter bg-primary dark:text-white;
+		@apply font-inter h-screen w-full text-black dark:text-white;
 	}
 	p {
-		@apply text-lg leading-[26.24px] text-paragraph dark:bg-black;
+		@apply text-lg leading-[26.24px] dark:text-white;
 	}
 	h1 {
-		@apply text-center text-4xl font-semibold leading-[39px] tracking-tight text-secondary sm:text-5xl  sm:leading-[55px] md:text-[60px]  md:leading-[70px] xl:text-6xl   xl:leading-[82px] dark:text-white;
+		@apply text-center text-4xl font-semibold leading-[39px] tracking-tight text-black text-secondary sm:text-5xl  sm:leading-[55px] md:text-[60px]  md:leading-[70px] xl:text-6xl   xl:leading-[82px] dark:text-white;
 	}
 	h2 {
-		@apply text-center font-schibsted-grotesk text-3xl font-semibold leading-[41px] text-secondary sm:text-[40px] lg:text-6xl lg:leading-[66px];
+		@apply font-schibsted-grotesk text-center text-3xl font-semibold leading-[41px] text-secondary sm:text-[40px] lg:text-6xl lg:leading-[66px];
 	}
 	h3 {
 		@apply text-center text-4xl font-semibold leading-[41.76px] text-secondary sm:text-5xl sm:leading-[58px];

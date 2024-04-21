@@ -48,6 +48,7 @@ export const WavyBackground = ({
 		}
 	};
 
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const init = (): void => {
 		canvas = canvasRef.current;
 		ctx = canvas.getContext("2d");
@@ -99,7 +100,7 @@ export const WavyBackground = ({
 		return () => {
 			cancelAnimationFrame(animationId);
 		};
-	}, []);
+	}, [init]);
 
 	const [isSafari, setIsSafari] = useState(false);
 	useEffect(() => {
@@ -114,7 +115,7 @@ export const WavyBackground = ({
 	return (
 		<div
 			className={cn(
-				"flex h-screen flex-col items-center justify-center",
+				"flex h-screen flex-col items-center justify-center dark:bg-background",
 				containerClassName
 			)}
 		>
