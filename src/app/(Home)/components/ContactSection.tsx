@@ -121,41 +121,41 @@ const ContactSection = (): React.JSX.Element => {
 									onSubmit={handleSubmit(onSubmit)}
 									className="flex h-fit w-full flex-wrap gap-0 "
 								>
-									<span className="h-fit w-full pb-10  text-[16px] text-paragraph lg:w-1/2 lg:pr-11">
+									<span className="text-paragraph h-fit w-full  pb-10 text-[16px] lg:w-1/2 lg:pr-11">
 										<input
 											type="text"
 											id="firstName"
-											className="w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
+											className="border-paragraph w-full border-b bg-transparent py-[15px] focus:outline-none"
 											placeholder="First Name"
 											{...register("firstName")}
 										/>
 										<p>{errors.firstName?.message}</p>
 									</span>
-									<span className="h-fit w-full pb-10 text-[16px] text-paragraph lg:w-1/2 lg:pl-11">
+									<span className="text-paragraph h-fit w-full pb-10 text-[16px] lg:w-1/2 lg:pl-11">
 										<input
 											type="text"
 											id="lastName"
-											className="h-fit w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
+											className="border-paragraph h-fit w-full border-b bg-transparent py-[15px] focus:outline-none"
 											placeholder="Last Name"
 											{...register("lastName")}
 										/>
 										<p>{errors.lastName?.message}</p>
 									</span>
-									<span className="h-fit w-full pb-10 text-[16px] text-paragraph lg:w-1/2 lg:pr-11">
+									<span className="text-paragraph h-fit w-full pb-10 text-[16px] lg:w-1/2 lg:pr-11">
 										<input
 											type="email"
 											id="email"
-											className="w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
+											className="border-paragraph w-full border-b bg-transparent py-[15px] focus:outline-none"
 											placeholder="Your Email"
 											{...register("email")}
 										/>
 										<p>{errors.email?.message}</p>
 									</span>
-									<span className="h-fit w-full pb-10 text-[16px] text-paragraph lg:w-1/2 lg:pl-11">
+									<span className="text-paragraph h-fit w-full pb-10 text-[16px] lg:w-1/2 lg:pl-11">
 										<input
 											type="text"
 											id="companyName"
-											className="w-full border-b border-paragraph bg-transparent py-[15px] focus:outline-none"
+											className="border-paragraph w-full border-b bg-transparent py-[15px] focus:outline-none"
 											placeholder="Company Name"
 											{...register("companyName")}
 										/>
@@ -166,7 +166,7 @@ const ContactSection = (): React.JSX.Element => {
 										cols={4}
 										rows={4}
 										placeholder="Additional Message"
-										className="h-32 w-full resize-y border-b border-paragraph bg-transparent py-[15px] text-[16px] text-paragraph focus:outline-none"
+										className="border-paragraph text-paragraph h-32 w-full resize-y border-b bg-transparent py-[15px] text-[16px] focus:outline-none"
 										{...register("additionalMessage")}
 									/>
 									<p>{errors.additionalMessage?.message}</p>
