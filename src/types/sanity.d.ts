@@ -96,6 +96,14 @@ interface getBlog {
 	_updatedAt: string;
 }
 
+interface getAllFaq {
+	id: string;
+	question: string;
+	ans: string;
+	content: TypedObject | TypedObject[];
+	_updatedAt: string;
+}
+
 interface getAllPlans {
 	id: number;
 	name: string;

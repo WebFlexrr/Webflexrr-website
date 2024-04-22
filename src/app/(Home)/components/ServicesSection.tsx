@@ -26,7 +26,7 @@ const firstrow = [
 const ServicesSection = (): React.JSX.Element => {
 	return (
 		<section className=" services h-auto w-full " id={"services"}>
-			<section className=" h-auto w-full py-20 lg:pt-60">
+			<section className=" h-auto w-full py-20 lg:py-28">
 				<Heading
 					heading={"We handle just about everything!"}
 					subHeading={
