@@ -7,6 +7,8 @@ import TeamSection from "./components/TeamSection";
 // import ContactSection from "./components/ContactSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "@/components/Footer";
+import ProjectsSection from "./components/ProjectsSection";
+import FaqSection from "./components/FaqSection";
 
 const Home = async (): Promise<React.JSX.Element> => {
 	return (
@@ -14,10 +16,11 @@ const Home = async (): Promise<React.JSX.Element> => {
 			<HeroSection />
 			<BannerSection />
 			<ServicesSection />
-			{/* <ProjectsSection/> */}
+			<ProjectsSection />
 			{/* <GallerySection /> */}
 			<WorksFlowSection />
 			<PlanSection />
+			<FaqSection />
 			<TeamSection />
 			{/* <ContactSection /> */}
 			<ContactSection />
