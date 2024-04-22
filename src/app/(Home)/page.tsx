@@ -1,15 +1,12 @@
 import HeroSection from "./components/HeroSection";
 import BannerSection from "./components/BannerSection";
 import ServicesSection from "./components/ServicesSection";
-// import GallerySection from "@/components/Pages/Home/GallerySection";
 import WorksFlowSection from "./components/WorksFlowSection";
 import PlanSection from "./components/PlanSection";
 import TeamSection from "./components/TeamSection";
-import ContactSection from "./components/ContactSection";
-// import ProjectsSection from "@/components/Pages/Home/ProjectsSection";
-
-// import ProjectsSection from "@/components/Pages/Home/ProjectsSection";
-// import Footer from "@/components/Footer";
+// import ContactSection from "./components/ContactSection";
+import ContactSection2 from "./components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Home = async (): Promise<React.JSX.Element> => {
 	return (
@@ -23,10 +20,11 @@ const Home = async (): Promise<React.JSX.Element> => {
 			<WorksFlowSection />
 			<PlanSection />
 			<TeamSection />
-			<ContactSection />
+			{/* <ContactSection /> */}
+			<ContactSection2 />
 			{/* <FeedBack /> */}
 			{/* <SocialCarousel /> */}
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	);
 };

@@ -13,12 +13,9 @@ export function WavyBackgroundDemo(): React.JSX.Element {
 		>
 			<section className="mx-auto flex h-full w-full max-w-7xl flex-col items-center gap-10 text-center sm:px-5 md:px-14 xl:px-20">
 				<section className="mt-32 w-full max-w-6xl">
-					<h1 className="text-black dark:text-white">
+					<h1 className="stroke-text text-black dark:text-white">
 						Crafting High-Performance Websites for
-						<span className="text-green-600">
-							{" "}
-							Maximize your Business 10X 🚀
-						</span>
+						<span className="text-primary"> Maximize your Business 10X 🚀</span>
 					</h1>
 				</section>
 				<section className="w-full max-w-4xl ">

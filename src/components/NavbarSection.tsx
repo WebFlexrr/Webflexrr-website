@@ -12,18 +12,12 @@ import {
 	NavbarMenuToggle,
 	NavbarMenu,
 	NavbarMenuItem,
-	// Dropdown,
-	// DropdownTrigger,
 	Button,
 	Link,
-	// DropdownMenu,
-	// DropdownItem,
 } from "@nextui-org/react";
-// import { CiCamera, CiMobile3 } from 'react-icons/ci';
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+
+// import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { useRouter } from "next/navigation";
-// import { SiCreatereactapp } from 'react-icons/si';
-// import { useRouter } from 'next/navigation';
 
 const menuItems = [
 	"Services",
@@ -48,7 +42,7 @@ const NavbarSection = (): React.JSX.Element => {
 				// maxWidth={"full"}
 				className="fixed  w-full bg-transparent"
 			>
-				<div className=" mx-auto mt-6 flex w-full animate-visible-from-down items-center justify-between gap-4 rounded-full  border-2 border-black  bg-white px-4  py-2 text-white  antialiased drop-shadow-xl ease-in-out-expo sm:max-w-xl lg:max-w-3xl xl:max-w-6xl    ">
+				<div className=" mx-auto mt-10 flex w-full animate-visible-from-down items-center justify-between gap-4 rounded-full  border-2 border-black  bg-white px-4  py-2 text-white  antialiased drop-shadow-xl ease-in-out-expo sm:max-w-xl lg:max-w-3xl xl:max-w-6xl    ">
 					<NavbarContent>
 						<NavbarBrand>
 							<Link href={"/#home"}>
@@ -121,9 +115,9 @@ const NavbarSection = (): React.JSX.Element => {
 						</NavbarItem>
 					</NavbarContent>
 					<NavbarContent justify={"end"} className="hidden xl:flex">
-						<span>
+						{/* <span>
 							<ThemeSwitcher />
-						</span>
+						</span> */}
 						<NavbarItem>
 							<Button
 								variant={"shadow"}

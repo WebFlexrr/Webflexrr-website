@@ -6,7 +6,7 @@ const BannerSection = (): React.JSX.Element => {
 		<section className=" h-auto w-full py-20 ">
 			<section className=" mx-auto flex h-auto w-full max-w-7xl flex-col gap-10 ">
 				<section className="mx-auto flex w-full max-w-4xl flex-col gap-10 text-center  text-white">
-					<h4 className=" mx-5 text-center ">
+					<h4 className=" mx-5 text-center text-black">
 						We Always Took advantage of new technologies in your environments
 						for solve your business problem
 					</h4>

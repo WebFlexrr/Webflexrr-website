@@ -3,7 +3,6 @@ import "./globals.css";
 import { type ReactNode } from "react";
 import { Providers } from "./providers";
 import NavbarSection from "@/components/NavbarSection";
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
 	title: {
@@ -85,7 +84,6 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 					<main className=" overflow-x-hidden ">
 						<NavbarSection />
 						{children}
-						<Footer />
 					</main>
 				</Providers>
 			</body>

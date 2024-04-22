@@ -9,11 +9,11 @@ const Heading: FC<HeadingProps> = ({ heading, subHeading }) => {
 		<section className="mx-auto flex h-auto  w-full max-w-4xl flex-col items-center gap-3 text-center">
 			{heading != null ? (
 				<>
-					<h2 className=" galleryHeading font-schibsted-grotesk">{heading}</h2>
+					<h2 className="text-black">{heading}</h2>
 					<p>{subHeading}</p>
 				</>
 			) : (
-				<h2 className=" galleryHeading">{heading}</h2>
+				<h2 className="">{heading}</h2>
 			)}
 		</section>
 	);
