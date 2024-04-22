@@ -28,16 +28,18 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 					/>
 					<section className=" mb-16 mt-10 flex h-auto w-full flex-col  gap-6  ">
 						{/* Selection Pannel */}
-						<section className=" mx-auto grid h-auto w-full max-w-lg grid-cols-1 gap-10 sm:px-10 xl:max-w-none xl:grid-cols-3 xl:px-0 2xl:gap-20">
+						<section className=" mx-auto grid h-auto w-full max-w-lg grid-cols-1 gap-9 sm:px-10 xl:max-w-none xl:grid-cols-3 xl:px-0 ">
 							{allPlans.map((item) => (
 								<Card
 									key={item.id}
 									className="border border-pink-400 px-3 py-5"
 								>
 									{/* heading */}
-									<CardHeader className=" flex w-full flex-col items-center justify-center gap-6 pb-[3rem] ">
+									<CardHeader className=" flex w-full flex-col items-center justify-center gap-5 pb-[3rem] ">
 										<section className="w-full">
-											<span>{item.name}</span>
+											<span className="text-lg font-bold text-primary">
+												{item.name}
+											</span>
 										</section>
 										<section className="w-full">
 											<span>Pause or cancel anytime</span>

@@ -5,7 +5,7 @@ import WorksFlowSection from "./components/WorksFlowSection";
 import PlanSection from "./components/PlanSection";
 import TeamSection from "./components/TeamSection";
 // import ContactSection from "./components/ContactSection";
-import ContactSection2 from "./components/ContactSection";
+import ContactSection from "./components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Home = async (): Promise<React.JSX.Element> => {
@@ -16,12 +16,11 @@ const Home = async (): Promise<React.JSX.Element> => {
 			<ServicesSection />
 			{/* <ProjectsSection/> */}
 			{/* <GallerySection /> */}
-			{/* <Process2 /> */}
 			<WorksFlowSection />
 			<PlanSection />
 			<TeamSection />
 			{/* <ContactSection /> */}
-			<ContactSection2 />
+			<ContactSection />
 			{/* <FeedBack /> */}
 			{/* <SocialCarousel /> */}
 			<Footer />

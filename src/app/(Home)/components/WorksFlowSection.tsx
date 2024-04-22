@@ -12,7 +12,7 @@ const WorksFlowSection = (): React.JSX.Element => {
 
 	return (
 		<section className="  h-auto w-full  " id={"howItWorks"}>
-			<section className=" mx-auto h-auto w-full max-w-5xl py-20 lg:py-28">
+			<section className=" mx-auto h-auto w-full max-w-5xl px-5 py-20 lg:py-28">
 				<Heading
 					heading={"How it Works"}
 					subHeading={
@@ -59,7 +59,7 @@ const WorksFlowSection = (): React.JSX.Element => {
 							/>
 						</svg> 
 					</section> */}
-					<motion.section className="mx-auto grid h-auto w-[75%] grid-cols-1 flex-col gap-8">
+					<motion.section className="mx-auto grid h-auto w-full grid-cols-1 flex-col gap-8 lg:w-[75%]">
 						{/* First step */}
 						<motion.section
 							initial={{ opacity: 0 }}
@@ -67,12 +67,11 @@ const WorksFlowSection = (): React.JSX.Element => {
 								opacity: 1,
 							}}
 							viewport={{
-								// amount:"all"
-								margin: "-300px",
+								margin: "-500px",
 							}}
-							className=" flex w-full rounded-xl border-2 border-black p-6"
+							className=" flex w-full flex-col rounded-xl border-2 border-black p-6 lg:flex-row"
 						>
-							<div className="flex aspect-square w-[30%] flex-col gap-3 rounded-2xl border bg-black p-10">
+							<div className="flex aspect-square w-full flex-col gap-3 rounded-2xl border bg-black p-10 lg:w-[30%]">
 								<div className="h-4 w-full rounded-full border-3 border-white"></div>
 								<div className="flex w-full">
 									<div className="aspect-square w-1/2 rounded-2xl border-3 border-white"></div>
@@ -92,7 +91,7 @@ const WorksFlowSection = (): React.JSX.Element => {
 									<div className="aspect-video w-1/2 rounded-lg border-3 border-white"></div>
 								</div>
 							</div>
-							<section className="w-[70%] p-5">
+							<section className="w-full py-5 lg:w-[70%] lg:p-5">
 								<h4>Book a Discovery Call</h4>
 								<div className="text-lg">Lets chat about your business...</div>
 								<div>
@@ -106,19 +105,18 @@ const WorksFlowSection = (): React.JSX.Element => {
 								</div>
 							</section>
 						</motion.section>
-						{/* Second Step */}
+
 						<motion.section
 							initial={{ opacity: 0 }}
 							whileInView={{
 								opacity: 1,
 							}}
 							viewport={{
-								// amount:"all"
-								margin: "-300px",
+								margin: "-500px",
 							}}
-							className=" flex w-full rounded-xl border-2 border-black p-6"
+							className=" flex w-full flex-col rounded-xl border-2 border-black p-6 lg:flex-row"
 						>
-							<div className="flex aspect-square w-[30%] flex-col gap-3 rounded-2xl border bg-black p-10">
+							<div className="flex aspect-square w-full flex-col gap-3 rounded-2xl border bg-black p-10 lg:w-[30%]">
 								<div className="h-4 w-full rounded-full border-3 border-white"></div>
 								<div className="flex w-full">
 									<div className="aspect-square w-1/2 rounded-2xl border-3 border-white"></div>
@@ -138,11 +136,9 @@ const WorksFlowSection = (): React.JSX.Element => {
 									<div className="aspect-video w-1/2 rounded-lg border-3 border-white"></div>
 								</div>
 							</div>
-							<section className="w-[70%] p-5">
-								<h4>Subscribe & Add Your Project Details</h4>
-								<div className="text-lg">
-									Subscribe & Add Your Project Details
-								</div>
+							<section className="w-full py-5 lg:w-[70%] lg:p-5">
+								<h4>Book a Discovery Call</h4>
+								<div className="text-lg">Lets chat about your business...</div>
 								<div>
 									<p className="text-sm">
 										Schedule a Discovery Call with us to understand your
@@ -154,19 +150,18 @@ const WorksFlowSection = (): React.JSX.Element => {
 								</div>
 							</section>
 						</motion.section>
-						{/* Second Step */}
+
 						<motion.section
 							initial={{ opacity: 0 }}
 							whileInView={{
 								opacity: 1,
 							}}
 							viewport={{
-								// amount:"all"
-								margin: "-300px",
+								margin: "-500px",
 							}}
-							className=" flex w-full rounded-xl border-2 border-black p-6"
+							className=" flex w-full flex-col rounded-xl border-2 border-black p-6 lg:flex-row"
 						>
-							<div className="flex aspect-square w-[30%] flex-col gap-3 rounded-2xl border bg-black p-10">
+							<div className="flex aspect-square w-full flex-col gap-3 rounded-2xl border bg-black p-10 lg:w-[30%]">
 								<div className="h-4 w-full rounded-full border-3 border-white"></div>
 								<div className="flex w-full">
 									<div className="aspect-square w-1/2 rounded-2xl border-3 border-white"></div>
@@ -186,11 +181,9 @@ const WorksFlowSection = (): React.JSX.Element => {
 									<div className="aspect-video w-1/2 rounded-lg border-3 border-white"></div>
 								</div>
 							</div>
-							<section className="w-[70%] p-5">
-								<h4>Subscribe & Add Your Project Details</h4>
-								<div className="text-lg">
-									Subscribe & Add Your Project Details
-								</div>
+							<section className="w-full py-5 lg:w-[70%] lg:p-5">
+								<h4>Book a Discovery Call</h4>
+								<div className="text-lg">Lets chat about your business...</div>
 								<div>
 									<p className="text-sm">
 										Schedule a Discovery Call with us to understand your
@@ -202,19 +195,18 @@ const WorksFlowSection = (): React.JSX.Element => {
 								</div>
 							</section>
 						</motion.section>
-						{/* Second Step */}
+
 						<motion.section
 							initial={{ opacity: 0 }}
 							whileInView={{
 								opacity: 1,
 							}}
 							viewport={{
-								// amount:"all"
-								margin: "-300px",
+								margin: "-500px",
 							}}
-							className=" flex w-full rounded-xl border-2 border-black p-6"
+							className=" flex w-full flex-col rounded-xl border-2 border-black p-6 lg:flex-row"
 						>
-							<div className="flex aspect-square w-[30%] flex-col gap-3 rounded-2xl border bg-black p-10">
+							<div className="flex aspect-square w-full flex-col gap-3 rounded-2xl border bg-black p-10 lg:w-[30%]">
 								<div className="h-4 w-full rounded-full border-3 border-white"></div>
 								<div className="flex w-full">
 									<div className="aspect-square w-1/2 rounded-2xl border-3 border-white"></div>
@@ -234,11 +226,9 @@ const WorksFlowSection = (): React.JSX.Element => {
 									<div className="aspect-video w-1/2 rounded-lg border-3 border-white"></div>
 								</div>
 							</div>
-							<section className="w-[70%] p-5">
-								<h4>Subscribe & Add Your Project Details</h4>
-								<div className="text-lg">
-									Subscribe & Add Your Project Details
-								</div>
+							<section className="w-full py-5 lg:w-[70%] lg:p-5">
+								<h4>Book a Discovery Call</h4>
+								<div className="text-lg">Lets chat about your business...</div>
 								<div>
 									<p className="text-sm">
 										Schedule a Discovery Call with us to understand your

@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
 import Heading from "@/components/Heading";
-import PulseCircle from "@/components/ui/PulseCircle";
+// import PulseCircle from "@/components/ui/PulseCircle";
 
 const schema = yup.object({
 	firstName: yup.string().required("First Name is Required"),
@@ -235,7 +235,7 @@ const ContactUs = (): React.JSX.Element => {
 						<section className=" relative h-full w-full py-16 md:w-[60%] md:py-0 lg:w-[60%] xl:w-[68%]">
 							<section className=" flex h-full w-full flex-col xl:gap-6 xl:pr-32">
 								<div className=" hero1 flex h-fit w-full items-center gap-6">
-									<PulseCircle />
+									{/* <PulseCircle /> */}
 									<span className="text-[20px] leading-[42.64px] text-primary sm:text-[26px]">
 										Get in Touch
 									</span>
@@ -252,51 +252,51 @@ const ContactUs = (): React.JSX.Element => {
 										onSubmit={handleSubmit(onSubmit)}
 										className="flex h-fit w-full flex-wrap gap-0 "
 									>
-										<span className=" h-fit w-full pb-5 text-[16px] text-paragraph md:w-1/2 md:pb-10 md:pr-6 lg:pr-9">
+										<span className=" text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pb-10 md:pr-6 lg:pr-9">
 											<input
 												type="text"
 												id="firstName"
-												className="w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
 												placeholder="First Name"
 												{...register("firstName")}
 											/>
 											<p>{errors.firstName?.message}</p>
 										</span>
-										<span className=" h-fit w-full pb-5 text-[16px] text-paragraph md:w-1/2 md:pb-10 md:pl-6 lg:pl-9">
+										<span className=" text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pb-10 md:pl-6 lg:pl-9">
 											<input
 												type="text"
 												id="lastName"
-												className="h-fit w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph h-fit w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
 												placeholder="Last Name"
 												{...register("lastName")}
 											/>
 											<p>{errors.lastName?.message}</p>
 										</span>
-										<span className="h-fit w-full pb-5 text-[16px] text-paragraph md:w-1/2 md:pb-10 md:pr-6 lg:pr-9">
+										<span className="text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pb-10 md:pr-6 lg:pr-9">
 											<input
 												type="number"
 												id="number"
-												className="w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
 												placeholder="Your Number"
 												{...register("number")}
 											/>
 											<p>{errors.number?.message}</p>
 										</span>
-										<span className="h-fit w-full pb-5 text-[16px] text-paragraph md:w-1/2 md:pb-10 md:pl-6 lg:pl-9">
+										<span className="text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pb-10 md:pl-6 lg:pl-9">
 											<input
 												type="email"
 												id="email"
-												className="w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
 												placeholder="Your Email"
 												{...register("email")}
 											/>
 											<p>{errors.email?.message}</p>
 										</span>
-										<span className="h-fit  w-full pb-5 text-[16px] text-paragraph md:pb-10">
+										<span className="text-paragraph  h-fit w-full pb-5 text-[16px] md:pb-10">
 											<input
 												type="text"
 												id="companyName"
-												className="w-full border-b-2 border-paragraph bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
 												placeholder="Company Name"
 												{...register("companyName")}
 											/>
@@ -307,7 +307,7 @@ const ContactUs = (): React.JSX.Element => {
 											cols={4}
 											rows={4}
 											placeholder="Additional Message"
-											className="h-26 w-full resize-y border-b-2 border-paragraph bg-transparent py-[15px] text-[16px] text-paragraph focus:outline-none lg:h-32"
+											className="h-26 border-paragraph text-paragraph w-full resize-y border-b-2 bg-transparent py-[15px] text-[16px] focus:outline-none lg:h-32"
 											{...register("additionalMessage")}
 										/>
 										<p>{errors.additionalMessage?.message}</p>
@@ -418,7 +418,7 @@ const ContactUs = (): React.JSX.Element => {
 					<section className="relative z-0 mb-[390px] mt-10 h-auto w-full md:mb-[500px] lg:mt-16 xl:mb-[560px]">
 						<section className=" relative z-10 mx-auto flex h-auto w-full max-w-[90rem] flex-col justify-center px-5 sm:px-20 md:max-w-full md:flex-row md:flex-wrap md:px-5 lg:max-w-[100rem]">
 							<section className="my-2 h-auto w-full px-2 md:w-1/2 xl:w-1/4">
-								<div className="flex h-auto w-full flex-col gap-6 rounded-lg border border-secondary bg-background3 px-10 py-12 transition duration-700 ease-in-out hover:border-primary lg:gap-10 lg:px-14  lg:py-20 xl:px-10 xl:py-16">
+								<div className="bg-background3 flex h-auto w-full flex-col gap-6 rounded-lg border border-secondary px-10 py-12 transition duration-700 ease-in-out hover:border-primary lg:gap-10 lg:px-14  lg:py-20 xl:px-10 xl:py-16">
 									<h5 className="text-primary">Canbeera</h5>
 									<h5>45 Laggon Street, Canberra, Looloith, E1 6GL</h5>
 									<section>
@@ -428,7 +428,7 @@ const ContactUs = (): React.JSX.Element => {
 								</div>
 							</section>
 							<section className="my-2 h-auto w-full px-2 md:w-1/2 xl:w-1/4">
-								<div className="flex h-auto w-full flex-col gap-6 rounded-lg border border-secondary bg-background3 px-10 py-12 transition duration-700 ease-in-out hover:border-primary lg:gap-10 lg:px-14  lg:py-20 xl:px-10 xl:py-16">
+								<div className="bg-background3 flex h-auto w-full flex-col gap-6 rounded-lg border border-secondary px-10 py-12 transition duration-700 ease-in-out hover:border-primary lg:gap-10 lg:px-14  lg:py-20 xl:px-10 xl:py-16">
 									<h5 className="text-primary">Canbeera</h5>
 									<h5>45 Laggon Street, Canberra, Looloith, E1 6GL</h5>
 									<section>
@@ -438,7 +438,7 @@ const ContactUs = (): React.JSX.Element => {
 								</div>
 							</section>
 							<section className="my-2 h-auto w-full px-2 md:w-1/2 xl:w-1/4">
-								<div className="flex h-auto w-full flex-col gap-6 rounded-lg border border-secondary bg-background3 px-10 py-12 transition duration-700 ease-in-out hover:border-primary lg:gap-10 lg:px-14  lg:py-20 xl:px-10 xl:py-16">
+								<div className="bg-background3 flex h-auto w-full flex-col gap-6 rounded-lg border border-secondary px-10 py-12 transition duration-700 ease-in-out hover:border-primary lg:gap-10 lg:px-14  lg:py-20 xl:px-10 xl:py-16">
 									<h5 className="text-primary">Canbeera</h5>
 									<h5>45 Laggon Street, Canberra, Looloith, E1 6GL</h5>
 									<section>

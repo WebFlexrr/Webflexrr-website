@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { type FC, useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import PulseCircle from "../PulseCircle";
+// import PulseCircle from "../PulseCircle";
 
 interface GalleryContentSectionProps {
 	projects: getAllProjects[];
@@ -81,7 +81,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 									href={"/projects"}
 									className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 								>
-									<PulseCircle />
+									{/* <PulseCircle /> */}
 									Read more
 								</Link>
 							</section>
@@ -111,7 +111,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 									href={"/projects"}
 									className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 								>
-									<PulseCircle />
+									{/* <PulseCircle /> */}
 									Read more
 								</Link>
 							</section>
@@ -140,7 +140,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 									href={"/projects"}
 									className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 								>
-									<PulseCircle />
+									{/* <PulseCircle /> */}
 									Read more
 								</Link>
 							</section>
@@ -168,7 +168,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 								href={"/projects"}
 								className="flex items-center gap-2 text-secondary transition duration-500 ease-in-out hover:text-primary"
 							>
-								<PulseCircle /> View All
+								{/* <PulseCircle /> View All */}
 							</Link>
 						</div>
 					</div>
@@ -197,7 +197,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 										href={"/projects"}
 										className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 									>
-										<PulseCircle />
+										{/* <PulseCircle /> */}
 										Read more
 									</Link>
 								</section>
@@ -227,7 +227,7 @@ const GalleryContentSection: FC<GalleryContentSectionProps> = ({
 										href={"/projects"}
 										className="flex gap-3 text-secondary transition duration-500 ease-in-out hover:text-primary"
 									>
-										<PulseCircle />
+										{/* <PulseCircle /> */}
 										Read more
 									</Link>
 								</section>

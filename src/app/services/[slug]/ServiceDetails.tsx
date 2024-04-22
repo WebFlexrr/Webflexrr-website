@@ -2,7 +2,7 @@
 // import Image from "next/image";
 import React from "react";
 // import Core_Services from "./CoreServices";
-import PulseCircle from "@/components/ui/PulseCircle";
+// import PulseCircle from "@/components/ui/PulseCircle";
 // import Technologies from "./Technologies";
 
 // interface ServiceDetailsProps {
@@ -21,7 +21,7 @@ const ServiceDetails = async (): Promise<React.JSX.Element> => {
 							<div className=" flex h-full w-full flex-col justify-center xl:w-[60%] xl:pl-20">
 								<div className="flex h-[80%] w-full flex-col gap-6 border border-primary p-6 xl:border-y xl:border-l xl:px-20 xl:py-12">
 									<section className="flex w-full gap-4 text-secondary">
-										<PulseCircle />
+										{/* <PulseCircle /> */}
 										{/* {serviceDetails.name} */}
 									</section>
 									<section className="h-auto w-full">

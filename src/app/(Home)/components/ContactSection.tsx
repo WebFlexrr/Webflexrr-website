@@ -69,7 +69,7 @@ const ContactSection = (): React.JSX.Element => {
 
 	return (
 		<section id={"contact"} className=" relative h-auto w-full ">
-			<section className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-5 py-20 md:px-10 lg:py-28 ">
+			<section className="mx-auto w-full max-w-5xl space-y-10 px-5 py-20 md:px-10 lg:py-28 ">
 				<Heading
 					heading={"Contact Us"}
 					subHeading={
