@@ -4,7 +4,6 @@ import ServicesSection from "./components/ServicesSection";
 import WorksFlowSection from "./components/WorksFlowSection";
 import PlanSection from "./components/PlanSection";
 import TeamSection from "./components/TeamSection";
-// import ContactSection from "./components/ContactSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "@/components/Footer";
 import ProjectsSection from "./components/ProjectsSection";

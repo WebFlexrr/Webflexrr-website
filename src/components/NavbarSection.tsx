@@ -57,11 +57,10 @@ const NavbarSection = (): React.JSX.Element => {
 							</Link>
 						</NavbarBrand>
 					</NavbarContent>
-
 					<NavbarContent className="hidden gap-5  xl:flex" justify="center">
 						<NavbarItem>
 							<Link
-								className="text-lg dark:text-black "
+								className="text-lg font-medium text-black antialiased dark:text-white "
 								color="foreground"
 								href={"/#services"}
 							>
@@ -70,7 +69,7 @@ const NavbarSection = (): React.JSX.Element => {
 						</NavbarItem>
 						<NavbarItem>
 							<Link
-								className="text-lg dark:text-black"
+								className="text-lg font-medium text-black antialiased dark:text-white "
 								color="foreground"
 								href={"/#portfolio"}
 							>
@@ -79,7 +78,7 @@ const NavbarSection = (): React.JSX.Element => {
 						</NavbarItem>
 						<NavbarItem>
 							<Link
-								className="text-lg dark:text-black"
+								className="text-lg font-medium text-black antialiased dark:text-white "
 								color="foreground"
 								href={"/#teams"}
 							>
@@ -88,7 +87,7 @@ const NavbarSection = (): React.JSX.Element => {
 						</NavbarItem>
 						<NavbarItem>
 							<Link
-								className="text-lg dark:text-black"
+								className="text-lg font-medium text-black antialiased dark:text-white "
 								color="foreground"
 								href={"/#plans"}
 							>
@@ -97,7 +96,7 @@ const NavbarSection = (): React.JSX.Element => {
 						</NavbarItem>
 						<NavbarItem>
 							<Link
-								className="text-lg dark:text-black"
+								className="text-lg font-medium text-black antialiased dark:text-white "
 								color="foreground"
 								href={"/blogs"}
 							>
@@ -106,7 +105,7 @@ const NavbarSection = (): React.JSX.Element => {
 						</NavbarItem>
 						<NavbarItem>
 							<Link
-								className="text-lg dark:text-black "
+								className="text-lg font-medium text-black antialiased dark:text-white "
 								color="foreground"
 								href={"/#contact"}
 							>
