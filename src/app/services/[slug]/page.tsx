@@ -1,7 +1,7 @@
 import ServiceDetails from "@/app/services/[slug]/ServiceDetails";
 import Footer from "@/components/Footer";
 import MainTitle from "@/components/MainTitle";
-import SocialCarousel from "@/components/ui/SocialPostsCarousel/SocialCarousel";
+// import SocialCarousel from "@/components/ui/SocialPostsCarousel/SocialCarousel";
 
 // import { findServiceByName } from "@/lib/getServices";
 // import { type Metadata } from "next";
@@ -47,7 +47,7 @@ const page: FC<PageProps> = async ({ params }) => {
 			<MainTitle heading={params.slug} />
 			<ServiceDetails />
 			{/* <CaseStudy/> */}
-			<SocialCarousel />
+			{/* <SocialCarousel /> */}
 			<Footer />
 		</>
 	);

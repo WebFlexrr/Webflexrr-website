@@ -67,13 +67,31 @@ const NavbarSection = (): React.JSX.Element => {
 								Services
 							</Link>
 						</NavbarItem>
-						<NavbarItem>
+						{/* <NavbarItem>
 							<Link
 								className="text-lg font-medium text-black antialiased dark:text-white "
 								color="foreground"
 								href={"/#portfolio"}
 							>
 								Portfolio
+							</Link>
+						</NavbarItem> */}
+						<NavbarItem>
+							<Link
+								className="text-lg font-medium text-black antialiased dark:text-white "
+								color="foreground"
+								href={"/#plans"}
+							>
+								Pricing
+							</Link>
+						</NavbarItem>
+						<NavbarItem>
+							<Link
+								className="text-lg font-medium text-black antialiased dark:text-white "
+								color="foreground"
+								href={"/#faq"}
+							>
+								FAQ
 							</Link>
 						</NavbarItem>
 						<NavbarItem>
@@ -89,27 +107,9 @@ const NavbarSection = (): React.JSX.Element => {
 							<Link
 								className="text-lg font-medium text-black antialiased dark:text-white "
 								color="foreground"
-								href={"/#plans"}
-							>
-								Pricing
-							</Link>
-						</NavbarItem>
-						<NavbarItem>
-							<Link
-								className="text-lg font-medium text-black antialiased dark:text-white "
-								color="foreground"
 								href={"/blogs"}
 							>
 								Blogs
-							</Link>
-						</NavbarItem>
-						<NavbarItem>
-							<Link
-								className="text-lg font-medium text-black antialiased dark:text-white "
-								color="foreground"
-								href={"/#contact"}
-							>
-								Contact Us
 							</Link>
 						</NavbarItem>
 					</NavbarContent>
@@ -120,7 +120,7 @@ const NavbarSection = (): React.JSX.Element => {
 						<NavbarItem>
 							<Button
 								variant={"shadow"}
-								// color={"primary"}
+								color={"secondary"}
 								radius="full"
 								className="flex items-center justify-center text-lg font-medium text-black"
 							>

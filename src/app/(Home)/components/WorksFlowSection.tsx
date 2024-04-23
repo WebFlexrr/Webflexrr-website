@@ -62,9 +62,13 @@ const WorksFlowSection = (): React.JSX.Element => {
 					<motion.section className="mx-auto grid h-auto w-full grid-cols-1 flex-col gap-8 lg:w-[75%]">
 						{/* First step */}
 						<motion.section
-							initial={{ opacity: 0 }}
+							initial={{
+								opacity: 0,
+								// scale:0
+							}}
 							whileInView={{
 								opacity: 1,
+								// scale:1.3
 							}}
 							viewport={{
 								margin: "-500px",

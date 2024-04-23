@@ -2,7 +2,7 @@ import HeroServices from "@/app/services/HeroServices";
 import Footer from "@/components/Footer";
 import MainTitle from "@/components/MainTitle";
 import NavbarSection from "@/components/NavbarSection";
-import SocialCarousel from "@/components/ui/SocialPostsCarousel/SocialCarousel";
+// import SocialCarousel from "@/components/ui/SocialPostsCarousel/SocialCarousel";
 import type { Metadata } from "next";
 import React from "react";
 
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 
 const Services = (): JSX.Element => {
 	return (
-		<main className="relative z-30 h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth bg-background2 dark:bg-black">
+		<main className="bg-background2 relative z-30 h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth dark:bg-black">
 			<NavbarSection />
 			<MainTitle heading={"Services"} />
 			<HeroServices />
-			<SocialCarousel />
+			{/* <SocialCarousel /> */}
 			<Footer />
 		</main>
 	);

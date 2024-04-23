@@ -35,7 +35,7 @@ const TagLine = (): React.JSX.Element => {
 	});
 
 	return (
-		<section ref={tagLine} className=" relative h-auto w-full bg-background2 ">
+		<section ref={tagLine} className=" bg-background2 relative h-auto w-full ">
 			<section className="w-full py-20 lg:py-36 ">
 				<section className="mx-auto flex w-full max-w-[90rem] flex-col gap-10 px-5 md:px-10 lg:gap-16 xl:gap-28 ">
 					<section className="tagLineContent mx-auto flex w-full max-w-5xl flex-col gap-14 text-center">
@@ -44,13 +44,13 @@ const TagLine = (): React.JSX.Element => {
 							Are Always Here To Help You Grow Your Business
 						</h3>
 					</section>
-					<section className="tagLineContent2  h-auto items-center justify-between  text-tertiary lg:mx-auto lg:min-w-[40rem] lg:justify-evenly  xl:w-full">
+					<section className="tagLineContent2  text-tertiary h-auto items-center  justify-between lg:mx-auto lg:min-w-[40rem] lg:justify-evenly  xl:w-full">
 						<section className="mx-auto grid h-auto w-fit md:w-full md:grid-cols-2 lg:gap-7 xl:grid-cols-4">
 							<div className="flex h-32 w-60 items-center gap-5 lg:w-80   ">
 								<div className="stroke-text border-secondary text-[75px] font-semibold leading-[87px] text-transparent transition duration-500 ease-in-out hover:text-primary lg:text-[100px] xl:text-[120px]">
 									2+
 								</div>
-								<div className="flex w-fit flex-col text-left text-2xl leading-10 text-tertiary transition duration-500 ease-in-out hover:text-secondary">
+								<div className="text-tertiary flex w-fit flex-col text-left text-2xl leading-10 transition duration-500 ease-in-out hover:text-secondary">
 									Years Experience
 								</div>
 							</div>
@@ -58,7 +58,7 @@ const TagLine = (): React.JSX.Element => {
 								<div className="stroke-text border-secondary text-[75px]  font-semibold leading-[87px] text-transparent transition duration-500 ease-in-out hover:text-primary lg:text-[100px] xl:text-[120px]">
 									12+
 								</div>
-								<span className="flex flex-col text-left text-2xl leading-10 text-tertiary transition duration-500 ease-in-out hover:text-secondary">
+								<span className="text-tertiary flex flex-col text-left text-2xl leading-10 transition duration-500 ease-in-out hover:text-secondary">
 									Advanced Tools
 								</span>
 							</div>
@@ -66,7 +66,7 @@ const TagLine = (): React.JSX.Element => {
 								<div className="stroke-text border-secondary text-[75px]  font-semibold leading-[87px] text-transparent transition duration-700 ease-in-out hover:text-primary lg:text-[100px] xl:text-[120px]">
 									10+
 								</div>
-								<span className="flex flex-col text-left text-2xl leading-10 text-tertiary transition duration-700 ease-in-out hover:text-secondary">
+								<span className="text-tertiary flex flex-col text-left text-2xl leading-10 transition duration-700 ease-in-out hover:text-secondary">
 									Satisfied Clients
 								</span>
 							</div>
@@ -74,7 +74,7 @@ const TagLine = (): React.JSX.Element => {
 								<div className="stroke-text border-secondary text-[75px]  font-semibold leading-[87px] text-transparent transition duration-500 ease-in-out hover:text-primary lg:text-[100px] xl:text-[120px]">
 									20+
 								</div>
-								<span className="flex flex-col text-left text-2xl leading-10 text-tertiary transition duration-500 ease-in-out hover:text-secondary">
+								<span className="text-tertiary flex flex-col text-left text-2xl leading-10 transition duration-500 ease-in-out hover:text-secondary">
 									Projects Completed
 								</span>
 							</div>

@@ -64,16 +64,13 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 				<span className="mt-5 flex items-center text-2xl">
 					{personDetails.linkedIn != null && (
 						<>
-							{/* <span className="text-primary"> - </span> */}
 							<Link
 								href={personDetails.linkedIn}
 								target="_blank"
 								className="mx-2   text-[#0077b5]"
 							>
-								{/* <FaLinkedinIn className="h-[14px] w-[14px] " /> */}
 								<FaLinkedin className="" />
 							</Link>
-							{/* <span className="text-primary"> - </span> */}
 						</>
 					)}
 
@@ -82,7 +79,6 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 							<Link
 								href={personDetails.twitter}
 								target="_blank"
-								// className="mx-2 flex h-[34px] w-[34px] cursor-pointer items-center justify-center rounded-full  border-2 border-white bg-primary text-secondary transition duration-500 ease-in-out hover:text-black"
 								className="mx-2   text-black"
 							>
 								{/* <BsTwitterX className="h-[14px] w-[14px]  " /> */}
