@@ -18,7 +18,7 @@ const RefundPolicy = async (): Promise<JSX.Element> => {
 				<section className="mx-auto h-auto w-full max-w-2xl  px-5 py-20 xl:py-28">
 					<section className="flex w-full flex-col justify-start space-y-5">
 						<h4>{policy.title}</h4>
-						<span>Date: April 23, 2024</span>
+						<span>Last updated: {policy._updatedAt}</span>
 					</section>
 					<Divider className="my-4" />
 					<PortableText

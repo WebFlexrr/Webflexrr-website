@@ -59,45 +59,40 @@ export const PortableTextComponents: PortableTextReactComponents = {
 	block: {
 		// Ex. 1: customizing common block types
 		h1: ({ children }) => (
-			<h1 className="my-4 text-3xl font-extrabold text-[#130f49]">
-				{children}
-			</h1>
+			<h1 className="my-4 text-3xl font-bold text-[#130f49]">{children}</h1>
 		),
 		h2: ({ children }) => (
-			<h2 className="my-4 text-2xl  font-extrabold text-[#130f49]">
+			<h2 className="my-4 text-left text-2xl  font-bold text-[#130f49]">
 				{children}
 			</h2>
 		),
 		h3: ({ children }) => (
-			<h3 className="my-4 text-xl  font-extrabold text-[#130f49]">
+			<h3 className="my-3 text-left text-xl  font-bold text-[#130f49]">
 				{children}
 			</h3>
 		),
 		h4: ({ children }) => (
-			<h4 className="my-4 text-lg  font-extrabold text-[#130f49]">
-				{children}
-			</h4>
+			<h4 className="my-2 text-lg  font-bold text-[#130f49]">{children}</h4>
 		),
 		h5: ({ children }) => (
-			<h5 className="my-4 text-base  font-extrabold text-[#130f49]">
-				{children}
-			</h5>
+			<h5 className="my-1 text-base  font-bold text-[#130f49]">{children}</h5>
 		),
 		h6: ({ children }) => (
-			<h6 className="my-4 text-sm  font-extrabold text-[#130f49]">
-				{children}
-			</h6>
+			<h6 className="my-4 text-sm  font-bold text-[#130f49]">{children}</h6>
 		),
 		blockquote: ({ children }) => (
 			<blockquote className="border-l-4 border-slate-500  pl-3 text-[#130f49]">
 				{children}
 			</blockquote>
 		),
+		normal: ({ children }) => (
+			<p className=" text-base  text-[#130f49]">{children}</p>
+		),
 	},
 	list: {
 		// Ex. 1: customizing common list types
 		bullet: ({ children }) => (
-			<ul className="mt-xl text-[#130f49]">{children}</ul>
+			<ul className=" my-6 space-y-6 px-5 text-[#130f49]">{children}</ul>
 		),
 		number: ({ children }) => (
 			<ol className="mt-lg text-[#130f49]">{children}</ol>
@@ -111,10 +106,14 @@ export const PortableTextComponents: PortableTextReactComponents = {
 	listItem: {
 		// Ex. 1: customizing common list types
 		bullet: ({ children }) => (
-			<li className="list-disc text-[#130f49]">{children}</li>
+			<li className="list-disc text-[#130f49]">
+				<p className=" text-base  text-[#130f49]">{children}</p>
+			</li>
 		),
 		number: ({ children }) => (
-			<li className="list-decimal text-[#130f49]">{children}</li>
+			<li className="list-decimal text-[#130f49]">
+				<p className=" text-base  text-[#130f49]">{children}</p>
+			</li>
 		),
 
 		// Ex. 2: rendering custom list items
