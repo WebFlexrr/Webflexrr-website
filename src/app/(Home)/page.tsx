@@ -17,15 +17,12 @@ const Home = async (): Promise<React.JSX.Element> => {
 			<BannerSection />
 			<ServicesSection />
 			<ProjectsSection />
-			{/* <GallerySection /> */}
 			<WorksFlowSection />
 			<PlanSection />
 			<FaqSection />
 			<TeamSection />
-			{/* <ContactSection /> */}
 			<ContactSection />
 			{/* <FeedBack /> */}
-			{/* <SocialCarousel /> */}
 			<Footer />
 		</>
 	);

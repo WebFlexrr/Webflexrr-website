@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import MainTitle from "@/components/MainTitle";
 import type { Metadata } from "next";
-import Hero from "./Hero";
+import Hero from "./components/Hero";
 
 export const metadata: Metadata = {
 	title: "Our team",

@@ -7,7 +7,7 @@ import { LuInstagram } from "react-icons/lu";
 
 const Footer = (): React.JSX.Element => {
 	return (
-		<footer className="mx-auto h-auto w-full max-w-7xl   text-tertiary ">
+		<footer className="text-tertiary mx-auto h-auto w-full   max-w-7xl ">
 			<Divider />
 			<section className=" flex flex-col gap-10 py-20 ">
 				<section className="w-full">
@@ -19,57 +19,55 @@ const Footer = (): React.JSX.Element => {
 						className=""
 					/>
 				</section>
-				<section className="flex h-auto w-full  ">
-					<section className="h-auto w-full px-5 py-2 md:w-full lg:w-1/3">
-						<div className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-5 text-black">
-							<div className=" flex w-full flex-wrap gap-5 sm:flex-nowrap xl:gap-2">
-								<input
-									type="text"
-									title="Message"
-									placeholder="Email for news letters"
-									className="w-full border-b bg-transparent text-secondary focus:border-secondary focus:outline-none  xl:w-[60%]"
-								/>
-								<Button radius="full" color="primary" variant="ghost">
-									Subscribe
-								</Button>
-							</div>
-							<div className="space-y-2">
-								<section>
-									<p className="text-sm">
-										&#169; 2024 Webflexrr Solutions Private Limited. All rights
-										reserved.
-									</p>
-								</section>
-								{/* <span>Kolkata, West Bengal, India</span> */}
-								<section>
-									<Link
-										className="text-sm"
-										href={"mailto:contact@webflexrr.com"}
-										target="_blank"
-									>
-										contact@webflexrr.com
-									</Link>
-								</section>
-								<section className="text-sm">
-									<span>WhatsApp :</span>
-									<ul>
-										<li>
-											<Link href={"https://wa.me/917044785308"} target="_blank">
-												+91 - 7044785308
-											</Link>
-										</li>
-										<li>
-											<Link href={"https://wa.me/919038007312"} target="_blank">
-												+91 - 9038007312
-											</Link>
-										</li>
-									</ul>
-								</section>
-							</div>
+				<section className="flex h-auto w-full flex-col gap-5 lg:flex-row  ">
+					<section className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-10 py-2 text-black md:w-full lg:w-1/3 lg:px-5">
+						<div className=" flex w-full flex-wrap gap-5 sm:flex-nowrap xl:gap-2">
+							<input
+								type="text"
+								title="Message"
+								placeholder="Email for news letters"
+								className="w-full border-b bg-transparent text-secondary focus:border-secondary focus:outline-none  xl:w-[60%]"
+							/>
+							<Button radius="full" color="primary" variant="ghost">
+								Subscribe
+							</Button>
+						</div>
+						<div className="space-y-2">
+							<section>
+								<p className="text-sm">
+									&#169; 2024 Webflexrr Solutions Private Limited. All rights
+									reserved.
+								</p>
+							</section>
+							{/* <span>Kolkata, West Bengal, India</span> */}
+							<section>
+								<Link
+									className="text-sm"
+									href={"mailto:contact@webflexrr.com"}
+									target="_blank"
+								>
+									contact@webflexrr.com
+								</Link>
+							</section>
+							<section className="text-sm">
+								<span>WhatsApp :</span>
+								<ul>
+									<li>
+										<Link href={"https://wa.me/917044785308"} target="_blank">
+											+91 - 7044785308
+										</Link>
+									</li>
+									<li>
+										<Link href={"https://wa.me/919038007312"} target="_blank">
+											+91 - 9038007312
+										</Link>
+									</li>
+								</ul>
+							</section>
 						</div>
 					</section>
-					<section className="flex gap-8 py-2 text-sm">
-						<section className=" flex flex-col gap-4    text-black">
+					<section className="flex flex-wrap gap-8  px-10 py-2  text-sm lg:px-5">
+						<section className=" flex flex-col gap-4  text-black">
 							<span className="font-bold text-black">Pages</span>
 							<ul className=" space-y-4 ">
 								<li>
@@ -92,7 +90,7 @@ const Footer = (): React.JSX.Element => {
 								</li>
 							</ul>
 						</section>
-						<section className="flex flex-col gap-4   text-black">
+						<section className="flex flex-col gap-4 text-black">
 							<span className="font-bold text-black">Service</span>
 							<ul className=" space-y-4 ">
 								<li>
@@ -111,23 +109,23 @@ const Footer = (): React.JSX.Element => {
 								</li>
 							</ul>
 						</section>
-						<section className=" flex w-fit flex-col gap-4    text-black">
+						<section className=" flex w-fit flex-col gap-4 text-black">
 							<span className="  font-bold text-black">Legal</span>
 							<ul className=" space-y-4    ">
 								<li>
-									<Link href={"/"}>Privacy Policy</Link>
+									<Link href={"/privacy"}>Privacy Policy</Link>
 								</li>
 								<li>
-									<Link href={"/"} className="w-fit">
+									<Link href={"/terms"} className="w-fit">
 										Terms and Conditions
 									</Link>
 								</li>
 								<li>
-									<Link href={"/"}>Refund Policy</Link>
+									<Link href={"/refund"}>Refund Policy</Link>
 								</li>
 							</ul>
 						</section>
-						<section className="flex flex-col gap-4    text-black">
+						<section className="flex flex-col gap-4 text-black">
 							<span className="font-bold text-black">Tools</span>
 							<ul className=" space-y-4 ">
 								<li>
@@ -146,8 +144,8 @@ const Footer = (): React.JSX.Element => {
 								</li>
 							</ul>
 						</section>
-						<Divider orientation="vertical" className="mx-5" />
-						<section className=" flex flex-col gap-4   text-black">
+						<Divider orientation="vertical" />
+						<section className=" flex flex-col gap-4 text-black">
 							<span className="font-bold text-black">Stay Connected</span>
 							<ul className=" space-y-4 ">
 								<li>

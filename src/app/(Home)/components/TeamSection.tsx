@@ -7,7 +7,7 @@ const TeamSection = async (): Promise<React.JSX.Element> => {
 	const allTeamsDetails = await getAllManagementData();
 
 	return (
-		<section id={"teams"} className=" bg-background3 relative h-auto w-full ">
+		<section id={"teams"} className="relative h-auto w-full">
 			<section className="w-full py-20 lg:py-28 ">
 				<section className="mx-auto flex w-full max-w-7xl flex-col gap-14 px-5 md:px-10 ">
 					<Heading

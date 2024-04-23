@@ -111,3 +111,10 @@ interface getAllPlans {
 	price: number;
 	service: string[];
 }
+
+interface getPolicy {
+	title: string;
+	slug: string;
+	content: TypedObject | TypedObject[];
+	_updatedAt: string;
+}

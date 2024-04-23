@@ -60,7 +60,7 @@
 		@apply text-lg leading-[26.24px] text-black dark:text-white;
 	}
 	h1 {
-		@apply text-center text-4xl font-semibold leading-[39px] tracking-tight dark:text-white text-black text-secondary sm:text-5xl  sm:leading-[55px] md:text-[60px]  md:leading-[70px] xl:text-6xl   xl:leading-[82px] dark:text-white;
+		@apply text-center text-4xl font-semibold leading-[39px] tracking-tight  text-black text-secondary sm:text-5xl  sm:leading-[55px] md:text-[60px]  md:leading-[70px] xl:text-6xl   xl:leading-[82px] dark:text-white;
 	}
 	h2 {
 		@apply font-schibsted-grotesk text-black text-center text-3xl dark:text-white font-semibold leading-[41px] text-secondary sm:text-[40px] lg:text-6xl lg:leading-[66px];

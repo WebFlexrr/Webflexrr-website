@@ -1,13 +1,18 @@
 "use client";
 import { Image } from "@nextui-org/react";
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const BannerSection = (): React.JSX.Element => {
 	const ref = useRef(null);
-	// const { scrollY } = useScroll({
-	// 	target: ref,
-	// });
+	const { scrollYProgress } = useScroll({
+		target: ref,
+	});
+
+	const translateX1 = useTransform(scrollYProgress, [0, 1], [-300, 39]);
+	const translateX2 = useTransform(scrollYProgress, [0, 1], [300, 39]);
+	// const gap = useTransform(scrollYProgress, [0, 1], [-300, 39]);
+
 	return (
 		<section ref={ref} className=" h-auto w-full bg-slate-500 py-20 ">
 			<section className=" mx-auto flex h-auto w-full max-w-7xl flex-col gap-10 ">
@@ -24,8 +29,8 @@ const BannerSection = (): React.JSX.Element => {
 				</section>
 				<section className=" flex w-full flex-col flex-wrap items-center justify-evenly gap-10 ">
 					<motion.section
-						whileInView={{
-							translateX: -200,
+						style={{
+							translateX: translateX1,
 						}}
 						className="flex items-center gap-20"
 					>
@@ -62,8 +67,8 @@ const BannerSection = (): React.JSX.Element => {
 						</span>
 					</motion.section>
 					<motion.section
-						whileInView={{
-							translateX: 200,
+						style={{
+							translateX: translateX2,
 						}}
 						className="flex items-center gap-20"
 					>
