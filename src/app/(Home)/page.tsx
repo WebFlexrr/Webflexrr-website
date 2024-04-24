@@ -8,7 +8,6 @@ import ContactSection from "./components/ContactSection";
 import Footer from "@/components/Footer";
 import ProjectsSection from "./components/ProjectsSection";
 import FaqSection from "./components/FaqSection";
-// import CallOutSection from "./components/CallOutSection";
 
 const Home = async (): Promise<React.JSX.Element> => {
 	return (

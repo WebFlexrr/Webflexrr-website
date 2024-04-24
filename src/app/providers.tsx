@@ -11,9 +11,7 @@ export function Providers({
 	return (
 		// <SmoothScrolling>
 		<NextUIProvider>
-			<NextThemesProvider attribute="class" defaultTheme="dark">
-				{children}
-			</NextThemesProvider>
+			<NextThemesProvider attribute="class">{children}</NextThemesProvider>
 		</NextUIProvider>
 		// </SmoothScrolling>
 	);

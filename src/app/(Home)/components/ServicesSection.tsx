@@ -34,9 +34,9 @@ const ServicesSection = (): React.JSX.Element => {
 					}
 				/>
 
-				<section className="servicesSections flex h-auto  w-full justify-center  xl:mt-7 ">
+				<section className="servicesSections flex h-auto  w-full justify-center  xl:mt-20 ">
 					<div className="grid w-full max-w-7xl grid-cols-1  gap-7 lg:grid-cols-3 lg:grid-rows-3">
-						<section className="group col-span-2 flex w-full rounded-2xl border border-black  pl-5 pt-5 shadow-xl lg:col-span-2 lg:row-span-1 ">
+						<section className="group col-span-2 flex w-full rounded-2xl border   pl-5 pt-5 shadow-xl lg:col-span-2 lg:row-span-1 ">
 							<section className="flex h-auto w-full max-w-xs flex-col gap-5">
 								<section className="w-full">
 									<div className="flex h-8 w-8 items-center justify-center rounded-full border bg-black  ">

@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Heading from "@/components/Heading";
-import { BlogItem } from "@/components/ui/blog-Item";
+import { BlogItem } from "@/app/(Marketing)/blogs/components/blog-Item";
 
 import { Button, Card, CardBody, Image } from "@nextui-org/react";
 import { getAllBlogs } from "@/lib/getBlog";

@@ -26,6 +26,7 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 							"Simple pricing that makes sense for your business. No hidden fees."
 						}
 					/>
+
 					<section className=" mb-16 mt-10 flex h-auto w-full flex-col  gap-6  ">
 						{/* Selection Pannel */}
 						<section className=" mx-auto grid h-auto w-full max-w-lg grid-cols-1 gap-9 sm:px-10 xl:max-w-none xl:grid-cols-3 xl:px-0 ">
@@ -76,6 +77,10 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 								</Card>
 							))}
 						</section>
+					</section>
+					<section className=" mb-16 mt-10 flex h-auto w-full flex-col  gap-6  ">
+						<h4>If your Want free consultation ,then Book a Call </h4>
+						<Link></Link>
 					</section>
 					<section className="flex h-auto w-full flex-col items-center  justify-center gap-5">
 						<div className=" text-sm text-black ">

@@ -43,15 +43,10 @@ interface findServiceByName {
 }
 
 interface getAllProjects {
-	id: number;
-	name: string;
-	slug: string;
-	description: string;
-	category: string;
-	projectOwnership: string;
-	previewSpacing: number;
-	preview: string;
-	projectLink: string | null;
+	title: string;
+	link: string;
+	thumbnail: string;
+	_updatedAt: string;
 }
 
 interface getAllPosts {

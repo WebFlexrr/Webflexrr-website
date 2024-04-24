@@ -1,7 +1,7 @@
 "use client";
 import { Image } from "@nextui-org/react";
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const BannerSection = (): React.JSX.Element => {
 	const ref = useRef(null);
@@ -9,8 +9,25 @@ const BannerSection = (): React.JSX.Element => {
 		target: ref,
 	});
 
-	const translateX1 = useTransform(scrollYProgress, [0, 1], [-300, 39]);
-	const translateX2 = useTransform(scrollYProgress, [0, 1], [300, 39]);
+	const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+
+	const translateX1 = useSpring(
+		useTransform(scrollYProgress, [0, 1], [-300, 39]),
+		springConfig
+	);
+
+	// const gap = useTransform(
+	// 	scrollYProgress,
+	// 	[0, 20],
+	// 	[1, 60],
+	// 	// springConfig
+	// );
+
+	const translateX2 = useSpring(
+		useTransform(scrollYProgress, [0, 1], [300, 39]),
+		springConfig
+	);
+
 	// const gap = useTransform(scrollYProgress, [0, 1], [-300, 39]);
 
 	return (
@@ -31,6 +48,7 @@ const BannerSection = (): React.JSX.Element => {
 					<motion.section
 						style={{
 							translateX: translateX1,
+							// gap,
 						}}
 						className="flex items-center gap-20"
 					>

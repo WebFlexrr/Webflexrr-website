@@ -19,7 +19,10 @@ const WorksFlowSection = (): React.JSX.Element => {
 						"Say goodbye to the lengthy onboarding processes associated with agencies. Simply subscribe, add your project details, then watch us set up and deliver your first task within 72 hours."
 					}
 				/>
-				<section ref={worksFlowSectionRef} className="mt-20 flex w-full ">
+				<section
+					ref={worksFlowSectionRef}
+					className="mt-20 flex w-full flex-col gap-14 "
+				>
 					{/* <section className="w-[25%] ">
 						<motion.svg
 							width="4"
@@ -64,16 +67,14 @@ const WorksFlowSection = (): React.JSX.Element => {
 						<motion.section
 							initial={{
 								opacity: 0,
-								// scale:0
 							}}
 							whileInView={{
 								opacity: 1,
-								// scale:1.3
 							}}
 							viewport={{
-								margin: "-500px",
+								margin: "-300px",
 							}}
-							className=" flex w-full flex-col rounded-xl border-2 border-black p-6 lg:flex-row"
+							className="relative  flex w-full flex-col rounded-xl border-3 border-black p-6 lg:flex-row"
 						>
 							<div className="flex aspect-square w-full flex-col gap-3 rounded-2xl border bg-black p-10 lg:w-[30%]">
 								<div className="h-4 w-full rounded-full border-3 border-white"></div>
@@ -108,17 +109,24 @@ const WorksFlowSection = (): React.JSX.Element => {
 									</p>
 								</div>
 							</section>
+							<div className="absolute -left-40  bottom-1/2 flex h-20 w-20 items-center  justify-center rounded-full border-3 border-black bg-white text-lg font-semibold text-black">
+								Step 1
+							</div>
 						</motion.section>
-
+					</motion.section>
+					<motion.section className="mx-auto grid h-auto w-full grid-cols-1 flex-col gap-8 lg:w-[75%]">
+						{/* First step */}
 						<motion.section
-							initial={{ opacity: 0 }}
+							initial={{
+								opacity: 0,
+							}}
 							whileInView={{
 								opacity: 1,
 							}}
 							viewport={{
-								margin: "-500px",
+								margin: "-300px",
 							}}
-							className=" flex w-full flex-col rounded-xl border-2 border-black p-6 lg:flex-row"
+							className="relative  flex w-full flex-col rounded-xl border-3 border-black p-6 lg:flex-row"
 						>
 							<div className="flex aspect-square w-full flex-col gap-3 rounded-2xl border bg-black p-10 lg:w-[30%]">
 								<div className="h-4 w-full rounded-full border-3 border-white"></div>
@@ -153,17 +161,24 @@ const WorksFlowSection = (): React.JSX.Element => {
 									</p>
 								</div>
 							</section>
+							<div className="absolute -left-40  bottom-1/2 flex h-20 w-20 items-center  justify-center rounded-full border-3 border-black bg-white text-lg font-semibold text-black">
+								Step 1
+							</div>
 						</motion.section>
-
+					</motion.section>
+					<motion.section className="mx-auto grid h-auto w-full grid-cols-1 flex-col gap-8 lg:w-[75%]">
+						{/* First step */}
 						<motion.section
-							initial={{ opacity: 0 }}
+							initial={{
+								opacity: 0,
+							}}
 							whileInView={{
 								opacity: 1,
 							}}
 							viewport={{
-								margin: "-500px",
+								margin: "-300px",
 							}}
-							className=" flex w-full flex-col rounded-xl border-2 border-black p-6 lg:flex-row"
+							className="relative  flex w-full flex-col rounded-xl border-3 border-black p-6 lg:flex-row"
 						>
 							<div className="flex aspect-square w-full flex-col gap-3 rounded-2xl border bg-black p-10 lg:w-[30%]">
 								<div className="h-4 w-full rounded-full border-3 border-white"></div>
@@ -198,17 +213,24 @@ const WorksFlowSection = (): React.JSX.Element => {
 									</p>
 								</div>
 							</section>
+							<div className="absolute -left-40  bottom-1/2 flex h-20 w-20 items-center  justify-center rounded-full border-3 border-black bg-white text-lg font-semibold text-black">
+								Step 1
+							</div>
 						</motion.section>
-
+					</motion.section>
+					<motion.section className="mx-auto grid h-auto w-full grid-cols-1 flex-col gap-8 lg:w-[75%]">
+						{/* First step */}
 						<motion.section
-							initial={{ opacity: 0 }}
+							initial={{
+								opacity: 0,
+							}}
 							whileInView={{
 								opacity: 1,
 							}}
 							viewport={{
-								margin: "-500px",
+								margin: "-300px",
 							}}
-							className=" flex w-full flex-col rounded-xl border-2 border-black p-6 lg:flex-row"
+							className="relative  flex w-full flex-col rounded-xl border-3 border-black p-6 lg:flex-row"
 						>
 							<div className="flex aspect-square w-full flex-col gap-3 rounded-2xl border bg-black p-10 lg:w-[30%]">
 								<div className="h-4 w-full rounded-full border-3 border-white"></div>
@@ -243,6 +265,9 @@ const WorksFlowSection = (): React.JSX.Element => {
 									</p>
 								</div>
 							</section>
+							<div className="absolute -left-40  bottom-1/2 flex h-20 w-20 items-center  justify-center rounded-full border-3 border-black bg-white text-lg font-semibold text-black">
+								Step 1
+							</div>
 						</motion.section>
 					</motion.section>
 				</section>

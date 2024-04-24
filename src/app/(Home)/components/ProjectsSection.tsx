@@ -1,4 +1,5 @@
 import Heading from "@/components/Heading";
+import getAllProjects from "@/lib/getProjects";
 import { Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
 import React from "react";
 
@@ -98,7 +99,8 @@ export const products = [
 	},
 ];
 
-const ProjectsSection = (): React.JSX.Element => {
+const ProjectsSection = async (): Promise<React.JSX.Element> => {
+	const projects = await getAllProjects();
 	return (
 		<section className=" h-auto w-full py-20 " id="projects">
 			<section className="  mx-auto flex h-auto w-full max-w-6xl flex-col gap-10 px-5 sm:px-10   ">
@@ -109,12 +111,17 @@ const ProjectsSection = (): React.JSX.Element => {
 					}
 				/>
 				<section className="grid h-auto w-full md:grid-cols-2 md:gap-20 lg:gap-20 ">
-					{products.map((item, index) => (
+					{projects.map((item, index) => (
 						<Card key={index} className=" bg-transparent p-0 hover:bg-primary">
 							<CardHeader>
-								<Image src={item.thumbnail} width={500} alt={item.title} />
+								<Image
+									src={item.thumbnail}
+									width={500}
+									height={600}
+									className=""
+									alt={item.title}
+								/>
 							</CardHeader>
-
 							<CardFooter>
 								<h5>{item.title}</h5>
 							</CardFooter>
