@@ -1,5 +1,5 @@
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
-import { Button, Image } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import React from "react";
 
 const people = [
@@ -80,7 +80,7 @@ const CallOutSection = (): React.JSX.Element => {
 				<section className="relative h-full w-1/2  ">
 					<section className=" absolute grid w-full grid-cols-2">
 						<section className="z-0 space-y-5 overflow-auto">
-							<Image
+							{/* <Image
 								src={"/assets/pixelperfect.png"}
 								width={300}
 								height={600}
@@ -97,10 +97,10 @@ const CallOutSection = (): React.JSX.Element => {
 								width={300}
 								height={600}
 								className="rounded-none p-0"
-							/>
+							/> */}
 						</section>
 						<section className="-z-10 space-y-5">
-							<Image
+							{/* <Image
 								src={"/assets/pixelperfect.png"}
 								width={300}
 								height={600}
@@ -117,7 +117,7 @@ const CallOutSection = (): React.JSX.Element => {
 								width={300}
 								height={600}
 								className="rounded-none p-0"
-							/>
+							/> */}
 						</section>
 					</section>
 				</section>

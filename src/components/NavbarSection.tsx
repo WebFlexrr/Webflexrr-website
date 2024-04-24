@@ -67,15 +67,6 @@ const NavbarSection = (): React.JSX.Element => {
 								Services
 							</Link>
 						</NavbarItem>
-						{/* <NavbarItem>
-							<Link
-								className="text-lg font-medium text-black antialiased dark:text-white "
-								color="foreground"
-								href={"/#portfolio"}
-							>
-								Portfolio
-							</Link>
-						</NavbarItem> */}
 						<NavbarItem>
 							<Link
 								className="text-lg font-medium text-black antialiased dark:text-white "

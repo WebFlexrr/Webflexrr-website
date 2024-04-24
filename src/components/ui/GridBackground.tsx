@@ -3,12 +3,12 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export function GridBackground(): React.JSX.Element {
 	return (
-		<div className="relative flex h-[50rem] w-full  items-center justify-center bg-white bg-grid-black/[0.2] dark:bg-black dark:bg-grid-white/[0.2]">
+		<div className="relative flex h-screen w-full items-center justify-center bg-white bg-grid-black/[0.2] lg:pt-28 dark:bg-black dark:bg-grid-white/[0.2]">
 			{/* Radial gradient for the container to give a faded look */}
 			<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-			<section className="mx-auto flex h-full w-full max-w-7xl flex-col items-center gap-10 text-center sm:px-5 md:px-14 xl:px-20">
+			<section className="mx-auto flex h-full w-full max-w-7xl flex-col items-center gap-10 px-5 text-center md:px-14 xl:px-20">
 				<section className="mt-32 w-full max-w-6xl">
-					<h1>
+					<h1 className="text-black">
 						Crafting High-Performance Websites for
 						<span className="text-green-600">
 							{" "}
