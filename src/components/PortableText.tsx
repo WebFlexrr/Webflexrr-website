@@ -59,7 +59,9 @@ export const PortableTextComponents: PortableTextReactComponents = {
 	block: {
 		// Ex. 1: customizing common block types
 		h1: ({ children }) => (
-			<h1 className="my-4 text-3xl font-bold text-[#130f49]">{children}</h1>
+			<h1 className="my-4 text-left text-3xl font-bold text-[#130f49]">
+				{children}
+			</h1>
 		),
 		h2: ({ children }) => (
 			<h2 className="my-4 text-left text-2xl  font-bold text-[#130f49]">
@@ -72,16 +74,22 @@ export const PortableTextComponents: PortableTextReactComponents = {
 			</h3>
 		),
 		h4: ({ children }) => (
-			<h4 className="my-2 text-lg  font-bold text-[#130f49]">{children}</h4>
+			<h4 className="my-2 text-left text-lg  font-bold text-[#130f49]">
+				{children}
+			</h4>
 		),
 		h5: ({ children }) => (
-			<h5 className="my-1 text-base  font-bold text-[#130f49]">{children}</h5>
+			<h5 className="my-1 text-left text-base  font-bold text-[#130f49]">
+				{children}
+			</h5>
 		),
 		h6: ({ children }) => (
-			<h6 className="my-4 text-sm  font-bold text-[#130f49]">{children}</h6>
+			<h6 className="my-4 text-left text-sm  font-bold text-[#130f49]">
+				{children}
+			</h6>
 		),
 		blockquote: ({ children }) => (
-			<blockquote className="border-l-4 border-slate-500  pl-3 text-[#130f49]">
+			<blockquote className="border-l-4 border-slate-500 pl-3  text-left text-[#130f49]">
 				{children}
 			</blockquote>
 		),

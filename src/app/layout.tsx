@@ -78,7 +78,7 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 		<html lang="en" className="!scroll-smooth">
 			<body className="main ">
 				<Providers>
-					<main className=" overflow-x-hidden ">
+					<main className="overflow-x-hidden scroll-smooth ">
 						<NavbarSection />
 						{children}
 					</main>

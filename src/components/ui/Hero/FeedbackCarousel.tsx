@@ -54,7 +54,7 @@ const FeedbackCarousel: FC<FeedbackCarouselProps> = ({ feedbacks }) => {
 						</section>
 						<section
 							id="description"
-							className="z-0 h-auto w-full bg-gradient-to-br from-background3 to-background3 bg-[length:100%_80%] bg-no-repeat"
+							className="from-background3 to-background3 z-0 h-auto w-full bg-gradient-to-br bg-[length:100%_80%] bg-no-repeat"
 						>
 							<section className="h-auto w-full px-[20px] py-[40px] lg:px-12 lg:py-[66px] xl:px-20">
 								<p>{feedback.message}</p>

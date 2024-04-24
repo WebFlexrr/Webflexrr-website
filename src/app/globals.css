@@ -54,7 +54,7 @@
 
 @layer base {
 	body {
-		@apply  h-screen w-full text-black dark:text-white;
+		@apply h-screen w-full text-black dark:text-white;
 	}
 	p {
 		@apply text-lg leading-[26.24px] text-black dark:text-white;
@@ -63,16 +63,16 @@
 		@apply text-center text-4xl font-semibold leading-[39px] tracking-tight  text-black text-secondary sm:text-5xl  sm:leading-[55px] md:text-[60px]  md:leading-[70px] xl:text-6xl   xl:leading-[82px] dark:text-white;
 	}
 	h2 {
-		@apply font-schibsted-grotesk text-black text-center text-3xl dark:text-white font-semibold leading-[41px] text-secondary sm:text-[40px] lg:text-6xl lg:leading-[66px];
+		@apply text-center font-schibsted-grotesk text-3xl font-semibold leading-[41px] text-black text-secondary sm:text-[40px] lg:text-6xl lg:leading-[66px] dark:text-white;
 	}
 	h3 {
-		@apply text-center text-4xl text-black dark:text-white font-semibold leading-[41.76px] text-secondary sm:text-5xl sm:leading-[58px];
+		@apply text-center text-4xl font-semibold leading-[41.76px] text-black text-secondary sm:text-5xl sm:leading-[58px] dark:text-white;
 	}
 	h4 {
-		@apply text-left text-4xl text-black dark:text-white dark font-bold leading-[41.76px] text-secondary;
+		@apply text-left text-4xl font-bold leading-[41.76px] text-black text-secondary dark dark:text-white;
 	}
 	h5 {
-		@apply text-start text-xl text-black leading-[32.8px] dark:text-white  text-secondary sm:leading-[37.7px] md:text-[23px] lg:text-[26px] xl:text-[22px];
+		@apply text-start text-xl leading-[32.8px] text-black text-secondary  sm:leading-[37.7px] md:text-[23px] lg:text-[26px] xl:text-[22px] dark:text-white;
 	}
 }
 

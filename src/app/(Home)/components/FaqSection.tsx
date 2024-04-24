@@ -23,7 +23,7 @@ const FaqSection = async (): Promise<React.JSX.Element> => {
 						"Meet the founders behind Webflexrr Solutions revolutionary development agency"
 					}
 				/>
-				<section id={"teams"} className="  relative h-auto w-full ">
+				<section className="  relative h-auto w-full ">
 					<Accordion type="multiple">
 						{allFaq.map((item, index) => (
 							<AccordionItem key={item.id} value={`item-${index}`}>

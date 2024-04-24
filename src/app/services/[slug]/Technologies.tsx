@@ -32,7 +32,7 @@ const Technologies: FC<TechnologiesProps> = ({ weAreUsing }) => {
 		<section ref={technologies} className="h-auto w-full bg-background ">
 			<section className="h-auto w-full px-5 py-20 xl:py-28 ">
 				<Heading heading={"Technology"} subHeading={"We are Using "} />
-				<section className="mx-auto h-fit w-full max-w-[70rem] border-2 border-primary bg-background3 p-3 ">
+				<section className="bg-background3 mx-auto h-fit w-full max-w-[70rem] border-2 border-primary p-3 ">
 					<section className="grid h-full w-full grid-cols-2 gap-5 md:grid-cols-3  xl:grid-cols-6 ">
 						{weAreUsing?.map((item) => (
 							<div

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const Portfolio = (): React.JSX.Element => {
 	return (
-		<main className="relative z-30 h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth bg-background2">
+		<main className="bg-background2 relative z-30 h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth">
 			<NavbarSection />
 			<MainTitle heading={"Portfolio"} />
 			<ProjectSection />

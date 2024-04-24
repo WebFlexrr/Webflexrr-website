@@ -32,7 +32,7 @@ const CoreServices: FC<CoreServicesProps> = ({ services }) => {
 	return (
 		<section
 			ref={CoreServices}
-			className="h-auto w-full border-t border-black bg-background2"
+			className="bg-background2 h-auto w-full border-t border-black"
 		>
 			<section className="relative h-fit w-full">
 				<section className="flex h-auto w-full flex-col items-center px-5 py-20  xl:px-0 xl:py-28 ">
@@ -40,7 +40,7 @@ const CoreServices: FC<CoreServicesProps> = ({ services }) => {
 					{/* <h1>We can offer</h1> */}
 					<section className="h-auto w-full xl:mt-10 ">
 						{/* <section className="w-full h-full flex flex-col md:flex-row md:flex-wrap  lg:gap-0  text-secondary border-tertiary "> */}
-						<section className=" grid h-full  w-full grid-cols-1  border-tertiary text-secondary xl:grid-cols-4 ">
+						<section className=" border-tertiary grid  h-full w-full  grid-cols-1 text-secondary xl:grid-cols-4 ">
 							{services?.map((items) => (
 								<section
 									key={items._key}
