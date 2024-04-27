@@ -1,4 +1,6 @@
 import { nextui } from "@nextui-org/react";
+import { transform } from "next/dist/build/swc";
+
 import type { Config } from "tailwindcss";
 
 const defaultTheme = require("tailwindcss/defaultTheme");
@@ -86,21 +88,21 @@ const config: Config = {
 					"50%": { transform: "rotate(8deg)" },
 					"100%": { transform: "rotate(0deg)" },
 				},
-				"visible-from-up": {
-					"0%": { translate: "0 30% 0", opacity: "0" },
-					"100%": { translate: "0 0 0", opacity: "1" },
+
+				"left-to-right": {
+					"100%": {
+						transform: "translate(calc(-50% - .5rem))",
+					},
 				},
-				"visible-from-down": {
-					"0%": { translate: "0 -30% 0", opacity: "0" },
-					"100%": { translate: "0 0 0", opacity: "1" },
-				},
-				"visible-from-left": {
-					"0%": { translate: "-30% 0 0", opacity: "0" },
-					"100%": { translate: "0 0 0", opacity: "1" },
-				},
-				"visible-from-right": {
-					"0%": { translate: "30% 0 0", opacity: "0" },
-					"100%": { translate: "0 0 0", opacity: "1" },
+				"fade-down": {
+					"0%": {
+						opacity: "0",
+						translate: "0 20% 0",
+					},
+					"100%": {
+						opacity: "1",
+						translate: "0 0% 0",
+					},
 				},
 				scroll: {
 					"0%": {
@@ -123,15 +125,10 @@ const config: Config = {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				wiggle: "wiggle 700ms ease-in-out",
-				"visible-from-left":
-					"visible-from-left 1.5s cubic-bezier(0.785, 0.135, 0.150, 0.860)",
-				"visible-from-right":
-					"visible-from-right 1.5s cubic-bezier(0.785, 0.135, 0.150, 0.860) ",
-				"visible-from-up":
-					"visible-from-up 1s cubic-bezier(0.785, 0.135, 0.150, 0.860)",
-				"visible-from-down":
-					"visible-from-down 1s cubic-bezier(0.785, 0.135, 0.150, 0.860)",
+
 				scroll: "scroll 10s ease-in-out",
+				"left-to-right": "left-to-right 40s  linear  infinite",
+				"fade-down": "fade-down 1s ease-in-out",
 			},
 			transitionTimingFunction: {
 				"in-out-circ": "cubic-bezier(0.785, 0.135, 0.150, 0.860)",

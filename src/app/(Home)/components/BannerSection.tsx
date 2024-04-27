@@ -27,7 +27,7 @@ const Logos: ArrayLogos[] = [
 	{
 		image: "/com-logos/reactjs.png",
 		altText: "react js",
-		width: 100,
+		width: 120,
 		height: 0,
 	},
 	{
@@ -45,7 +45,7 @@ const Logos: ArrayLogos[] = [
 	{
 		image: "/com-logos/framer-motion.png",
 		altText: "framer motion",
-		width: 70,
+		width: 80,
 		height: 0,
 	},
 	{
@@ -117,7 +117,7 @@ const BannerSection = (): React.JSX.Element => {
 					</p>
 				</section>
 				<section className=" flex w-full flex-col flex-wrap items-center justify-evenly gap-10 ">
-					<section className="flex flex-wrap items-center justify-evenly gap-10 lg:flex-nowrap ">
+					<section className="flex flex-wrap items-center justify-evenly gap-4 lg:flex-nowrap lg:gap-10 ">
 						{Logos.map((item, index) => (
 							<motion.span
 								key={index}
@@ -135,7 +135,7 @@ const BannerSection = (): React.JSX.Element => {
 									height={item.height}
 									alt={item.altText}
 									src={item.image}
-									className=" rounded-none bg-white px-4 py-1 "
+									className=" rounded-none  px-4 py-1 "
 								/>
 							</motion.span>
 						))}

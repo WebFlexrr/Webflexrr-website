@@ -76,6 +76,12 @@
 	}
 }
 
+/* @layer utilities {
+   .pause {
+     animation-play-state: paused;
+   }
+} */
+
 /* ::-webkit-scrollbar {
 	display: none;
 } */

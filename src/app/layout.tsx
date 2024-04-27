@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { type ReactNode } from "react";
-import { Providers } from "./providers";
+// import { Providers } from "./providers";
 import NavbarSection from "@/components/NavbarSection";
 
 export const metadata: Metadata = {
@@ -77,12 +77,12 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 	return (
 		<html lang="en" className="!scroll-smooth">
 			<body className="main ">
-				<Providers>
-					<main className="overflow-x-hidden scroll-smooth ">
-						<NavbarSection />
-						{children}
-					</main>
-				</Providers>
+				{/* <Providers> */}
+				<main className="overflow-x-hidden scroll-smooth ">
+					<NavbarSection />
+					{children}
+				</main>
+				{/* </Providers> */}
 			</body>
 		</html>
 	);
