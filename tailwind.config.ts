@@ -125,7 +125,6 @@ const config: Config = {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				wiggle: "wiggle 700ms ease-in-out",
-
 				scroll: "scroll 10s ease-in-out",
 				"left-to-right": "left-to-right 40s  linear  infinite",
 				"fade-down": "fade-down 1s ease-in-out",

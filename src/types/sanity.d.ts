@@ -98,6 +98,13 @@ interface getAllFaq {
 	content: TypedObject | TypedObject[];
 	_updatedAt: string;
 }
+interface getAllProcess {
+	step: number;
+	name: string;
+	description: string;
+	picture: string;
+	_updatedAt: string;
+}
 
 interface getAllPlans {
 	id: number;

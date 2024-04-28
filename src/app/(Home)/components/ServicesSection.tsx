@@ -102,7 +102,7 @@ const Row2 = [
 const ServicesSection = (): React.JSX.Element => {
 	return (
 		<section className=" services h-auto w-full " id={"services"}>
-			<section className="relative mx-auto flex h-auto w-full max-w-7xl flex-col justify-center gap-24 px-7 py-36 lg:px-0 ">
+			<section className="relative mx-auto flex h-auto w-full max-w-7xl flex-col justify-center gap-24 px-7 py-40 lg:px-0 ">
 				<Heading
 					heading={"We handle just about everything!"}
 					subHeading={
@@ -483,7 +483,6 @@ const ServicesSection = (): React.JSX.Element => {
 						</section>
 					</section>
 					<div className="absolute -top-5 left-5 -z-10 h-80 w-[30rem] rounded-full bg-gradient-to-r from-cyan-500 to-green-500 opacity-25 blur-xl "></div>
-					{/* <div className="absolute left-52  top-0 -z-10 h-80 w-[30rem] rounded-full bg-gradient-to-r from-cyan-500 to-green-500 opacity-25 blur-xl "></div> */}
 					<div className="absolute right-1/2 top-1/2 -z-10 h-80 w-[40rem] -rotate-12 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 opacity-25 blur-xl "></div>
 					<div className="absolute -bottom-16 right-14 -z-10 h-96 w-96 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 opacity-55 blur-xl "></div>
 				</section>
