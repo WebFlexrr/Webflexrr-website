@@ -103,7 +103,7 @@ const ProjectsSection = async (): Promise<React.JSX.Element> => {
 	const projects = await getAllProjects();
 	return (
 		<section className=" h-auto w-full py-20 " id="projects">
-			<section className="  mx-auto flex h-auto w-full max-w-6xl flex-col gap-10 px-5 sm:px-10   ">
+			<section className=" mx-auto flex h-auto w-full max-w-6xl flex-col gap-10  px-5 py-28 sm:px-10   ">
 				<Heading
 					heading={"A glimpse into the projects that we have built."}
 					subHeading={
