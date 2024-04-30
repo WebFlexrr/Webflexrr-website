@@ -51,7 +51,7 @@ const ContactSection = (): React.JSX.Element => {
 
 		try {
 			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_URL2}/api/email-send`,
+				`${process.env.NEXT_PUBLIC_URL}/api/email-send`,
 				{
 					method: "POST",
 					headers: {
