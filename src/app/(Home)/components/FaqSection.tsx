@@ -20,7 +20,7 @@ const FaqSection = async (): Promise<React.JSX.Element> => {
 				<Heading
 					heading={"Frequently asked questions?"}
 					subHeading={
-						"Meet the founders behind Webflexrr Solutions revolutionary development agency"
+						"Can’t find the answer you’re looking for? Reach out to us and we will get in touch with you"
 					}
 				/>
 				<section className="  relative h-auto w-full ">

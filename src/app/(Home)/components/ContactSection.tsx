@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Heading from "@/components/Heading";
 import { Button, Input, Textarea } from "@nextui-org/react";
+import toast, { Toaster } from "react-hot-toast";
 
 const schema = yup.object({
 	firstName: yup.string().required("First Name is Required"),
@@ -13,8 +14,8 @@ const schema = yup.object({
 		.string()
 		.email("Email format is not valid")
 		.required("Email is Required"),
-	companyName: yup.string().required("Company Name is Required"),
-	additionalMessage: yup.string().required("Message is Required"),
+	companyName: yup.string(),
+	additionalMessage: yup.string(),
 });
 
 type FormInput = yup.InferType<typeof schema>;
@@ -35,22 +36,22 @@ const ContactSection = (): React.JSX.Element => {
 		resolver: yupResolver(schema),
 	});
 
-	const onSubmit = async (data: FormInput): Promise<void> => {
-		const formData = {
-			service_id: `${process.env.NEXT_PUBLIC_YOUR_SERVICE_ID}`,
-			template_id: `${process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID}`,
-			user_id: `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`,
-			template_params: {
-				from_name: data.firstName,
-				from_email: data.email,
-				to_name: "Tejodeep",
-				message: data.additionalMessage,
-			},
-		};
+	const onSubmit = async (formData: FormInput): Promise<void> => {
+		// const formData = {
+		// 	service_id: `${process.env.NEXT_PUBLIC_YOUR_SERVICE_ID}`,
+		// 	template_id: `${process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID}`,
+		// 	user_id: `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`,
+		// 	template_params: {
+		// 		from_name: data.firstName,
+		// 		from_email: data.email,
+		// 		to_name: "Tejodeep",
+		// 		message: data.additionalMessage,
+		// 	},
+		// };
 
 		try {
 			const response = await fetch(
-				"https://api.emailjs.com/api/v1.0/email/send",
+				`${process.env.NEXT_PUBLIC_URL2}/api/email-send`,
 				{
 					method: "POST",
 					headers: {
@@ -61,29 +62,31 @@ const ContactSection = (): React.JSX.Element => {
 			);
 
 			const data = await response.json();
+			toast.success("Mail Sucessfully send!");
 			console.log(data);
 		} catch (error) {
+			toast.error("Error Happen! Email was not send, Pls Retry");
 			console.log(error);
 		}
 	};
 
 	return (
 		<section id={"contact"} className=" relative h-auto w-full ">
+			<Toaster position="bottom-center" reverseOrder={true} />
 			<section className="mx-auto w-full max-w-5xl space-y-10 px-5 py-20 md:px-10 lg:py-28 ">
 				<Heading
 					heading={"Contact Us"}
 					subHeading={
-						"Meet the founders behind Webflexrr Solutions revolutionary development agency"
+						"You can feel free to contact us If you have any query or anything you want."
 					}
 				/>
-				<section className=" flex h-auto w-full flex-col gap-6 p-5  ">
-					<section className="flex h-full w-full flex-col gap-16">
-						<form
-							// eslint-disable-next-line @typescript-eslint/no-misused-promises
-							onSubmit={handleSubmit(onSubmit)}
-							className=" grid grid-cols-2 gap-4"
-						>
-							<span className=" w-full space-y-2 text-[16px] ">
+				<section className=" flex h-auto  w-full flex-col gap-16 p-5 ">
+					<form
+						// eslint-disable-next-line @typescript-eslint/no-misused-promises
+						onSubmit={handleSubmit(onSubmit)}
+					>
+						<section className=" grid grid-cols-1 gap-4 md:grid-cols-2">
+							<div className=" w-full space-y-2 text-[16px] ">
 								<Input
 									type="text"
 									id="first Name"
@@ -94,9 +97,9 @@ const ContactSection = (): React.JSX.Element => {
 								<p className="text-sm text-red-700">
 									{errors.firstName?.message}
 								</p>
-							</span>
+							</div>
 
-							<span className=" w-full space-y-2 text-[16px] ">
+							<div className=" w-full space-y-2 text-[16px] ">
 								<Input
 									type="text"
 									id="Last Name"
@@ -107,8 +110,8 @@ const ContactSection = (): React.JSX.Element => {
 								<p className="text-sm text-red-700">
 									{errors.lastName?.message}
 								</p>
-							</span>
-							<span className=" w-full space-y-2 text-[16px] ">
+							</div>
+							<div className=" w-full space-y-2 text-[16px] ">
 								<Input
 									type="email"
 									id="email"
@@ -117,8 +120,8 @@ const ContactSection = (): React.JSX.Element => {
 									{...register("email")}
 								/>
 								<p className="text-sm text-red-700">{errors.email?.message}</p>
-							</span>
-							<span className="w-full space-y-2 text-[16px]">
+							</div>
+							<div className="w-full space-y-2 text-[16px]">
 								<Input
 									type="text"
 									id="companyName"
@@ -129,13 +132,13 @@ const ContactSection = (): React.JSX.Element => {
 								<p className="text-sm text-red-700">
 									{errors.companyName?.message}
 								</p>
-							</span>
-							<div className=" col-span-2 h-40 w-full space-y-2 text-[16px] ">
+							</div>
+							<div className=" h-40 w-full space-y-2 text-[16px] md:col-span-2 ">
 								<Textarea
 									id="additionalMessage"
 									cols={4}
 									rows={4}
-									label="additionalMessage"
+									label="additional Message (Option)"
 									className="  w-full resize-y text-[16px] "
 									{...register("additionalMessage")}
 								/>
@@ -143,19 +146,19 @@ const ContactSection = (): React.JSX.Element => {
 									{errors.additionalMessage?.message}
 								</p>
 							</div>
-							<section className="col-span-2  flex  w-full justify-center">
-								<Button
-									type="submit"
-									radius="full"
-									size="lg"
-									color="primary"
-									className="px-10 font-dm-sans text-[16px] font-semibold"
-								>
-									Submit
-								</Button>
-							</section>
-						</form>
-					</section>
+						</section>
+						<section className="col-span-2  flex  w-full justify-center">
+							<Button
+								type="submit"
+								radius="full"
+								size="lg"
+								color="primary"
+								className="px-10 font-dm-sans text-[16px] font-semibold"
+							>
+								Submit
+							</Button>
+						</section>
+					</form>
 				</section>
 			</section>
 		</section>
