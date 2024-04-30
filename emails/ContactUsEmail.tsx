@@ -1,13 +1,15 @@
 import {
 	Body,
-	Button,
+	Column,
 	Container,
 	Head,
-	Hr,
 	Html,
 	Img,
+	Link,
 	Preview,
+	Row,
 	Section,
+	Tailwind,
 	Text,
 } from "@react-email/components";
 import * as React from "react";
@@ -21,93 +23,111 @@ interface ContactUsEmailProps {
 	companyName: string;
 }
 
-export const ContactUsEmail = ({
+const ContactUsEmail = ({
 	firstName,
 	lastName,
 	email,
 	companyName,
 }: ContactUsEmailProps): React.JSX.Element => (
 	<Html>
-		<Head />
+		<Head>
+			<title>My email title</title>
+		</Head>
 		<Preview>
 			The sales intelligence platform that helps you uncover qualified leads.
 		</Preview>
-		<Body style={main}>
-			<Container style={container}>
+		<Tailwind
+			config={{
+				theme: {
+					extend: {
+						colors: {
+							brand: "#2250f4",
+							offwhite: "#fafbfb",
+						},
+						spacing: {
+							0: "0px",
+							20: "20px",
+							45: "45px",
+						},
+					},
+				},
+			}}
+		>
+			<Body className="bg-offwhite font-sans text-base">
 				<Img
 					src={`${baseUrl}/logos/logo.png`}
-					width="270"
-					alt="webflexrr"
-					style={logo}
+					width="220"
+					alt="Webflexrr"
+					className="mx-auto my-20"
 				/>
-				<Text style={paragraph}>Hi {firstName},</Text>
-				<Text style={paragraph}>
-					Welcome to Webflexrr Digital Services, Our team will contact you as
-					Soon as possible. Therefore hold your horses.
-				</Text>
-				<Text style={paragraph}>{companyName}</Text>
-				<Section style={btnContainer}>
-					<Button style={button} href="https://webflexrr.com">
-						Get started
-					</Button>
-				</Section>
-				<Text style={paragraph}>
-					Best,
-					<br />
-					The Webflexrr team
-				</Text>
-				<Hr style={hr} />
-				<Text style={footer}>
-					470 Noor Ave STE B #1148, South San Francisco, CA 94080
-				</Text>
-			</Container>
-		</Body>
+				<Container className="p-45 bg-white">
+					<Section>
+						<Text className="text-base">
+							Dear
+							<u>{firstName},</u>
+						</Text>
+						<Row>
+							<Text className="text-base">
+								Thank you for contacting us at Webflexrr Digital Services🚀. We
+								appreciate you taking the time to reach out to us.
+							</Text>
+
+							<Text className="text-base">
+								Our team is committed to providing exceptional service, and we
+								are excited to assist you with your inquiry. One of our
+								representatives will review your message shortly and will get
+								back to you as soon as possible.
+							</Text>
+							<Text className="text-base">
+								In the meantime, if you have any urgent matters or additional
+								information to share, please feel free to contact us directly at{" "}
+								<Link href="mailto:business@webflexrr.com">
+									business@webflexrr.com
+								</Link>
+								.
+							</Text>
+							<Text className="text-base">
+								Thank you once again for reaching out to us. We look forward to
+								connecting with you soon!
+							</Text>
+						</Row>
+					</Section>
+
+					<Section className="text-left">
+						<Row className="border border-black">
+							<Text className="mb-2 mt-0 text-base">Best regards,</Text>
+							<Text className="my-0 text-base">Tejodeep Mitra Roy</Text>
+							<Text className="my-0 text-base">CTO</Text>
+							<Text className="my-0 text-base">Webflexrr Digital Services</Text>
+							<Link
+								href="mailto:tejodeepmitraroy@webflexrr.com"
+								className="my-0"
+							>
+								tejodeepmitraroy@webflexrr.com
+							</Link>
+						</Row>
+					</Section>
+				</Container>
+
+				<Container className="mt-20 ">
+					<Row>
+						<Column className="px-20 text-right">
+							<Link href="https://www.webflexrr.com/">Home</Link>
+						</Column>
+						<Column className=" text-center">
+							<Link href="https://www.webflexrr.com/#services">Services</Link>
+						</Column>
+						<Column className=" text-center">
+							<Link href="https://www.webflexrr.com/#plans">Pricing</Link>
+						</Column>
+						<Column className="px-20 text-left">
+							<Link href="https://www.webflexrr.com/blogs">Blog</Link>
+						</Column>
+					</Row>
+				</Container>
+			</Body>
+		</Tailwind>
 	</Html>
 );
 
 export default ContactUsEmail;
-
-const main = {
-	backgroundColor: "#ffffff",
-	fontFamily:
-		'-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
-};
-
-const container = {
-	margin: "0 auto",
-	padding: "20px 0 48px",
-};
-
-const logo = {
-	margin: "0 auto",
-};
-
-const paragraph = {
-	fontSize: "16px",
-	lineHeight: "26px",
-};
-
-const btnContainer = {
-	textAlign: "center" as const,
-};
-
-const button = {
-	backgroundColor: "#08425f",
-	borderRadius: "3px",
-	color: "#fff",
-	fontSize: "16px",
-	textDecoration: "none",
-	textAlign: "center" as const,
-	display: "block",
-	padding: "12px",
-};
-
-const hr = {
-	borderColor: "#cccccc",
-	margin: "20px 0",
-};
-
-const footer = {
-	color: "#8898aa",
-	fontSize: "12px",
-};

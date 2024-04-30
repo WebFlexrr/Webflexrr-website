@@ -72,7 +72,7 @@
 		@apply text-left font-dm-sans text-4xl font-bold text-black dark:text-white;
 	}
 	h5 {
-		@apply text-center text-2xl font-dm-sans font-bold text-black dark:text-white;
+		@apply text-center font-dm-sans text-2xl font-bold text-black dark:text-white;
 	}
 }
 
