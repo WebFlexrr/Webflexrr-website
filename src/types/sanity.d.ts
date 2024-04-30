@@ -106,12 +106,16 @@ interface getAllProcess {
 	_updatedAt: string;
 }
 
+interface service {
+	serviceName: string;
+	isSelected: boolean;
+}
 interface getAllPlans {
 	id: number;
 	name: string;
 	description: string;
 	price: number;
-	service: string[];
+	service: service[];
 	bookingLink: string;
 }
 

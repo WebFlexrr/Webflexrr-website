@@ -7,7 +7,10 @@ const getAllPlans = async (): Promise<getAllPlans[]> =>
   name,
   description,
   price,
-  service,
+  service{
+    serviceName,
+      isSelected
+  }[],
   bookingLink
 }`,
 		{},

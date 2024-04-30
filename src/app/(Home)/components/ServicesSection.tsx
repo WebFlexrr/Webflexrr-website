@@ -110,9 +110,9 @@ const ServicesSection = (): React.JSX.Element => {
 					}
 				/>
 
-				<section className="relative mx-auto grid  w-full grid-cols-1 gap-7 lg:grid-cols-3 lg:grid-rows-3">
+				<section className="relative mx-auto grid w-full max-w-md grid-cols-1 gap-7 xl:max-w-none xl:grid-cols-3 xl:grid-rows-3">
 					{/* First Section */}
-					<section className="group col-span-2 flex w-full flex-col gap-20 rounded-2xl border shadow-xl   lg:col-span-2 lg:row-span-1 lg:flex-row lg:gap-0 ">
+					<section className="group col-span-2 flex w-full flex-col gap-20 rounded-2xl border shadow-xl   xl:col-span-2 xl:row-span-1 xl:flex-row xl:gap-0 ">
 						<section className="flex h-auto w-full max-w-xs flex-col gap-5 p-5 ">
 							<section className="w-full">
 								<div className="flex h-8 w-8 items-center justify-center rounded-full border bg-black  ">
@@ -161,8 +161,8 @@ const ServicesSection = (): React.JSX.Element => {
 					</section>
 
 					{/* Second Section */}
-					<section className=" group relative col-span-2 row-span-1 flex w-full flex-col justify-between overflow-hidden rounded-2xl border shadow-xl lg:col-span-1 lg:row-span-2">
-						<section className="flex h-auto w-full flex-col gap-5 px-5 pt-5 ">
+					<section className=" group relative col-span-2 row-span-1 flex w-full flex-col gap-5 overflow-hidden rounded-2xl border  shadow-xl xl:col-span-1 xl:row-span-2">
+						<section className=" flex h-auto w-full flex-col gap-5  px-5 pt-5 ">
 							<div className="flex h-8 w-8 items-center justify-center rounded-full border bg-black  ">
 								<IoMdCloudOutline className="text-lg text-white" />
 							</div>
@@ -178,7 +178,7 @@ const ServicesSection = (): React.JSX.Element => {
 								</p>
 							</section>
 						</section>
-						<section className="mt-12  flex w-full flex-col  justify-end space-y-6  ">
+						<section className=" mt-12 flex w-full  flex-col justify-end space-y-6   ">
 							<div className=" relative z-20 w-full overflow-hidden">
 								<ul
 									style={{ animationDirection: "normal" }}
@@ -261,7 +261,7 @@ const ServicesSection = (): React.JSX.Element => {
 									</div>
 								</ul>
 							</div>
-							<div className=" relative z-20 w-full overflow-hidden">
+							<div className="  relative z-20 w-full overflow-hidden ">
 								<ul
 									style={{ animationDirection: "normal" }}
 									className=" flex  w-max min-w-full shrink-0 animate-left-to-right flex-nowrap gap-5  [animation-play-state:paused] group-hover:[animation-play-state:running] "
@@ -303,7 +303,7 @@ const ServicesSection = (): React.JSX.Element => {
 								</ul>
 							</div>
 						</section>
-						<section className="mt-4 h-auto w-full">
+						<section className=" mt-4 h-auto w-full ">
 							<div
 								id={"Website"}
 								className=" mx-auto  h-[130px] w-[160px] rounded-lg border-x-2 border-t-2 bg-white shadow-2xl  "
@@ -322,12 +322,12 @@ const ServicesSection = (): React.JSX.Element => {
 									</div> */}
 								</section>
 							</div>
+							<div className="absolute  -bottom-16 left-28 -z-10 h-44 w-44 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 blur-2xl"></div>
 						</section>
-						<div className="absolute  -bottom-16 left-28 -z-10 h-44 w-44 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 blur-2xl"></div>
 					</section>
 
 					{/* Third Section */}
-					<section className=" group col-span-2 flex w-full  flex-col justify-between overflow-hidden rounded-2xl  border p-5 pb-14 shadow-xl lg:col-span-1 lg:row-span-2">
+					<section className=" group col-span-2 flex w-full  flex-col justify-between overflow-hidden rounded-2xl  border p-5 pb-14 shadow-xl xl:col-span-1 xl:row-span-2">
 						<section className="flex h-auto w-full flex-col gap-5  ">
 							<div className="flex h-8 w-8 items-center justify-center rounded-full border bg-black  ">
 								<IoLogoGoogle className="text-lg text-white" />
@@ -416,7 +416,7 @@ const ServicesSection = (): React.JSX.Element => {
 					</section>
 
 					{/* Forth Section */}
-					<section className="col-span-2 w-full rounded-2xl border shadow-xl lg:col-span-1 lg:row-span-1">
+					<section className="col-span-2 w-full rounded-2xl border shadow-xl xl:col-span-1 xl:row-span-1">
 						<section className="flex w-full flex-col justify-between overflow-hidden p-5 ">
 							<section className="flex h-auto w-full flex-col gap-5  ">
 								<div className="flex h-8 w-8 items-center justify-center rounded-full border bg-black  ">
@@ -449,8 +449,8 @@ const ServicesSection = (): React.JSX.Element => {
 					</section>
 
 					{/* Fifth Section */}
-					<section className=" group col-span-2 row-span-1 flex w-full justify-between gap-5 overflow-hidden rounded-2xl  border shadow-xl ">
-						<section className="flex h-auto w-1/2 flex-col gap-5  p-5">
+					<section className=" group col-span-2 row-span-1 flex w-full flex-col justify-between gap-5 overflow-hidden rounded-2xl border  shadow-xl xl:flex-row ">
+						<section className="flex h-auto w-full flex-col gap-5 p-5  xl:w-1/2">
 							<div className="flex h-8 w-8 items-center justify-center rounded-full border bg-black  ">
 								<FaCheckCircle className="text-sm text-white" />
 							</div>
@@ -464,10 +464,10 @@ const ServicesSection = (): React.JSX.Element => {
 								</p>
 							</section>
 						</section>
-						<section className="flex h-auto w-1/2 items-center justify-center overflow-hidden">
+						<section className="flex h-auto w-full items-center justify-center overflow-hidden xl:w-1/2">
 							<div
 								id={"Website"}
-								className=" h-[200px] w-[300px] rounded pr-5 transition-all  ease-in-out-expo group-hover:translate-x-6 group-hover:scale-150 "
+								className=" h-[200px] w-[300px] rounded  transition-all ease-in-out-expo  group-hover:translate-x-6 group-hover:scale-150 2xl:pr-5 "
 							>
 								<div className="flex h-2 w-full items-center gap-1 rounded-t-md bg-slate-300 px-2">
 									<div className="h-[3px] w-[3px] rounded-full bg-red-600"></div>

@@ -8,7 +8,7 @@ import {
 	Link,
 } from "@nextui-org/react";
 import React from "react";
-import { FaCircleCheck } from "react-icons/fa6";
+import { FaCircleCheck, FaCircleXmark } from "react-icons/fa6";
 
 const PlanSection = async (): Promise<React.JSX.Element> => {
 	const getPlans = await getAllPlans();
@@ -61,9 +61,13 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 									{item.service?.map((service, index) => (
 										<li className="flex w-full gap-6 text-sm " key={index}>
 											<div className="flex h-4 w-4 items-center justify-center text-lg text-primary">
-												<FaCircleCheck />
+												{service.isSelected ? (
+													<FaCircleCheck className="text-primary" />
+												) : (
+													<FaCircleXmark className="text-danger" />
+												)}
 											</div>
-											{service}
+											{service.serviceName}
 										</li>
 									))}
 								</ul>
