@@ -112,6 +112,7 @@ interface getAllPlans {
 	description: string;
 	price: number;
 	service: string[];
+	bookingLink: string;
 }
 
 interface getPolicy {

@@ -1,7 +1,6 @@
 import Heading from "@/components/Heading";
 import getAllPlans from "@/lib/getPlans";
 import {
-	Button,
 	Card,
 	CardBody,
 	CardFooter,
@@ -17,7 +16,7 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 
 	return (
 		<section id="plans" className="h-auto w-full ">
-			<section className=" mx-auto flex h-auto w-full max-w-7xl flex-col px-5 py-20 xl:py-28  ">
+			<section className=" mx-auto flex h-auto w-full max-w-7xl flex-col px-5 py-20 xl:py-36  ">
 				{/* Heading */}
 				<Heading
 					heading={"The right price for you, with maximum value"}
@@ -28,7 +27,11 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 
 				<section className=" mx-auto  my-7 flex h-auto w-full flex-col  items-center justify-center gap-6  lg:flex-row  ">
 					<h5>If your have queries about our services </h5>
-					<Link className=" rounded-full border-2  border-black bg-primary px-10 py-2.5 text-lg font-semibold text-white  transition-colors">
+					<Link
+						href="https://calendly.com/webflexrr/consultation-meeting"
+						target="_blank"
+						className=" cursor-pointer rounded-full border-2  border-black bg-primary px-10 py-2.5 text-lg font-semibold text-white  transition-colors"
+					>
 						Book a Call
 					</Link>
 				</section>
@@ -66,15 +69,15 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 								</ul>
 							</CardBody>
 							<CardFooter>
-								<Button
+								<Link
+									href={item.bookingLink}
+									target="_blank"
 									type="submit"
 									color="primary"
-									variant="bordered"
-									fullWidth
-									className="mt-6 rounded-lg"
+									className="mt-6 flex w-full items-center justify-center rounded-lg border-2 border-primary p-2 "
 								>
-									Buy Now
-								</Button>
+									<Link>Book this</Link>
+								</Link>
 							</CardFooter>
 						</Card>
 					))}
@@ -83,7 +86,10 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 					<div className=" text-sm text-black ">
 						Prices are per month per project.
 					</div>
-					<Link className=" cursor-pointer rounded-full border px-4 py-2 text-sm font-bold text-black">
+					<Link
+						href="/plans"
+						className=" cursor-pointer rounded-full border px-4 py-2 text-sm font-bold text-black"
+					>
 						✨ See all feature and compare plans
 					</Link>
 				</section>

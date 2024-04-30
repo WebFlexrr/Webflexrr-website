@@ -54,17 +54,16 @@ const ContactUsEmail = ({
 			}}
 		>
 			<Body className="bg-offwhite font-sans text-base">
-				<Img
-					src={`${baseUrl}/logos/logo.png`}
-					width="220"
-					alt="Webflexrr"
-					className="mx-auto my-20"
-				/>
 				<Container className="p-45 bg-white">
+					<Img
+						src={`${baseUrl}/logos/logo.png`}
+						width="220"
+						alt="Webflexrr"
+						className="mx-auto my-20"
+					/>
 					<Section>
 						<Text className="text-base">
-							Dear
-							<u>{firstName},</u>
+							Dear <u>{firstName},</u>
 						</Text>
 						<Row>
 							<Text className="text-base">
@@ -93,9 +92,9 @@ const ContactUsEmail = ({
 						</Row>
 					</Section>
 
-					<Section className="text-left">
+					<Section className="mt-5 text-left">
+						<Text className="mb-2 mt-0 text-base">Best regards,</Text>
 						<Row className="border border-black">
-							<Text className="mb-2 mt-0 text-base">Best regards,</Text>
 							<Text className="my-0 text-base">Tejodeep Mitra Roy</Text>
 							<Text className="my-0 text-base">CTO</Text>
 							<Text className="my-0 text-base">Webflexrr Digital Services</Text>

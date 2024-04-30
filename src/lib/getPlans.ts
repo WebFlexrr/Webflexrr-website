@@ -7,7 +7,8 @@ const getAllPlans = async (): Promise<getAllPlans[]> =>
   name,
   description,
   price,
-  service
+  service,
+  bookingLink
 }`,
 		{},
 		{ next: { tags: ["plans"], revalidate: 3600 } }
