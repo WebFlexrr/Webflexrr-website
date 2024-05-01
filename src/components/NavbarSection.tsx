@@ -1,36 +1,40 @@
 "use client";
 import React, { useState } from "react";
-// import SideBar from './Sidebar';
 import Image from "next/image";
-// import { RiArrowDropDownLine, RiWhatsappFill } from 'react-icons/ri';
 import { RiWhatsappFill } from "react-icons/ri";
 import {
 	Navbar,
 	NavbarBrand,
 	NavbarContent,
 	NavbarItem,
-	NavbarMenuToggle,
-	NavbarMenu,
-	NavbarMenuItem,
 	Button,
-	Link,
 } from "@nextui-org/react";
 
-// import { ThemeSwitcher } from "@/components/ThemeSwitcher";
-import { useRouter } from "next/navigation";
+import {
+	Drawer,
+	DrawerClose,
+	DrawerContent,
+	DrawerDescription,
+	DrawerFooter,
+	DrawerHeader,
+	DrawerTitle,
+	DrawerTrigger,
+} from "./ui/drawer";
+import { Menu } from "lucide-react";
+import Link from "next/link";
 
-const menuItems = [
-	"Services",
-	"Portfolio",
-	"Teams",
-	"Plans",
-	"Blog",
-	"Contact",
-];
+// const menuItems = [
+// 	"Services",
+// 	"Portfolio",
+// 	"Teams",
+// 	"Plans",
+// 	"Blog",
+// 	"Contact",
+// ];
 
 const NavbarSection = (): React.JSX.Element => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const router = useRouter();
+
 	return (
 		<section>
 			<Navbar
@@ -121,37 +125,27 @@ const NavbarSection = (): React.JSX.Element => {
 						</NavbarItem>
 					</NavbarContent>
 					<NavbarContent className=" xl:hidden" justify="end">
-						<NavbarMenuToggle
-							// aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-							className="text-black dark:text-white"
-							isSelected={isMenuOpen}
-						/>
+						<Drawer>
+							<DrawerTrigger className="text-black">
+								<Menu />
+							</DrawerTrigger>
+							<DrawerContent>
+								<DrawerHeader>
+									<DrawerTitle>Are you absolutely sure?</DrawerTitle>
+									<DrawerDescription>
+										This action cannot be undone.
+									</DrawerDescription>
+								</DrawerHeader>
+								<DrawerFooter>
+									<Button>Submit</Button>
+									<DrawerClose>
+										<Button variant="ghost">Cancel</Button>
+									</DrawerClose>
+								</DrawerFooter>
+							</DrawerContent>
+						</Drawer>
 					</NavbarContent>
 				</div>
-				<NavbarMenu className="mt-10 rounded-t-3xl p-5">
-					{menuItems.map((item, index) => (
-						<NavbarMenuItem key={`${item}-${index}`}>
-							<Button
-								color={
-									index === 2
-										? "primary"
-										: index === menuItems.length - 1
-											? "danger"
-											: "secondary"
-								}
-								className="w-full"
-								// href={`/#${item.toLowerCase()}`}
-								size="lg"
-								onClick={() => {
-									setIsMenuOpen(false);
-									router.push(`/#${item.toLowerCase()}`);
-								}}
-							>
-								{item.toLowerCase()}
-							</Button>
-						</NavbarMenuItem>
-					))}
-				</NavbarMenu>
 			</Navbar>
 		</section>
 	);

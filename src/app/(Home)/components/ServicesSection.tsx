@@ -1,10 +1,13 @@
+"use client";
 import Heading from "@/components/Heading";
-import React from "react";
+import React, { useEffect } from "react";
 import { RiWindow2Fill } from "react-icons/ri";
 import { IoIosSearch, IoLogoGoogle, IoMdCloudOutline } from "react-icons/io";
 import { FaCheckCircle, FaCode } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 import Image from "next/image";
+import { motion } from "framer-motion";
+// import { animate } from "framer-motion";
 
 const Row1 = [
 	{
@@ -99,10 +102,76 @@ const Row2 = [
 	},
 ];
 
+// function useMenuAnimation(isOpen: boolean) {
+// 	const [scope, animate] = useAnimate();
+
+// 	useEffect(() => {
+// 		const menuAnimations = isOpen
+// 			? [
+// 					[
+// 						"nav",
+// 						{ transform: "translateX(0%)" },
+// 						{ ease: [0.08, 0.65, 0.53, 0.96], duration: 0.6 },
+// 					],
+// 					[
+// 						"li",
+// 						{ transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
+// 						{ delay: stagger(0.05), at: "-0.1" },
+// 					],
+// 				]
+// 			: [
+// 					[
+// 						"li",
+// 						{ transform: "scale(0.5)", opacity: 0, filter: "blur(10px)" },
+// 						{ delay: stagger(0.05, { from: "last" }), at: "<" },
+// 					],
+// 					["nav", { transform: "translateX(-100%)" }, { at: "-0.1" }],
+// 				];
+
+// 		animate([
+// 			[
+// 				"path.top",
+// 				{ d: isOpen ? "M 3 16.5 L 17 2.5" : "M 2 2.5 L 20 2.5" },
+// 				{ at: "<" },
+// 			],
+// 			["path.middle", { opacity: isOpen ? 0 : 1 }, { at: "<" }],
+// 			[
+// 				"path.bottom",
+// 				{ d: isOpen ? "M 3 2.5 L 17 16.346" : "M 2 16.346 L 20 16.346" },
+// 				{ at: "<" },
+// 			],
+// 			...menuAnimations,
+// 		]);
+// 	}, [isOpen]);
+
+// 	return scope;
+// }
+
 const ServicesSection = (): React.JSX.Element => {
+	// const sequence = [
+	// 	[
+	// 		"#sec1",
+	// 		{
+	// 			opacity: [0, 1],
+	// 			y: [-100, 0],
+	// 		},
+	// 		{ type: "tween", stiffness: 100, duration: 0.5 },
+	// 	],
+	// ];
+	// const [scope, animate] = useAnimate();
+
+	useEffect(() => {
+		// This "li" selector will only select children
+		// of the element that receives `scope`.
+		// animate(sequence);
+	});
+
 	return (
 		<section className=" services h-auto w-full " id={"services"}>
-			<section className="relative mx-auto flex h-auto w-full max-w-7xl flex-col justify-center gap-24 px-7 py-36 lg:px-0 ">
+			<section
+				// ref={scope}
+				className="relative mx-auto flex h-auto w-full max-w-7xl flex-col justify-center gap-24 px-7 py-36 lg:px-0 "
+			>
 				<Heading
 					heading={"We handle just about everything!"}
 					subHeading={
@@ -112,7 +181,10 @@ const ServicesSection = (): React.JSX.Element => {
 
 				<section className="relative mx-auto grid w-full max-w-md grid-cols-1 gap-7 xl:max-w-none xl:grid-cols-3 xl:grid-rows-3">
 					{/* First Section */}
-					<section className="group col-span-2 flex w-full flex-col gap-20 rounded-2xl border shadow-xl   xl:col-span-2 xl:row-span-1 xl:flex-row xl:gap-0 ">
+					<section
+						id={"sec1"}
+						className="group col-span-2 flex w-full flex-col gap-20 rounded-2xl border shadow-xl   xl:col-span-2 xl:row-span-1 xl:flex-row xl:gap-0 "
+					>
 						<section className="flex h-auto w-full max-w-xs flex-col gap-5 p-5 ">
 							<section className="w-full">
 								<div className="flex h-8 w-8 items-center justify-center rounded-full border bg-black  ">
@@ -161,7 +233,22 @@ const ServicesSection = (): React.JSX.Element => {
 					</section>
 
 					{/* Second Section */}
-					<section className=" group relative col-span-2 row-span-1 flex w-full flex-col gap-5 overflow-hidden rounded-2xl border  shadow-xl xl:col-span-1 xl:row-span-2">
+					<motion.section
+						initial={{
+							opacity: 0,
+							x: 100,
+						}}
+						whileInView={{
+							opacity: 1,
+							x: 0,
+						}}
+						viewport={{
+							once: true,
+							margin: "-400px",
+						}}
+						transition={{ type: "tween", stiffness: 100, duration: 0.5 }}
+						className=" group relative col-span-2 row-span-1 flex w-full flex-col gap-5 overflow-hidden rounded-2xl border  shadow-xl xl:col-span-1 xl:row-span-2"
+					>
 						<section className=" flex h-auto w-full flex-col gap-5  px-5 pt-5 ">
 							<div className="flex h-8 w-8 items-center justify-center rounded-full border bg-black  ">
 								<IoMdCloudOutline className="text-lg text-white" />
@@ -180,7 +267,7 @@ const ServicesSection = (): React.JSX.Element => {
 						</section>
 						<section className=" mt-12 flex w-full  flex-col justify-end space-y-6   ">
 							<div className=" relative z-20 w-full overflow-hidden">
-								<ul
+								<div
 									style={{ animationDirection: "normal" }}
 									className=" flex  w-max min-w-full shrink-0 animate-left-to-right flex-nowrap gap-5  [animation-play-state:paused] group-hover:[animation-play-state:running] "
 								>
@@ -218,10 +305,10 @@ const ServicesSection = (): React.JSX.Element => {
 											</div>
 										))}
 									</div>
-								</ul>
+								</div>
 							</div>
 							<div className=" relative z-20 w-full overflow-hidden">
-								<ul
+								<div
 									style={{ animationDirection: "reverse" }}
 									className=" flex w-max min-w-full shrink-0 animate-left-to-right flex-row-reverse flex-nowrap gap-5  [animation-play-state:paused] group-hover:[animation-play-state:running] "
 								>
@@ -259,10 +346,10 @@ const ServicesSection = (): React.JSX.Element => {
 											</div>
 										))}
 									</div>
-								</ul>
+								</div>
 							</div>
 							<div className="  relative z-20 w-full overflow-hidden ">
-								<ul
+								<div
 									style={{ animationDirection: "normal" }}
 									className=" flex  w-max min-w-full shrink-0 animate-left-to-right flex-nowrap gap-5  [animation-play-state:paused] group-hover:[animation-play-state:running] "
 								>
@@ -300,7 +387,7 @@ const ServicesSection = (): React.JSX.Element => {
 											</div>
 										))}
 									</div>
-								</ul>
+								</div>
 							</div>
 						</section>
 						<section className=" mt-4 h-auto w-full ">
@@ -324,7 +411,7 @@ const ServicesSection = (): React.JSX.Element => {
 							</div>
 							<div className="absolute  -bottom-16 left-28 -z-10 h-44 w-44 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 blur-2xl"></div>
 						</section>
-					</section>
+					</motion.section>
 
 					{/* Third Section */}
 					<section className=" group col-span-2 flex w-full  flex-col justify-between overflow-hidden rounded-2xl  border p-5 pb-14 shadow-xl xl:col-span-1 xl:row-span-2">

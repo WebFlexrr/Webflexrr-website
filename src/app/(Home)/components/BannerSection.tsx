@@ -66,28 +66,39 @@ const Logos: ArrayLogos[] = [
 		width: 80,
 		height: 0,
 	},
+	{
+		image: "/com-logos/bubble.png",
+		altText: "bubble",
+		width: 150,
+		height: 0,
+	},
+	{
+		image: "/com-logos/python.png",
+		altText: "python",
+		width: 130,
+		height: 0,
+	},
+	{
+		image: "/com-logos/fastApi.png",
+		altText: "fastApi",
+		width: 130,
+		height: 0,
+	},
+	{
+		image: "/com-logos/pytorch.png",
+		altText: "pytorch",
+		width: 120,
+		height: 0,
+	},
+	{
+		image: "/com-logos/tensorFlow.png",
+		altText: "tensorFlow",
+		width: 180,
+		height: 0,
+	},
 ];
 
 const BannerSection = (): React.JSX.Element => {
-	// const ref = useRef(null);
-	// const { scrollYProgress } = useScroll({
-	// 	target: ref,
-	// });
-
-	// const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
-
-	// const translateX1 = useSpring(
-	// 	useTransform(scrollYProgress, [0, 1], [-300, 39]),
-	// 	springConfig
-	// );
-
-	// const translateX2 = useSpring(
-	// 	useTransform(scrollYProgress, [0, 1], [300, 39]),
-	// 	springConfig
-	// );
-
-	// const gap = useTransform(scrollYProgress, [0, 1], [-300, 39]);
-
 	const staggerVarients: Variants = {
 		initial: {
 			opacity: 0,
@@ -116,7 +127,7 @@ const BannerSection = (): React.JSX.Element => {
 						your tech stack.
 					</p>
 				</section>
-				<section className=" flex w-full flex-wrap  items-center justify-evenly gap-4  lg:flex-nowrap lg:gap-10 ">
+				<section className=" flex w-full flex-wrap  items-center justify-evenly gap-4   lg:gap-10 ">
 					{Logos.map((item, index) => (
 						<motion.span
 							key={index}

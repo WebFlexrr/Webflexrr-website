@@ -1,12 +1,8 @@
 import Heading from "@/components/Heading";
 import getAllPlans from "@/lib/getPlans";
-import {
-	Card,
-	CardBody,
-	CardFooter,
-	CardHeader,
-	Link,
-} from "@nextui-org/react";
+// import getAllPlans from "@/lib/getPlans";
+import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
+import Link from "next/link";
 import React from "react";
 import { FaCircleCheck, FaCircleXmark } from "react-icons/fa6";
 
@@ -28,7 +24,7 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 				<section className=" mx-auto  my-7 flex h-auto w-full flex-col  items-center justify-center gap-6  lg:flex-row  ">
 					<h5>If your have queries about our services </h5>
 					<Link
-						href="https://calendly.com/webflexrr/consultation-meeting"
+						href={process.env.NEXT_PUBLIC_MEETING_LINK ?? ""}
 						target="_blank"
 						className=" cursor-pointer rounded-full border-2  border-black bg-primary px-10 py-2.5 text-lg font-semibold text-white  transition-colors"
 					>
@@ -76,11 +72,9 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 								<Link
 									href={item.bookingLink}
 									target="_blank"
-									type="submit"
-									color="primary"
 									className="mt-6 flex w-full items-center justify-center rounded-lg border-2 border-primary p-2 "
 								>
-									<Link>Book this</Link>
+									Book this
 								</Link>
 							</CardFooter>
 						</Card>
@@ -91,7 +85,7 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 						Prices are per month per project.
 					</div>
 					<Link
-						href="/plans"
+						href={"/plans"}
 						className=" cursor-pointer rounded-full border px-4 py-2 text-sm font-bold text-black"
 					>
 						✨ See all feature and compare plans

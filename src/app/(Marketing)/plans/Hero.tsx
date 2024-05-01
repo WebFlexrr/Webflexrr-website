@@ -28,7 +28,7 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 				<section className=" mx-auto  my-7 flex h-auto w-full flex-col  items-center justify-center gap-6  lg:flex-row  ">
 					<h5>If your have queries about our services </h5>
 					<Link
-						href="https://calendly.com/webflexrr/consultation-meeting"
+						href={process.env.NEXT_PUBLIC_MEETING_LINK ?? ""}
 						target="_blank"
 						className=" cursor-pointer rounded-full border-2  border-black bg-primary px-10 py-2.5 text-lg font-semibold text-white  transition-colors"
 					>
@@ -77,10 +77,9 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 									href={item.bookingLink}
 									target="_blank"
 									type="submit"
-									color="primary"
 									className="mt-6 flex w-full items-center justify-center rounded-lg border-2 border-primary p-2 "
 								>
-									<Link>Book this</Link>
+									Book this
 								</Link>
 							</CardFooter>
 						</Card>
