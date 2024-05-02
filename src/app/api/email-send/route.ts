@@ -2,6 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { render } from "@react-email/render";
 import ContactUsEmail from "@/../emails/ContactUsEmail";
+import ForOwnEmail from "@/../emails/ForOwnEmail";
 
 export const POST = async (
 	request: NextRequest
@@ -24,25 +25,39 @@ export const POST = async (
 		});
 
 		// send mail with defined transport object
-		const info = await transporter.sendMail({
+		const forClient = await transporter.sendMail({
 			from: `business@webflexrr.com <business@webflexrr.com>`, // sender address
 			to: body.email, // list of receivers
-			subject: "Thanks for Contact Us", // Subject line
+			subject: "Thanks for Contacted Us", // Subject line
 			// text: "Hello world?", // plain text body
 			html: render(
 				ContactUsEmail({
 					firstName: body.firstName,
+				}),
+				{ pretty: true }
+			),
+		});
+
+		const forOwn = await transporter.sendMail({
+			from: `business@webflexrr.com <business@webflexrr.com>`, // sender address
+			to: `business@webflexrr.com`, // list of receivers
+			subject: "A new prospect send a message", // Subject line
+			html: render(
+				ForOwnEmail({
+					firstName: body.firstName,
 					lastName: body.lastName,
 					email: body.email,
 					companyName: body.companyName,
+					additionalMessage: body.additionalMessage,
 				}),
 				{ pretty: true }
-			), // html body
+			),
 		});
 
-		console.log(info);
+		console.log(forClient);
+		console.log(forOwn);
 
-		return NextResponse.json(info, { status: 200 });
+		return NextResponse.json(forClient, { status: 200 });
 	} catch (error) {
 		console.log(error);
 		return NextResponse.json(error, { status: 500 });

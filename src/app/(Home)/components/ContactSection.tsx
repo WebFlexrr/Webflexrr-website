@@ -37,21 +37,9 @@ const ContactSection = (): React.JSX.Element => {
 	});
 
 	const onSubmit = async (formData: FormInput): Promise<void> => {
-		// const formData = {
-		// 	service_id: `${process.env.NEXT_PUBLIC_YOUR_SERVICE_ID}`,
-		// 	template_id: `${process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID}`,
-		// 	user_id: `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`,
-		// 	template_params: {
-		// 		from_name: data.firstName,
-		// 		from_email: data.email,
-		// 		to_name: "Tejodeep",
-		// 		message: data.additionalMessage,
-		// 	},
-		// };
-
 		try {
 			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_URL}/api/email-send`,
+				`${process.env.NEXT_PUBLIC_URL2}/api/email-send`,
 				{
 					method: "POST",
 					headers: {

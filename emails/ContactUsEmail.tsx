@@ -18,16 +18,10 @@ const baseUrl = process.env.NEXT_PUBLIC_URL ?? `http://localhost:3000`;
 
 interface ContactUsEmailProps {
 	firstName: string;
-	lastName: string;
-	email: string;
-	companyName: string;
 }
 
 const ContactUsEmail = ({
 	firstName,
-	lastName,
-	email,
-	companyName,
 }: ContactUsEmailProps): React.JSX.Element => (
 	<Html>
 		<Head>
@@ -55,12 +49,14 @@ const ContactUsEmail = ({
 		>
 			<Body className="bg-offwhite font-sans text-base">
 				<Container className="p-45 bg-white">
-					<Img
-						src={`${baseUrl}/logos/logo.png`}
-						width="220"
-						alt="Webflexrr"
-						className="mx-auto my-20"
-					/>
+					<Link href={process.env.NEXT_PUBLIC_URL}>
+						<Img
+							src={`${baseUrl}/logos/logo.png`}
+							width="220"
+							alt="Webflexrr"
+							className="mx-auto my-20"
+						/>
+					</Link>
 					<Section>
 						<Text className="text-base">
 							Dear <u>{firstName},</u>

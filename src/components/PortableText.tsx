@@ -33,10 +33,10 @@ export const PortableTextComponents: PortableTextReactComponents = {
 	},
 	marks: {
 		strong: ({ children }: { children: ReactNode }) => (
-			<strong className=" font-bold  text-[#130f49]">{children}</strong>
+			<strong className=" font-bold  text-black">{children}</strong>
 		),
 		em: ({ children }: { children: ReactNode }) => (
-			<em className="font-semibold text-[#130f49]">{children}</em>
+			<em className="font-semibold text-black">{children}</em>
 		),
 		code: ({ children }: { children: ReactNode }) => <Code>$ {children}</Code>,
 		link: ({ value, children }) => {
@@ -59,75 +59,71 @@ export const PortableTextComponents: PortableTextReactComponents = {
 	block: {
 		// Ex. 1: customizing common block types
 		h1: ({ children }) => (
-			<h1 className="my-4 text-left text-3xl font-bold text-[#130f49]">
+			<h1 className="my-4 text-left text-3xl font-bold text-black">
 				{children}
 			</h1>
 		),
 		h2: ({ children }) => (
-			<h2 className="my-4 text-left text-2xl  font-bold text-[#130f49]">
+			<h2 className="my-4 text-left text-2xl  font-bold text-black">
 				{children}
 			</h2>
 		),
 		h3: ({ children }) => (
-			<h3 className="my-3 text-left text-xl  font-bold text-[#130f49]">
+			<h3 className="my-3 text-left text-xl  font-bold text-black ">
 				{children}
 			</h3>
 		),
 		h4: ({ children }) => (
-			<h4 className="my-2 text-left text-lg  font-bold text-[#130f49]">
+			<h4 className="my-2 text-left text-lg  font-bold text-black">
 				{children}
 			</h4>
 		),
 		h5: ({ children }) => (
-			<h5 className="my-1 text-left text-base  font-bold text-[#130f49]">
+			<h5 className="my-1 text-left text-base  font-bold text-black">
 				{children}
 			</h5>
 		),
 		h6: ({ children }) => (
-			<h6 className="my-4 text-left text-sm  font-bold text-[#130f49]">
+			<h6 className="my-4 text-left text-sm  font-bold text-black">
 				{children}
 			</h6>
 		),
 		blockquote: ({ children }) => (
-			<blockquote className="border-l-4 border-slate-500 pl-3  text-left text-[#130f49]">
+			<blockquote className="border-l-4 border-slate-500 pl-3 text-left text-black ">
 				{children}
 			</blockquote>
 		),
 		normal: ({ children }) => (
-			<p className=" text-base  text-[#130f49]">{children}</p>
+			<p className=" text-base text-black ">{children}</p>
 		),
 	},
 	list: {
 		// Ex. 1: customizing common list types
 		bullet: ({ children }) => (
-			<ul className=" my-6 space-y-6 px-5 text-[#130f49]">{children}</ul>
+			<ul className=" my-6 space-y-6 px-5 text-black">{children}</ul>
 		),
-		number: ({ children }) => (
-			<ol className="mt-lg text-[#130f49]">{children}</ol>
-		),
+		number: ({ children }) => <ol className="mt-lg text-black">{children}</ol>,
 
 		// Ex. 2: rendering custom lists
 		checkmarks: ({ children }) => (
-			<ol className="m-auto text-lg text-[#130f49] ">{children}</ol>
+			<ol className="m-auto text-lg text-black ">{children}</ol>
 		),
 	},
 	listItem: {
 		// Ex. 1: customizing common list types
 		bullet: ({ children }) => (
-			<li className="list-disc text-[#130f49]">
-				<p className=" text-base  text-[#130f49]">{children}</p>
+			<li className="list-disc text-black">
+				<p className=" text-base  text-black">{children}</p>
 			</li>
 		),
 		number: ({ children }) => (
-			<li className="list-decimal text-[#130f49]">
-				<p className=" text-base  text-[#130f49]">{children}</p>
+			<li className="list-decimal text-black">
+				<p className=" text-base  text-black">{children}</p>
 			</li>
 		),
 
 		// Ex. 2: rendering custom list items
-		checkmarks: ({ children }) => (
-			<li className="text-[#130f49]">✅ {children}</li>
-		),
+		checkmarks: ({ children }) => <li className="text-black">✅ {children}</li>,
 	},
 	hardBreak: () => <br />,
 	unknownMark: () => <></>,

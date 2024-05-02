@@ -23,12 +23,14 @@ const FaqSection = async (): Promise<React.JSX.Element> => {
 						"Can’t find the answer you’re looking for? Reach out to us and we will get in touch with you"
 					}
 				/>
-				<section className="  relative h-auto w-full ">
+				<section className="  relative h-auto w-full text-black ">
 					<Accordion type="multiple">
 						{allFaq.map((item, index) => (
 							<AccordionItem key={item.id} value={`item-${index}`}>
-								<AccordionTrigger>{item.question}</AccordionTrigger>
-								<AccordionContent>
+								<AccordionTrigger className=" text-xl font-semibold">
+									{item.question}
+								</AccordionTrigger>
+								<AccordionContent className="px-3 text-lg">
 									<PortableText
 										value={item.content}
 										components={PortableTextComponents}
