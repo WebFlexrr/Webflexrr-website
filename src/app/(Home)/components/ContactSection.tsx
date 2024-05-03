@@ -39,7 +39,7 @@ const ContactSection = (): React.JSX.Element => {
 	const onSubmit = async (formData: FormInput): Promise<void> => {
 		try {
 			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_URL2}/api/email-send`,
+				`${process.env.NEXT_PUBLIC_URL}/api/email-send`,
 				{
 					method: "POST",
 					headers: {
