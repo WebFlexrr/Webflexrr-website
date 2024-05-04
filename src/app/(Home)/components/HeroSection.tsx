@@ -5,7 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const HeroSection = (): React.JSX.Element => {
 	return (
 		<section id={"home"} className="relative  w-full  ">
-			<div className="relative flex h-screen w-full items-center justify-center bg-white bg-grid-black/[0.2] lg:pt-28 dark:bg-black dark:bg-grid-white/[0.2]">
+			<div className="relative flex h-fit w-full items-center justify-center bg-white pb-28 bg-grid-black/[0.2] lg:h-screen lg:pt-28 dark:bg-black dark:bg-grid-white/[0.2]">
 				{/* Radial gradient for the container to give a faded look */}
 				<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
 				<section className="mx-auto flex h-full w-full max-w-7xl flex-col items-center gap-10 px-5 text-center md:px-14 xl:px-20">

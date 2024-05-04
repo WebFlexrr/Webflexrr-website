@@ -72,6 +72,12 @@ const Logos: ArrayLogos[] = [
 		height: 0,
 	},
 	{
+		image: "/com-logos/django.png",
+		altText: "Django Logo",
+		width: 120,
+		height: 0,
+	},
+	{
 		image: "/com-logos/fastApi.png",
 		altText: "fastApi Logo",
 		width: 130,

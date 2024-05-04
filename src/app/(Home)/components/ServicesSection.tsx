@@ -107,56 +107,6 @@ const Row2 = [
 ];
 
 const ServicesSection = (): React.JSX.Element => {
-	// const sequence = (isInView:boolean) => [
-	// 	[
-	// 		"#sec1",
-	// 		{
-	// 			opacity: [0, 1],
-	// 			y: [-100, 0],
-	// 		},
-	// 		{ type: "tween", stiffness: 100, duration: 0.5 },
-	// 	],
-	// 	[
-	// 		"#sec2",
-	// 		{
-	// 			opacity: [0, 1],
-	// 			x: [100, 0],
-	// 		},
-	// 		{ type: "tween", stiffness: 100, duration: 0.5 },
-	// 	],
-	// 	[
-	// 		"#sec3",
-	// 		{
-	// 			opacity: [0, 1],
-	// 			x: [-100, 0],
-	// 		},
-	// 		{ type: "tween", stiffness: 100, duration: 0.5 },
-	// 	],
-	// 	[
-	// 		"#sec5",
-	// 		{
-	// 			opacity: [0, 1],
-	// 			y: [100, 0],
-	// 		},
-	// 		{ type: "tween", stiffness: 100, duration: 0.5 },
-	// 	],
-	// ];
-	// const [scope, animate] = useAnimate();
-
-	// const isInView = useInView(
-	// 	scope,
-	// 	{
-	// 		margin: "10% 0px -50% 0px",
-	// 		// once: true ,
-	// 	}
-	// );
-
-	// useEffect(() => {
-	// 	console.log(isInView);
-	// 	void animate(sequence(isInView));
-
-	// }, [isInView]);
-
 	return (
 		<section className=" services h-auto w-full " id={"services"}>
 			<section className="relative mx-auto flex h-auto w-full max-w-7xl flex-col justify-center gap-24 px-7 py-36 lg:px-0 ">
@@ -634,7 +584,6 @@ const ServicesSection = (): React.JSX.Element => {
 							delay: 0.2,
 							duration: 0.5,
 						}}
-						// id={"sec5"}
 						className=" group col-span-2 row-span-1 flex w-full flex-col justify-between gap-5 overflow-hidden rounded-2xl border  shadow-xl xl:flex-row "
 					>
 						<section className="flex h-auto w-full flex-col gap-5 p-5  xl:w-1/2">
@@ -642,12 +591,13 @@ const ServicesSection = (): React.JSX.Element => {
 								<FaCheckCircle className="text-sm text-white" />
 							</div>
 							<section className="text-lg font-medium">
-								And Everything else ✨
+								And Integrate Everything with AI ✨
 							</section>
 							<section>
 								<p className="text-sm">
-									React Components, Ecommerce, Landing pages, Dashboards. You
-									name it, we've done it AND we'll do it for you.
+									Advance Integrations with AI in Ecommerce, Landing pages,
+									Dashboards. You name it, we've done it AND we'll do it for
+									you.
 								</p>
 							</section>
 						</section>
