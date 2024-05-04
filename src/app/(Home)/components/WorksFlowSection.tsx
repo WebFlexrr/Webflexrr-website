@@ -9,7 +9,7 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 
 	return (
 		<section className="  h-auto w-full  " id={"howItWorks"}>
-			<section className=" mx-auto h-auto w-full max-w-5xl px-5 py-20">
+			<section className=" mx-auto h-auto w-full max-w-5xl px-5 py-20 xl:py-36">
 				<Heading
 					heading={"How it Works"}
 					subHeading={

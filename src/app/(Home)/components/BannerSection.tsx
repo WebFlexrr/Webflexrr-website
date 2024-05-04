@@ -1,14 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-	motion,
-	// animate,
-	// useScroll,
-	// useSpring,
-	// useTransform,
-	type Variants,
-} from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 
 interface ArrayLogos {
@@ -20,79 +13,79 @@ interface ArrayLogos {
 const Logos: ArrayLogos[] = [
 	{
 		image: "/com-logos/nextjs.png",
-		altText: "next js",
+		altText: "next js Logo",
 		width: 140,
 		height: 0,
 	},
 	{
 		image: "/com-logos/reactjs.png",
-		altText: "react js",
+		altText: "react js Logo",
 		width: 120,
 		height: 0,
 	},
 	{
 		image: "/com-logos/node-js.png",
-		altText: "node js",
+		altText: "node js Logo",
 		width: 90,
 		height: 0,
 	},
 	{
 		image: "/com-logos/tailwindcss.png",
-		altText: "tailwind css",
+		altText: "tailwind css Logo",
 		width: 200,
 		height: 0,
 	},
 	{
 		image: "/com-logos/framer-motion.png",
-		altText: "framer motion",
+		altText: "framer motion Logo",
 		width: 80,
 		height: 0,
 	},
 	{
 		image: "/com-logos/stripe.png",
-		altText: "stripe",
+		altText: "stripe Logo",
 		width: 100,
 		height: 0,
 	},
 	{
 		image: "/com-logos/sanity.png",
-		altText: "sanity",
+		altText: "sanity Logo",
 		width: 120,
 		height: 0,
 	},
 	{
 		image: "/com-logos/aws.png",
-		altText: "aws",
+		altText: "aws Logo",
 		width: 80,
 		height: 0,
 	},
 	{
 		image: "/com-logos/bubble.png",
-		altText: "bubble",
+		altText: "bubble Logo",
 		width: 150,
 		height: 0,
 	},
 	{
 		image: "/com-logos/python.png",
-		altText: "python",
+		altText: "python Logo",
 		width: 130,
 		height: 0,
 	},
 	{
 		image: "/com-logos/fastApi.png",
-		altText: "fastApi",
+		altText: "fastApi Logo",
 		width: 130,
 		height: 0,
 	},
 	{
 		image: "/com-logos/pytorch.png",
-		altText: "pytorch",
+		altText: "pytorch Logo",
 		width: 120,
 		height: 0,
 	},
 	{
 		image: "/com-logos/tensorFlow.png",
-		altText: "tensorFlow",
+		altText: "tensorFlow Logo",
 		width: 180,
 		height: 0,
 	},

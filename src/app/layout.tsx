@@ -3,15 +3,16 @@ import "./globals.css";
 import { type ReactNode } from "react";
 // import { Providers } from "./providers";
 import NavbarSection from "@/components/NavbarSection";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
 	title: {
 		default:
-			"WebFlexrr Digital Services | Empowering Businesses with Web Development, Digital Marketing, SEO, and Creative Graphic Designing Solutions",
+			"WebFlexrr Digital Services | Crafting High-Performance Websites for Maximize your Business 10X ",
 		template: "%s | WebFlexrr Digital Services",
 	},
 	description:
-		"WebFlexrr Digital Services: Elevate your online presence with WebFlexrr's Web Development and Digital Marketing strategies. Specializing in E-commerce Solutions, Responsive Design, SEO, and more for impactful, custom web solutions. Learn more....",
+		"WebFlexrr Digital Services: Elevate your online presence with WebFlexrr's Web Development . Specializing in E-commerce Solutions, Responsive Design, SEO, and more for impactful, custom web solutions. Learn more....",
 	metadataBase: new URL("https://www.webflexrr.com"),
 	alternates: {
 		canonical: "/",
@@ -33,10 +34,9 @@ export const metadata: Metadata = {
 		"WebFlexrr SEO Experts",
 		"Responsive WebFlexrr Design",
 		"Web Development",
-		"Digital Marketing",
+		"SAAS Development",
 		"Website Design",
 		"SEO Services",
-		"Social Media Marketing",
 		"Online Presence",
 		"E-commerce Solutions",
 		"Responsive Design",
@@ -44,13 +44,10 @@ export const metadata: Metadata = {
 		"Branding Services",
 		"Mobile App Development",
 		"Search Engine Optimization",
-		"Graphic Design",
 		"Web Analytics",
 		"User Experience (UX) Design",
 		"Conversion Optimization",
-		"Digital Strategy",
 		"Custom Web Solutions",
-		"Internet Marketing",
 	],
 	authors: { name: "WebFlexrr" },
 	creator: "Tech Team of WebFlexrr",
@@ -63,9 +60,9 @@ export const metadata: Metadata = {
 		siteName: "WebFlexrr Digital Services",
 		images: [
 			{
-				url: "/assets/logo2.png",
-				width: 1800,
-				height: 1600,
+				url: "/logos/logo2.png",
+				width: 1200,
+				height: 630,
 				alt: "WebFlexrr",
 			},
 		],
@@ -76,6 +73,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 	return (
 		<html lang="en" className="!scroll-smooth">
+			<GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER ?? ""} />
 			<body className="main ">
 				{/* <Providers> */}
 				<main className="overflow-x-hidden scroll-smooth ">

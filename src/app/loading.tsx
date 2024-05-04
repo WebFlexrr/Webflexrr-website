@@ -8,7 +8,7 @@ const loading = (): React.JSX.Element => {
 				src={"/logos/logo.png"}
 				width={"300"}
 				height={"0"}
-				alt="Logo"
+				alt="Webflexrr Logo"
 				className=" animate-pulse"
 			/>
 		</div>

@@ -1,19 +1,17 @@
-// import { getAllServices } from "@/lib/getServices";
+import { getAllBlogs } from "@/lib/getBlog";
+import type { MetadataRoute } from "next";
 
-const sitemap = async (): Promise<
-	Array<{
-		url: string;
-		lastModified: Date;
-	}>
-> => {
+const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
 	const baseUrl = "https://www.webflexrr.com";
 
-	// const services = await getAllServices();
+	const allBlogs = await getAllBlogs();
 
-	// const serviceUrls = services.map((service) => ({
-	// 	url: `${baseUrl}/services/${service.slug}`,
-	// 	lastModified: service._updatedAt,
-	// }));
+	const blogs = allBlogs.map((blog) => {
+		return {
+			url: `${baseUrl}/blogs/${blog.slug}`,
+			lastModified: blog._updatedAt,
+		};
+	});
 
 	return [
 		{
@@ -21,14 +19,26 @@ const sitemap = async (): Promise<
 			lastModified: new Date(),
 		},
 		{
-			url: `${baseUrl}/services`,
+			url: `${baseUrl}/plans`,
 			lastModified: new Date(),
 		},
 		{
-			url: `${baseUrl}/projects`,
+			url: `${baseUrl}/blogs/`,
 			lastModified: new Date(),
 		},
-		// ...serviceUrls,
+		...blogs,
+		{
+			url: `${baseUrl}/privacy`,
+			lastModified: new Date(),
+		},
+		{
+			url: `${baseUrl}/terms`,
+			lastModified: new Date(),
+		},
+		{
+			url: `${baseUrl}/refund`,
+			lastModified: new Date(),
+		},
 	];
 };
 
