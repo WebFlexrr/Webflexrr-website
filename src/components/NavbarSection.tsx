@@ -49,7 +49,7 @@ const NavbarSection = (): React.JSX.Element => {
 				<div className=" animate-visible-from-down mx-auto mt-10 flex w-full items-center justify-between gap-4 rounded-full  border-2 border-black  bg-white px-4  py-2 text-white  antialiased drop-shadow-xl ease-in-out-expo sm:max-w-xl lg:max-w-3xl xl:max-w-6xl    ">
 					<NavbarContent>
 						<NavbarBrand>
-							<Link href={"/#home"}>
+							<Link href={"/#home"} aria-label="Home Button">
 								<Image
 									src={"/logos/logo.png"}
 									width={"250"}
@@ -135,7 +135,7 @@ const NavbarSection = (): React.JSX.Element => {
 					</NavbarContent>
 					<NavbarContent className=" xl:hidden" justify="end">
 						<Drawer>
-							<DrawerTrigger className="text-black">
+							<DrawerTrigger className="text-black" title="Menu">
 								<Menu />
 							</DrawerTrigger>
 							<DrawerContent>

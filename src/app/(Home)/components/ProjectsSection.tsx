@@ -1,131 +1,37 @@
 import Heading from "@/components/Heading";
+import { imageUrlFor } from "@/config/SanityImageUrl";
 import getAllProjects from "@/lib/getProjects";
-import { Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import Link from "next/link";
 import React from "react";
-
-export const products = [
-	{
-		title: "Moonbeam",
-		link: "https://gomoonbeam.com",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
-	},
-	{
-		title: "Cursor",
-		link: "https://cursor.so",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/cursor.png",
-	},
-	{
-		title: "Rogue",
-		link: "https://userogue.com",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/rogue.png",
-	},
-
-	{
-		title: "Editorially",
-		link: "https://editorially.org",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/editorially.png",
-	},
-	{
-		title: "Editrix AI",
-		link: "https://editrix.ai",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/editrix.png",
-	},
-	{
-		title: "Pixel Perfect",
-		link: "https://app.pixelperfect.quest",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-	},
-
-	{
-		title: "Algochurn",
-		link: "https://algochurn.com",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-	},
-	{
-		title: "Aceternity UI",
-		link: "https://ui.aceternity.com",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-	},
-	{
-		title: "Tailwind Master Kit",
-		link: "https://tailwindmasterkit.com",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-	},
-	{
-		title: "SmartBridge",
-		link: "https://smartbridgetech.com",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-	},
-	{
-		title: "Renderwork Studio",
-		link: "https://renderwork.studio",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-	},
-
-	{
-		title: "Creme Digital",
-		link: "https://cremedigital.com",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-	},
-	{
-		title: "Golden Bells Academy",
-		link: "https://goldenbellsacademy.com",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-	},
-	{
-		title: "Invoker Labs",
-		link: "https://invoker.lol",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/invoker.png",
-	},
-	{
-		title: "E Free Invoice",
-		link: "https://efreeinvoice.com",
-		thumbnail:
-			"https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-	},
-];
 
 const ProjectsSection = async (): Promise<React.JSX.Element> => {
 	const projects = await getAllProjects();
 	return (
 		<section className=" h-auto w-full py-20 " id="projects">
-			<section className=" mx-auto flex h-auto w-full max-w-6xl flex-col gap-10  px-5 py-28 sm:px-10   ">
+			<section className=" mx-auto  flex h-auto w-full max-w-7xl flex-col gap-16  px-5 py-28    ">
 				<Heading
 					heading={"A glimpse into the projects that we have built."}
 					subHeading={
 						"Say goodbye to the lengthy onboarding processes associated with agencies. Simply subscribe, add your project details, then watch us set up and deliver your first task within 72 hours."
 					}
 				/>
-				<section className="grid h-auto w-full md:grid-cols-2 md:gap-20 lg:gap-20 ">
+				<section className="grid h-auto w-full md:grid-cols-2 md:gap-20 lg:gap-16 ">
 					{projects.map((item, index) => (
-						<Card key={index} className=" bg-transparent p-0 hover:bg-primary">
-							<CardHeader>
-								<Image
-									src={item.thumbnail}
-									width={500}
-									height={600}
-									className=""
-									alt={item.title}
-								/>
-							</CardHeader>
-							<CardFooter>
-								<h5>{item.title}</h5>
-							</CardFooter>
-						</Card>
+						<Link href={item.link} key={index}>
+							<Card className=" group bg-transparent p-0 hover:bg-primary hover:shadow-2xl">
+								<CardBody>
+									<Image
+										src={imageUrlFor(item.thumbnail).url()}
+										className=" h-[350px] w-full object-cover"
+										alt={item.title}
+									/>
+								</CardBody>
+								<CardFooter>
+									<h5 className=" group-hover:text-white">{item.title}</h5>
+								</CardFooter>
+							</Card>
+						</Link>
 					))}
 				</section>
 			</section>

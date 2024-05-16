@@ -14,25 +14,6 @@ interface TeamPictureProps {
 }
 
 const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
-	// const teamProject = useRef<HTMLDivElement>(null);
-	// gsap.registerPlugin(useGSAP);
-
-	// useGSAP(
-	// 	() => {
-	// 		gsap.from(".teamPicture", {
-	// 			y: 30,
-	// 			opacity: 0,
-	// 			duration: 1,
-	// 		});
-	// 		gsap.from(".teamPicture", {
-	// 			y: 30,
-	// 			opacity: 0,
-	// 			duration: 1,
-	// 		});
-	// 	},
-	// 	{ scope: teamProject }
-	// );
-
 	return (
 		<Card
 			isFooterBlurred
@@ -68,6 +49,7 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 								href={personDetails.linkedIn}
 								target="_blank"
 								className="mx-2   text-[#0077b5]"
+								aria-label="Linkedin Link"
 							>
 								<FaLinkedin className="" />
 							</Link>
@@ -80,6 +62,7 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 								href={personDetails.twitter}
 								target="_blank"
 								className="mx-2   text-black"
+								aria-label="Twitter Link"
 							>
 								{/* <BsTwitterX className="h-[14px] w-[14px]  " /> */}
 								<FaSquareXTwitter />
@@ -95,6 +78,7 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 								target="_blank"
 								// className="mx-2 flex h-[34px] w-[34px] cursor-pointer items-center justify-center rounded-full  border-2 border-white bg-primary text-secondary transition duration-500 ease-in-out hover:text-[#CD201F]"
 								className="mx-2 text-[#CD201F]"
+								aria-label="Youtube Link"
 							>
 								{/* <FaYoutube className="h-[14px] w-[14px] " /> */}
 								<FaYoutube />
@@ -110,6 +94,7 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 								target="_blank"
 								// className="mx-2 flex h-[34px] w-[34px] cursor-pointer items-center justify-center rounded-full  border-2 border-white bg-primary text-secondary transition duration-500 ease-in-out hover:text-[#d62976]"
 								className="mx-2 text-[#d62976]"
+								aria-label="Instagram"
 							>
 								<FaInstagram />
 							</Link>

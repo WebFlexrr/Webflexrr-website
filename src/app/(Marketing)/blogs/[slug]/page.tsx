@@ -16,7 +16,7 @@ const Blog = async ({
 		<>
 			<main className=" mx-auto h-auto w-full max-w-7xl  overflow-x-hidden py-16 lg:py-28 ">
 				<TracingBeam className="px-6">
-					<section className="flex w-full justify-start">
+					<section className="flex w-full justify-center ">
 						<h1>{blogData.title}</h1>
 					</section>
 					<div className="relative mx-auto mt-10 max-w-2xl antialiased">

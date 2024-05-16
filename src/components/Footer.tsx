@@ -1,4 +1,4 @@
-import { Button, Divider, Image } from "@nextui-org/react";
+import { Divider, Image } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
 import { FaFacebookF, FaLinkedin, FaYoutube } from "react-icons/fa";
@@ -21,7 +21,7 @@ const Footer = (): React.JSX.Element => {
 				</section>
 				<section className="flex h-auto w-full flex-col gap-5 lg:flex-row  ">
 					<section className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-10 py-2 text-black md:w-full lg:w-1/3 lg:px-5">
-						<div className=" flex w-full flex-wrap gap-5 sm:flex-nowrap xl:gap-2">
+						{/* <div className=" flex w-full flex-wrap gap-5 sm:flex-nowrap xl:gap-2">
 							<input
 								type="text"
 								title="Message"
@@ -31,7 +31,7 @@ const Footer = (): React.JSX.Element => {
 							<Button radius="full" color="primary" variant="ghost">
 								Subscribe
 							</Button>
-						</div>
+						</div> */}
 						<div className="space-y-2">
 							<section>
 								<p className="text-sm">

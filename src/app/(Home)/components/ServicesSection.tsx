@@ -475,7 +475,7 @@ const ServicesSection = (): React.JSX.Element => {
 										</span>
 									</div>
 									<div className="mt-1.5">
-										<span className="text-xs text-stone-400 ">
+										<span className="text-xs text-[#5E5654] ">
 											This guy does not know what heckernews comments are.
 										</span>
 									</div>
@@ -488,7 +488,7 @@ const ServicesSection = (): React.JSX.Element => {
 										</span>
 									</div>
 									<div className="mt-1.5">
-										<span className="text-xs text-stone-400 ">
+										<span className="text-xs text-[#5E5654] ">
 											This guy does not know what heckernews comments are.
 										</span>
 									</div>
@@ -501,7 +501,7 @@ const ServicesSection = (): React.JSX.Element => {
 										</span>
 									</div>
 									<div className="mt-1.5">
-										<span className="text-xs text-stone-400 ">
+										<span className="text-xs text-[#5E5654] ">
 											This guy does not know what heckernews comments are.
 										</span>
 									</div>

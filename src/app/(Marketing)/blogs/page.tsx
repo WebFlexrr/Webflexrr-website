@@ -2,9 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import Heading from "@/components/Heading";
 import { BlogItem } from "@/app/(Marketing)/blogs/components/blog-Item";
-
 import { Button, Card, CardBody, Image } from "@nextui-org/react";
 import { getAllBlogs } from "@/lib/getBlog";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
 	title: {
@@ -13,9 +13,10 @@ export const metadata: Metadata = {
 	},
 	description: "This is Plan Page of Webflexrr Digital Services",
 };
+
 const Blog = async (): Promise<React.JSX.Element> => {
 	const blogs = await getAllBlogs();
-	console.log(blogs);
+
 	return (
 		<>
 			<main className=" mx-auto h-auto w-full max-w-7xl overflow-x-hidden py-16 lg:py-28 ">
@@ -39,8 +40,8 @@ const Blog = async (): Promise<React.JSX.Element> => {
 									/>
 								</section>
 								<section className="flex w-1/2 flex-col  gap-5">
-									<h5 className="text-3xl font-bold">
-										Thisn is how to make a portfolio
+									<h5 className="text-left text-3xl font-bold">
+										This is how to make a portfolio
 									</h5>
 									<p className="truncate font-sans text-base font-normal text-neutral-600 dark:text-neutral-300">
 										I personally have always been a fan of great portfolio
@@ -60,63 +61,23 @@ const Blog = async (): Promise<React.JSX.Element> => {
 					</Card>
 					<section className="col-span-1 flex w-full flex-col gap-3">
 						<span className="text-lg font-semibold">Features</span>
-						<Card className="border border-black">
-							<CardBody>
-								<section className="flex w-full items-center justify-start gap-5 rounded-none">
-									<Image
-										className="aspect-video"
-										width={"60"}
-										src={
-											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
-										}
-										alt={"Thisn is how to make a portfolio"}
-									/>
-									<section className="flex  flex-col">
-										<h6 className="text-lg font-bold">
-											Thisn is how to make a portfolio
-										</h6>
+						{blogs?.map((blog, index) => (
+							<Card key={index} className="border border-black">
+								<CardBody>
+									<section className="flex w-full items-center justify-start gap-5 rounded-none">
+										<Image
+											className="aspect-video"
+											width={"60"}
+											src={blog.thumbnail}
+											alt={blog.title}
+										/>
+										<section className="flex  flex-col">
+											<h6 className="text-lg font-bold">{blog.title}</h6>
+										</section>
 									</section>
-								</section>
-							</CardBody>
-						</Card>
-						<Card className="border border-black">
-							<CardBody>
-								<section className="flex w-full items-center justify-start gap-5 rounded-none">
-									<Image
-										className="aspect-video"
-										width={"60"}
-										src={
-											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
-										}
-										alt={"Thisn is how to make a portfolio"}
-									/>
-									<section className="flex  flex-col">
-										<h6 className="text-lg font-bold">
-											Thisn is how to make a portfolio
-										</h6>
-									</section>
-								</section>
-							</CardBody>
-						</Card>
-						<Card className="border border-black">
-							<CardBody>
-								<section className="flex w-full items-center justify-start gap-5 rounded-none">
-									<Image
-										className="aspect-video"
-										width={"60"}
-										src={
-											"https://www.aceternity.com/_next/image?url=https%3A%2F%2Fassets.aceternity.com%2Fcloudinary_bkp_2%2FTracing_Beam_oudgt2.png&w=1920&q=75"
-										}
-										alt={"Thisn is how to make a portfolio"}
-									/>
-									<section className="flex  flex-col">
-										<h6 className="text-lg font-bold">
-											Thisn is how to make a portfolio
-										</h6>
-									</section>
-								</section>
-							</CardBody>
-						</Card>
+								</CardBody>
+							</Card>
+						))}
 					</section>
 				</section>
 				<section className="mt-24 grid w-full grid-cols-3 gap-10">
@@ -132,6 +93,7 @@ const Blog = async (): Promise<React.JSX.Element> => {
 					))}
 				</section>
 			</main>
+			<Footer />
 		</>
 	);
 };

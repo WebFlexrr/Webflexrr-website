@@ -38,13 +38,13 @@ export const BlogItem = ({
 		<Link href={`/blogs/${slug}`}>
 			<Card
 				fullWidth
-				className="  row-span-1 space-y-4 rounded-xl border  bg-white p-2  antialiased transition duration-200 hover:-translate-y-2 hover:shadow-2xl dark:border-white/[0.2] dark:bg-gray-700  dark:shadow-none"
+				className="row-span-1 space-y-4 rounded-xl border  bg-white p-2  antialiased transition duration-200 hover:-translate-y-2 hover:shadow-2xl dark:border-white/[0.2] dark:bg-gray-700  dark:shadow-none"
 			>
 				<CardHeader>
-					<Image src={image} alt={title} className="aspect-video " />
+					<Image src={image} alt={title} className="aspect-video border " />
 				</CardHeader>
 				<CardBody>
-					<span className="mb-2 mt-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
+					<span className="mb-2  font-sans text-xl font-bold  dark:text-neutral-200">
 						{title}
 					</span>
 					<span className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
@@ -52,7 +52,13 @@ export const BlogItem = ({
 					</span>
 				</CardBody>
 				<CardFooter className="flex justify-between ">
-					<span>{date}</span>
+					<span>
+						{new Date(date).toLocaleDateString("en-US", {
+							year: "numeric",
+							month: "long",
+							day: "numeric",
+						})}
+					</span>
 					<Button size="sm" className="bg-black text-sm text-white">
 						Read More
 					</Button>

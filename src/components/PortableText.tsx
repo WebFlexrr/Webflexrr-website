@@ -1,24 +1,27 @@
+import { imageUrlFor } from "@/config/SanityImageUrl";
 import { Code, Image, Link } from "@nextui-org/react";
 import type { PortableTextReactComponents } from "@portabletext/react";
+import type { SanityImageAssetDocument } from "next-sanity";
 import type { ReactNode } from "react";
 
 const ImageComponent = ({
 	value,
 	isInline,
 }: {
-	value: string;
+	value: SanityImageAssetDocument;
 	isInline: boolean;
 }): JSX.Element => {
 	// const { width, height } = getImageDimensions(value);
+	console.log(value);
 	return (
 		<Image
-			src={value}
+			src={imageUrlFor(value).url()}
 			width={isInline ? 100 : 800}
 			height={0}
 			// eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-			alt={value || " "}
+			alt={value.alt || " "}
 			loading="lazy"
-			className=" object-contain"
+			className=" my-8 object-contain"
 			style={{
 				// Display alongside text if image appears inside a block text span
 				display: isInline ? "inline-block" : "block",
