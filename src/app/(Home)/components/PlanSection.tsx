@@ -1,10 +1,10 @@
 import Heading from "@/components/Heading";
+import PlansCard from "@/components/PlansCard";
 import getAllPlans from "@/lib/getPlans";
 // import getAllPlans from "@/lib/getPlans";
-import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
+
 import Link from "next/link";
 import React from "react";
-import { FaCircleCheck, FaCircleXmark } from "react-icons/fa6";
 
 const PlanSection = async (): Promise<React.JSX.Element> => {
 	const getPlans = await getAllPlans();
@@ -35,49 +35,7 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 				{/* Selection Pannel */}
 				<section className=" mx-auto mb-16 mt-10  grid h-auto  w-full max-w-lg grid-cols-1 flex-col gap-9 sm:px-10 xl:max-w-none xl:grid-cols-3 xl:px-0 ">
 					{allPlans.map((item) => (
-						<Card key={item.id} className="border border-pink-400 px-3 py-5">
-							{/* heading */}
-							<CardHeader className=" flex w-full flex-col items-center justify-center gap-5 pb-[3rem] ">
-								<section className="w-full">
-									<span className="text-lg font-bold text-primary">
-										{item.name}
-									</span>
-								</section>
-								<section className="w-full">
-									<span>Pause or cancel anytime</span>
-									<h4>${item.price}/month</h4>
-								</section>
-								<section className="">
-									<p className="text-sm">{item.description}</p>
-								</section>
-							</CardHeader>
-							{/* mid Section */}
-							<CardBody>
-								<ul className=" flex h-auto w-full flex-col items-center gap-4  text-start text-base leading-[28.8px]">
-									{item.service?.map((service, index) => (
-										<li className="flex w-full gap-6 text-sm " key={index}>
-											<div className="flex h-4 w-4 items-center justify-center text-lg ">
-												{service.isSelected ? (
-													<FaCircleCheck className="text-primary" />
-												) : (
-													<FaCircleXmark className="text-danger" />
-												)}
-											</div>
-											{service.serviceName}
-										</li>
-									))}
-								</ul>
-							</CardBody>
-							<CardFooter>
-								<Link
-									href={item.bookingLink}
-									target="_blank"
-									className="mt-6 flex w-full items-center justify-center rounded-lg border-2 border-primary p-2 "
-								>
-									Book this
-								</Link>
-							</CardFooter>
-						</Card>
+						<PlansCard key={item.id} item={item} />
 					))}
 				</section>
 				<section className="flex h-auto w-full flex-col items-center  justify-center gap-5">

@@ -75,12 +75,10 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 		<html lang="en" className="!scroll-smooth">
 			<GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER ?? ""} />
 			<body className="main ">
-				{/* <Providers> */}
 				<main className="overflow-x-hidden scroll-smooth ">
 					<NavbarSection />
 					{children}
 				</main>
-				{/* </Providers> */}
 			</body>
 		</html>
 	);

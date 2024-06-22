@@ -108,7 +108,7 @@ const Row2 = [
 
 const ServicesSection = (): React.JSX.Element => {
 	return (
-		<section className=" services h-auto w-full " id={"services"}>
+		<section className=" services bg-dark h-auto w-full" id={"services"}>
 			<section className="relative mx-auto flex h-auto w-full max-w-7xl flex-col justify-center gap-24 px-7 py-36 lg:px-0 ">
 				<Heading
 					heading={"We handle just about everything!"}

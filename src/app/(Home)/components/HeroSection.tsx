@@ -5,25 +5,24 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const HeroSection = (): React.JSX.Element => {
 	return (
 		<section id={"home"} className="relative  w-full  ">
-			<div className="relative flex h-fit w-full items-center justify-center bg-white pb-28 bg-grid-black/[0.2] lg:h-screen lg:pt-28 dark:bg-black dark:bg-grid-white/[0.2]">
+			<div className="relative flex h-fit w-full items-center justify-center bg-white pb-28 bg-grid-black/[0.09] lg:h-screen lg:pt-28 dark:bg-black dark:bg-grid-white/[0.2]">
 				{/* Radial gradient for the container to give a faded look */}
-				<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-				<section className="mx-auto flex h-full w-full max-w-7xl flex-col items-center gap-10 px-5 text-center md:px-14 xl:px-20">
+				<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_60%,black)] dark:bg-black"></div>
+				<section className="mx-auto flex h-full w-full max-w-[90rem] flex-col items-center gap-10 px-5 text-center md:px-14 xl:px-20">
 					<section className="mt-32 w-full max-w-6xl">
-						<h1 className="text-black">
-							Crafting High-Performance Websites for
+						<h1 className="">
 							<span className="text-green-600">
-								{" "}
-								Maximize your Business 10X 🚀
+								Grow your startup by 200% 🚀
 							</span>
+							with our stunning, scalable websites and apps!
 						</h1>
 					</section>
-					<section className="w-full max-w-4xl">
-						<p>
-							We build website for your business that actually converts.
-							Wonderfully designed, masterfully created websites and layouts,
-							created by the founders of Google and Facebook. The ideal
-							beginning stage for your next project.
+					<section className="w-full max-w-4xl ">
+						<p className="text-xl text-black">
+							We empower start-up businesses with our technical expertise. We
+							deliver beautifully designed websites and highly scalable mobile
+							and web apps, ensuring technical compliance. Our solutions are
+							essential for the success of early-stage startups.
 						</p>
 					</section>
 					<section>

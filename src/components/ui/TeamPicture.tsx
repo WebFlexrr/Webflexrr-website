@@ -18,7 +18,7 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 		<Card
 			isFooterBlurred
 			radius="lg"
-			className="group h-auto w-full border-none p-3 "
+			className="group h-auto w-full border border-primary p-3 "
 		>
 			<CardHeader>
 				<Image

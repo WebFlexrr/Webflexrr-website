@@ -11,7 +11,7 @@ import FaqSection from "./components/FaqSection";
 
 const Home = async (): Promise<React.JSX.Element> => {
 	return (
-		<>
+		<div className="">
 			<HeroSection />
 			<BannerSection />
 			<ServicesSection />
@@ -24,7 +24,7 @@ const Home = async (): Promise<React.JSX.Element> => {
 			{/* <FeedBack /> */}
 			{/* <CallOutSection/> */}
 			<Footer />
-		</>
+		</div>
 	);
 };
 
