@@ -49,9 +49,7 @@ const PlansCard: FC<PlansCardProps> = ({ item }): React.JSX.Element => {
 										className={item.highlighted ? "text-white" : "text-primary"}
 									/>
 								) : (
-									<FaCircleXmark
-										className={item.highlighted ? "text-white" : "text-danger"}
-									/>
+									<FaCircleXmark className={"text-danger"} />
 								)}
 							</div>
 							<p className={`${item.highlighted && "text-white"}`}>
