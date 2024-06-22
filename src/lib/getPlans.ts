@@ -5,6 +5,7 @@ const getAllPlans = async (): Promise<getAllPlans[]> =>
 		`*[_type=="plans"]{
   id,
   name,
+  highlighted,
   description,
   price,
   service{

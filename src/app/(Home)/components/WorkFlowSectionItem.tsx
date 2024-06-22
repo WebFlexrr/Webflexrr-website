@@ -41,14 +41,16 @@ const WorkFlowSectionItem: FC<WorkFlowSectionItemProps> = ({
 					<Image
 						src={picture}
 						alt={name}
-						className="aspect-[16/9] h-full w-full md:aspect-square"
+						className="aspect-square h-full w-full md:aspect-square"
 					/>
 				</div>
 				<section className="w-full space-y-3  pt-7 md:w-[65%] md:px-4 md:py-3 ">
 					<h3>{name}</h3>
-					<div className="text-lg">Lets chat about your business...</div>
+					{/* <div className="text-lg">Lets chat about your business...</div> */}
 					<div>
-						<p className="text-sm">{description}</p>
+						<p className=" text-xl leading-relaxed tracking-wide text-black">
+							{description}
+						</p>
 					</div>
 				</section>
 				<div className="absolute -top-6 left-5 z-10 mx-auto flex h-10 w-10 items-center justify-center  rounded-full border-3 border-black bg-white text-lg font-semibold text-black lg:hidden">

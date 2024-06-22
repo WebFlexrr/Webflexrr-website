@@ -17,7 +17,7 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 						"Say goodbye to the lengthy onboarding processes associated with agencies. Simply subscribe, add your project details, then watch us set up and deliver your first task within 72 hours."
 					}
 				/>
-				<section className="mx-auto mt-20  grid h-auto w-full grid-cols-1 ">
+				<section className="mx-auto mt-20  grid h-auto w-full grid-cols-1 gap-4 ">
 					{processes.map((process) => (
 						<WorkFlowSectionItem
 							key={process.step}

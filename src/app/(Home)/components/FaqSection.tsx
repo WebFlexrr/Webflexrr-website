@@ -27,10 +27,10 @@ const FaqSection = async (): Promise<React.JSX.Element> => {
 					<Accordion type="multiple">
 						{allFaq.map((item, index) => (
 							<AccordionItem key={item.id} value={`item-${index}`}>
-								<AccordionTrigger className=" text-xl font-semibold">
+								<AccordionTrigger className=" text-center text-xl font-semibold">
 									{item.question}
 								</AccordionTrigger>
-								<AccordionContent className="px-3 text-lg">
+								<AccordionContent className="px-3">
 									<PortableText
 										value={item.content}
 										components={PortableTextComponents}

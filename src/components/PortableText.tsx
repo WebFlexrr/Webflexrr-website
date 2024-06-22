@@ -97,7 +97,7 @@ export const PortableTextComponents: PortableTextReactComponents = {
 			</blockquote>
 		),
 		normal: ({ children }) => (
-			<p className=" text-base text-black ">{children}</p>
+			<p className=" text-lg text-black ">{children}</p>
 		),
 	},
 	list: {

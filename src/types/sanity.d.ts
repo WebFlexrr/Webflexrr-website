@@ -114,6 +114,7 @@ interface getAllPlans {
 	id: number;
 	name: string;
 	description: string;
+	highlighted: boolean;
 	price: number;
 	service: service[];
 	bookingLink: string;

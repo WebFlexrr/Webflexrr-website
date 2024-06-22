@@ -9,21 +9,21 @@ const ProjectsSection = async (): Promise<React.JSX.Element> => {
 	const projects = await getAllProjects();
 	return (
 		<section className=" h-auto w-full py-20 " id="projects">
-			<section className=" mx-auto  flex h-auto w-full max-w-7xl flex-col gap-16  px-5 py-28    ">
+			<section className=" mx-auto  flex h-auto w-full max-w-7xl flex-col gap-16  px-5  md:py-28    ">
 				<Heading
 					heading={"A glimpse into the projects that we have built."}
 					subHeading={
 						"Say goodbye to the lengthy onboarding processes associated with agencies. Simply subscribe, add your project details, then watch us set up and deliver your first task within 72 hours."
 					}
 				/>
-				<section className="grid h-auto w-full md:grid-cols-2 md:gap-20 lg:gap-16 ">
+				<section className="grid h-auto w-full gap-10 md:grid-cols-2 md:gap-20 lg:gap-16 ">
 					{projects.map((item, index) => (
 						<Link href={item.link} key={index}>
 							<Card className=" group bg-transparent p-0 hover:bg-primary hover:shadow-2xl">
-								<CardBody>
+								<CardBody className="pb-0 ">
 									<Image
 										src={imageUrlFor(item.thumbnail).url()}
-										className=" h-[350px] w-full object-cover"
+										className=" w-full border object-contain md:h-[350px] md:object-cover"
 										alt={item.title}
 									/>
 								</CardBody>
