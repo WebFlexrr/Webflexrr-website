@@ -69,7 +69,7 @@ const PlansCard: FC<PlansCardProps> = ({ item }): React.JSX.Element => {
 							: "border-primary transition-all duration-100 ease-in-out hover:bg-primary hover:text-white "
 					} flex w-full items-center justify-center rounded-lg border-2  p-2.5 text-lg font-semibold `}
 				>
-					Book this
+					Book a Discovery Call
 				</Link>
 			</CardFooter>
 		</Card>
