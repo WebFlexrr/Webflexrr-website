@@ -122,15 +122,17 @@ const NavbarSection = (): React.JSX.Element => {
 							<ThemeSwitcher />
 						</span> */}
 						<NavbarItem>
-							<Button
-								variant={"shadow"}
-								color={"secondary"}
-								radius="full"
-								className="flex items-center justify-center text-lg font-medium text-black"
-							>
-								<RiWhatsappFill className="mr-2 h-[25px] w-[25px]  text-lg text-[#25D366]" />
-								Contact Us
-							</Button>
+							<Link href={process.env.NEXT_PUBLIC_CONTACT_US_LINK ?? ""}>
+								<Button
+									variant={"shadow"}
+									color={"secondary"}
+									radius="full"
+									className="flex items-center justify-center text-lg font-medium text-black"
+								>
+									<RiWhatsappFill className="mr-2 h-[25px] w-[25px]  text-lg text-[#25D366]" />
+									Contact Us
+								</Button>
+							</Link>
 						</NavbarItem>
 					</NavbarContent>
 					<NavbarContent className=" xl:hidden" justify="end">
