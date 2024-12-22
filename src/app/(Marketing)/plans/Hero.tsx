@@ -17,6 +17,7 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 					subHeading={
 						"Simple pricing that makes sense for your business. No hidden fees."
 					}
+					para={"Plans"}
 				/>
 
 				<section className=" mx-auto  my-7 flex h-auto w-full flex-col  items-center justify-center gap-6  lg:flex-row  ">

@@ -9,13 +9,11 @@ export const metadata: Metadata = {
 };
 const Teams = (): JSX.Element => {
 	return (
-		<>
-			<main>
-				<MainTitle heading={"Our Team"} />
-				<Hero />
-			</main>
+		<main>
+			<MainTitle heading={"Our Team"} />
+			<Hero />
 			<Footer />
-		</>
+		</main>
 	);
 };
 

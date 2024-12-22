@@ -66,8 +66,12 @@
 	body {
 		@apply h-screen w-full font-dm-sans  text-black dark:text-white;
 	}
+
+	main {
+		@apply bg-background pt-40;
+	}
 	p {
-		@apply font-dm-sans text-lg leading-[26.24px]  text-[#3F3F46] dark:text-white;
+		@apply font-dm-sans text-lg leading-[26.24px]  text-[#3F3F46] dark:text-default-500;
 	}
 	h1 {
 		@apply text-center text-[2.6rem] font-bold leading-[49px] text-[#3F3F46]  md:text-6xl  md:leading-[82px] dark:text-white;

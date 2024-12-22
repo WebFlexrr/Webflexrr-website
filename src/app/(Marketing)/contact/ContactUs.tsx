@@ -407,7 +407,11 @@ const ContactUs = (): React.JSX.Element => {
 				{/* Address & Location */}
 				<section className=" mt-20 h-auto w-full lg:mt-40 ">
 					<section className=" m-auto flex h-auto w-full flex-col items-center justify-between gap-3 px-5 text-secondary">
-						<Heading heading={null} subHeading={"Our Affiliate Branches"} />
+						<Heading
+							heading={null}
+							subHeading={"Our Affiliate Branches"}
+							para="contact"
+						/>
 						<div className=" mx-auto w-full text-center lg:max-w-[60%] ">
 							Et tortor consequat id porta nibh venenatis cras sed felis.
 							Pharetra diam sit amet nisl suscipit. Etiam dignissim diam quis

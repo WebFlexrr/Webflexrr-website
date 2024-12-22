@@ -113,7 +113,7 @@ const BannerSection = (): React.JSX.Element => {
 	};
 
 	return (
-		<section className=" h-auto w-full bg-foreground py-20 ">
+		<section className=" h-auto w-full  py-20 ">
 			<section className=" mx-auto flex h-auto w-full max-w-7xl flex-col gap-10 px-3 lg:px-0 ">
 				<section className="mx-auto flex w-full max-w-4xl flex-col gap-10 text-center">
 					<h3 className=" mx-5 text-center text-white">

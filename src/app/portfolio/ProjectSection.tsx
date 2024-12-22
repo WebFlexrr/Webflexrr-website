@@ -37,7 +37,11 @@ const ProjectSection = async (): Promise<React.JSX.Element> => {
 				<section className=" mx-auto flex h-auto w-full max-w-[100rem] flex-col gap-20 ">
 					{/* Heading */}
 
-					<Heading heading={"Gallery"} subHeading={"Our Project Portfolio"} />
+					<Heading
+						heading={"Gallery"}
+						subHeading={"Our Project Portfolio"}
+						para={"projects"}
+					/>
 					{/* Main Section */}
 					<section className="flex h-auto w-full flex-col gap-3 md:gap-4 lg:gap-6 ">
 						{/* <section className=" grid h-auto w-full grid-cols-1 flex-wrap justify-between gap-4 md:grid-cols-2 md:flex-row lg:grid-cols-3 lg:gap-6">

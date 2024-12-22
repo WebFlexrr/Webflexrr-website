@@ -9,7 +9,11 @@ const Hero = async (): Promise<React.JSX.Element> => {
 		<section className="h-auto w-full">
 			<section className="h-auto w-full px-5 py-20 xl:py-36">
 				<section className="mx-auto flex h-auto w-full max-w-[100rem] flex-col gap-10">
-					<Heading heading={"Top Authorities"} subHeading={"Our Management"} />
+					<Heading
+						heading={"Top Authorities"}
+						subHeading={"Our Management"}
+						para="teams"
+					/>
 					<div className="grid h-auto w-full grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2 2xl:grid-cols-4 ">
 						{allTeamsDetails.map((personDetails) => (
 							<TeamPicture

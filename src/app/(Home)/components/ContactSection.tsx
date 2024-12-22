@@ -67,6 +67,7 @@ const ContactSection = (): React.JSX.Element => {
 					subHeading={
 						"You can feel free to contact us If you have any query or anything you want."
 					}
+					para={"Contact Section"}
 				/>
 				<section className=" flex h-auto  w-full flex-col gap-16 p-5 ">
 					<form
