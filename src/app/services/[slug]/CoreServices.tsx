@@ -1,37 +1,37 @@
 "use client";
 import Heading from "@/components/Heading";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useGSAP } from "@gsap/react";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import React, { type FC, useRef } from "react";
+import React, { type FC } from "react";
 
 interface CoreServicesProps {
 	services: ServiceServices[];
 }
 
 const CoreServices: FC<CoreServicesProps> = ({ services }) => {
-	const CoreServices = useRef<HTMLDivElement>(null);
-	gsap.registerPlugin(ScrollTrigger);
-	gsap.registerPlugin(useGSAP);
+	// const CoreServices = useRef<HTMLDivElement>(null);
+	// gsap.registerPlugin(ScrollTrigger);
+	// gsap.registerPlugin(useGSAP);
 
-	useGSAP(() => {
-		gsap.from(".core_servicesSection", {
-			y: 100,
-			opacity: 0,
-			stagger: 0.2,
-			ease: "power4.out",
-			scrollTrigger: {
-				trigger: CoreServices.current,
-				scroller: "main",
-				start: "30% 80%",
-			},
-		});
-	});
+	// useGSAP(() => {
+	// 	gsap.from(".core_servicesSection", {
+	// 		y: 100,
+	// 		opacity: 0,
+	// 		stagger: 0.2,
+	// 		ease: "power4.out",
+	// 		scrollTrigger: {
+	// 			trigger: CoreServices.current,
+	// 			scroller: "main",
+	// 			start: "30% 80%",
+	// 		},
+	// 	});
+	// });
 
 	return (
 		<section
-			ref={CoreServices}
+			// ref={CoreServices}
 			className="bg-background2 h-auto w-full border-t border-black"
 		>
 			<section className="relative h-fit w-full">

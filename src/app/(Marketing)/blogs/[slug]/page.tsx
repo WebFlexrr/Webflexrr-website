@@ -1,21 +1,10 @@
 import React from "react";
-import { TracingBeam } from "@/components/ui/tracing-beam";
 import Footer from "@/components/Footer";
-import { getSingleBlog } from "@/lib/getBlog";
-import { PortableText } from "@portabletext/react";
-import { Image } from "@nextui-org/react";
-import { PortableTextComponents } from "@/components/PortableText";
 
-const Blog = async ({
-	params,
-}: {
-	params: { slug: string };
-}): Promise<React.JSX.Element> => {
-	const blogData = await getSingleBlog(params.slug);
+const Blog = async (): Promise<React.JSX.Element> => {
 	return (
-		<>
-			<main className=" mx-auto h-auto w-full max-w-7xl  overflow-x-hidden py-16 lg:py-28 ">
-				<TracingBeam className="px-6">
+		<main className=" mx-auto h-auto w-full max-w-7xl  overflow-x-hidden py-16 lg:py-28 ">
+			{/* <TracingBeam className="px-6">
 					<section className="flex w-full justify-center ">
 						<h1>{blogData.title}</h1>
 					</section>
@@ -30,10 +19,9 @@ const Blog = async ({
 							components={PortableTextComponents}
 						/>
 					</div>
-				</TracingBeam>
-			</main>
+				</TracingBeam> */}
 			<Footer />
-		</>
+		</main>
 	);
 };
 

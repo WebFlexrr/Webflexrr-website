@@ -13,7 +13,7 @@ const Heading: FC<HeadingProps> = ({ heading, subHeading, para }) => {
 					<span className=" text-xl font-semibold text-primary ">
 						{heading}
 					</span>
-					<span className="text-5xl font-semibold text-black dark:text-white">
+					<span className="text-5xl font-bold text-black dark:text-white">
 						{subHeading}
 					</span>
 

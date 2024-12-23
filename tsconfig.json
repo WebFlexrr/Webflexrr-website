@@ -30,7 +30,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/Loading.js",
-    "next.config.js",
+    "next.config.ts",
     "postcss.config.js"
 , "src/components/Ui/SocialPostsCarousel"  ],
   "exclude": ["node_modules"]

@@ -212,7 +212,7 @@ const ContactUs = (): React.JSX.Element => {
 							</section>
 							<section className=" h-full w-full md:w-[75%] lg:w-[87%]">
 								<section className=" text-center text-[44px] font-semibold leading-[52px] text-primary lg:text-start xl:text-[47px] xl:leading-[57px] 2xl:text-[60px] 2xl:leading-[72px]">
-									<span>We'll respond to you in an hour. </span>
+									<span>We&apos;ll respond to you in an hour. </span>
 								</section>
 							</section>
 						</section>
@@ -248,7 +248,6 @@ const ContactUs = (): React.JSX.Element => {
 										</h3>
 									</section>
 									<form
-										// eslint-disable-next-line @typescript-eslint/no-misused-promises
 										onSubmit={handleSubmit(onSubmit)}
 										className="flex h-fit w-full flex-wrap gap-0 "
 									>

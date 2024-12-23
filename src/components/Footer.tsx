@@ -20,7 +20,7 @@ const Footer = (): React.JSX.Element => {
 					/>
 				</section>
 				<section className="flex h-auto w-full flex-col gap-5 lg:flex-row  ">
-					<section className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-10 py-2 text-black md:w-full lg:w-1/3 lg:px-5 dark:text-white">
+					<section className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-10 py-2 text-black dark:text-white md:w-full lg:w-1/3 lg:px-5">
 						{/* <div className=" flex w-full flex-wrap gap-5 sm:flex-nowrap xl:gap-2">
 							<input
 								type="text"
@@ -49,7 +49,7 @@ const Footer = (): React.JSX.Element => {
 									contact@webflexrr.com
 								</Link>
 							</section>
-							<section className="text-sm">
+							<section className="text-sm ">
 								<span>WhatsApp :</span>
 								<ul>
 									<li>
@@ -68,7 +68,9 @@ const Footer = (): React.JSX.Element => {
 					</section>
 					<section className="flex flex-wrap gap-8  px-10 py-2  text-sm lg:px-5">
 						<section className="flex flex-col gap-4 text-black  dark:text-white">
-							<span className="font-bold text-black">Pages</span>
+							<span className="font-bold text-black dark:text-white">
+								Pages
+							</span>
 							<ul className=" space-y-4 ">
 								<li>
 									<Link href={"/home"}>Home</Link>
@@ -88,7 +90,9 @@ const Footer = (): React.JSX.Element => {
 							</ul>
 						</section>
 						<section className="flex flex-col   gap-4 text-black dark:text-white">
-							<span className="font-bold text-black">Service</span>
+							<span className="font-bold text-black dark:text-white">
+								Service
+							</span>
 							<ul className=" space-y-4 ">
 								<li className=" cursor-pointer">Landing Page Development</li>
 								<li className=" cursor-pointer">Custom Web App Development</li>
@@ -97,7 +101,9 @@ const Footer = (): React.JSX.Element => {
 							</ul>
 						</section>
 						<section className="flex  w-fit flex-col gap-4 text-black dark:text-white">
-							<span className="  font-bold text-black">Legal</span>
+							<span className="  font-bold text-black dark:text-white">
+								Legal
+							</span>
 							<ul className=" space-y-4    ">
 								<li>
 									<Link href={"/privacy"}>Privacy Policy</Link>

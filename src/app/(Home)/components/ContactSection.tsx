@@ -6,6 +6,7 @@ import * as yup from "yup";
 import Heading from "@/components/Heading";
 import { Button, Input, Textarea } from "@nextui-org/react";
 import toast, { Toaster } from "react-hot-toast";
+import { sendEmailActions } from "@/lib/server/sendEmail";
 
 const schema = yup.object({
 	firstName: yup.string().required("First Name is Required"),
@@ -38,18 +39,19 @@ const ContactSection = (): React.JSX.Element => {
 
 	const onSubmit = async (formData: FormInput): Promise<void> => {
 		try {
-			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_URL}/api/email-send`,
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(formData),
-				}
-			);
+			// const response = await fetch(
+			// 	`${process.env.NEXT_PUBLIC_URL}/api/email-send`,
+			// 	{
+			// 		method: "POST",
+			// 		headers: {
+			// 			"Content-Type": "application/json",
+			// 		},
+			// 		body: JSON.stringify(formData),
+			// 	}
+			// );
 
-			const data = await response.json();
+			const data = await sendEmailActions(formData);
+
 			toast.success("Mail Sucessfully send!");
 			console.log(data);
 		} catch (error) {
@@ -70,10 +72,7 @@ const ContactSection = (): React.JSX.Element => {
 					para={"Contact Section"}
 				/>
 				<section className=" flex h-auto  w-full flex-col gap-16 p-5 ">
-					<form
-						// eslint-disable-next-line @typescript-eslint/no-misused-promises
-						onSubmit={handleSubmit(onSubmit)}
-					>
+					<form onSubmit={handleSubmit(onSubmit)}>
 						<section className=" grid grid-cols-1 gap-4 md:grid-cols-2">
 							<div className=" w-full space-y-2 text-[16px] ">
 								<Input

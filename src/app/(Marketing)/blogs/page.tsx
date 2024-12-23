@@ -24,7 +24,6 @@ const Blog = async (): Promise<React.JSX.Element> => {
 				subHeading={
 					"We write about everything from design to deployment to get your website shipped and ready to go!"
 				}
-				para="wada"
 			/>
 			<section className="mt-32 grid w-full grid-cols-3 gap-10">
 				<Card className=" col-span-2 flex w-full ">
@@ -45,8 +44,8 @@ const Blog = async (): Promise<React.JSX.Element> => {
 								</h5>
 								<p className="truncate font-sans text-base font-normal text-neutral-600 dark:text-neutral-300">
 									I personally have always been a fan of great portfolio
-									websites. I'm always on the look for new ideas and
-									inspirations. Today, I've curated a list of best porfolio
+									websites. I&apos;m always on the look for new ideas and
+									inspirations. Today, I&apos;ve curated a list of best porfolio
 									websites from all over the internet for you to get inspired
 									from.
 								</p>

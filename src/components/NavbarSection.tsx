@@ -14,7 +14,6 @@ import {
 	Drawer,
 	DrawerClose,
 	DrawerContent,
-	DrawerDescription,
 	DrawerFooter,
 	DrawerHeader,
 	DrawerTitle,
@@ -121,15 +120,28 @@ const NavbarSection = (): React.JSX.Element => {
 					</DrawerTrigger>
 					<DrawerContent>
 						<DrawerHeader>
-							<DrawerTitle>Are you absolutely sure?</DrawerTitle>
-							<DrawerDescription>
+							<DrawerTitle>Menu</DrawerTitle>
+							{/* <DrawerDescription>
 								This action cannot be undone.
-							</DrawerDescription>
+							</DrawerDescription> */}
 						</DrawerHeader>
-						<DrawerFooter>
-							<Button>Submit</Button>
-							<DrawerClose>
-								<Button variant="ghost">Cancel</Button>
+						<DrawerFooter className="border">
+							<Link href={"/Home"} className="w-full">
+								<Button className="w-full ">Home</Button>
+							</Link>
+							<Link href={"/works"} className="w-full ">
+								<Button className="w-full ">Work</Button>
+							</Link>
+							<Link href={"/careers"} className="w-full ">
+								<Button className="w-full ">Careers</Button>
+							</Link>
+							<Link href={"/contact"} className="w-full ">
+								<Button className="w-full ">Contact</Button>
+							</Link>
+							<DrawerClose className="w-full ">
+								<Button variant="ghost" className="w-full ">
+									Cancel
+								</Button>
 							</DrawerClose>
 						</DrawerFooter>
 					</DrawerContent>

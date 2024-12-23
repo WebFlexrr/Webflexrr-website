@@ -1,13 +1,18 @@
-import { type NextRequest, NextResponse } from "next/server";
+"use server";
+
 import nodemailer from "nodemailer";
 import { render } from "@react-email/render";
-import ContactUsEmail from "@/../emails/ContactUsEmail";
-import ForOwnEmail from "@/../emails/ForOwnEmail";
+import ContactUsEmail from "../../../emails/ContactUsEmail";
+import ForOwnEmail from "../../../emails/ForOwnEmail";
 
-export const POST = async (
-	request: NextRequest
-): Promise<NextResponse<unknown>> => {
-	const body = await request.json();
+export const sendEmailActions = async (formData: {
+	companyName?: string | undefined;
+	additionalMessage?: string | undefined;
+	firstName: string;
+	email: string;
+	lastName: string;
+}) => {
+	const body = formData;
 	console.log(body);
 
 	try {
@@ -47,8 +52,8 @@ export const POST = async (
 					firstName: body.firstName,
 					lastName: body.lastName,
 					email: body.email,
-					companyName: body.companyName,
-					additionalMessage: body.additionalMessage,
+					companyName: body.companyName!,
+					additionalMessage: body.additionalMessage!,
 				}),
 				{ pretty: true }
 			),
@@ -57,9 +62,9 @@ export const POST = async (
 		console.log(forClient);
 		console.log(forOwn);
 
-		return NextResponse.json(forClient, { status: 200 });
+		return forClient;
 	} catch (error) {
 		console.log(error);
-		return NextResponse.json(error, { status: 500 });
+		return error;
 	}
 };

@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
-import { motion, type Variants } from "framer-motion";
+// import { motion, type Variants } from "framer-motion";
+import { motion, type Variants } from "motion/react";
+
 import Image from "next/image";
 
 interface ArrayLogos {

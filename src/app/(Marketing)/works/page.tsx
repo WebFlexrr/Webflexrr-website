@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 
 import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
-import { Button, Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Image, Link } from "@nextui-org/react";
 
 import getAllProjects from "@/lib/getProjects";
+import { MoveUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
 	title: {
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 
 const Works = async (): Promise<React.JSX.Element> => {
 	const projects = await getAllProjects();
+	// const projects = [];
 
 	return (
 		<main>
@@ -27,13 +29,13 @@ const Works = async (): Promise<React.JSX.Element> => {
 					"See how we've helped businesses achieve their goals through innovative design and development"
 				}
 			/>
-			<section className="mx-auto my-20 mb-40 grid w-full max-w-5xl grid-cols-2 gap-8">
+			<section className="mx-auto my-20 mb-40 grid w-full max-w-5xl grid-cols-1 gap-8 px-5 md:grid-cols-2">
 				{projects.map((item, index) => (
-					/* eslint-disable no-console */
 					<Card
 						key={index}
 						isPressable
 						shadow="sm"
+						className="flex flex-col"
 						// onPress={() => {console.log("item pressed")}}
 					>
 						<CardBody className="overflow-visible p-0">
@@ -52,7 +54,12 @@ const Works = async (): Promise<React.JSX.Element> => {
 								<p className="text-default-500">{item.title}</p>
 							</section>
 
-							<Button>Open</Button>
+							<Link
+								href="/works/323"
+								className="rounded-full  border-2 border-primary-200 p-2 hover:bg-primary-400 hover:text-white "
+							>
+								Open <MoveUpRight size={20} strokeWidth={2} className="ml-2" />
+							</Link>
 						</CardFooter>
 					</Card>
 				))}

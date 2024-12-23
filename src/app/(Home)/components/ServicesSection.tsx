@@ -117,10 +117,7 @@ const ServicesSection = (): React.JSX.Element => {
 					}
 				/>
 
-				<section
-					// ref={scope}
-					className="relative mx-auto grid w-full max-w-md grid-cols-1 gap-7 xl:max-w-none xl:grid-cols-3 xl:grid-rows-3"
-				>
+				<section className="relative mx-auto grid w-full max-w-md grid-cols-1 gap-7 xl:max-w-none xl:grid-cols-3 xl:grid-rows-3">
 					{/* First Section */}
 					<motion.section
 						initial={{
@@ -151,8 +148,8 @@ const ServicesSection = (): React.JSX.Element => {
 							</section>
 							<section className="">
 								<p className="text-sm">
-									We'll build you a website that's so good, it'll make all the
-									other websites jealous. Trust me, not kidding.
+									We&apos;ll build you a website that's so good, it'll make all
+									the other websites jealous. Trust me, not kidding.
 								</p>
 							</section>
 						</section>

@@ -11,7 +11,7 @@ import PlanSection from "./components/PlanSection";
 
 const Home = async (): Promise<React.JSX.Element> => {
 	return (
-		<main>
+		<main className="p-0">
 			<HeroSection />
 			<BannerSection />
 			<ServicesSection />

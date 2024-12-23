@@ -12,31 +12,29 @@ export const metadata: Metadata = {
 const PrivacyPolicy = async (): Promise<JSX.Element> => {
 	const policy = await getPrivacyPolicy();
 	return (
-		<>
-			<section className="h-auto w-full ">
-				<section className="mx-auto h-auto w-full max-w-2xl  px-5 py-28">
-					<section className="flex w-full flex-col justify-start space-y-5">
-						<h4>{policy.title}</h4>
-						<span>
-							Last updated:{" "}
-							{new Date(policy._updatedAt).toLocaleDateString("en-US", {
-								year: "numeric",
-								month: "long",
-								day: "numeric",
-							})}
-						</span>
-					</section>
-					<Divider className="my-4" />
-					<div className="text-sm ">
-						<PortableText
-							value={policy.content}
-							components={PortableTextComponents}
-						/>
-					</div>
+		<main>
+			<section className="mx-auto h-auto w-full max-w-2xl  px-5 py-28">
+				<section className="flex w-full flex-col justify-start space-y-5">
+					<h4>{policy.title}</h4>
+					<span className="dark:text-white">
+						Last updated:{" "}
+						{new Date(policy._updatedAt).toLocaleDateString("en-US", {
+							year: "numeric",
+							month: "long",
+							day: "numeric",
+						})}
+					</span>
 				</section>
+				<Divider className="my-4" />
+				<div className="text-sm  ">
+					<PortableText
+						value={policy.content}
+						components={PortableTextComponents}
+					/>
+				</div>
 			</section>
 			<Footer />
-		</>
+		</main>
 	);
 };
 
