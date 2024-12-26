@@ -28,7 +28,7 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 								/>
 							</div>
 
-							<div className="relative grid grid-cols-1 gap-x-12 gap-y-12 text-center md:grid-cols-3">
+							<div className="relative grid grid-cols-1 gap-x-12 gap-y-12 text-center md:grid-cols-4">
 								<div>
 									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow">
 										<span className="text-xl font-semibold text-gray-700">
@@ -37,7 +37,7 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 										</span>
 									</div>
 									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
-										Create a free account
+										Create a Schedule Call
 									</h3>
 									<p className="mt-4 text-base text-gray-600">
 										Amet minim mollit non deserunt ullamco est sit aliqua dolor
@@ -54,7 +54,7 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 										</span>
 									</div>
 									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
-										Build your website
+										Develop Prototype
 									</h3>
 									<p className="mt-4 text-base text-gray-600">
 										Amet minim mollit non deserunt ullamco est sit aliqua dolor
@@ -63,6 +63,22 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 									</p>
 								</div>
 
+								<div>
+									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow">
+										<span className="text-xl font-semibold text-gray-700">
+											{" "}
+											32{" "}
+										</span>
+									</div>
+									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
+										Release & Launch
+									</h3>
+									<p className="mt-4 text-base text-gray-600">
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor
+										do amet sint. Velit officia consequat duis enim velit
+										mollit.
+									</p>
+								</div>
 								<div>
 									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow">
 										<span className="text-xl font-semibold text-gray-700">

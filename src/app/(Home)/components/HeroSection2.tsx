@@ -4,7 +4,7 @@ import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "motion/react";
 
-const HeroSection = (): React.JSX.Element => {
+const HeroSection2 = (): React.JSX.Element => {
 	return (
 		<section id={"home"} className="relative  w-full  ">
 			<div className="relative flex h-fit w-full items-center justify-center bg-white pb-28 bg-grid-black/[0.09] dark:bg-black dark:bg-grid-white/[0.2] lg:h-screen lg:pt-28">
@@ -55,4 +55,4 @@ const HeroSection = (): React.JSX.Element => {
 	);
 };
 
-export default HeroSection;
+export default HeroSection2;

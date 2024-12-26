@@ -32,32 +32,32 @@ const NavbarSection = (): React.JSX.Element => {
 		<Navbar
 			// shouldHideOnScroll={true}
 			// isBordered
-			// isBlurred={true}
+			isBlurred={true}
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			// maxWidth={"full"}
-			className="animate-visible-from-down fixed mx-auto mt-10 flex h-fit items-center  justify-evenly   rounded-full   border-2 border-black bg-foreground-100   text-white  antialiased  drop-shadow-xl ease-in-out-expo lg:w-fit  "
+			className="animate-visible-from-down fixed mx-auto mt-5  flex h-16 items-center justify-evenly  rounded-full   border-2   border-black text-white    antialiased  drop-shadow-xl  ease-in-out-expo dark:border-foreground-100 lg:w-fit  "
 		>
 			<NavbarContent className="w-fit">
 				<NavbarBrand className="">
-					<Link href={"/"} aria-label="Home Button">
+					<Link href={"/"} aria-label="Home Button" className="">
 						<Image
 							src={"/logos/logo.png"}
 							width={"250"}
 							height={"0"}
 							alt={""}
 							priority={true}
-							className="w-36 lg:w-48"
+							className="w-36 lg:w-40"
 						/>
 					</Link>
 				</NavbarBrand>
 			</NavbarContent>
-			<NavbarContent className="mx-10 hidden gap-3 xl:flex" justify="center">
+			<NavbarContent className="mx-20 hidden gap-3 xl:flex" justify="center">
 				<NavbarItem className={`  `}>
 					<Link
 						className={`${
 							pathname === "/" && "bg-primary text-white dark:text-white"
-						} rounded-full p-2 text-lg  font-medium text-black antialiased dark:text-white  `}
+						} rounded-full px-2 py-1 text-lg font-medium  text-black antialiased dark:font-normal dark:text-white  `}
 						href={"/"}
 					>
 						Home
@@ -67,7 +67,7 @@ const NavbarSection = (): React.JSX.Element => {
 					<Link
 						className={` ${
 							pathname === "/works" && "bg-primary text-white  dark:text-white"
-						} rounded-full p-2 text-lg font-medium text-black antialiased dark:text-white  `}
+						} rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white  `}
 						href={"/works"}
 					>
 						Works
@@ -78,7 +78,7 @@ const NavbarSection = (): React.JSX.Element => {
 						className={`${
 							pathname === "/careers" && "bg-primary text-white dark:text-white"
 						}
-							 rounded-full p-2 text-lg font-medium text-black antialiased dark:text-white `}
+							 rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white `}
 						color="foreground"
 						href={"/careers"}
 					>
@@ -89,7 +89,7 @@ const NavbarSection = (): React.JSX.Element => {
 					<Link
 						className={` ${
 							pathname === "/blogs" && "bg-primary text-white dark:text-white"
-						} rounded-full p-2 text-lg font-medium text-black antialiased dark:text-white`}
+						} rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white`}
 						color="foreground"
 						href={"/blogs"}
 					>

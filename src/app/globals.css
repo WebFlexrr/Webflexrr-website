@@ -76,6 +76,7 @@
 	h1 {
 		@apply text-center text-[2.6rem] font-bold leading-[49px] text-[#3F3F46]  md:text-6xl  md:leading-[82px] dark:text-white;
 	}
+	
 	h2 {
 		@apply text-center font-schibsted-grotesk text-3xl font-bold leading-[41px] text-[#3F3F46] text-secondary sm:text-[40px] lg:text-5xl lg:leading-[66px] dark:text-white;
 	}
@@ -114,4 +115,8 @@
 .process-padding-right-0 {
 	padding: 0 calc(114px / 2);
 	padding-right: 0px;
+}
+
+.swiper-wrapper{
+	transition-timing-function: linear !important;
 }
