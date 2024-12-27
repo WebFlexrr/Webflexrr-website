@@ -21,7 +21,7 @@ const Heading: FC<HeadingProps> = ({ heading, subHeading, para }) => {
 						{subHeading}
 					</span>
 
-					<p>{para}</p>
+					<p className="max-w-lg">{para}</p>
 				</>
 			) : (
 				<h2 className="">{heading}</h2>

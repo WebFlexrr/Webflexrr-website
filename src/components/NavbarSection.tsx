@@ -78,7 +78,7 @@ const NavbarSection = (): React.JSX.Element => {
 						className={`${
 							pathname === "/careers" && "bg-primary text-white dark:text-white"
 						}
-							 rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white `}
+							rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white `}
 						color="foreground"
 						href={"/careers"}
 					>
@@ -123,7 +123,7 @@ const NavbarSection = (): React.JSX.Element => {
 							<DrawerTitle>Menu</DrawerTitle>
 							{/* <DrawerDescription>
 								This action cannot be undone.
-							</DrawerDescription> */}
+								</DrawerDescription> */}
 						</DrawerHeader>
 						<DrawerFooter className="border">
 							<Link href={"/Home"} className="w-full">

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
 import { Card, CardBody, CardHeader, Divider, Image } from "@nextui-org/react";
+import NavBar from "@/components/NavBar";
 
 export const metadata: Metadata = {
 	title: {
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 const Careers = async (): Promise<React.JSX.Element> => {
 	return (
 		<main>
+			<NavBar />
 			<Heading
 				heading={"Careers"}
 				subHeading={"Join Our Remote Team"}

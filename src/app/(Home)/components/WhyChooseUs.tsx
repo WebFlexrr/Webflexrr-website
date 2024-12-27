@@ -7,16 +7,16 @@ import { Laptop, Smartphone, Tablet, Monitor } from "lucide-react";
 
 const WhyChooseUs = () => {
 	return (
-		<section className="w-full py-20 pt-10">
-			<section className="mx-auto w-full max-w-7xl px-6 ">
+		<section className="w-full py-32 md:py-20 ">
+			<section className="mx-auto  w-full  max-w-7xl px-6 ">
 				<Heading
 					heading={` Why Choose Us`}
 					subHeading={"Our Unique Selling Point"}
 					para="Discover our unique strength and distinctive value we offer"
 				/>
 
-				<section className="mt-20 grid w-full grid-cols-1 grid-rows-2  gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3">
-					<motion.div
+				<ul className="mt-20 grid w-full grid-flow-row-dense grid-cols-1   gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+					<motion.li
 						initial={{ opacity: 0, y: 40, x: -50 }}
 						whileInView={{ opacity: 1, y: 0, x: 0 }}
 						transition={{
@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
 							ease: "backInOut",
 						}}
 						viewport={{ margin: "0px -20px -150px 100px" }}
-						className="row-span-2  flex w-full grid-cols-1 flex-col gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg"
+						className="  flex w-full grid-cols-1 flex-col gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg"
 					>
 						<section className="flex w-full  flex-col items-center justify-center rounded-sm border border-foreground-300 bg-background p-3">
 							<section className="justify-left flex w-full items-center  gap-3 rounded-full border border-foreground-300 px-2 py-1.5 text-sm text-foreground ">
@@ -45,21 +45,6 @@ const WhyChooseUs = () => {
 										</span>
 									</div>
 								</div>
-								{/*
-								<div className="flex flex-col text-xs text-foreground delay-100 group-hover:animate-fade-down group-hover:delay-700">
-									<span className="">www.hackernews.com</span>
-									<div>
-										<span className="text-sm">
-											I launched <b>Your website</b> helps me grow.
-										</span>
-									</div>
-									<div className="mt-1.5">
-										<span className="text-xs text-foreground-500 ">
-											This guy does not know what heckernews comments are.
-										</span>
-									</div>
-								</div>
-											*/}
 							</section>
 						</section>
 						<section className="w-full text-left text-foreground">
@@ -74,9 +59,9 @@ const WhyChooseUs = () => {
 								you can get the traffic you're looking for.
 							</p>
 						</section>
-					</motion.div>
+					</motion.li>
 
-					<motion.div
+					<motion.li
 						initial={{ opacity: 0, y: 40 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{
@@ -84,7 +69,7 @@ const WhyChooseUs = () => {
 							ease: "backInOut",
 						}}
 						viewport={{ margin: "0px -20px -150px 100px" }}
-						className="row-span-2 flex w-full grid-cols-1 flex-col justify-between gap-4 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg"
+						className="flex w-full grid-cols-1 flex-col justify-between gap-4 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg"
 					>
 						<section className="flex  w-full flex-col  items-end  justify-center overflow-hidden overflow-x-hidden rounded-sm  border-foreground-300  p-3">
 							<motion.svg
@@ -156,9 +141,9 @@ const WhyChooseUs = () => {
 								intentional action.
 							</p>
 						</section>
-					</motion.div>
+					</motion.li>
 
-					<motion.div
+					<motion.li
 						initial={{ opacity: 0, y: 40, x: 50 }}
 						whileInView={{ opacity: 1, y: 0, x: 0 }}
 						transition={{
@@ -166,7 +151,7 @@ const WhyChooseUs = () => {
 							ease: "backInOut",
 						}}
 						viewport={{ margin: "0px -20px -150px 100px" }}
-						className="row-span-2 flex w-full grid-cols-1 flex-col justify-between gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg"
+						className=" flex w-full grid-cols-1 flex-col justify-between gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg md:grid-cols-2"
 					>
 						<section className="flex h-full w-full items-center justify-center rounded-sm border border-foreground-300 bg-background p-3">
 							{[
@@ -203,9 +188,9 @@ const WhyChooseUs = () => {
 								intentional action.
 							</p>
 						</section>
-					</motion.div>
+					</motion.li>
 
-					<motion.div
+					<motion.li
 						initial={{ opacity: 0, y: 40 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{
@@ -213,7 +198,7 @@ const WhyChooseUs = () => {
 							ease: "backInOut",
 						}}
 						viewport={{ margin: "0px -20px -150px 100px" }}
-						className="col-span-2 row-span-1 flex w-full flex-col justify-between gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg"
+						className="col-span-1 flex  w-full flex-col justify-between gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg md:col-span-2"
 					>
 						<section className="flex h-full w-full items-center justify-center rounded-sm border border-foreground-300 bg-background p-3">
 							{[
@@ -250,9 +235,8 @@ const WhyChooseUs = () => {
 								intentional action.
 							</p>
 						</section>
-					</motion.div>
-
-					<motion.div
+					</motion.li>
+					<motion.li
 						initial={{ opacity: 0, y: 40 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{
@@ -298,8 +282,8 @@ const WhyChooseUs = () => {
 								intentional action.
 							</p>
 						</section>
-					</motion.div>
-				</section>
+					</motion.li>
+				</ul>
 			</section>
 		</section>
 	);

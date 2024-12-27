@@ -4,19 +4,16 @@ import Image from "next/image";
 
 const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 	return (
-		<section className="  h-auto w-full  " id={"howItWorks"}>
-			<section className=" mx-auto h-auto w-full max-w-[60rem] px-6 py-20 xl:py-36">
+		<section className="  h-auto w-full py-20 " id={"howItWorks"}>
+			<section className=" mx-auto h-auto w-full max-w-7xl px-6">
+				<Heading
+					heading={"How it Works"}
+					subHeading={"How it Works"}
+					para=" Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+								amet sint. Velit officia consequat duis."
+				/>
 				<section className="bg-background py-10 sm:py-16 lg:py-24">
 					<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-						<div className="mx-auto max-w-2xl text-center">
-							<Heading heading={"How it Works"} subHeading={"How it Works"} />
-
-							<p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-gray-600">
-								Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-								amet sint. Velit officia consequat duis.
-							</p>
-						</div>
-
 						<div className="relative mt-12 lg:mt-20">
 							<div className="absolute inset-x-0 top-2 hidden md:block md:px-20 lg:px-28 xl:px-44">
 								<Image
@@ -37,13 +34,9 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 										</span>
 									</div>
 									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
-										Create a Schedule Call
+										Book a Schedule Call
 									</h3>
-									<p className="mt-4 text-base text-gray-600">
-										Amet minim mollit non deserunt ullamco est sit aliqua dolor
-										do amet sint. Velit officia consequat duis enim velit
-										mollit.
-									</p>
+									<p className="mt-4 text-base text-gray-600"></p>
 								</div>
 
 								<div>
@@ -54,7 +47,7 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 										</span>
 									</div>
 									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
-										Develop Prototype
+										Discuss About Your Idea
 									</h3>
 									<p className="mt-4 text-base text-gray-600">
 										Amet minim mollit non deserunt ullamco est sit aliqua dolor
@@ -67,11 +60,11 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow">
 										<span className="text-xl font-semibold text-gray-700">
 											{" "}
-											32{" "}
+											3{" "}
 										</span>
 									</div>
 									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
-										Release & Launch
+										Develope the product
 									</h3>
 									<p className="mt-4 text-base text-gray-600">
 										Amet minim mollit non deserunt ullamco est sit aliqua dolor
@@ -83,11 +76,11 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow">
 										<span className="text-xl font-semibold text-gray-700">
 											{" "}
-											32{" "}
+											4{" "}
 										</span>
 									</div>
 									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
-										Release & Launch
+										Deploy
 									</h3>
 									<p className="mt-4 text-base text-gray-600">
 										Amet minim mollit non deserunt ullamco est sit aliqua dolor

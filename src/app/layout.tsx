@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { type ReactNode } from "react";
-// import { Providers } from "./providers";
-import NavbarSection from "@/components/NavbarSection";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
 	title: {
 		default:
-			"WebFlexrr Digital Services | Crafting High-Performance Websites for Maximize your Business 10X ",
+			"WebFlexrr Labs | Crafting High-Performance Websites for Maximize your Business 10X ",
 		template: "%s | WebFlexrr Digital Services",
 	},
 	description:
@@ -74,10 +72,7 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 	return (
 		<html lang="en" className="!scroll-smooth">
 			<GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER ?? ""} />
-			<body className="dark">
-				<NavbarSection />
-				{children}
-			</body>
+			<body className="dark">{children}</body>
 		</html>
 	);
 };

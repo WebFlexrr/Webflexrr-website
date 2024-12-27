@@ -15,24 +15,11 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 			<section className=" mx-auto flex h-auto w-full max-w-7xl flex-col px-5 py-20 xl:py-36  ">
 				{/* Heading */}
 				<Heading
-					heading={"The right price for you, with maximum value"}
-					subHeading={
-						"Simple pricing that makes sense for your business. No hidden fees."
-					}
+					heading={"Our Prices"}
+					subHeading={"Simple pricing for Startups"}
+					para="We offer a range of flexible pricing plans tailored to suit businesses of all sizes."
 				/>
 
-				<section className=" mx-auto  my-7 flex h-auto w-full flex-col  items-center justify-center gap-6  lg:flex-row  ">
-					<h5>If your have queries about our services </h5>
-					<Link
-						href={process.env.NEXT_PUBLIC_MEETING_LINK ?? ""}
-						target="_blank"
-						className=" cursor-pointer rounded-full border-2  border-black bg-primary px-10 py-2.5 text-lg font-semibold text-white  transition-colors"
-					>
-						Book a Call
-					</Link>
-				</section>
-
-				{/* Selection Pannel */}
 				<section className=" mx-auto mb-16 mt-10  grid h-auto  w-full max-w-lg grid-cols-1 flex-col gap-9 sm:px-10 xl:max-w-none xl:grid-cols-3 xl:px-0 ">
 					{allPlans.map((item) => (
 						<PlansCard key={item.id} item={item} />
@@ -44,7 +31,7 @@ const PlanSection = async (): Promise<React.JSX.Element> => {
 					</div>
 					<Link
 						href={"/plans"}
-						className=" cursor-pointer rounded-full border px-4 py-2 text-sm font-bold text-black"
+						className=" cursor-pointer rounded-full border px-4 py-2 text-sm font-bold text-foreground"
 					>
 						✨ See all feature and compare plans
 					</Link>

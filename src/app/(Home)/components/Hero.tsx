@@ -12,7 +12,7 @@ import "swiper/css";
 //import { Swiper, SwiperSlide } from "swiper/react";
 //import { Autoplay } from "swiper/modules";
 
-const words = ["Website", "Apps", "Software", "MVP"];
+const words = ["Landing Pages", "Apps", "Software", "MVP"];
 
 {
 	/*
@@ -36,7 +36,7 @@ const Hero = () => {
 				className="-top-40 left-0 md:-top-20 md:left-60"
 				fill="white"
 			/>
-			<section className="relative flex h-fit w-full items-center justify-center bg-background   pt-40 lg:h-screen lg:pt-28 ">
+			<section className="relative  flex h-fit w-full items-center justify-center bg-background   pt-48 lg:h-screen lg:pt-28 ">
 				<section className="mx-auto  flex h-fit w-full max-w-[90rem] flex-col items-center px-5 text-center md:px-14 xl:px-20">
 					<motion.span
 						initial={{ opacity: 0, scale: 0.7, y: "-70%" }}
@@ -45,7 +45,7 @@ const Hero = () => {
 					>
 						<Link
 							href={"/plans"}
-							className=" flex cursor-pointer items-center gap-5 rounded-full border px-4 py-2 text-sm font-bold text-black dark:text-white"
+							className=" flex cursor-pointer items-center gap-5 rounded-full border px-4 py-2 text-base font-bold text-black dark:text-white md:text-sm"
 						>
 							✨ See our Designs and compare plans <FaArrowRightLong />
 						</Link>
@@ -54,26 +54,29 @@ const Hero = () => {
 						initial={{ opacity: 0, scale: 0.7, y: "40%" }}
 						animate={{ opacity: 1, scale: 0.8, y: "0" }}
 						transition={{ duration: 0.7, ease: "circInOut" }}
-						className=" mt-5 w-full max-w-5xl"
+						className=" mt-5 w-full max-w-5xl "
 					>
-						<h1 className="flex flex-col bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
-							<span>
-								We ship{" "}
+						<h1 className="  gap-2 bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold  text-transparent md:text-5xl lg:text-7xl">
+							<span className="flex flex-col items-center justify-center lg:flex-row">
+								We ship
 								<FlipWords
 									words={words}
 									duration={2000}
 									className=" text-red-400 dark:text-red-400"
 								/>
-								that
+								<span className="hidden lg:flex">that</span>
 							</span>
-							<span> standouts everywhere 🚀</span>
+							<span className="">
+								<span className="mx-2 lg:hidden">That</span>
+								Standouts Everywhere 🚀
+							</span>
 						</h1>
 					</motion.section>
 					<motion.section
 						initial={{ opacity: 0, y: "30%" }}
 						animate={{ opacity: 1, y: "0" }}
 						transition={{ duration: 0.7, delay: 0.1, ease: "circInOut" }}
-						className="w-full max-w-3xl "
+						className="mt-10 w-full max-w-3xl md:mt-0 "
 					>
 						<p className=" text-black">
 							A Design and Development studio that helps passionate Startup and
@@ -87,17 +90,17 @@ const Hero = () => {
 						className="my-7"
 					>
 						<Link href={process.env.NEXT_PUBLIC_MEETING_LINK ?? ""}>
-							<Button className="text-font rounded-full bg-primary bg-gradient-to-b from-primary via-primary to-purple-300  p-7 text-lg font-bold text-white">
+							<Button className="text-font scale-110 rounded-full bg-primary bg-gradient-to-b from-primary via-primary to-purple-300 p-7  text-lg font-bold text-white md:scale-100">
 								Book a Call
 							</Button>
 						</Link>
 					</motion.span>
-					<span className="mx-auto  my-4 flex flex-col text-foreground-500  lg:flex-row">
+					<span className="mx-auto my-4 flex flex-col gap-2 text-2xl text-foreground-500 md:text-lg  lg:flex-row">
 						<motion.span
 							initial={{ opacity: 0, x: "-20%", y: "30%" }}
 							animate={{ opacity: 1, x: "0", y: "0" }}
 							transition={{ duration: 0.7, delay: 0.6, ease: "circInOut" }}
-							className="text-lg"
+							className=""
 						>
 							We use industry standard technologies
 						</motion.span>
@@ -105,7 +108,7 @@ const Hero = () => {
 							initial={{ opacity: 0, x: "20%", y: "30%" }}
 							animate={{ opacity: 1, x: "0", y: "0" }}
 							transition={{ duration: 0.7, delay: 0.6, ease: "circInOut" }}
-							className="flex text-lg"
+							className="flex "
 						>
 							<motion.span whileHover={{ y: -10 }}>
 								<Link

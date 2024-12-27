@@ -71,7 +71,7 @@
 		@apply bg-background pt-40;
 	}
 	p {
-		@apply font-dm-sans text-lg leading-[26.24px]  text-[#3F3F46] dark:text-default-500;
+		@apply font-dm-sans text-xl subpixel-antialiased  md:text-lg  leading-[26.24px]  text-secondary dark:text-default-500;
 	}
 	h1 {
 		@apply text-center text-[2.6rem] font-bold leading-[49px] text-[#3F3F46]  md:text-6xl  md:leading-[82px] dark:text-white;
