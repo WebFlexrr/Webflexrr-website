@@ -68,7 +68,7 @@
 	}
 
 	main {
-		@apply bg-background pt-40;
+		@apply bg-background ;
 	}
 	p {
 		@apply font-dm-sans text-xl subpixel-antialiased  md:text-lg  leading-[26.24px]  text-secondary dark:text-default-500;

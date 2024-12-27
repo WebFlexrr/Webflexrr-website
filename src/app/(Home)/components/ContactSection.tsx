@@ -63,7 +63,7 @@ const ContactSection = (): React.JSX.Element => {
 	return (
 		<section id={"contact"} className=" relative h-auto w-full ">
 			<Toaster position="bottom-center" reverseOrder={true} />
-			<section className="mx-auto w-full max-w-5xl space-y-10 px-5 py-20 md:px-10 lg:py-28 ">
+			<section className="mx-auto w-full  max-w-5xl space-y-10 px-5 py-20 md:px-10 lg:py-24 ">
 				<Heading
 					heading={"Contact Us"}
 					subHeading={

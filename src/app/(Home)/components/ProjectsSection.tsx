@@ -10,12 +10,12 @@ const ProjectsSection = async (): Promise<React.JSX.Element> => {
 	const projects = await getAllProjects();
 	return (
 		<section className=" h-auto w-full py-20 pt-28" id="projects">
-			<section className="mx-auto w-full max-w-7xl px-6">
+			<section className="mx-auto w-full max-w-7xl px-5">
 				<Heading
 					heading={"Our Work Showcase"}
 					subHeading={"Showcase our Best Works"}
 				/>
-				<section className=" mt-12 grid w-full grid-cols-1 gap-6 px-5 md:grid-cols-2 ">
+				<section className=" mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-2 ">
 					{projects.map((item, index) => (
 						<Card
 							key={index}

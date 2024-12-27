@@ -1,5 +1,3 @@
-import WorksFlowSection from "./components/WorksFlowSection";
-import TeamSection from "./components/TeamSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "@/components/Footer";
 import ProjectsSection from "./components/ProjectsSection";
@@ -18,11 +16,13 @@ const Home = async (): Promise<React.JSX.Element> => {
 			<WhyChooseUs />
 			<Services />
 			<ProjectsSection />
-			<WorksFlowSection />
-
 			<PlanSection />
 			<FaqSection />
+			{/*
+			<WorksFlowSection />
 			<TeamSection />
+		*/}
+
 			<ContactSection />
 			{/* <FeedBack /> */}
 			{/* <CallOutSection/> */}
