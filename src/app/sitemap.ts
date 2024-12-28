@@ -1,10 +1,11 @@
-import { getAllBlogs } from "@/lib/getBlog";
+import { ALL_BLOG_QUERY } from "@/sanity/actions/queries";
+import { sanityFetch } from "@/sanity/lib/client";
 import type { MetadataRoute } from "next";
 
 const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
 	const baseUrl = "https://www.webflexrr.com";
 
-	const allBlogs = await getAllBlogs();
+	const allBlogs = await sanityFetch<getBlog[]>({ query: ALL_BLOG_QUERY });
 
 	const blogs = allBlogs.map((blog) => {
 		return {

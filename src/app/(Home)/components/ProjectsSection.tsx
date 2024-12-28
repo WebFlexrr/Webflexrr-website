@@ -1,5 +1,5 @@
 import Heading from "@/components/Heading";
-import getAllProjects from "@/lib/getProjects";
+import { getProjectsActions } from "@/sanity/actions/queryActions";
 import { Button, Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import React from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 const ProjectsSection = async (): Promise<React.JSX.Element> => {
-	const projects = await getAllProjects();
+	const projects = await getProjectsActions();
 	return (
 		<section className=" h-auto w-full py-20 pt-28" id="projects">
 			<section className="mx-auto w-full max-w-7xl px-5">

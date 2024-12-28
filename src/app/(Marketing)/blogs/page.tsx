@@ -3,9 +3,11 @@ import type { Metadata } from "next";
 import Heading from "@/components/Heading";
 import { BlogItem } from "@/app/(Marketing)/blogs/components/blog-Item";
 import { Button, Card, CardBody, Image } from "@nextui-org/react";
-import { getAllBlogs } from "@/lib/getBlog";
+
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import { sanityFetch } from "@/sanity/lib/client";
+import { ALL_BLOG_QUERY } from "@/sanity/actions/queries";
 
 export const metadata: Metadata = {
 	title: {
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const Blog = async (): Promise<React.JSX.Element> => {
-	const blogs = await getAllBlogs();
+	const blogs = await sanityFetch<getBlog[]>({ query: ALL_BLOG_QUERY });
 
 	return (
 		<main className=" mx-auto h-auto w-full  overflow-x-hidden py-16 lg:py-28 ">

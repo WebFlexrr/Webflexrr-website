@@ -43,7 +43,7 @@ const plans = [
 	},
 ];
 
-const PlanSection = async (): Promise<React.JSX.Element> => {
+const PlanSection = (): React.JSX.Element => {
 	return (
 		<section id="plans" className="h-auto w-full ">
 			<section className=" mx-auto flex h-auto w-full max-w-7xl flex-col  px-5 py-20 xl:py-36  ">

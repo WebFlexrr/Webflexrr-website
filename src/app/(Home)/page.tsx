@@ -8,7 +8,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import Services from "./components/Services";
 import NavBar from "@/components/NavBar";
 
-const Home = async (): Promise<React.JSX.Element> => {
+const Home = () => {
 	return (
 		<main className="p-0">
 			<NavBar />
@@ -18,14 +18,16 @@ const Home = async (): Promise<React.JSX.Element> => {
 			<ProjectsSection />
 			<PlanSection />
 			<FaqSection />
+
 			{/*
 			<WorksFlowSection />
 			<TeamSection />
-		*/}
+			<CallOutSection />
+			*/}
 
 			<ContactSection />
 			{/* <FeedBack /> */}
-			{/* <CallOutSection/> */}
+
 			<Footer />
 		</main>
 	);

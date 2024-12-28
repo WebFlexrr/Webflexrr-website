@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const Careers = async (): Promise<React.JSX.Element> => {
 	return (
-		<main>
+		<main className="pt-28">
 			<NavBar />
 			<Heading
 				heading={"Careers"}
@@ -27,7 +27,7 @@ const Careers = async (): Promise<React.JSX.Element> => {
 			/>
 
 			<section className="mx-auto my-20 mb-60 flex w-full max-w-xl flex-col gap-10 ">
-				<Card className="w-full">
+				<Card isHoverable className="w-full">
 					<CardHeader className="flex gap-3">
 						<Image
 							alt="nextui logo"

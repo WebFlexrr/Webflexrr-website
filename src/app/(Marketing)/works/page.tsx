@@ -1,13 +1,12 @@
 import React from "react";
 import type { Metadata } from "next";
-
 import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
 import { Card, CardBody, CardFooter, Image, Link } from "@nextui-org/react";
-
-import getAllProjects from "@/lib/getProjects";
 import { MoveUpRight } from "lucide-react";
 import NavBar from "@/components/NavBar";
+import { sanityFetch } from "@/sanity/lib/client";
+import { PROJECT_QUERY } from "@/sanity/actions/queries";
 
 export const metadata: Metadata = {
 	title: {
@@ -18,11 +17,12 @@ export const metadata: Metadata = {
 };
 
 const Works = async (): Promise<React.JSX.Element> => {
-	const projects = await getAllProjects();
-	// const projects = [];
+	const projects = await sanityFetch<getAllProjects[]>({
+		query: PROJECT_QUERY,
+	});
 
 	return (
-		<main>
+		<main className="pt-28">
 			<NavBar />
 			<Heading
 				heading={"Our Works"}
@@ -37,6 +37,7 @@ const Works = async (): Promise<React.JSX.Element> => {
 						key={index}
 						isPressable
 						shadow="sm"
+						isHoverable
 						className="flex flex-col"
 						// onPress={() => {console.log("item pressed")}}
 					>

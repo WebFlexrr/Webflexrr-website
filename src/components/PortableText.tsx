@@ -1,4 +1,4 @@
-import { imageUrlFor } from "@/config/SanityImageUrl";
+import { imageUrlFor } from "@/sanity/config/SanityImageUrl";
 import { Code, Image, Link } from "@nextui-org/react";
 import type { PortableTextReactComponents } from "@portabletext/react";
 import type { SanityImageAssetDocument } from "next-sanity";

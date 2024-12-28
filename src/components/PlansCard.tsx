@@ -80,7 +80,7 @@ const PlansCard: FC<PlansCardProps> = ({
 					target="_blank"
 					className={`mt-8 ${
 						type === "Recommended"
-							? "border-white bg-primary transition-all duration-100 ease-in-out hover:bg-background hover:text-primary"
+							? "border-white bg-foreground text-primary transition-all duration-100 ease-in-out hover:bg-primary hover:text-foreground "
 							: "border-primary transition-all duration-100 ease-in-out hover:bg-primary hover:text-white "
 					} flex w-full items-center justify-center rounded-lg border-2  p-2.5 text-lg font-semibold `}
 				>
