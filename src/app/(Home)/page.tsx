@@ -11,6 +11,7 @@ import NavBar from "@/components/NavBar";
 const Home = () => {
 	return (
 		<main className="p-0">
+			{/* <AnnouncementBar/> */}
 			<NavBar />
 			<Hero />
 			<WhyChooseUs />

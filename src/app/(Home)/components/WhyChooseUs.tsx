@@ -7,56 +7,53 @@ import { Laptop, Smartphone, Tablet, Monitor } from "lucide-react";
 
 const WhyChooseUs = () => {
 	return (
-		<section className="w-full py-32 md:py-20 ">
-			<section className="mx-auto  w-full  max-w-7xl px-6 ">
+		<section className="w-full bg-background py-16 md:py-24">
+			<section className="mx-auto w-full max-w-7xl px-4 md:px-6">
 				<Heading
-					heading={` Why Choose Us`}
-					subHeading={"Our Unique Selling Point"}
-					para="Discover our unique strength and distinctive value we offer"
+					heading="Why Choose Us"
+					subHeading="Our Unique Selling Points"
+					para="Discover the exceptional value and distinctive strengths we bring to your digital journey"
 				/>
 
-				<ul className="mt-20 grid w-full grid-flow-row-dense grid-cols-1   gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+				<ul className="mt-16 grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 					<motion.li
 						initial={{ opacity: 0, y: 40, x: -50 }}
 						whileInView={{ opacity: 1, y: 0, x: 0 }}
-						transition={{
-							duration: 0.7,
-							ease: "backInOut",
-						}}
-						viewport={{ margin: "0px -20px -150px 100px" }}
-						className="  flex w-full grid-cols-1 flex-col gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg"
+						transition={{ duration: 0.7, ease: "backInOut" }}
+						viewport={{ once: true }}
+						className="flex flex-col gap-6 rounded-xl border border-foreground/10 bg-gradient-to-br from-foreground/5 to-transparent p-6 shadow-lg transition-colors hover:border-primary/20"
 					>
-						<section className="flex w-full  flex-col items-center justify-center rounded-sm border border-foreground-300 bg-background p-3">
-							<section className="justify-left flex w-full items-center  gap-3 rounded-full border border-foreground-300 px-2 py-1.5 text-sm text-foreground ">
-								<Search size={20} />
-								Best Software Development Company??
+						<section className="flex flex-col space-y-4 rounded-lg border border-foreground/10 bg-background/50 p-4">
+							<section className="flex items-center gap-2 rounded-full border border-foreground/10 px-3 py-2 text-sm">
+								<Search className="h-4 w-4 text-primary" />
+								<span>Best Software Development Company</span>
 							</section>
-							<section className="flex flex-col gap-4 px-5 py-3 pr-6">
-								<div className="flex flex-col text-xs text-foreground group-hover:animate-fade-down group-hover:delay-500">
-									<span className="">https://www.webflexrr.com</span>
-									<div>
-										<span className="text-sm">
-											I launched <b>Your website</b> helps me grow.
+							<section className="space-y-3 px-3">
+								<div className="text-xs text-foreground/80">
+									<span>https://www.webflexrr.com</span>
+									<div className="mt-2">
+										<span className="text-sm font-medium">
+											Transform your online presence with us
 										</span>
 									</div>
-									<div className="mt-1.5">
-										<span className="text-xs text-foreground-500  ">
-											This guy does not know what heckernews comments are.
+									<div className="mt-1.5 text-foreground/60">
+										<span>
+											Expert web development solutions for your business
 										</span>
 									</div>
 								</div>
 							</section>
 						</section>
-						<section className="w-full text-left text-foreground">
-							<h5 className="text-left">
-								<span className="text-bold mr-2 text-3xl text-primary">
+						<section className="space-y-3">
+							<h5 className="flex items-baseline">
+								<span className="mr-2 text-2xl font-bold text-primary">
 									01.
 								</span>
-								SEO Optimization
+								<span className="text-xl font-semibold">SEO Optimization</span>
 							</h5>
-							<p className="mt-3 text-sm">
-								We'll make sure your website is optimized for search engines, so
-								you can get the traffic you're looking for.
+							<p className="text-sm text-foreground/80">
+								We ensure your website ranks higher through advanced SEO
+								strategies, driving organic traffic and improving visibility.
 							</p>
 						</section>
 					</motion.li>
@@ -64,21 +61,17 @@ const WhyChooseUs = () => {
 					<motion.li
 						initial={{ opacity: 0, y: 40 }}
 						whileInView={{ opacity: 1, y: 0 }}
-						transition={{
-							duration: 0.7,
-							ease: "backInOut",
-						}}
-						viewport={{ margin: "0px -20px -150px 100px" }}
-						className="flex w-full grid-cols-1 flex-col justify-between gap-4 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg"
+						transition={{ duration: 0.7, ease: "backInOut" }}
+						viewport={{ once: true }}
+						className="flex flex-col gap-6 rounded-xl border border-foreground/10 bg-gradient-to-br from-foreground/5 to-transparent p-6 shadow-lg transition-colors hover:border-primary/20"
 					>
-						<section className="flex  w-full flex-col  items-end  justify-center overflow-hidden overflow-x-hidden rounded-sm  border-foreground-300  p-3">
+						<section className="relative h-48 rounded-lg border border-foreground/10 bg-background/50 p-4">
 							<motion.svg
 								viewBox="0 0 100 50"
-								className="h-48 w-full"
+								className="h-full w-full"
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								transition={{ duration: 1 }}
-								viewport={{ margin: "0px -20px -200px 100px" }}
 							>
 								{[0, 1, 2, 3, 4].map((i) => (
 									<motion.line
@@ -87,7 +80,8 @@ const WhyChooseUs = () => {
 										y1={i * 12.5}
 										x2="100"
 										y2={i * 12.5}
-										stroke="#333"
+										stroke="currentColor"
+										strokeOpacity="0.1"
 										strokeWidth="0.5"
 										initial={{ pathLength: 0 }}
 										animate={{ pathLength: 1 }}
@@ -101,7 +95,8 @@ const WhyChooseUs = () => {
 										y1="0"
 										x2={i * 25}
 										y2="50"
-										stroke="#333"
+										stroke="currentColor"
+										strokeOpacity="0.1"
 										strokeWidth="0.5"
 										initial={{ pathLength: 0 }}
 										animate={{ pathLength: 1 }}
@@ -128,17 +123,18 @@ const WhyChooseUs = () => {
 								/>
 							</motion.svg>
 						</section>
-						<section className="w-full text-left text-foreground">
-							<h5 className="text-left text-2xl">
-								<span className="text-bold mr-2 text-3xl text-primary">
+						<section className="space-y-3">
+							<h5 className="flex items-baseline">
+								<span className="mr-2 text-2xl font-bold text-primary">
 									02.
 								</span>
-								High-Converting Design
+								<span className="text-xl font-semibold">
+									High-Converting Design
+								</span>
 							</h5>
-							<p className="mt-3 text-sm">
-								Our engaging design techniques drive remarkable increases in
-								conversion rates by compelling visitors to take decisive,
-								intentional action.
+							<p className="text-sm text-foreground/80">
+								Our data-driven design approach focuses on maximizing conversion
+								rates through compelling user experiences.
 							</p>
 						</section>
 					</motion.li>

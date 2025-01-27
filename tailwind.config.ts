@@ -100,14 +100,20 @@ const config: Config = {
 						transform: " translateX(-100%)",
 					},
 				},
-
 				wiggle: {
-					"0%": { transform: "rotate(0deg)" },
-					"25%": { transform: "rotate(-8deg)" },
-					"50%": { transform: "rotate(8deg)" },
-					"100%": { transform: "rotate(0deg)" },
+					"0%": {
+						transform: "rotate(0deg)",
+					},
+					"25%": {
+						transform: "rotate(-8deg)",
+					},
+					"50%": {
+						transform: "rotate(8deg)",
+					},
+					"100%": {
+						transform: "rotate(0deg)",
+					},
 				},
-
 				"left-to-right": {
 					"100%": {
 						transform: "translate(calc(-50% - .5rem))",
@@ -132,12 +138,20 @@ const config: Config = {
 					},
 				},
 				"accordion-down": {
-					from: { height: "0" },
-					to: { height: "var(--radix-accordion-content-height)" },
+					from: {
+						height: "0",
+					},
+					to: {
+						height: "var(--radix-accordion-content-height)",
+					},
 				},
 				"accordion-up": {
-					from: { height: "var(--radix-accordion-content-height)" },
-					to: { height: "0" },
+					from: {
+						height: "var(--radix-accordion-content-height)",
+					},
+					to: {
+						height: "0",
+					},
 				},
 				moveHorizontal: {
 					"0%": {
@@ -172,6 +186,14 @@ const config: Config = {
 						transform: "translateY(-50%)",
 					},
 				},
+				"shiny-text": {
+					"0%, 90%, 100%": {
+						"background-position": "calc(-100% - var(--shiny-width)) 0",
+					},
+					"30%, 60%": {
+						"background-position": "calc(100% + var(--shiny-width)) 0",
+					},
+				},
 			},
 			animation: {
 				marquee: "marquee 25s linear infinite",
@@ -187,6 +209,7 @@ const config: Config = {
 				scroll: "scroll 10s ease-in-out",
 				"left-to-right": "left-to-right 40s  linear  infinite",
 				"fade-down": "fade-down 1s ease-in-out",
+				"shiny-text": "shiny-text 8s infinite",
 			},
 			transitionTimingFunction: {
 				"in-out-circ": "cubic-bezier(0.785, 0.135, 0.150, 0.860)",

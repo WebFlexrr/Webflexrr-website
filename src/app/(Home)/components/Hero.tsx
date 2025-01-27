@@ -2,13 +2,16 @@
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+
 import { motion } from "motion/react";
 import Image from "next/image";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Spotlight } from "@/components/ui/Spotlight";
 
 import "swiper/css";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { ArrowRightIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 //import { Swiper, SwiperSlide } from "swiper/react";
 //import { Autoplay } from "swiper/modules";
 
@@ -37,8 +40,8 @@ const Hero = () => {
 				fill="white"
 			/>
 			<section className="relative  flex h-fit w-full items-center justify-center bg-background   pt-48 lg:h-screen lg:pt-28 ">
-				<section className="mx-auto  flex h-fit w-full max-w-[90rem] flex-col items-center px-5 text-center md:px-14 xl:px-20">
-					<motion.span
+				<section className="mx-auto  flex h-fit w-full max-w-[90rem] flex-col items-start px-8 text-center md:items-center md:px-14 xl:px-20">
+					{/* <motion.span
 						initial={{ opacity: 0, scale: 0.7, y: "-70%" }}
 						animate={{ opacity: 1, scale: 1, y: "0" }}
 						transition={{ duration: 0.7, ease: "circInOut" }}
@@ -49,15 +52,32 @@ const Hero = () => {
 						>
 							✨ See our Designs and compare plans <FaArrowRightLong />
 						</Link>
-					</motion.span>
-					<motion.section
+					</motion.span> */}
+					<motion.div
+						initial={{ opacity: 0, scale: 0.7, y: "-70%" }}
+						animate={{ opacity: 1, scale: 1, y: "0" }}
+						transition={{ duration: 0.7, ease: "circInOut" }}
+						className="z-10 flex  items-center justify-center"
+					>
+						<div
+							className={cn(
+								"group rounded-full border  border-primary bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+							)}
+						>
+							<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out  hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-200">
+								<span>✨ Introducing Webflexrr Labs</span>
+								<ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+							</AnimatedShinyText>
+						</div>
+					</motion.div>
+					{/* <motion.section
 						initial={{ opacity: 0, scale: 0.7, y: "40%" }}
 						animate={{ opacity: 1, scale: 0.8, y: "0" }}
 						transition={{ duration: 0.7, ease: "circInOut" }}
-						className=" mt-5 w-full max-w-5xl "
+						className=" mt-5 w-full lg:max-w-5xl  border "
 					>
-						<h1 className="  gap-2 bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold  text-transparent md:text-5xl lg:text-7xl">
-							<span className="flex flex-col items-center justify-center lg:flex-row">
+						<h1 className="  gap-2  bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold  text-transparent md:text-5xl lg:text-7xl">
+							<span className="flex flex-col items-start  lg:items-center justify-center lg:flex-row">
 								We ship
 								<FlipWords
 									words={words}
@@ -66,19 +86,62 @@ const Hero = () => {
 								/>
 								<span className="hidden lg:flex">that</span>
 							</span>
-							<span className="">
+							<span className=" border ">
 								<span className="mx-2 lg:hidden">That</span>
 								Standouts Everywhere 🚀
 							</span>
 						</h1>
+					</motion.section> */}
+					<motion.section
+						initial={{ opacity: 0, scale: 0.7, y: "40%" }}
+						animate={{ opacity: 1, scale: 1, y: "0" }}
+						transition={{ duration: 0.7, ease: "circInOut" }}
+						className="mt-16 w-full lg:mt-5 lg:max-w-5xl  "
+					>
+						<h1 className="flex flex-col flex-wrap items-start  gap-2 md:items-center">
+							<span className="flex flex-col gap-2 md:flex-row">
+								<span>We Ship</span>
+								<FlipWords
+									words={words}
+									duration={2000}
+									className="text-red-400 dark:text-red-400"
+								/>
+							</span>
+							<span className="flex flex-col gap-2 md:flex-row">
+								<span>That Standout</span>
+								<span>Everything</span>
+							</span>
+						</h1>
 					</motion.section>
+					{/* <motion.section
+						initial={{ opacity: 0, scale: 0.7, y: "40%" }}
+						animate={{ opacity: 1, scale: 0.8, y: "0" }}
+						transition={{ duration: 0.7, ease: "circInOut" }}
+						className=" mt-5 w-full lg:max-w-5xl  border "
+					>
+						<h1 className="  gap-2  bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold  text-transparent md:text-5xl lg:text-7xl">
+							<span className="flex flex-col items-start  lg:items-center justify-center lg:flex-row">
+								We ship
+								<FlipWords
+									words={words}
+									duration={2000}
+									className=" text-red-400 dark:text-red-400"
+								/>
+								<span className="hidden lg:flex">that</span>
+							</span>
+							<span className=" border ">
+								<span className="mx-2 lg:hidden">That</span>
+								Standouts Everywhere 🚀
+							</span>
+						</h1>
+					</motion.section> */}
 					<motion.section
 						initial={{ opacity: 0, y: "30%" }}
 						animate={{ opacity: 1, y: "0" }}
 						transition={{ duration: 0.7, delay: 0.1, ease: "circInOut" }}
 						className="mt-10 w-full max-w-3xl md:mt-0 "
 					>
-						<p className=" text-black">
+						<p className=" text-start text-black md:text-center">
 							A Design and Development studio that helps passionate Startup and
 							SaaS Founders build the products of their dreams.
 						</p>
@@ -87,10 +150,10 @@ const Hero = () => {
 						initial={{ opacity: 0, y: "30%" }}
 						animate={{ opacity: 1, y: "0" }}
 						transition={{ duration: 0.7, delay: 0.3, ease: "circInOut" }}
-						className="my-7"
+						className="my-7 w-full md:w-auto"
 					>
 						<Link href={process.env.NEXT_PUBLIC_MEETING_LINK ?? ""}>
-							<Button className="text-font scale-110 rounded-full bg-primary bg-gradient-to-b from-primary via-primary to-purple-300 p-7  text-lg font-bold text-white md:scale-100">
+							<Button className="text-font w-full scale-110 rounded-lg bg-primary bg-gradient-to-b from-primary via-primary to-purple-300 p-7 text-lg  font-bold text-white md:scale-100 lg:rounded-full">
 								Book a Call
 							</Button>
 						</Link>

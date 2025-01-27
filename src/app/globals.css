@@ -74,7 +74,7 @@
 		@apply font-dm-sans text-xl subpixel-antialiased  md:text-lg  leading-[26.24px]  text-secondary dark:text-default-500;
 	}
 	h1 {
-		@apply text-center text-[2.6rem] font-bold leading-[49px] text-[#3F3F46]  md:text-6xl  md:leading-[82px] dark:text-white;
+		@apply md:text-center text-6xl text-left font-bold  text-[#3F3F46]  md:text-6xl  md:leading-[82px] dark:text-white;
 	}
 	
 	h2 {
