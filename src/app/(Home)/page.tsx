@@ -8,6 +8,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import Services from "./components/Services";
 import NavBar from "@/components/NavBar";
 import FeatureSection from "./components/FeatureSection";
+import About from "./components/About";
 
 const Home = () => {
 	return (
@@ -15,6 +16,7 @@ const Home = () => {
 			{/* <AnnouncementBar/> */}
 			<NavBar />
 			<Hero />
+			<About />
 			<FeatureSection />
 			<WhyChooseUs />
 			<Services />

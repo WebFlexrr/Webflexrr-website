@@ -208,6 +208,17 @@ const config: Config = {
 						transform: "translateY(calc(-100% - var(--gap)))",
 					},
 				},
+				shine: {
+					"0%": {
+						"background-position": "0% 0%",
+					},
+					"50%": {
+						"background-position": "100% 100%",
+					},
+					to: {
+						"background-position": "0% 0%",
+					},
+				},
 			},
 			animation: {
 				marquee: "marquee var(--duration) infinite linear",
@@ -225,6 +236,7 @@ const config: Config = {
 				"fade-down": "fade-down 1s ease-in-out",
 				"shiny-text": "shiny-text 8s infinite",
 				"marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+				shine: "shine var(--duration) infinite linear",
 			},
 			transitionTimingFunction: {
 				"in-out-circ": "cubic-bezier(0.785, 0.135, 0.150, 0.860)",

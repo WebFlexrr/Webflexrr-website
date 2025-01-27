@@ -40,7 +40,7 @@ const Hero = () => {
 				fill="white"
 			/>
 			<section className="relative  flex h-fit w-full items-center justify-center bg-background   pt-48 lg:h-screen lg:pt-28 ">
-				<section className="mx-auto  flex h-fit w-full max-w-[90rem] flex-col items-start px-8 text-center md:items-center md:px-14 xl:px-20">
+				<section className="mx-auto  flex h-fit w-full max-w-[90rem] flex-col items-start px-7 text-center md:items-center md:px-14 xl:px-20">
 					{/* <motion.span
 						initial={{ opacity: 0, scale: 0.7, y: "-70%" }}
 						animate={{ opacity: 1, scale: 1, y: "0" }}
