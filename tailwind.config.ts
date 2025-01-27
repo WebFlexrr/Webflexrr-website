@@ -99,6 +99,12 @@ const config: Config = {
 					"100% ": {
 						transform: " translateX(-100%)",
 					},
+					from: {
+						transform: "translateX(0)",
+					},
+					to: {
+						transform: "translateX(calc(-100% - var(--gap)))",
+					},
 				},
 				wiggle: {
 					"0%": {
@@ -194,9 +200,17 @@ const config: Config = {
 						"background-position": "calc(100% + var(--shiny-width)) 0",
 					},
 				},
+				"marquee-vertical": {
+					from: {
+						transform: "translateY(0)",
+					},
+					to: {
+						transform: "translateY(calc(-100% - var(--gap)))",
+					},
+				},
 			},
 			animation: {
-				marquee: "marquee 25s linear infinite",
+				marquee: "marquee var(--duration) infinite linear",
 				spotlight: "spotlight 2s ease .75s 1 forwards",
 				first: "moveVertical 30s ease infinite",
 				second: "moveInCircle 20s reverse infinite",
@@ -210,6 +224,7 @@ const config: Config = {
 				"left-to-right": "left-to-right 40s  linear  infinite",
 				"fade-down": "fade-down 1s ease-in-out",
 				"shiny-text": "shiny-text 8s infinite",
+				"marquee-vertical": "marquee-vertical var(--duration) linear infinite",
 			},
 			transitionTimingFunction: {
 				"in-out-circ": "cubic-bezier(0.785, 0.135, 0.150, 0.860)",

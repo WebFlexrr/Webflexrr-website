@@ -154,7 +154,7 @@ const Hero = () => {
 					>
 						<Link href={process.env.NEXT_PUBLIC_MEETING_LINK ?? ""}>
 							<Button className="text-font w-full scale-110 rounded-lg bg-primary bg-gradient-to-b from-primary via-primary to-purple-300 p-7 text-lg  font-bold text-white md:scale-100 lg:rounded-full">
-								Book a Call
+								Book a Free Call
 							</Button>
 						</Link>
 					</motion.span>

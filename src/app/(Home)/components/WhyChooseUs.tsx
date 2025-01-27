@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
 					para="Discover the exceptional value and distinctive strengths we bring to your digital journey"
 				/>
 
-				<ul className="mt-16 grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+				<motion.ul className="mt-16 grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 					<motion.li
 						initial={{ opacity: 0, y: 40, x: -50 }}
 						whileInView={{ opacity: 1, y: 0, x: 0 }}
@@ -279,7 +279,7 @@ const WhyChooseUs = () => {
 							</p>
 						</section>
 					</motion.li>
-				</ul>
+				</motion.ul>
 			</section>
 		</section>
 	);

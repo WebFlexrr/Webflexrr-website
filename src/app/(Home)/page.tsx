@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Services from "./components/Services";
 import NavBar from "@/components/NavBar";
+import FeatureSection from "./components/FeatureSection";
 
 const Home = () => {
 	return (
@@ -14,6 +15,7 @@ const Home = () => {
 			{/* <AnnouncementBar/> */}
 			<NavBar />
 			<Hero />
+			<FeatureSection />
 			<WhyChooseUs />
 			<Services />
 			<ProjectsSection />
