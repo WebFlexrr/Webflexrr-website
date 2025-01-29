@@ -1,75 +1,90 @@
 import React, { type FC } from "react";
-import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
-import { FaCircleCheck, FaCircleXmark } from "react-icons/fa6";
+import {
+	Card,
+	CardBody,
+	CardFooter,
+	CardHeader,
+	Chip,
+	Divider,
+} from "@nextui-org/react";
 import Link from "next/link";
+import { Check } from "lucide-react";
 
 interface PlansCardProps {
-	item: getAllPlans;
+	type: string;
+	title: string;
+	price: number;
+	description: string;
+	lists: string[];
 }
-const PlansCard: FC<PlansCardProps> = ({ item }): React.JSX.Element => {
+const PlansCard: FC<PlansCardProps> = ({
+	type,
+	title,
+	price,
+	description,
+	lists,
+}): React.JSX.Element => {
 	return (
 		<Card
-			key={item.id}
-			className={`border ${
-				item.highlighted && "bg-primary text-white"
-			} border-primary px-3 py-5`}
+			className={`border  ${type === "Recommended" ? " z-10 bg-primary-200 lg:scale-110" : "border-foreground-200"}  px-3 py-5`}
 		>
 			{/* heading */}
-			<CardHeader className=" flex w-full flex-col items-center justify-center gap-5 pb-[3rem] ">
+			<CardHeader className=" flex w-full flex-col items-center justify-center pb-[2rem] text-white ">
 				<section className="w-full">
-					<span
-						className={`text-3xl font-bold text-primary ${
-							item.highlighted && "text-white"
-						}`}
+					<Chip
+						variant={"dot"}
+						color={"success"}
+						className={`${type === "Recommended" ? "bg-primary" : "border-foreground-200"} `}
 					>
-						{item.name}
+						{type}
+					</Chip>
+					<h4
+						className={`mt-5 font-dm-sans text-3xl font-bold text-primary ${"text-white"}`}
+					>
+						{title}
+					</h4>
+				</section>
+				<section className="mt-2 w-full">
+					<span className="text-xl font-medium">
+						Starting at:{" "}
+						<s className=" text-base font-thin text-foreground-400">1000</s> $
+						{price}
 					</span>
 				</section>
-				{/* <section className="w-full">
-									<span>Pause or cancel anytime</span>
-									<h4>${item.price}/month</h4>
-								</section> */}
-				<section>
-					<p className={`${item.highlighted && "text-white"}`}>
-						{item.description}
-					</p>
-				</section>
+				<p className={`mt-3 w-full text-left text-base text-foreground`}>
+					{description}
+				</p>
 			</CardHeader>
+			<Divider />
 			{/* mid Section */}
 			<CardBody>
 				<ul className=" flex h-auto w-full flex-col items-start justify-center gap-4  text-start text-base leading-[28.8px]">
-					{item.service?.map((service, index) => (
+					{lists.map((list) => (
 						<li
-							className={`flex w-full items-center gap-6 text-sm `}
-							key={index}
+							key={list}
+							className={`flex w-full items-center gap-2 text-sm `}
 						>
-							<div className="flex h-4 w-4 items-center justify-center text-lg ">
-								{service.isSelected ? (
-									<FaCircleCheck
-										className={item.highlighted ? "text-white" : "text-primary"}
-									/>
-								) : (
-									<FaCircleXmark className={"text-danger"} />
-								)}
-							</div>
-							<p className={`${item.highlighted && "text-white"}`}>
-								{service.serviceName}
-							</p>
+							<Check className={"text-primary"} size={17} />
+							<span
+								className={`${type === "Recommended" ? "text-foreground" : " "} text-base `}
+							>
+								{list}
+							</span>
 						</li>
 					))}
 				</ul>
 			</CardBody>
 			<CardFooter>
 				<Link
-					href={item.bookingLink}
+					href={""}
 					target="_blank"
-					className={`mt-6 ${
-						item.highlighted
-							? "border-white transition-all duration-100 ease-in-out hover:bg-background hover:text-primary"
+					className={`mt-8 ${
+						type === "Recommended"
+							? "border-white bg-foreground text-primary transition-all duration-100 ease-in-out hover:bg-primary hover:text-foreground "
 							: "border-primary transition-all duration-100 ease-in-out hover:bg-primary hover:text-white "
 					} flex w-full items-center justify-center rounded-lg border-2  p-2.5 text-lg font-semibold `}
 				>
-					Book a Discovery Call
+					Start Development
 				</Link>
 			</CardFooter>
 		</Card>

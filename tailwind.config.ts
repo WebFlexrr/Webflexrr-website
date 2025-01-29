@@ -1,3 +1,4 @@
+import { heroui } from "@heroui/theme";
 import { nextui } from "@nextui-org/react";
 import { transform } from "next/dist/build/swc";
 
@@ -19,6 +20,7 @@ const config: Config = {
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 		"./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+		"./node_modules/@heroui/theme/dist/components/navbar.js",
 	],
 	prefix: "",
 	theme: {
@@ -82,13 +84,44 @@ const config: Config = {
 				sm: "calc(var(--radius) - 4px)",
 			},
 			keyframes: {
-				wiggle: {
-					"0%": { transform: "rotate(0deg)" },
-					"25%": { transform: "rotate(-8deg)" },
-					"50%": { transform: "rotate(8deg)" },
-					"100%": { transform: "rotate(0deg)" },
+				spotlight: {
+					"0%": {
+						opacity: "0",
+						transform: "translate(-72%, -62%) scale(0.5)",
+					},
+					"100%": {
+						opacity: " 1",
+						transform: "translate(-50%,-40%) scale(1)",
+					},
 				},
-
+				marquee: {
+					"0%": {
+						transform: "translateX(0%)",
+					},
+					"100% ": {
+						transform: " translateX(-100%)",
+					},
+					from: {
+						transform: "translateX(0)",
+					},
+					to: {
+						transform: "translateX(calc(-100% - var(--gap)))",
+					},
+				},
+				wiggle: {
+					"0%": {
+						transform: "rotate(0deg)",
+					},
+					"25%": {
+						transform: "rotate(-8deg)",
+					},
+					"50%": {
+						transform: "rotate(8deg)",
+					},
+					"100%": {
+						transform: "rotate(0deg)",
+					},
+				},
 				"left-to-right": {
 					"100%": {
 						transform: "translate(calc(-50% - .5rem))",
@@ -113,21 +146,105 @@ const config: Config = {
 					},
 				},
 				"accordion-down": {
-					from: { height: "0" },
-					to: { height: "var(--radix-accordion-content-height)" },
+					from: {
+						height: "0",
+					},
+					to: {
+						height: "var(--radix-accordion-content-height)",
+					},
 				},
 				"accordion-up": {
-					from: { height: "var(--radix-accordion-content-height)" },
-					to: { height: "0" },
+					from: {
+						height: "var(--radix-accordion-content-height)",
+					},
+					to: {
+						height: "0",
+					},
+				},
+				moveHorizontal: {
+					"0%": {
+						transform: "translateX(-50%) translateY(-10%)",
+					},
+					"50%": {
+						transform: "translateX(50%) translateY(10%)",
+					},
+					"100%": {
+						transform: "translateX(-50%) translateY(-10%)",
+					},
+				},
+				moveInCircle: {
+					"0%": {
+						transform: "rotate(0deg)",
+					},
+					"50%": {
+						transform: "rotate(180deg)",
+					},
+					"100%": {
+						transform: "rotate(360deg)",
+					},
+				},
+				moveVertical: {
+					"0%": {
+						transform: "translateY(-50%)",
+					},
+					"50%": {
+						transform: "translateY(50%)",
+					},
+					"100%": {
+						transform: "translateY(-50%)",
+					},
+				},
+				"shiny-text": {
+					"0%, 90%, 100%": {
+						"background-position": "calc(-100% - var(--shiny-width)) 0",
+					},
+					"30%, 60%": {
+						"background-position": "calc(100% + var(--shiny-width)) 0",
+					},
+				},
+				"marquee-vertical": {
+					from: {
+						transform: "translateY(0)",
+					},
+					to: {
+						transform: "translateY(calc(-100% - var(--gap)))",
+					},
+				},
+				shine: {
+					"0%": {
+						"background-position": "0% 0%",
+					},
+					"50%": {
+						"background-position": "100% 100%",
+					},
+					to: {
+						"background-position": "0% 0%",
+					},
+				},
+				gradient: {
+					to: {
+						backgroundPosition: "var(--bg-size) 0",
+					},
 				},
 			},
 			animation: {
+				marquee: "marquee var(--duration) infinite linear",
+				spotlight: "spotlight 2s ease .75s 1 forwards",
+				first: "moveVertical 30s ease infinite",
+				second: "moveInCircle 20s reverse infinite",
+				third: "moveInCircle 40s linear infinite",
+				fourth: "moveHorizontal 40s ease infinite",
+				fifth: "moveInCircle 20s ease infinite",
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				wiggle: "wiggle 700ms ease-in-out",
 				scroll: "scroll 10s ease-in-out",
 				"left-to-right": "left-to-right 40s  linear  infinite",
 				"fade-down": "fade-down 1s ease-in-out",
+				"shiny-text": "shiny-text 8s infinite",
+				"marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+				shine: "shine var(--duration) infinite linear",
+				gradient: "gradient 8s linear infinite",
 			},
 			transitionTimingFunction: {
 				"in-out-circ": "cubic-bezier(0.785, 0.135, 0.150, 0.860)",
@@ -139,7 +256,7 @@ const config: Config = {
 		require("tailwindcss-animate"),
 		nextui({
 			prefix: "nextui", // prefix for themes variables
-			addCommonColors: false, // override common colors (e.g. "blue", "green", "pink").
+			addCommonColors: false, // override common colors (e.g. "blue",green,"pink").
 			defaultTheme: "light", // default theme from the themes object
 			defaultExtendTheme: "light", // default theme to extend on custom themes
 			layout: {}, // common layout tokens (applied to all themes)
@@ -151,8 +268,7 @@ const config: Config = {
 				dark: {
 					layout: {}, // dark theme layout tokens
 					colors: {}, // dark theme colors
-				},
-				// ... custom themes
+				}, // ... custom themes
 			},
 		}),
 		addVariablesForColors,
@@ -178,6 +294,7 @@ const config: Config = {
 				{ values: flattenColorPalette(theme("backgroundColor")), type: "color" }
 			);
 		},
+		heroui(),
 	],
 };
 

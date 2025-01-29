@@ -1,6 +1,8 @@
 import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 import { PortableTextComponents } from "@/components/PortableText";
-import getRefundPolicy from "@/lib/getRefundPolicy";
+import { REFUND_POLICY_QUERY } from "@/sanity/actions/queries";
+import { sanityFetch } from "@/sanity/lib/client";
 import { Divider } from "@nextui-org/react";
 import { PortableText } from "@portabletext/react";
 import type { Metadata } from "next";
@@ -11,31 +13,30 @@ export const metadata: Metadata = {
 };
 
 const RefundPolicy = async (): Promise<JSX.Element> => {
-	const policy = await getRefundPolicy();
+	const policy = await sanityFetch<getPolicy>({ query: REFUND_POLICY_QUERY });
 	return (
-		<>
-			<section className="h-auto w-full ">
-				<section className="mx-auto h-auto w-full max-w-2xl  px-5 py-28">
-					<section className="flex w-full flex-col justify-start space-y-5">
-						<h4>{policy.title}</h4>
-						<span>
-							Last updated:{" "}
-							{new Date(policy._updatedAt).toLocaleDateString("en-US", {
-								year: "numeric",
-								month: "long",
-								day: "numeric",
-							})}
-						</span>
-					</section>
-					<Divider className="my-4" />
-					<PortableText
-						value={policy.content}
-						components={PortableTextComponents}
-					/>
+		<main className="pt-16">
+			<NavBar />
+			<section className="mx-auto h-auto w-full max-w-2xl  px-5 py-28">
+				<section className="flex w-full flex-col justify-start space-y-5">
+					<h4>{policy.title}</h4>
+					<span className="dark:text-white">
+						Last updated:{" "}
+						{new Date(policy._updatedAt).toLocaleDateString("en-US", {
+							year: "numeric",
+							month: "long",
+							day: "numeric",
+						})}
+					</span>
 				</section>
+				<Divider className="my-4" />
+				<PortableText
+					value={policy.content}
+					components={PortableTextComponents}
+				/>
 			</section>
 			<Footer />
-		</>
+		</main>
 	);
 };
 

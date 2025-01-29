@@ -1,13 +1,13 @@
 import { Divider, Image } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
-import { FaFacebookF, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
 
 const Footer = (): React.JSX.Element => {
 	return (
-		<footer className="text-tertiary mx-auto h-auto w-full   max-w-7xl ">
+		<footer className="text-tertiary mx-auto h-auto w-full max-w-7xl   text-white ">
 			<Divider />
 			<section className=" flex flex-col gap-10 py-20 ">
 				<section className="w-full">
@@ -20,7 +20,7 @@ const Footer = (): React.JSX.Element => {
 					/>
 				</section>
 				<section className="flex h-auto w-full flex-col gap-5 lg:flex-row  ">
-					<section className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-10 py-2 text-black md:w-full lg:w-1/3 lg:px-5">
+					<section className="flex h-auto w-full max-w-[580px] flex-col gap-10 px-10 py-2 text-black dark:text-white md:w-full lg:w-1/3 lg:px-5">
 						{/* <div className=" flex w-full flex-wrap gap-5 sm:flex-nowrap xl:gap-2">
 							<input
 								type="text"
@@ -35,7 +35,7 @@ const Footer = (): React.JSX.Element => {
 						<div className="space-y-2">
 							<section>
 								<p className="text-sm">
-									&#169; 2024 Webflexrr Solutions Private Limited. All rights
+									&#169; 2024 Webflexrr Labs Private Limited. All rights
 									reserved.
 								</p>
 							</section>
@@ -49,7 +49,7 @@ const Footer = (): React.JSX.Element => {
 									contact@webflexrr.com
 								</Link>
 							</section>
-							<section className="text-sm">
+							<section className="text-sm ">
 								<span>WhatsApp :</span>
 								<ul>
 									<li>
@@ -67,50 +67,43 @@ const Footer = (): React.JSX.Element => {
 						</div>
 					</section>
 					<section className="flex flex-wrap gap-8  px-10 py-2  text-sm lg:px-5">
-						<section className=" flex flex-col gap-4  text-black">
-							<span className="font-bold text-black">Pages</span>
+						<section className="flex flex-col gap-4 text-black  dark:text-white">
+							<span className="font-bold text-black dark:text-white">
+								Pages
+							</span>
 							<ul className=" space-y-4 ">
 								<li>
-									<Link href={"/#services"}>Services</Link>
+									<Link href={"/home"}>Home</Link>
 								</li>
 								<li>
-									<Link href={"/#Projects"}>Projects</Link>
+									<Link href={"/works"}>Projects</Link>
 								</li>
 								<li>
-									<Link href={"/#teams"}>Team</Link>
-								</li>
-								<li>
-									<Link href={"/#teams"}>Pricing</Link>
+									<Link href={"/careers"}>Careers</Link>
 								</li>
 								<li>
 									<Link href={"/blogs"}>Blog</Link>
 								</li>
 								<li>
-									<Link href={"/#contact"}>Contact</Link>
+									<Link href={"/contact"}>Contact</Link>
 								</li>
 							</ul>
 						</section>
-						<section className="flex flex-col gap-4 text-black">
-							<span className="font-bold text-black">Service</span>
+						<section className="flex flex-col   gap-4 text-black dark:text-white">
+							<span className="font-bold text-black dark:text-white">
+								Service
+							</span>
 							<ul className=" space-y-4 ">
-								<li>
-									<Link href={"/#services"} className="p-0">
-										Landing Page Development
-									</Link>
-								</li>
-								<li>
-									<Link href={"/#Projects"}>Custom Web App Development</Link>
-								</li>
-								<li>
-									<Link href={"/#teams"}>AI App Development</Link>
-								</li>
-								<li>
-									<Link href={"/#teams"}>SEO Optimization</Link>
-								</li>
+								<li className=" cursor-pointer">Landing Page Development</li>
+								<li className=" cursor-pointer">Custom Web App Development</li>
+								<li className=" cursor-pointer">SAAS App Development</li>
+								<li className=" cursor-pointer">SEO Optimization</li>
 							</ul>
 						</section>
-						<section className=" flex w-fit flex-col gap-4 text-black">
-							<span className="  font-bold text-black">Legal</span>
+						<section className="flex  w-fit flex-col gap-4 text-black dark:text-white">
+							<span className="  font-bold text-black dark:text-white">
+								Legal
+							</span>
 							<ul className=" space-y-4    ">
 								<li>
 									<Link href={"/privacy"}>Privacy Policy</Link>
@@ -125,7 +118,7 @@ const Footer = (): React.JSX.Element => {
 								</li>
 							</ul>
 						</section>
-						<section className="flex flex-col gap-4 text-black">
+						{/* <section className="flex flex-col gap-4 text-black">
 							<span className="font-bold text-black">Tools</span>
 							<ul className=" space-y-4 ">
 								<li>
@@ -143,14 +136,14 @@ const Footer = (): React.JSX.Element => {
 									</Link>
 								</li>
 							</ul>
-						</section>
+						</section> */}
 						<Divider orientation="vertical" />
-						<section className=" flex flex-col gap-4 text-black">
+						<section className="flex  flex-col gap-4 text-black dark:text-white">
 							<span className="font-bold text-black">Stay Connected</span>
 							<ul className=" space-y-4 ">
 								<li>
 									<Link
-										href={"https://twitter.com/WebFlexRR"}
+										href={"https://x.com/webflexrrlabs"}
 										target="_blank"
 										aria-label="Twitter"
 										className="flex items-center gap-2"
@@ -159,7 +152,7 @@ const Footer = (): React.JSX.Element => {
 										X.com
 									</Link>
 								</li>
-								<li>
+								{/* <li>
 									<Link
 										href={"/"}
 										target="_blank"
@@ -169,10 +162,10 @@ const Footer = (): React.JSX.Element => {
 										<FaYoutube className="text-xl font-light" />
 										Youtube
 									</Link>
-								</li>
+								</li> */}
 								<li>
 									<Link
-										href={"/"}
+										href={"https://www.linkedin.com/company/webflexrrlabs"}
 										target="_blank"
 										aria-label="Linkedin"
 										className="flex items-center gap-2"
@@ -181,7 +174,7 @@ const Footer = (): React.JSX.Element => {
 										LinkedIn
 									</Link>
 								</li>
-								<li>
+								{/* <li>
 									<Link
 										href={"/"}
 										target="_blank"
@@ -191,10 +184,10 @@ const Footer = (): React.JSX.Element => {
 										<FaFacebookF className="text-xl font-light" />
 										Facebook
 									</Link>
-								</li>
+								</li> */}
 								<li className="flex items-center gap-2">
 									<Link
-										href={"/"}
+										href={"https://www.instagram.com/webflexrr_labs"}
 										target="_blank"
 										aria-label="Instagram"
 										className="flex items-center gap-2"

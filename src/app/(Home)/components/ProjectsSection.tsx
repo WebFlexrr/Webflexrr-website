@@ -1,38 +1,61 @@
 import Heading from "@/components/Heading";
-import { imageUrlFor } from "@/config/SanityImageUrl";
-import getAllProjects from "@/lib/getProjects";
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { getProjectsActions } from "@/sanity/actions/queryActions";
+import { Button, Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 const ProjectsSection = async (): Promise<React.JSX.Element> => {
-	const projects = await getAllProjects();
+	const projects = await getProjectsActions();
 	return (
-		<section className=" h-auto w-full py-20 " id="projects">
-			<section className=" mx-auto  flex h-auto w-full max-w-7xl flex-col gap-16  px-5  md:py-28    ">
+		<section className=" h-auto w-full py-20 pt-28" id="projects">
+			<section className="mx-auto w-full max-w-7xl px-5">
 				<Heading
-					heading={"A glimpse into the projects that we have built."}
-					subHeading={
-						"Say goodbye to the lengthy onboarding processes associated with agencies. Simply subscribe, add your project details, then watch us set up and deliver your first task within 72 hours."
-					}
+					heading={"Our Work Showcase"}
+					subHeading={"Showcase our Best Works"}
 				/>
-				<section className="grid h-auto w-full gap-10 md:grid-cols-2 md:gap-20 lg:gap-16 ">
+				<section className=" mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-2 ">
 					{projects.map((item, index) => (
-						<Link href={item.link} key={index}>
-							<Card className=" group bg-transparent p-0 hover:bg-primary hover:shadow-2xl">
-								<CardBody className="pb-0 ">
-									<Image
-										src={imageUrlFor(item.thumbnail).url()}
-										className=" w-full border object-contain md:h-[350px] md:object-cover"
-										alt={item.title}
-									/>
-								</CardBody>
-								<CardFooter>
-									<h5 className=" group-hover:text-white">{item.title}</h5>
-								</CardFooter>
-							</Card>
-						</Link>
+						<Card
+							key={index}
+							isPressable
+							shadow="sm"
+							className="flex flex-col"
+							// onPress={() => {console.log("item pressed")}}
+						>
+							<CardBody className="overflow-visible p-0">
+								<Image
+									alt={item.title}
+									className=" aspect-[4/3]  w-full object-cover"
+									radius="lg"
+									shadow="sm"
+									src={item.thumbnail}
+									width={"100%"}
+								/>
+							</CardBody>
+							<CardFooter className="justify-between p-6">
+								<section className="flex flex-col items-start">
+									<span>{item.title}</span>
+									<p className="text-default-500">{item.title}</p>
+								</section>
+
+								<Link
+									href={item.link}
+									className="flex rounded-full border-2 border-primary-200 bg-secondary p-3 hover:bg-primary-400 hover:text-white "
+								>
+									Open <MdOutlineArrowOutward size={26} />
+								</Link>
+							</CardFooter>
+						</Card>
 					))}
+				</section>
+				<section className="mt-16 flex w-full items-center justify-center ">
+					<Link href={"/works"}>
+						<Button className="rounded-full bg-secondary p-6 py-7 font-inter text-lg font-medium ">
+							See All Projects <ArrowRight />
+						</Button>
+					</Link>
 				</section>
 			</section>
 		</section>

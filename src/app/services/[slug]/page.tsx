@@ -5,20 +5,13 @@ import MainTitle from "@/components/MainTitle";
 
 // import { findServiceByName } from "@/lib/getServices";
 // import { type Metadata } from "next";
-import React, { type FC } from "react";
-
-interface PageProps {
-	params: {
-		slug: string;
-	};
-}
+import React from "react";
 
 // export const generateMetadata = async ({
 // 	params,
 // }: PageProps): Promise<Metadata> => {
 // 	const serviceDetails = await findServiceByName(params.slug);
 
-//  eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
 // 	if (!serviceDetails) {
 // 		return {
 // 			title: "Not Found",
@@ -39,12 +32,12 @@ interface PageProps {
 // 	};
 // };
 
-const page: FC<PageProps> = async ({ params }) => {
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 	// const serviceDetails = await findServiceByName(params.slug);
 
 	return (
 		<>
-			<MainTitle heading={params.slug} />
+			<MainTitle heading={(await params).slug} />
 			<ServiceDetails />
 			{/* <CaseStudy/> */}
 			{/* <SocialCarousel /> */}

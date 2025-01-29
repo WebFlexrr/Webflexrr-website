@@ -1,41 +1,39 @@
 "use client";
-import React, { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import React from "react";
 
 const TagLine = (): React.JSX.Element => {
-	const tagLine = useRef<HTMLDivElement>(null);
-	gsap.registerPlugin(ScrollTrigger);
-	gsap.registerPlugin(useGSAP);
+	// const tagLine = useRef<HTMLDivElement>(null);
+	// gsap.registerPlugin(ScrollTrigger);
+	// gsap.registerPlugin(useGSAP);
 
-	useGSAP(() => {
-		gsap.from(".tagLineContent", {
-			x: -90,
-			duration: 1.3,
-			opacity: 0,
-			ease: "power2.out",
-			scrollTrigger: {
-				trigger: tagLine.current,
-				scroller: ".main",
-				start: "top 90%",
-			},
-		});
-		gsap.from(".tagLineContent2", {
-			x: 90,
-			duration: 1,
-			opacity: 0,
-			ease: "power2.out",
-			scrollTrigger: {
-				trigger: tagLine.current,
-				scroller: ".main",
-				start: "40% 90%",
-			},
-		});
-	});
+	// useGSAP(() => {
+	// 	gsap.from(".tagLineContent", {
+	// 		x: -90,
+	// 		duration: 1.3,
+	// 		opacity: 0,
+	// 		ease: "power2.out",
+	// 		scrollTrigger: {
+	// 			trigger: tagLine.current,
+	// 			scroller: ".main",
+	// 			start: "top 90%",
+	// 		},
+	// 	});
+	// 	gsap.from(".tagLineContent2", {
+	// 		x: 90,
+	// 		duration: 1,
+	// 		opacity: 0,
+	// 		ease: "power2.out",
+	// 		scrollTrigger: {
+	// 			trigger: tagLine.current,
+	// 			scroller: ".main",
+	// 			start: "40% 90%",
+	// 		},
+	// 	});
+	// });
 
 	return (
-		<section ref={tagLine} className=" bg-background2 relative h-auto w-full ">
+		// <section ref={tagLine} className=" bg-background2 relative h-auto w-full ">
+		<section className=" bg-background2 relative h-auto w-full ">
 			<section className="w-full py-20 lg:py-36 ">
 				<section className="mx-auto flex w-full max-w-[90rem] flex-col gap-10 px-5 md:px-10 lg:gap-16 xl:gap-28 ">
 					<section className="tagLineContent mx-auto flex w-full max-w-5xl flex-col gap-14 text-center">

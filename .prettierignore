@@ -4,6 +4,7 @@ node_modules
 # config files
 package-lock.json
 next.config.js
+eslint.config.mjs
 yarn.lock
 .prettierrc
 .eslintrc.json
@@ -17,6 +18,7 @@ tsconfig.json
 
 # asset
 public
+globals.css
 
 # next.js
 .next
