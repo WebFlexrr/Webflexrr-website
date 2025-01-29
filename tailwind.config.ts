@@ -1,3 +1,4 @@
+import { heroui } from "@heroui/theme";
 import { nextui } from "@nextui-org/react";
 import { transform } from "next/dist/build/swc";
 
@@ -19,6 +20,7 @@ const config: Config = {
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 		"./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+		"./node_modules/@heroui/theme/dist/components/navbar.js",
 	],
 	prefix: "",
 	theme: {
@@ -219,6 +221,11 @@ const config: Config = {
 						"background-position": "0% 0%",
 					},
 				},
+				gradient: {
+					to: {
+						backgroundPosition: "var(--bg-size) 0",
+					},
+				},
 			},
 			animation: {
 				marquee: "marquee var(--duration) infinite linear",
@@ -237,6 +244,7 @@ const config: Config = {
 				"shiny-text": "shiny-text 8s infinite",
 				"marquee-vertical": "marquee-vertical var(--duration) linear infinite",
 				shine: "shine var(--duration) infinite linear",
+				gradient: "gradient 8s linear infinite",
 			},
 			transitionTimingFunction: {
 				"in-out-circ": "cubic-bezier(0.785, 0.135, 0.150, 0.860)",
@@ -248,7 +256,7 @@ const config: Config = {
 		require("tailwindcss-animate"),
 		nextui({
 			prefix: "nextui", // prefix for themes variables
-			addCommonColors: false, // override common colors (e.g. "blue", "green", "pink").
+			addCommonColors: false, // override common colors (e.g. "blue",green,"pink").
 			defaultTheme: "light", // default theme from the themes object
 			defaultExtendTheme: "light", // default theme to extend on custom themes
 			layout: {}, // common layout tokens (applied to all themes)
@@ -260,8 +268,7 @@ const config: Config = {
 				dark: {
 					layout: {}, // dark theme layout tokens
 					colors: {}, // dark theme colors
-				},
-				// ... custom themes
+				}, // ... custom themes
 			},
 		}),
 		addVariablesForColors,
@@ -287,6 +294,7 @@ const config: Config = {
 				{ values: flattenColorPalette(theme("backgroundColor")), type: "color" }
 			);
 		},
+		heroui(),
 	],
 };
 

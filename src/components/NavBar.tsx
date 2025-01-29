@@ -1,10 +1,12 @@
 "use client";
 import {
 	Button,
-	Dropdown,
-	DropdownItem,
-	DropdownMenu,
-	DropdownTrigger,
+	Drawer,
+	DrawerBody,
+	DrawerContent,
+	DrawerFooter,
+	DrawerHeader,
+	useDisclosure,
 } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
@@ -15,6 +17,8 @@ import { RiWhatsappFill } from "react-icons/ri";
 
 const NavBar = () => {
 	const pathname = usePathname();
+	const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
 	return (
 		<nav className="relative  top-0 z-50 flex w-full justify-center border border-white px-5 md:fixed">
 			<section className=" fixed mt-10    flex h-16 w-fit  items-center justify-between rounded-full border-2 border-white  bg-background   px-8  antialiased     drop-shadow-xl  ease-in-out-expo dark:border-foreground-100 md:mx-auto md:justify-evenly  lg:w-fit">
@@ -88,7 +92,10 @@ const NavBar = () => {
 					</section>
 				</section>
 				<section className="ml-20 lg:hidden">
-					<Dropdown>
+					<Button onPress={onOpen}>
+						<Menu />
+					</Button>
+					{/* <Dropdown>
 						<DropdownTrigger className="text-foreground">
 							<Menu />
 						</DropdownTrigger>
@@ -103,7 +110,47 @@ const NavBar = () => {
 								Delete file
 							</DropdownItem>
 						</DropdownMenu>
-					</Dropdown>
+					</Dropdown> */}
+					<Drawer isOpen={isOpen} onOpenChange={onOpenChange}>
+						<DrawerContent>
+							{(onClose) => (
+								<>
+									<DrawerHeader className="flex flex-col gap-1">
+										Drawer Title
+									</DrawerHeader>
+									<DrawerBody>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Nullam pulvinar risus non risus hendrerit venenatis.
+											Pellentesque sit amet hendrerit risus, sed porttitor quam.
+										</p>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Nullam pulvinar risus non risus hendrerit venenatis.
+											Pellentesque sit amet hendrerit risus, sed porttitor quam.
+										</p>
+										<p>
+											Magna exercitation reprehenderit magna aute tempor
+											cupidatat consequat elit dolor adipisicing. Mollit dolor
+											eiusmod sunt ex incididunt cillum quis. Velit duis sit
+											officia eiusmod Lorem aliqua enim laboris do dolor
+											eiusmod. Et mollit incididunt nisi consectetur esse
+											laborum eiusmod pariatur proident Lorem eiusmod et. Culpa
+											deserunt nostrud ad veniam.
+										</p>
+									</DrawerBody>
+									<DrawerFooter>
+										<Button color="danger" variant="light" onPress={onClose}>
+											Close
+										</Button>
+										<Button color="primary" onPress={onClose}>
+											Action
+										</Button>
+									</DrawerFooter>
+								</>
+							)}
+						</DrawerContent>
+					</Drawer>
 				</section>
 			</section>
 		</nav>

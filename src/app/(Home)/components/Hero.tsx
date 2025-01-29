@@ -9,9 +9,9 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { Spotlight } from "@/components/ui/Spotlight";
 
 import "swiper/css";
-import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
-import { ArrowRightIcon } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 //import { Swiper, SwiperSlide } from "swiper/react";
 //import { Autoplay } from "swiper/modules";
 
@@ -39,8 +39,8 @@ const Hero = () => {
 				className="-top-40 left-0 md:-top-20 md:left-60"
 				fill="white"
 			/>
-			<section className="relative  mb-20 flex h-auto w-full items-center justify-center bg-background   pt-48 lg:h-screen lg:pt-28 ">
-				<section className="mx-auto  flex h-fit w-full max-w-[90rem] flex-col items-start px-7 text-center md:items-center md:px-14 xl:px-20">
+			<section className="relative  mb-20 flex h-auto w-full items-center justify-center bg-background px-7 pt-20  md:pt-20 lg:h-screen lg:pt-28 ">
+				<section className="mx-auto  flex h-fit w-full max-w-[90rem] flex-col items-center text-center md:items-center md:px-14 xl:px-20">
 					{/* <motion.span
 						initial={{ opacity: 0, scale: 0.7, y: "-70%" }}
 						animate={{ opacity: 1, scale: 1, y: "0" }}
@@ -59,7 +59,7 @@ const Hero = () => {
 						transition={{ duration: 0.7, ease: "circInOut" }}
 						className="z-10 flex  items-center justify-center"
 					>
-						<div
+						{/* <div
 							className={cn(
 								"group rounded-full border  border-primary bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
 							)}
@@ -68,7 +68,18 @@ const Hero = () => {
 								<span>✨ Introducing Webflexrr Labs</span>
 								<ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
 							</AnimatedShinyText>
-						</div>
+						</div> */}
+						<AnimatedGradientText>
+							🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
+							<span
+								className={cn(
+									`inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-white`
+								)}
+							>
+								Introducing Webflexrr Labs &gt;
+							</span>
+							<ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+						</AnimatedGradientText>
 					</motion.div>
 					{/* <motion.section
 						initial={{ opacity: 0, scale: 0.7, y: "40%" }}
@@ -171,7 +182,7 @@ const Hero = () => {
 							initial={{ opacity: 0, x: "20%", y: "30%" }}
 							animate={{ opacity: 1, x: "0", y: "0" }}
 							transition={{ duration: 0.7, delay: 0.6, ease: "circInOut" }}
-							className="flex "
+							className="flex flex-wrap justify-center"
 						>
 							<motion.span whileHover={{ y: -10 }}>
 								<Link

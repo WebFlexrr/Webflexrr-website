@@ -5,7 +5,7 @@ import React from "react";
 const About = () => {
 	return (
 		<section className="mx-auto mt-20 w-full  max-w-7xl px-4 sm:px-6">
-			<div className="z-10 flex min-h-64 items-center justify-center rounded-lg  bg-white p-4 dark:bg-black sm:p-6">
+			<div className="z-10 flex min-h-64 items-center justify-center rounded-lg   p-4  sm:p-6">
 				<TextReveal text="We're a AI based Software Development Agency. 💫 We turn business Into industry Leader" />
 			</div>
 

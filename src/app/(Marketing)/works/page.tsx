@@ -4,9 +4,10 @@ import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
 import { Card, CardBody, CardFooter, Image, Link } from "@nextui-org/react";
 import { MoveUpRight } from "lucide-react";
-import NavBar from "@/components/NavBar";
+// import NavBar from "@/components/NavBar";
 import { sanityFetch } from "@/sanity/lib/client";
 import { PROJECT_QUERY } from "@/sanity/actions/queries";
+import NavBar2 from "@/components/NavBar2";
 
 export const metadata: Metadata = {
 	title: {
@@ -22,8 +23,8 @@ const Works = async (): Promise<React.JSX.Element> => {
 	});
 
 	return (
-		<main className="pt-28">
-			<NavBar />
+		<main className="">
+			<NavBar2 />
 			<Heading
 				heading={"Our Works"}
 				subHeading={"Projects We've Delivered"}

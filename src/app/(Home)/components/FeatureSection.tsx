@@ -191,7 +191,7 @@ const features = [
 								{Row1.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6  items-center justify-center gap-2 rounded-md border px-6  py-4  text-sm font-medium shadow-md"
+										className=" flex h-6 items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -208,7 +208,7 @@ const features = [
 								{Row1.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6  items-center justify-center gap-2 rounded-md border px-6  py-4  text-sm font-medium shadow-md"
+										className=" flex h-6 items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -232,7 +232,7 @@ const features = [
 								{Row2.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6  items-center justify-center gap-2 rounded-md border px-6  py-4  text-sm font-medium shadow-md"
+										className=" flex h-6  items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -249,7 +249,7 @@ const features = [
 								{Row2.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6  items-center justify-center gap-2 rounded-md border px-6  py-4  text-sm font-medium shadow-md"
+										className=" flex h-6 items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -273,7 +273,7 @@ const features = [
 								{Row1.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6  items-center justify-center gap-2 rounded-md border px-6  py-4  text-sm font-medium shadow-md"
+										className=" flex h-6 items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
 									>
 										<Image
 											src={item.icon}
