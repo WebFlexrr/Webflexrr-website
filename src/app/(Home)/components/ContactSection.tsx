@@ -141,7 +141,7 @@ const ContactSection = (): React.JSX.Element => {
 								radius="full"
 								size="lg"
 								color="primary"
-								className="px-10 font-dm-sans text-[16px] font-semibold text-foreground"
+								className="font-dm-sans px-10 text-[16px] font-semibold text-foreground"
 							>
 								Submit
 							</Button>

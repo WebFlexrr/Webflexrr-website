@@ -41,7 +41,6 @@ const NavBar2 = () => {
 	return (
 		<Navbar
 			onMenuOpenChange={setIsMenuOpen}
-			shouldHideOnScroll
 			isBordered
 			maxWidth={"xl"}
 			className={"w-full "}

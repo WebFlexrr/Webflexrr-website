@@ -180,7 +180,7 @@ const features = [
 		href: "/",
 		cta: "Learn more",
 		background: (
-			<section className="  relative flex h-full w-full flex-col justify-between gap-5 overflow-hidden rounded-2xl shadow-xl">
+			<section className="relative flex h-full w-full flex-col justify-between gap-5 overflow-hidden rounded-2xl  shadow-xl">
 				<section className=" mt-12 flex w-full flex-col  justify-end space-y-6 text-white   ">
 					<div className=" relative z-20 w-full overflow-hidden">
 						<div
@@ -306,9 +306,10 @@ const features = [
 						</div>
 					</div>
 				</section>
-				<section className=" mt-4 h-auto w-full ">
+				<section className=" mt-4 h-full w-full ">
 					<div
 						id={"Website"}
+						// className=" mx-auto  h-[130px] w-[160px] rounded-lg border-x-2 border-t-2 bg-white shadow-2xl  "
 						className=" mx-auto  h-[130px] w-[160px] rounded-lg border-x-2 border-t-2 bg-white shadow-2xl  "
 					>
 						<div className="flex h-2 w-full items-center gap-1 rounded-t-md  px-2">

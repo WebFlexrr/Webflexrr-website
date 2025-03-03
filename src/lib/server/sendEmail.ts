@@ -1,5 +1,4 @@
 "use server";
-
 import nodemailer from "nodemailer";
 import { render } from "@react-email/render";
 import ContactUsEmail from "../../../emails/ContactUsEmail";

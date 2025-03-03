@@ -39,7 +39,7 @@ const PlansCard: FC<PlansCardProps> = ({
 						{type}
 					</Chip>
 					<h4
-						className={`mt-5 font-dm-sans text-3xl font-bold text-primary ${"text-white"}`}
+						className={`font-dm-sans mt-5 text-3xl font-bold text-primary ${"text-white"}`}
 					>
 						{title}
 					</h4>

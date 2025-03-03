@@ -38,10 +38,8 @@ const config: Config = {
 					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 			},
 			fontFamily: {
-				prompt: "Prompt, sans-serif",
 				inter: "Inter, sans-serif",
-				"schibsted-grotesk": "Schibsted Grotesk, sans-serif",
-				"dm-sans": "DM Sans, sans-serif",
+				"space-grotesk": "Space Grotesk, sans-serif",
 			},
 			colors: {
 				border: "hsl(var(--border))",
@@ -76,6 +74,13 @@ const config: Config = {
 				card: {
 					DEFAULT: "hsl(var(--card))",
 					foreground: "hsl(var(--card-foreground))",
+				},
+				chart: {
+					"1": "hsl(var(--chart-1))",
+					"2": "hsl(var(--chart-2))",
+					"3": "hsl(var(--chart-3))",
+					"4": "hsl(var(--chart-4))",
+					"5": "hsl(var(--chart-5))",
 				},
 			},
 			borderRadius: {
