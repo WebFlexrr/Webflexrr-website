@@ -1,5 +1,5 @@
 "use client";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 import React from "react";
 import { RiWindow2Fill } from "react-icons/ri";
 import { IoIosSearch, IoLogoGoogle, IoMdCloudOutline } from "react-icons/io";

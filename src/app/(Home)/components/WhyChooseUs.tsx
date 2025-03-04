@@ -1,5 +1,5 @@
 "use client";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 import { Search } from "lucide-react";
 import React from "react";
 import { motion } from "motion/react";

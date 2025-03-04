@@ -1,4 +1,4 @@
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 import PlansCard from "@/components/PlansCard";
 
 import Link from "next/link";

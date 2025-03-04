@@ -3,7 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 import toast, { Toaster } from "react-hot-toast";
 import { sendEmailActions } from "@/lib/server/sendEmail";
 import { Input, Textarea } from "@heroui/input";

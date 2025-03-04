@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { type FC } from "react";
-import Heading from "../../../components/Heading";
+import Heading from "../../../components/SectionHeading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";

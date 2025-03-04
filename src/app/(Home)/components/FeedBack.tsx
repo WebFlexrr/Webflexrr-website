@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../../../components/Heading";
+import Heading from "../../../components/SectionHeading";
 // import FeedbackCarousel from "@/components/ui/Hero/FeedbackCarousel";
 // import getAllFeedback from "@/lib/getFeedback";
 

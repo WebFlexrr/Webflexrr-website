@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 import { BlogItem } from "@/app/(Marketing)/blogs/components/blog-Item";
 import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";

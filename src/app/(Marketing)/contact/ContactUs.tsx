@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 // import PulseCircle from "@/components/ui/PulseCircle";
 
 const schema = yup.object({

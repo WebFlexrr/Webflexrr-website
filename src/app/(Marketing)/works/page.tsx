@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 import { Link } from "@heroui/link";
 import { Card, CardBody, CardFooter } from "@heroui/card";
 import { Image } from "@heroui/image";

@@ -335,7 +335,7 @@ const features = [
 ];
 
 import React from "react";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 import { Search } from "lucide-react";
 
 import Image from "next/image";

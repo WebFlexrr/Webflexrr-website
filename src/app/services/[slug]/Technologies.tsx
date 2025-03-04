@@ -1,5 +1,5 @@
 "use client";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 // import { useGSAP } from "@gsap/react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";

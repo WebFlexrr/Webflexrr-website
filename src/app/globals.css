@@ -200,6 +200,7 @@ layer(base);
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+
 @layer base {
   *,
   ::after,
@@ -250,15 +251,17 @@ layer(base);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(15% 0.0237 279.02);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.145 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
+  /* --primary: oklch(0.985 0 0); */
+  --primary: oklch(57.36% 0.2108 257.84);
   --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+  /* --secondary: oklch(0.269 0 0); */
+  --secondary: oklch(56.7% 0.2266 11.22);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
@@ -327,13 +330,6 @@ layer(base);
 }
 
 
-
-
-
-
-
-
-
 @layer base {
 	body {
 		@apply h-screen  w-full font-inter text-black dark:text-white;
@@ -345,7 +341,7 @@ layer(base);
 		@apply md:text-center text-6xl text-left font-space-grotesk font-bold  md:text-6xl  md:leading-[82px] dark:text-white;
 	}
 	h2 {
-		@apply text-center font-space-grotesk text-4xl leading-[38.5px] md:text-5xl font-medium md:leading-[52.8px]  text-secondary   dark:text-white;
+		@apply text-center font-space-grotesk text-4xl leading-[38.5px] md:text-5xl font-light md:leading-[52.8px]  text-secondary   dark:text-white;
 	}
 	h3 {
 		@apply  font-space-grotesk  md:text-[2.9rem] md:leading-[54px] text-2xl  font-bold ;
@@ -357,20 +353,20 @@ layer(base);
 		@apply text-center font-space-grotesk md:text-2xl text-base  font-medium text-black dark:text-white;
 	}
 	p {
-		@apply font-inter md:text-lg text-base subpixel-antialiased leading-[1.4rem]  md:leading-[1.6rem]  text-secondary dark:text-white;
+		@apply font-inter text-foreground/55 md:text-lg text-base subpixel-antialiased leading-[1.4rem]  md:leading-[1.6rem]  text-secondary dark:text-white;
 	}
 }
 
 @layer utilities {
-  /* @layer utilities {
+  @layer utilities {
    .pause {
      animation-play-state: paused;
    }
-} */
+} 
 
-  /* ::-webkit-scrollbar {
+   ::-webkit-scrollbar {
 	display: none;
-} */
+}
 
   .stroke-text {
     -webkit-text-stroke: 2px var(--color-tertiary);

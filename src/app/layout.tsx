@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { type ReactNode } from "react";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
 	title: {
@@ -72,7 +73,9 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 	return (
 		<html lang="en" className="scroll-smooth!">
 			<GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER ?? ""} />
-			<body className="dark">{children}</body>
+			<body className="dark">
+				<Providers>{children}</Providers>
+			</body>
 		</html>
 	);
 };

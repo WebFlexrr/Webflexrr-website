@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 
 import Footer from "@/components/Footer";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 
 import { Divider } from "@heroui/divider";
 import { Card, CardBody, CardHeader } from "@heroui/card";

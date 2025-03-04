@@ -1,10 +1,12 @@
 // tailwind.config.js
-const { heroui } = require("@heroui/theme");
+import { heroui } from "@heroui/react";
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
 	content: [
-		"./node_modules/@heroui/theme/dist/components/(accordion|button|card|chip|divider|drawer|image|input|link|navbar|ripple|spinner|modal|form).js",
+		// ...
+		// make sure it's pointing to the ROOT node_module
+		"./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
 		extend: {},
@@ -12,3 +14,5 @@ module.exports = {
 	darkMode: "class",
 	plugins: [heroui()],
 };
+
+export default config;

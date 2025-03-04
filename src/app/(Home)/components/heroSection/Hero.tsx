@@ -6,13 +6,13 @@ import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { FlipWords } from "@/components/ui/flip-words";
-import { Spotlight } from "@/components/ui/Spotlight";
 
 import "swiper/css";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
-import CallToActionButton from "@/components/CallToActionButton";
+import { CallToActionButton } from "@/components/CallToActionButton";
+
 //import { Swiper, SwiperSlide } from "swiper/react";
 //import { Autoplay } from "swiper/modules";
 
@@ -35,12 +35,13 @@ const words = ["Landing Pages", "Apps", "Software", "MVP"];
 
 const Hero = () => {
 	return (
-		<section id={"home"} className="relative w-full">
-			<Spotlight
+		<section className="relative w-full">
+			{/* <Spotlight
 				className="-top-40 left-0 md:-top-20 md:left-60"
 				fill="white"
-			/>
-			<section className="bg-background relative mb-20 flex h-auto w-full items-center justify-center px-7 pt-20 md:pt-20 lg:h-screen lg:pt-8">
+			/> */}
+
+			<section className="relative mb-20 flex h-auto w-full items-center justify-center px-7 pt-20 md:pt-20 lg:h-screen lg:pt-8">
 				<section className="mx-auto flex h-fit w-full max-w-[90rem] flex-col items-center text-center md:items-center md:px-14 xl:px-20">
 					{/* <motion.span
 						initial={{ opacity: 0, scale: 0.7, y: "-70%" }}

@@ -1,5 +1,5 @@
 "use client";
-import Heading from "@/components/Heading";
+import Heading from "@/components/SectionHeading";
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Divider } from "@heroui/divider";
 import { PlusCircle } from "lucide-react";

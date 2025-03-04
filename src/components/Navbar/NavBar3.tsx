@@ -3,6 +3,7 @@ import React from "react";
 // import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { ContactUsButton } from "../CallToActionButton";
 
 const NavBar3 = () => {
 	// const pathname = usePathname();
@@ -35,9 +36,9 @@ const NavBar3 = () => {
 	];
 	return (
 		<>
-			<nav className="w-full border">
-				<section className="mx-auto flex w-full max-w-7xl border border-black">
-					<section className="flex w-full items-center justify-start border border-blue-500">
+			<nav className="fixed top-8 z-20 my-5 w-full">
+				<section className="mx-auto flex w-full max-w-7xl items-center px-5">
+					<section className="flex w-full items-center justify-start">
 						<div className="flex w-fit items-center gap-3">
 							<Image
 								src={"/logos/white-logo.png"}
@@ -50,8 +51,8 @@ const NavBar3 = () => {
 							</div>
 						</div>
 					</section>
-					<section className="flex w-full items-center justify-center border border-green-500">
-						<section className="flex w-fit gap-4 rounded-full bg-black px-3 py-2">
+					<section className="flex w-full items-center justify-center">
+						<section className="flex w-fit gap-4 rounded-full bg-black px-6 py-3">
 							{menuItems.map((navLink) => (
 								<div key={navLink.content}>
 									<Link href={navLink.link}>{navLink.content}</Link>
@@ -59,7 +60,9 @@ const NavBar3 = () => {
 							))}
 						</section>
 					</section>
-					<section className="w-full border border-red-400"></section>
+					<section className="flex w-full items-center justify-end">
+						<ContactUsButton />
+					</section>
 				</section>
 			</nav>
 		</>
