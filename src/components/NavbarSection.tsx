@@ -2,13 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { RiWhatsappFill } from "react-icons/ri";
-import {
-	Navbar,
-	NavbarBrand,
-	NavbarContent,
-	NavbarItem,
-	Button,
-} from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
+import { Button } from "@heroui/button";
 
 import {
 	Drawer,
@@ -36,7 +31,7 @@ const NavbarSection = (): React.JSX.Element => {
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			// maxWidth={"full"}
-			className="animate-visible-from-down fixed mx-auto mt-5  flex h-16 items-center justify-evenly  rounded-full   border-2   border-black text-white    antialiased  drop-shadow-xl  ease-in-out-expo dark:border-foreground-100 lg:w-fit  "
+			className="animate-visible-from-down ease-in-out-expo dark:border-foreground-100 fixed mx-auto mt-5 flex h-16 items-center justify-evenly rounded-full border-2 border-black text-white antialiased drop-shadow-xl lg:w-fit"
 		>
 			<NavbarContent className="w-fit">
 				<NavbarBrand className="">
@@ -53,11 +48,11 @@ const NavbarSection = (): React.JSX.Element => {
 				</NavbarBrand>
 			</NavbarContent>
 			<NavbarContent className="mx-20 hidden gap-3 xl:flex" justify="center">
-				<NavbarItem className={`  `}>
+				<NavbarItem className={` `}>
 					<Link
 						className={`${
 							pathname === "/" && "bg-primary text-white dark:text-white"
-						} rounded-full px-2 py-1 text-lg font-medium  text-black antialiased dark:font-normal dark:text-white  `}
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:font-normal dark:text-white`}
 						href={"/"}
 					>
 						Home
@@ -66,8 +61,8 @@ const NavbarSection = (): React.JSX.Element => {
 				<NavbarItem>
 					<Link
 						className={` ${
-							pathname === "/works" && "bg-primary text-white  dark:text-white"
-						} rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white  `}
+							pathname === "/works" && "bg-primary text-white dark:text-white"
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:text-white`}
 						href={"/works"}
 					>
 						Works
@@ -77,8 +72,7 @@ const NavbarSection = (): React.JSX.Element => {
 					<Link
 						className={`${
 							pathname === "/careers" && "bg-primary text-white dark:text-white"
-						}
-							rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white `}
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:text-white`}
 						color="foreground"
 						href={"/careers"}
 					>
@@ -89,7 +83,7 @@ const NavbarSection = (): React.JSX.Element => {
 					<Link
 						className={` ${
 							pathname === "/blogs" && "bg-primary text-white dark:text-white"
-						} rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white`}
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:text-white`}
 						color="foreground"
 						href={"/blogs"}
 					>
@@ -102,18 +96,17 @@ const NavbarSection = (): React.JSX.Element => {
 					{/* <Link href={process.env.NEXT_PUBLIC_CONTACT_US_LINK ?? ""}> */}
 					<Link href="/contact">
 						<Button
-							variant={"shadow"}
 							color={"secondary"}
 							radius="full"
 							className="flex items-center justify-center text-lg font-medium text-black dark:text-white"
 						>
-							<RiWhatsappFill className="mr-2 h-[25px] w-[25px]   text-lg text-[#25D366]" />
+							<RiWhatsappFill className="mr-2 h-[25px] w-[25px] text-lg text-[#25D366]" />
 							Contact Us
 						</Button>
 					</Link>
 				</NavbarItem>
 			</NavbarContent>
-			<NavbarContent className=" xl:hidden" justify="end">
+			<NavbarContent className="xl:hidden" justify="end">
 				<Drawer>
 					<DrawerTrigger className="text-black" title="Menu">
 						<Menu />
@@ -127,19 +120,19 @@ const NavbarSection = (): React.JSX.Element => {
 						</DrawerHeader>
 						<DrawerFooter className="border">
 							<Link href={"/Home"} className="w-full">
-								<Button className="w-full ">Home</Button>
+								<Button className="w-full">Home</Button>
 							</Link>
-							<Link href={"/works"} className="w-full ">
-								<Button className="w-full ">Work</Button>
+							<Link href={"/works"} className="w-full">
+								<Button className="w-full">Work</Button>
 							</Link>
-							<Link href={"/careers"} className="w-full ">
-								<Button className="w-full ">Careers</Button>
+							<Link href={"/careers"} className="w-full">
+								<Button className="w-full">Careers</Button>
 							</Link>
-							<Link href={"/contact"} className="w-full ">
-								<Button className="w-full ">Contact</Button>
+							<Link href={"/contact"} className="w-full">
+								<Button className="w-full">Contact</Button>
 							</Link>
-							<DrawerClose className="w-full ">
-								<Button variant="ghost" className="w-full ">
+							<DrawerClose className="w-full">
+								<Button variant="ghost" className="w-full">
 									Cancel
 								</Button>
 							</DrawerClose>

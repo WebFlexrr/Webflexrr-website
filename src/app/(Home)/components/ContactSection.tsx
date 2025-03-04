@@ -4,9 +4,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Heading from "@/components/Heading";
-import { Button, Input, Textarea } from "@nextui-org/react";
 import toast, { Toaster } from "react-hot-toast";
 import { sendEmailActions } from "@/lib/server/sendEmail";
+import { Input, Textarea } from "@heroui/input";
+import { Button } from "@heroui/button";
 
 const schema = yup.object({
 	firstName: yup.string().required("First Name is Required"),
@@ -61,9 +62,9 @@ const ContactSection = (): React.JSX.Element => {
 	};
 
 	return (
-		<section id={"contact"} className=" relative h-auto w-full ">
+		<section id={"contact"} className="relative h-auto w-full">
 			<Toaster position="bottom-center" reverseOrder={true} />
-			<section className="mx-auto w-full  max-w-5xl space-y-10 px-5 py-20 md:px-10 lg:py-24 ">
+			<section className="mx-auto w-full max-w-5xl space-y-10 px-5 py-20 md:px-10 lg:py-24">
 				<Heading
 					heading={"Contact Us"}
 					subHeading={
@@ -71,10 +72,10 @@ const ContactSection = (): React.JSX.Element => {
 					}
 					para={"Contact Section"}
 				/>
-				<section className=" flex h-auto  w-full flex-col gap-16 p-5 ">
+				<section className="flex h-auto w-full flex-col gap-16 p-5">
 					<form onSubmit={handleSubmit(onSubmit)}>
-						<section className=" grid grid-cols-1 gap-4 md:grid-cols-2">
-							<div className=" w-full space-y-2 text-[16px] ">
+						<section className="grid grid-cols-1 gap-4 md:grid-cols-2">
+							<div className="w-full space-y-2 text-[16px]">
 								<Input
 									type="text"
 									id="first Name"
@@ -87,7 +88,7 @@ const ContactSection = (): React.JSX.Element => {
 								</p>
 							</div>
 
-							<div className=" w-full space-y-2 text-[16px] ">
+							<div className="w-full space-y-2 text-[16px]">
 								<Input
 									type="text"
 									id="Last Name"
@@ -99,7 +100,7 @@ const ContactSection = (): React.JSX.Element => {
 									{errors.lastName?.message}
 								</p>
 							</div>
-							<div className=" w-full space-y-2 text-[16px] ">
+							<div className="w-full space-y-2 text-[16px]">
 								<Input
 									type="email"
 									id="email"
@@ -121,13 +122,13 @@ const ContactSection = (): React.JSX.Element => {
 									{errors.companyName?.message}
 								</p>
 							</div>
-							<div className=" h-40 w-full space-y-2 text-[16px] md:col-span-2 ">
+							<div className="h-40 w-full space-y-2 text-[16px] md:col-span-2">
 								<Textarea
 									id="additionalMessage"
 									cols={4}
 									rows={4}
 									label="additional Message (Option)"
-									className="  w-full resize-y text-[16px] "
+									className="w-full resize-y text-[16px]"
 									{...register("additionalMessage")}
 								/>
 								<p className="text-sm text-red-700">
@@ -135,13 +136,13 @@ const ContactSection = (): React.JSX.Element => {
 								</p>
 							</div>
 						</section>
-						<section className="col-span-2  flex  w-full justify-center">
+						<section className="col-span-2 flex w-full justify-center">
 							<Button
 								type="submit"
 								radius="full"
 								size="lg"
 								color="primary"
-								className="font-dm-sans px-10 text-[16px] font-semibold text-foreground"
+								className="font-dm-sans text-foreground px-10 text-[16px] font-semibold"
 							>
 								Submit
 							</Button>

@@ -21,19 +21,19 @@ const ServiceItems: FC<ServiceItemsProps> = ({ title, image, slug }) => {
 						height={"0"}
 						className="relative h-full w-full bg-cover transition-transform duration-300 ease-in group-hover:scale-105"
 					/>
-					<div className="invisible absolute bottom-0  z-0 flex h-[100px] w-full translate-y-[0.2rem] items-center justify-center bg-opacity-100 bg-clip-padding shadow-2xl backdrop-blur-xl backdrop-filter transition duration-100 ease-in group-hover:visible group-hover:translate-y-0">
-						<span className="flex gap-3 text-secondary">
+					<div className="bg-opacity-100 invisible absolute bottom-0 z-0 flex h-[100px] w-full translate-y-[0.2rem] items-center justify-center bg-clip-padding shadow-2xl backdrop-blur-xl backdrop-filter transition duration-100 ease-in group-hover:visible group-hover:translate-y-0">
+						<span className="text-secondary flex gap-3">
 							{/* <PulseCircle /> */}
 							Read More
 						</span>
 					</div>
 				</Link>
 			</div>
-			<div className="mt-10 flex w-full items-center ">
+			<div className="mt-10 flex w-full items-center">
 				<Link
 					href={`/service/${slug}`}
 					target="_blank"
-					className="mx-auto text-center text-[30px] font-semibold leading-[34.8px] text-secondary transition duration-700 ease-in-out hover:text-primary"
+					className="text-secondary hover:text-primary mx-auto text-center text-[30px] leading-[34.8px] font-semibold transition duration-700 ease-in-out"
 				>
 					{title}
 				</Link>

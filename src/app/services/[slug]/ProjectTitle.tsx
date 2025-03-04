@@ -6,7 +6,7 @@ const ProjectTitle: FC<ProjectTitleProps> = ({ heading }) => {
 	return (
 		<section className="relative h-auto w-full">
 			<div
-				className="h-auto w-full bg-fixed  object-cover "
+				className="h-auto w-full bg-fixed object-cover"
 				// style={{ backgroundImage: `url(${picture})` }}
 			>
 				<section className="flex h-auto w-full flex-col items-center py-14 xl:pt-28">

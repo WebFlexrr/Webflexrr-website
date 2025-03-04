@@ -59,7 +59,7 @@ export const HeroParallax = ({
 		<div
 			ref={ref}
 			id="portfolio"
-			className=" relative flex h-[300vh] flex-col  self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d] dark:bg-black"
+			className="relative flex h-[300vh] flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d] dark:bg-black"
 		>
 			<Header />
 			<motion.div
@@ -79,7 +79,7 @@ export const HeroParallax = ({
 						/>
 					))}
 				</motion.div>
-				<motion.div className="mb-20 flex  flex-row space-x-20 ">
+				<motion.div className="mb-20 flex flex-row space-x-20">
 					{secondRow.map((product) => (
 						<ProductCard
 							product={product}
@@ -104,11 +104,11 @@ export const HeroParallax = ({
 
 export const Header = (): React.JSX.Element => {
 	return (
-		<div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
-			<h1 className="text-left text-7xl font-bold text-black dark:text-white md:text-7xl">
+		<div className="relative top-0 left-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
+			<h1 className="text-left text-7xl font-bold text-black md:text-7xl dark:text-white">
 				Our Ultimate <br /> Creations
 			</h1>
-			<p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
+			<p className="mt-8 max-w-2xl text-base md:text-xl dark:text-neutral-200">
 				We build beautiful products with the latest technologies and frameworks.
 				We are a team of passionate developers and designers that love to build
 				amazing products.
@@ -137,12 +137,12 @@ export const ProductCard = ({
 				y: -20,
 			}}
 			key={product.title}
-			className="group/product relative  aspect-[3.8/2.8] w-[20rem] flex-shrink-0  lg:w-[30rem] "
-			// className="group/product relative  w-[30rem]  flex-shrink-0 lg:h-96 lg:w-[30rem]"
+			className="group/product relative aspect-[3.8/2.8] w-[20rem] shrink-0 lg:w-[30rem]"
+			// className="group/product relative  w-[30rem]  shrink-0 lg:h-96 lg:w-[30rem]"
 		>
 			<Link
 				href={product.link}
-				className="block group-hover/product:shadow-2xl "
+				className="block group-hover/product:shadow-2xl"
 			>
 				<Image
 					src={product.thumbnail}

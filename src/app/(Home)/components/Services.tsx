@@ -1,10 +1,7 @@
 import React from "react";
-
 import Heading from "@/components/Heading";
-
 import { ShineBorder } from "@/components/ui/shine-border";
-import { Card, CardBody, CardHeader } from "@nextui-org/react";
-
+import { Card, CardBody, CardHeader } from "@heroui/card";
 import { PanelsTopLeft } from "lucide-react";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoAndroid } from "react-icons/io";
@@ -17,7 +14,7 @@ const services = [
 		description:
 			"We ensure your website ranks higher through advanced SEO strategies, driving organic traffic and improving visibility.",
 		background: (
-			<section className="flex h-full w-full items-center  justify-center rounded-lg bg-gradient-to-tr from-primary to-[#549493] ">
+			<section className="from-primary flex h-full w-full items-center justify-center rounded-lg bg-linear-to-tr to-[#549493]">
 				<PanelsTopLeft size={80} />
 			</section>
 		),
@@ -27,7 +24,7 @@ const services = [
 		description:
 			"We ensure your website ranks higher through advanced SEO strategies, driving organic traffic and improving visibility.",
 		background: (
-			<section className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-tr from-primary to-[#549493] ">
+			<section className="from-primary flex h-full w-full items-center justify-center rounded-lg bg-linear-to-tr to-[#549493]">
 				<IoLogoAndroid className="text-7xl" /> <FaPlus className="text-xl" />
 				<TbBrandReactNative className="text-7xl" />
 			</section>
@@ -38,7 +35,7 @@ const services = [
 		description:
 			"We ensure your website ranks higher through advanced SEO strategies, driving organic traffic and improving visibility.",
 		background: (
-			<section className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-tr from-primary to-[#549493] ">
+			<section className="from-primary flex h-full w-full items-center justify-center rounded-lg bg-linear-to-tr to-[#549493]">
 				<BsTypeH1 className="text-7xl" />
 			</section>
 		),
@@ -47,8 +44,8 @@ const services = [
 
 const Services = () => {
 	return (
-		<section className="w-full py-32 md:py-20 ">
-			<section className="mx-auto  w-full  max-w-7xl px-5 ">
+		<section className="w-full py-32 md:py-20">
+			<section className="mx-auto w-full max-w-7xl px-5">
 				<Heading
 					heading={` Services`}
 					subHeading={"Our Services"}
@@ -57,17 +54,17 @@ const Services = () => {
 
 				<div
 					className={
-						"mt-16  grid w-full grid-cols-1 flex-col gap-6 lg:grid-cols-3 "
+						"mt-16 grid w-full grid-cols-1 flex-col gap-6 lg:grid-cols-3"
 					}
 				>
 					{services.map((service) => (
 						<ShineBorder
 							key={service.title}
-							className="relative flex w-full  flex-col items-center justify-center overflow-hidden bg-background   p-1 md:shadow-xl"
+							className="bg-background relative flex w-full flex-col items-center justify-center overflow-hidden p-1 md:shadow-xl"
 							color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
 						>
-							<Card className="w-full  bg-background p-6">
-								<CardHeader className="aspect-[4/3]  w-full rounded-lg border border-foreground/10">
+							<Card className="bg-background w-full p-6">
+								<CardHeader className="border-foreground/10 aspect-4/3 w-full rounded-lg border">
 									{service.background}
 								</CardHeader>
 								<CardBody className="mt-10">
@@ -75,7 +72,7 @@ const Services = () => {
 										<h4 className="flex items-baseline">
 											<span className="font-normal">{service.title}</span>
 										</h4>
-										<p className="text-base text-foreground/80">
+										<p className="text-foreground/80 text-base">
 											{service.description}
 										</p>
 									</section>

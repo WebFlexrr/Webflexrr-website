@@ -7,7 +7,7 @@ import { Laptop, Smartphone, Tablet, Monitor } from "lucide-react";
 
 const WhyChooseUs = () => {
 	return (
-		<section className="w-full bg-background py-16 md:py-24">
+		<section className="bg-background w-full py-16 md:py-24">
 			<section className="mx-auto w-full max-w-7xl px-4 md:px-6">
 				<Heading
 					heading="Why Choose Us"
@@ -21,22 +21,22 @@ const WhyChooseUs = () => {
 						whileInView={{ opacity: 1, y: 0, x: 0 }}
 						transition={{ duration: 0.7, ease: "backInOut" }}
 						viewport={{ once: true }}
-						className="flex flex-col gap-6 rounded-xl border border-foreground/10 bg-gradient-to-br from-foreground/5 to-transparent p-6 shadow-lg transition-colors hover:border-primary/20"
+						className="border-foreground/10 from-foreground/5 hover:border-primary/20 flex flex-col gap-6 rounded-xl border bg-linear-to-br to-transparent p-6 shadow-lg transition-colors"
 					>
-						<section className="flex flex-col space-y-4 rounded-lg border border-foreground/10 bg-background/50 p-4">
-							<section className="flex items-center gap-2 rounded-full border border-foreground/10 px-3 py-2 text-sm">
-								<Search className="h-4 w-4 text-primary" />
+						<section className="border-foreground/10 bg-background/50 flex flex-col space-y-4 rounded-lg border p-4">
+							<section className="border-foreground/10 flex items-center gap-2 rounded-full border px-3 py-2 text-sm">
+								<Search className="text-primary h-4 w-4" />
 								<span>Best Software Development Company</span>
 							</section>
 							<section className="space-y-3 px-3">
-								<div className="text-xs text-foreground/80">
+								<div className="text-foreground/80 text-xs">
 									<span>https://www.webflexrr.com</span>
 									<div className="mt-2">
 										<span className="text-sm font-medium">
 											Transform your online presence with us
 										</span>
 									</div>
-									<div className="mt-1.5 text-foreground/60">
+									<div className="text-foreground/60 mt-1.5">
 										<span>
 											Expert web development solutions for your business
 										</span>
@@ -46,12 +46,12 @@ const WhyChooseUs = () => {
 						</section>
 						<section className="space-y-3">
 							<h5 className="flex items-baseline">
-								<span className="mr-2 text-2xl font-bold text-primary">
+								<span className="text-primary mr-2 text-2xl font-bold">
 									01.
 								</span>
 								<span className="text-xl font-semibold">SEO Optimization</span>
 							</h5>
-							<p className="text-sm text-foreground/80">
+							<p className="text-foreground/80 text-sm">
 								We ensure your website ranks higher through advanced SEO
 								strategies, driving organic traffic and improving visibility.
 							</p>
@@ -63,9 +63,9 @@ const WhyChooseUs = () => {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.7, ease: "backInOut" }}
 						viewport={{ once: true }}
-						className="flex flex-col gap-6 rounded-xl border border-foreground/10 bg-gradient-to-br from-foreground/5 to-transparent p-6 shadow-lg transition-colors hover:border-primary/20"
+						className="border-foreground/10 from-foreground/5 hover:border-primary/20 flex flex-col gap-6 rounded-xl border bg-linear-to-br to-transparent p-6 shadow-lg transition-colors"
 					>
-						<section className="relative h-48 rounded-lg border border-foreground/10 bg-background/50 p-4">
+						<section className="border-foreground/10 bg-background/50 relative h-48 rounded-lg border p-4">
 							<motion.svg
 								viewBox="0 0 100 50"
 								className="h-full w-full"
@@ -125,14 +125,14 @@ const WhyChooseUs = () => {
 						</section>
 						<section className="space-y-3">
 							<h5 className="flex items-baseline">
-								<span className="mr-2 text-2xl font-bold text-primary">
+								<span className="text-primary mr-2 text-2xl font-bold">
 									02.
 								</span>
 								<span className="text-xl font-semibold">
 									High-Converting Design
 								</span>
 							</h5>
-							<p className="text-sm text-foreground/80">
+							<p className="text-foreground/80 text-sm">
 								Our data-driven design approach focuses on maximizing conversion
 								rates through compelling user experiences.
 							</p>
@@ -147,9 +147,9 @@ const WhyChooseUs = () => {
 							ease: "backInOut",
 						}}
 						viewport={{ margin: "0px -20px -150px 100px" }}
-						className=" flex w-full grid-cols-1 flex-col justify-between gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg md:grid-cols-2"
+						className="border-foreground-300 from-foreground-100 shadow-primary-200 flex w-full grid-cols-1 flex-col justify-between gap-7 rounded-lg border bg-linear-to-br p-8 drop-shadow-lg md:grid-cols-2"
 					>
-						<section className="flex h-full w-full items-center justify-center rounded-sm border border-foreground-300 bg-background p-3">
+						<section className="border-foreground-300 bg-background flex h-full w-full items-center justify-center rounded-sm border p-3">
 							{[
 								{ Icon: Monitor, label: "Desktop" },
 								{ Icon: Laptop, label: "Laptop" },
@@ -171,9 +171,9 @@ const WhyChooseUs = () => {
 								</motion.div>
 							))}
 						</section>
-						<section className="w-full text-left text-foreground">
+						<section className="text-foreground w-full text-left">
 							<h5 className="text-left">
-								<span className="text-bold mr-2 text-3xl text-primary">
+								<span className="text-bold text-primary mr-2 text-3xl">
 									03.
 								</span>
 								Peak Performance on Any Screen
@@ -194,9 +194,9 @@ const WhyChooseUs = () => {
 							ease: "backInOut",
 						}}
 						viewport={{ margin: "0px -20px -150px 100px" }}
-						className="col-span-1 flex  w-full flex-col justify-between gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg md:col-span-2"
+						className="border-foreground-300 from-foreground-100 shadow-primary-200 col-span-1 flex w-full flex-col justify-between gap-7 rounded-lg border bg-linear-to-br p-8 drop-shadow-lg md:col-span-2"
 					>
-						<section className="flex h-full w-full items-center justify-center rounded-sm border border-foreground-300 bg-background p-3">
+						<section className="border-foreground-300 bg-background flex h-full w-full items-center justify-center rounded-sm border p-3">
 							{[
 								{ Icon: Monitor, label: "Desktop" },
 								{ Icon: Laptop, label: "Laptop" },
@@ -218,9 +218,9 @@ const WhyChooseUs = () => {
 								</motion.div>
 							))}
 						</section>
-						<section className="w-full text-left text-foreground">
+						<section className="text-foreground w-full text-left">
 							<h5 className="text-left">
-								<span className="text-bold mr-2 text-3xl text-primary">
+								<span className="text-bold text-primary mr-2 text-3xl">
 									04.
 								</span>
 								Quality Without Overcharge
@@ -241,9 +241,9 @@ const WhyChooseUs = () => {
 							delay: 0.7,
 						}}
 						viewport={{ margin: "0px -20px -150px 100px" }}
-						className="col-span-1 row-span-1 flex w-full flex-col justify-between gap-7 rounded-lg border border-foreground-300 bg-gradient-to-br from-foreground-100 p-8 shadow-primary-200 drop-shadow-lg"
+						className="border-foreground-300 from-foreground-100 shadow-primary-200 col-span-1 row-span-1 flex w-full flex-col justify-between gap-7 rounded-lg border bg-linear-to-br p-8 drop-shadow-lg"
 					>
-						<section className="flex h-full w-full items-center justify-center rounded-sm border border-foreground-300 bg-background p-3">
+						<section className="border-foreground-300 bg-background flex h-full w-full items-center justify-center rounded-sm border p-3">
 							{[
 								{ Icon: Monitor, label: "Desktop" },
 								{ Icon: Laptop, label: "Laptop" },
@@ -265,9 +265,9 @@ const WhyChooseUs = () => {
 								</motion.div>
 							))}
 						</section>
-						<section className="w-full text-left text-foreground">
+						<section className="text-foreground w-full text-left">
 							<h5 className="text-left">
-								<span className="text-bold mr-2 text-3xl text-primary">
+								<span className="text-bold text-primary mr-2 text-3xl">
 									05.
 								</span>
 								Quality Without Overcharge

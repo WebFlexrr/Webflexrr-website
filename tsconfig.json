@@ -31,7 +31,7 @@
     ".next/types/**/*.ts",
     "src/app/Loading.js",
     "next.config.ts",
-    "postcss.config.js"
-, "src/components/Ui/SocialPostsCarousel"  ],
+    "postcss.config.mjs"
+, "src/components/Ui/SocialPostsCarousel", "tailwind.config.ts"  ],
   "exclude": ["node_modules"]
 }

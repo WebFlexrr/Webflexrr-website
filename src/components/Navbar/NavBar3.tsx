@@ -3,7 +3,6 @@ import React from "react";
 // import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import AnnouncementBar from "@/components/AnnouncementBar";
 
 const NavBar3 = () => {
 	// const pathname = usePathname();
@@ -36,9 +35,8 @@ const NavBar3 = () => {
 	];
 	return (
 		<>
-			<AnnouncementBar />
 			<nav className="w-full border">
-				<section className="mx-auto flex w-full max-w-7xl border border-black ">
+				<section className="mx-auto flex w-full max-w-7xl border border-black">
 					<section className="flex w-full items-center justify-start border border-blue-500">
 						<div className="flex w-fit items-center gap-3">
 							<Image

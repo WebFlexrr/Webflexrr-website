@@ -2,12 +2,14 @@ import React from "react";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
-import { Card, CardBody, CardFooter, Image, Link } from "@nextui-org/react";
+import { Link } from "@heroui/link";
+import { Card, CardBody, CardFooter } from "@heroui/card";
+import { Image } from "@heroui/image";
 import { MoveUpRight } from "lucide-react";
 // import NavBar from "@/components/NavBar";
 import { sanityFetch } from "@/sanity/lib/client";
 import { PROJECT_QUERY } from "@/sanity/actions/queries";
-import NavBar2 from "@/components/NavBar2";
+import NavBar2 from "@/components/Navbar/NavBar2";
 
 export const metadata: Metadata = {
 	title: {
@@ -45,7 +47,7 @@ const Works = async (): Promise<React.JSX.Element> => {
 						<CardBody className="overflow-visible p-0">
 							<Image
 								alt={item.title}
-								className=" aspect-[4/3]  w-full object-cover"
+								className="aspect-4/3 w-full object-cover"
 								radius="lg"
 								shadow="sm"
 								src={item.thumbnail}
@@ -59,7 +61,7 @@ const Works = async (): Promise<React.JSX.Element> => {
 							</section>
 							<Link
 								href={item.link}
-								className="rounded-full  border-2 border-primary-200 p-2 hover:bg-primary-400 hover:text-white "
+								className="border-primary-200 hover:bg-primary-400 rounded-full border-2 p-2 hover:text-white"
 							>
 								Open <MoveUpRight size={20} strokeWidth={2} className="ml-2" />
 							</Link>

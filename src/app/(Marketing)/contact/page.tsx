@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 const Plans = (): React.JSX.Element => {
 	return (
-		<main className="bg-background2 relative z-30 h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth">
+		<main className="bg-background2 relative z-30 h-screen w-full overflow-x-hidden overflow-y-auto scroll-smooth">
 			<NavbarSection />
 			<MainTitle heading={"Contact"} />
 			<ContactUs />

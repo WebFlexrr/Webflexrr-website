@@ -2,10 +2,10 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { PortableText } from "@portabletext/react";
 import { PortableTextComponents } from "@/components/PortableText";
-import { Divider } from "@nextui-org/react";
+import { Divider } from "@heroui/divider";
 import { sanityFetch } from "@/sanity/lib/client";
 import { PRIVACY_POLICY_QUERY } from "@/sanity/actions/queries";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/Navbar/NavBar";
 
 export const metadata: Metadata = {
 	title: "Privacy Policy",
@@ -17,7 +17,7 @@ const PrivacyPolicy = async (): Promise<JSX.Element> => {
 	return (
 		<main className="pt-16">
 			<NavBar />
-			<section className="mx-auto h-auto w-full max-w-2xl  px-5 py-28">
+			<section className="mx-auto h-auto w-full max-w-2xl px-5 py-28">
 				<section className="flex w-full flex-col justify-start space-y-5">
 					<h4>{policy.title}</h4>
 					<span className="dark:text-white">
@@ -30,7 +30,7 @@ const PrivacyPolicy = async (): Promise<JSX.Element> => {
 					</span>
 				</section>
 				<Divider className="my-4" />
-				<div className="text-sm  ">
+				<div className="text-sm">
 					<PortableText
 						value={policy.content}
 						components={PortableTextComponents}

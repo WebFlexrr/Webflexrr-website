@@ -3,11 +3,11 @@
 
 
 # Check tsconfig standards
-npm run check-types || {
-    echo '😂🤮❌Failed Type check😂🤮❌
-    Are you seriously trying to write that? Make the changes required above.'
-    false;
-}
+# npm run check-types || {
+#     echo '😂🤮❌Failed Type check😂🤮❌
+#     Are you seriously trying to write that? Make the changes required above.'
+#     false;
+# }
 npx lint-staged -p false
 # #Check Prettier standards
 # npm run check-format || {

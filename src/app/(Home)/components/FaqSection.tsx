@@ -1,6 +1,7 @@
 "use client";
 import Heading from "@/components/Heading";
-import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@heroui/accordion";
+import { Divider } from "@heroui/divider";
 import { PlusCircle } from "lucide-react";
 import React from "react";
 
@@ -43,22 +44,22 @@ const FaqSection = () => {
 		},
 	];
 	return (
-		<section id={"faq"} className=" relative h-auto w-full ">
-			<section className="mx-auto flex  w-full max-w-4xl flex-col gap-14 px-5 py-20 md:px-10 lg:py-28 ">
+		<section id={"faq"} className="relative h-auto w-full">
+			<section className="mx-auto flex w-full max-w-4xl flex-col gap-14 px-5 py-20 md:px-10 lg:py-28">
 				<Heading
 					heading={"FAQ"}
 					subHeading={"Frequently Asked Questions ?"}
 					para="Here are some commonly asked questions. If you can't find the answer you're looking for, feel free to reach out to us directly. We're here to help!"
 				/>
-				<section className="  relative h-auto w-full ">
+				<section className="relative h-auto w-full">
 					<Accordion variant="splitted">
 						{FAQ.map((faq) => (
 							<AccordionItem
 								key={faq.key}
 								indicator={<PlusCircle />}
 								aria-label={faq.title}
-								title={<span className=" text-lg">{faq.title}</span>}
-								className="my-2 border border-primary-200 bg-background px-5 font-medium text-foreground-400 antialiased"
+								title={<span className="text-lg">{faq.title}</span>}
+								className="border-primary-200 bg-background text-foreground-400 my-2 border px-5 font-medium antialiased"
 							>
 								<Divider className="mb-3" />
 								{faq.answer}

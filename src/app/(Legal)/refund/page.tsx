@@ -1,9 +1,9 @@
 import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/Navbar/NavBar";
 import { PortableTextComponents } from "@/components/PortableText";
 import { REFUND_POLICY_QUERY } from "@/sanity/actions/queries";
 import { sanityFetch } from "@/sanity/lib/client";
-import { Divider } from "@nextui-org/react";
+import { Divider } from "@heroui/divider";
 import { PortableText } from "@portabletext/react";
 import type { Metadata } from "next";
 
@@ -17,7 +17,7 @@ const RefundPolicy = async (): Promise<JSX.Element> => {
 	return (
 		<main className="pt-16">
 			<NavBar />
-			<section className="mx-auto h-auto w-full max-w-2xl  px-5 py-28">
+			<section className="mx-auto h-auto w-full max-w-2xl px-5 py-28">
 				<section className="flex w-full flex-col justify-start space-y-5">
 					<h4>{policy.title}</h4>
 					<span className="dark:text-white">

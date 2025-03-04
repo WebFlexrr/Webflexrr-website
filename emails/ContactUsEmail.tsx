@@ -48,7 +48,7 @@ const ContactUsEmail = ({
 			}}
 		>
 			<Body className="bg-offwhite font-sans text-base">
-				<Container className="p-45 bg-white">
+				<Container className="bg-white p-45">
 					<Link href={process.env.NEXT_PUBLIC_URL}>
 						<Img
 							src={`${baseUrl}/logos/logo.png`}
@@ -89,7 +89,7 @@ const ContactUsEmail = ({
 					</Section>
 
 					<Section className="mt-5 text-left">
-						<Text className="mb-2 mt-0 text-base">Best regards,</Text>
+						<Text className="mt-0 mb-2 text-base">Best regards,</Text>
 						<Row className="border border-black">
 							<Text className="my-0 text-base">Tejodeep Mitra Roy</Text>
 							<Text className="my-0 text-base">CTO</Text>
@@ -104,15 +104,15 @@ const ContactUsEmail = ({
 					</Section>
 				</Container>
 
-				<Container className="mt-20 ">
+				<Container className="mt-20">
 					<Row>
 						<Column className="px-20 text-right">
 							<Link href="https://www.webflexrr.com/">Home</Link>
 						</Column>
-						<Column className=" text-center">
+						<Column className="text-center">
 							<Link href="https://www.webflexrr.com/#services">Services</Link>
 						</Column>
-						<Column className=" text-center">
+						<Column className="text-center">
 							<Link href="https://www.webflexrr.com/#plans">Pricing</Link>
 						</Column>
 						<Column className="px-20 text-left">

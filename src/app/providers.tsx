@@ -1,6 +1,7 @@
 "use client";
+import { HeroUIProvider } from "@heroui/system";
 // import SmoothScrolling from "@/components/SmoothScrolling";
-import { NextUIProvider } from "@nextui-org/react";
+
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 export function Providers({
@@ -10,9 +11,11 @@ export function Providers({
 }): JSX.Element {
 	return (
 		// <SmoothScrolling>
-		<NextUIProvider>
+
+		<HeroUIProvider>
 			<NextThemesProvider attribute="class">{children}</NextThemesProvider>
-		</NextUIProvider>
+		</HeroUIProvider>
+
 		// </SmoothScrolling>
 	);
 }

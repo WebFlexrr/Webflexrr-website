@@ -3,12 +3,12 @@ import React from "react";
 
 const ProjectDetail = (): React.JSX.Element => {
 	return (
-		<section className="h-auto w-full ">
+		<section className="h-auto w-full">
 			<section className="h-auto w-full px-8 py-20 md:px-5 xl:py-36">
-				<section className="mx-auto flex h-auto w-full max-w-[100rem] flex-col gap-20 ">
+				<section className="mx-auto flex h-auto w-full max-w-[100rem] flex-col gap-20">
 					<section>
 						<section className="flex h-[50rem] w-full">
-							<section className="flex h-full w-1/2 flex-col justify-between border pb-40 pr-[14%]">
+							<section className="flex h-full w-1/2 flex-col justify-between border pr-[14%] pb-40">
 								<div className="flex w-full flex-col gap-5 border">
 									<span>
 										<h4>Description :</h4>

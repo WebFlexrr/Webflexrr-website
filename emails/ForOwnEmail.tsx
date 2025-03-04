@@ -55,7 +55,7 @@ const ForOwnEmail = ({
 				}}
 			>
 				<Body className="bg-offwhite font-sans text-base">
-					<Container className="p-45 bg-white">
+					<Container className="bg-white p-45">
 						<Img
 							src={`${baseUrl}/logos/logo.png`}
 							width="220"

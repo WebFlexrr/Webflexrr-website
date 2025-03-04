@@ -2,10 +2,12 @@ import React from "react";
 import type { Metadata } from "next";
 import Heading from "@/components/Heading";
 import { BlogItem } from "@/app/(Marketing)/blogs/components/blog-Item";
-import { Button, Card, CardBody, Image } from "@nextui-org/react";
+import { Button } from "@heroui/button";
+import { Card, CardBody } from "@heroui/card";
+import { Image } from "@heroui/image";
 
 import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/Navbar/NavBar";
 import { sanityFetch } from "@/sanity/lib/client";
 import { ALL_BLOG_QUERY } from "@/sanity/actions/queries";
 
@@ -21,7 +23,7 @@ const Blog = async (): Promise<React.JSX.Element> => {
 	const blogs = await sanityFetch<getBlog[]>({ query: ALL_BLOG_QUERY });
 
 	return (
-		<main className=" mx-auto h-auto w-full  overflow-x-hidden py-16 lg:py-28 ">
+		<main className="mx-auto h-auto w-full overflow-x-hidden py-16 lg:py-28">
 			<NavBar />
 			<Heading
 				heading={"Everything about web apps"}
@@ -30,10 +32,10 @@ const Blog = async (): Promise<React.JSX.Element> => {
 				}
 			/>
 			<section className="mt-32 grid w-full max-w-7xl grid-cols-3 gap-10">
-				<Card className=" col-span-2 flex w-full ">
+				<Card className="col-span-2 flex w-full">
 					<CardBody>
 						<section className="flex w-full gap-5">
-							<section className="w-1/2 ">
+							<section className="w-1/2">
 								<Image
 									className="aspect-video"
 									alt="acernity"
@@ -42,7 +44,7 @@ const Blog = async (): Promise<React.JSX.Element> => {
 									}
 								/>
 							</section>
-							<section className="flex w-1/2 flex-col  gap-5">
+							<section className="flex w-1/2 flex-col gap-5">
 								<h5 className="text-left text-3xl font-bold">
 									This is how to make a portfolio
 								</h5>
@@ -74,7 +76,7 @@ const Blog = async (): Promise<React.JSX.Element> => {
 										src={blog.thumbnail}
 										alt={blog.title}
 									/>
-									<section className="flex  flex-col">
+									<section className="flex flex-col">
 										<h6 className="text-lg font-bold">{blog.title}</h6>
 									</section>
 								</section>

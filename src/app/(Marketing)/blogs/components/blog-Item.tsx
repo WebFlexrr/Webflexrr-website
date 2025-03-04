@@ -1,13 +1,8 @@
 "use client";
-import {
-	Button,
-	Card,
-	CardBody,
-	CardFooter,
-	CardHeader,
-	Image,
-	Link,
-} from "@nextui-org/react";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
+import { Button } from "@heroui/button";
+import { Image } from "@heroui/image";
+import { Link } from "@heroui/link";
 
 export const BlogGrid = ({
 	children,
@@ -38,20 +33,20 @@ export const BlogItem = ({
 		<Link href={`/blogs/${slug}`}>
 			<Card
 				fullWidth
-				className="row-span-1 space-y-4 rounded-xl border  bg-white p-2  antialiased transition duration-200 hover:-translate-y-2 hover:shadow-2xl dark:border-white/[0.2] dark:bg-gray-700  dark:shadow-none"
+				className="row-span-1 space-y-4 rounded-xl border bg-white p-2 antialiased transition duration-200 hover:-translate-y-2 hover:shadow-2xl dark:border-white/[0.2] dark:bg-gray-700 dark:shadow-none"
 			>
 				<CardHeader>
-					<Image src={image} alt={title} className="aspect-video border " />
+					<Image src={image} alt={title} className="aspect-video border" />
 				</CardHeader>
 				<CardBody>
-					<span className="mb-2  font-sans text-xl font-bold  dark:text-neutral-200">
+					<span className="mb-2 font-sans text-xl font-bold dark:text-neutral-200">
 						{title}
 					</span>
 					<span className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
 						{description}
 					</span>
 				</CardBody>
-				<CardFooter className="flex justify-between ">
+				<CardFooter className="flex justify-between">
 					<span>
 						{new Date(date).toLocaleDateString("en-US", {
 							year: "numeric",

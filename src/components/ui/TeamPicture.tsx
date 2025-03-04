@@ -1,4 +1,6 @@
-import { Card, CardBody, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Image } from "@heroui/image";
+
 import Link from "next/link";
 import React, { type FC } from "react";
 import {
@@ -18,7 +20,7 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 		<Card
 			isFooterBlurred
 			radius="lg"
-			className="group h-auto w-full border border-primary p-3 "
+			className="group border-primary h-auto w-full border p-3"
 		>
 			<CardHeader>
 				<Image
@@ -27,19 +29,19 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 					height={"920"}
 					alt=""
 					radius="lg"
-					className="relative z-0 aspect-[4/5]  h-full w-full transition duration-700 ease-in-out group-hover:grayscale-0"
+					className="relative z-0 aspect-4/5 h-full w-full transition duration-700 ease-in-out group-hover:grayscale-0"
 				/>
 			</CardHeader>
-			<CardBody className="flex w-full flex-col items-center ">
+			<CardBody className="flex w-full flex-col items-center">
 				<section className="flex flex-col items-center">
 					<div className="text-2xl font-semibold text-black">
 						{personDetails.name}
 					</div>
-					<div className="mt-2  text-xl text-black">
+					<div className="mt-2 text-xl text-black">
 						{personDetails.position}
 					</div>
-					<div className="mt-2  text-center text-xl text-black">
-						<p className="text-sm ">{personDetails.about}</p>
+					<div className="mt-2 text-center text-xl text-black">
+						<p className="text-sm">{personDetails.about}</p>
 					</div>
 				</section>
 				<span className="mt-5 flex items-center text-2xl">
@@ -48,7 +50,7 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 							<Link
 								href={personDetails.linkedIn}
 								target="_blank"
-								className="mx-2   text-[#0077b5]"
+								className="mx-2 text-[#0077b5]"
 								aria-label="Linkedin Link"
 							>
 								<FaLinkedin className="" />
@@ -61,7 +63,7 @@ const TeamPicture: FC<TeamPictureProps> = ({ personDetails }) => {
 							<Link
 								href={personDetails.twitter}
 								target="_blank"
-								className="mx-2   text-black"
+								className="mx-2 text-black"
 								aria-label="Twitter Link"
 							>
 								{/* <BsTwitterX className="h-[14px] w-[14px]  " /> */}

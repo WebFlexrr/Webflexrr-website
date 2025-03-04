@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 	return (
-		<section className="  h-auto w-full py-20 " id={"howItWorks"}>
-			<section className=" mx-auto h-auto w-full max-w-7xl px-6">
+		<section className="h-auto w-full py-20" id={"howItWorks"}>
+			<section className="mx-auto h-auto w-full max-w-7xl px-6">
 				<Heading
 					heading={"How it Works"}
 					subHeading={"How it Works"}
@@ -27,26 +27,26 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 
 							<div className="relative grid grid-cols-1 gap-x-12 gap-y-12 text-center md:grid-cols-4">
 								<div>
-									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow">
+									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow-sm">
 										<span className="text-xl font-semibold text-gray-700">
 											{" "}
 											1{" "}
 										</span>
 									</div>
-									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
+									<h3 className="mt-6 text-center text-xl leading-tight font-semibold text-black md:mt-10 dark:text-white">
 										Book a Schedule Call
 									</h3>
 									<p className="mt-4 text-base text-gray-600"></p>
 								</div>
 
 								<div>
-									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow">
+									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow-sm">
 										<span className="text-xl font-semibold text-gray-700">
 											{" "}
 											2{" "}
 										</span>
 									</div>
-									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
+									<h3 className="mt-6 text-center text-xl leading-tight font-semibold text-black md:mt-10 dark:text-white">
 										Discuss About Your Idea
 									</h3>
 									<p className="mt-4 text-base text-gray-600">
@@ -57,13 +57,13 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 								</div>
 
 								<div>
-									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow">
+									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow-sm">
 										<span className="text-xl font-semibold text-gray-700">
 											{" "}
 											3{" "}
 										</span>
 									</div>
-									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
+									<h3 className="mt-6 text-center text-xl leading-tight font-semibold text-black md:mt-10 dark:text-white">
 										Develope the product
 									</h3>
 									<p className="mt-4 text-base text-gray-600">
@@ -73,13 +73,13 @@ const WorksFlowSection = async (): Promise<React.JSX.Element> => {
 									</p>
 								</div>
 								<div>
-									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow">
+									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow-sm">
 										<span className="text-xl font-semibold text-gray-700">
 											{" "}
 											4{" "}
 										</span>
 									</div>
-									<h3 className="mt-6 text-center text-xl font-semibold leading-tight text-black dark:text-white md:mt-10">
+									<h3 className="mt-6 text-center text-xl leading-tight font-semibold text-black md:mt-10 dark:text-white">
 										Deploy
 									</h3>
 									<p className="mt-4 text-base text-gray-600">

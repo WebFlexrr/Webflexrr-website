@@ -13,9 +13,9 @@ interface ProcessProps {
 }
 const Process: FC<ProcessProps> = ({ process }) => {
 	return (
-		<section className="h-auto w-full ">
-			<section className="h-auto w-full px-5 pb-20 pt-28 md:px-5">
-				<section className="mx-auto h-auto w-full max-w-[100rem] ">
+		<section className="h-auto w-full">
+			<section className="h-auto w-full px-5 pt-28 pb-20 md:px-5">
+				<section className="mx-auto h-auto w-full max-w-[100rem]">
 					<section className="flex h-fit w-full flex-col">
 						<Heading
 							heading={"Procedure"}
@@ -47,11 +47,11 @@ const Process: FC<ProcessProps> = ({ process }) => {
 										key={steps._key}
 										className="process-padding-left-0 relative flex w-full flex-col pl-0"
 									>
-										<section className="absolute left-0 top-1/2  h-[1px] w-full bg-primary">
-											<span className="relative h-full w-full bg-primary"></span>
+										<section className="bg-primary absolute top-1/2 left-0 h-[1px] w-full">
+											<span className="bg-primary relative h-full w-full"></span>
 										</section>
 										<section>
-											<div className="h-[340px] w-full  pb-11">
+											<div className="h-[340px] w-full pb-11">
 												<Image
 													src={steps.image}
 													width={"1000"}
@@ -60,15 +60,15 @@ const Process: FC<ProcessProps> = ({ process }) => {
 													className="h-full w-full"
 												/>
 											</div>
-											<div className="relative h-[1px] w-full before:absolute before:bottom-0 before:left-[-30%] before:right-0 before:top-[50px] before:m-auto before:h-[100px]  before:w-[1px] before:translate-x-1/2 before:bg-primary before:content-['']  "></div>
-											<div className="h-[340px] w-full  pt-11  ">
-												<div className="flex h-full w-full flex-col justify-between ">
+											<div className="before:bg-primary relative h-[1px] w-full before:absolute before:top-[50px] before:right-0 before:bottom-0 before:left-[-30%] before:m-auto before:h-[100px] before:w-[1px] before:translate-x-1/2 before:content-['']"></div>
+											<div className="h-[340px] w-full pt-11">
+												<div className="flex h-full w-full flex-col justify-between">
 													<div className="h-fit w-full text-left">
-														<span className=" stroke-text border-secondary text-[60px] font-semibold leading-[69px] text-transparent transition duration-500 ease-in-out hover:text-primary ">
+														<span className="stroke-text border-secondary hover:text-primary text-[60px] leading-[69px] font-semibold text-transparent transition duration-500 ease-in-out">
 															{steps.step}
 														</span>
 													</div>
-													<div className="h-fit w-full text-[26px] font-semibold leading-[30.16px] text-secondary">
+													<div className="text-secondary h-fit w-full text-[26px] leading-[30.16px] font-semibold">
 														<span>{steps.title}</span>
 													</div>
 													<div className="h-fit w-full">
@@ -81,13 +81,13 @@ const Process: FC<ProcessProps> = ({ process }) => {
 								) : (
 									<SwiperSlide
 										key={steps._key}
-										className="process-padding-left-0 relative flex w-full flex-col pr-20 "
+										className="process-padding-left-0 relative flex w-full flex-col pr-20"
 									>
-										<section className="absolute left-0 top-1/2  h-[1px] w-full bg-primary">
-											<span className="relative h-full w-full bg-primary"></span>
+										<section className="bg-primary absolute top-1/2 left-0 h-[1px] w-full">
+											<span className="bg-primary relative h-full w-full"></span>
 										</section>
-										<section className="flex flex-col-reverse ">
-											<div className="h-[340px] w-full  pt-11">
+										<section className="flex flex-col-reverse">
+											<div className="h-[340px] w-full pt-11">
 												<Image
 													src={steps.image}
 													width={"1000"}
@@ -96,17 +96,17 @@ const Process: FC<ProcessProps> = ({ process }) => {
 													className="h-full w-full"
 												/>
 											</div>
-											<div className="relative h-[1px] w-full  before:absolute before:bottom-0 before:left-[-30%] before:right-0 before:top-[-100px] before:m-auto before:h-[100px]  before:w-[1px] before:translate-x-1/2 before:bg-primary before:content-['']  "></div>
-											<div className="h-[340px] w-full  pb-11  ">
-												<div className="flex h-full w-full flex-col justify-between ">
-													<div className="h-fit w-full text-[26px] font-semibold leading-[30.16px] text-secondary">
+											<div className="before:bg-primary relative h-[1px] w-full before:absolute before:top-[-100px] before:right-0 before:bottom-0 before:left-[-30%] before:m-auto before:h-[100px] before:w-[1px] before:translate-x-1/2 before:content-['']"></div>
+											<div className="h-[340px] w-full pb-11">
+												<div className="flex h-full w-full flex-col justify-between">
+													<div className="text-secondary h-fit w-full text-[26px] leading-[30.16px] font-semibold">
 														<span>{steps.title}</span>
 													</div>
 													<div className="h-fit w-full">
 														<p>{steps.description}</p>
 													</div>
 													<div className="h-fit w-full text-left">
-														<span className=" stroke-text border-secondary text-[60px] font-semibold leading-[69px] text-transparent transition duration-500 ease-in-out hover:text-primary ">
+														<span className="stroke-text border-secondary hover:text-primary text-[60px] leading-[69px] font-semibold text-transparent transition duration-500 ease-in-out">
 															{steps.step}
 														</span>
 													</div>

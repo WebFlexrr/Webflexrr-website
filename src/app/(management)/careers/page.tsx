@@ -3,9 +3,11 @@ import type { Metadata } from "next";
 
 import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
-import { Card, CardBody, CardHeader, Divider, Image } from "@nextui-org/react";
 
-import NavBar2 from "@/components/NavBar2";
+import { Divider } from "@heroui/divider";
+import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Image } from "@heroui/image";
+import NavBar2 from "@/components/Navbar/NavBar2";
 
 export const metadata: Metadata = {
 	title: {
@@ -28,7 +30,7 @@ const Careers = async (): Promise<React.JSX.Element> => {
 				}
 			/>
 
-			<section className="mx-auto my-20 mb-60 flex w-full max-w-xl flex-col gap-10 ">
+			<section className="mx-auto my-20 mb-60 flex w-full max-w-xl flex-col gap-10">
 				<Card isHoverable className="w-full">
 					<CardHeader className="flex gap-3">
 						<Image

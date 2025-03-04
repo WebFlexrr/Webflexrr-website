@@ -78,20 +78,20 @@ const ContactUs = (): React.JSX.Element => {
 	};
 
 	return (
-		<section className="h-auto w-full ">
-			<section className="h-auto w-full py-20  xl:px-0 xl:py-28">
-				<section className=" mx-auto flex h-auto w-full max-w-[100rem] flex-col px-5 md:px-5">
+		<section className="h-auto w-full">
+			<section className="h-auto w-full py-20 xl:px-0 xl:py-28">
+				<section className="mx-auto flex h-auto w-full max-w-[100rem] flex-col px-5 md:px-5">
 					{/* Heading */}
-					<section className=" m-auto flex h-auto w-full max-w-[90rem] flex-col items-center justify-between gap-3 text-secondary md:gap-4  lg:flex-row lg:gap-0   ">
-						<section className=" flex  h-full w-full flex-col items-center justify-between gap-3 md:flex-row md:gap-0  lg:w-[59%] ">
-							<section className=" flex h-full w-full items-center md:w-[15%] lg:w-[54%] ">
-								<section className=" flex h-full w-full justify-center">
+					<section className="text-secondary m-auto flex h-auto w-full max-w-[90rem] flex-col items-center justify-between gap-3 md:gap-4 lg:flex-row lg:gap-0">
+						<section className="flex h-full w-full flex-col items-center justify-between gap-3 md:flex-row md:gap-0 lg:w-[59%]">
+							<section className="flex h-full w-full items-center md:w-[15%] lg:w-[54%]">
+								<section className="flex h-full w-full justify-center">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="100"
 										height="93"
 										viewBox="0 0 100 93"
-										className=" relative h-[110px] w-[110px] leading-[90px]"
+										className="relative h-[110px] w-[110px] leading-[90px]"
 									>
 										<g id="Group_773" transform="translate(-1935.085 -655)">
 											{" "}
@@ -210,14 +210,14 @@ const ContactUs = (): React.JSX.Element => {
 									</svg>
 								</section>
 							</section>
-							<section className=" h-full w-full md:w-[75%] lg:w-[87%]">
-								<section className=" text-center text-[44px] font-semibold leading-[52px] text-primary lg:text-start xl:text-[47px] xl:leading-[57px] 2xl:text-[60px] 2xl:leading-[72px]">
+							<section className="h-full w-full md:w-[75%] lg:w-[87%]">
+								<section className="text-primary text-center text-[44px] leading-[52px] font-semibold lg:text-start xl:text-[47px] xl:leading-[57px] 2xl:text-[60px] 2xl:leading-[72px]">
 									<span>We&apos;ll respond to you in an hour. </span>
 								</section>
 							</section>
 						</section>
 						<section className="h-full w-full lg:w-[33%]">
-							<section className=" text-center lg:text-start ">
+							<section className="text-center lg:text-start">
 								<p>
 									Discover the essence of innovation through our diverse
 									portfolio. Each project at WebFlexrr is a testament to
@@ -230,52 +230,52 @@ const ContactUs = (): React.JSX.Element => {
 					</section>
 
 					{/* Body */}
-					<section className=" mt-10 flex h-auto w-full flex-col gap-10 md:mt-28 md:flex-row lg:justify-between xl:mt-40">
+					<section className="mt-10 flex h-auto w-full flex-col gap-10 md:mt-28 md:flex-row lg:justify-between xl:mt-40">
 						{/* Left side */}
-						<section className=" relative h-full w-full py-16 md:w-[60%] md:py-0 lg:w-[60%] xl:w-[68%]">
-							<section className=" flex h-full w-full flex-col xl:gap-6 xl:pr-32">
-								<div className=" hero1 flex h-fit w-full items-center gap-6">
+						<section className="relative h-full w-full py-16 md:w-[60%] md:py-0 lg:w-[60%] xl:w-[68%]">
+							<section className="flex h-full w-full flex-col xl:gap-6 xl:pr-32">
+								<div className="hero1 flex h-fit w-full items-center gap-6">
 									{/* <PulseCircle /> */}
-									<span className="text-[20px] leading-[42.64px] text-primary sm:text-[26px]">
+									<span className="text-primary text-[20px] leading-[42.64px] sm:text-[26px]">
 										Get in Touch
 									</span>
 								</div>
 
-								<section className=" flex h-full w-full flex-col gap-7">
-									<section className="w-full text-left xl:pr-28 ">
+								<section className="flex h-full w-full flex-col gap-7">
+									<section className="w-full text-left xl:pr-28">
 										<h3 className="text-left text-[30px] md:text-[40px]">
 											Reach Out to Us
 										</h3>
 									</section>
 									<form
 										onSubmit={handleSubmit(onSubmit)}
-										className="flex h-fit w-full flex-wrap gap-0 "
+										className="flex h-fit w-full flex-wrap gap-0"
 									>
-										<span className=" text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pb-10 md:pr-6 lg:pr-9">
+										<span className="text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pr-6 md:pb-10 lg:pr-9">
 											<input
 												type="text"
 												id="firstName"
-												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-hidden"
 												placeholder="First Name"
 												{...register("firstName")}
 											/>
 											<p>{errors.firstName?.message}</p>
 										</span>
-										<span className=" text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pb-10 md:pl-6 lg:pl-9">
+										<span className="text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pb-10 md:pl-6 lg:pl-9">
 											<input
 												type="text"
 												id="lastName"
-												className="border-paragraph h-fit w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph h-fit w-full border-b-2 bg-transparent py-[15px] focus:outline-hidden"
 												placeholder="Last Name"
 												{...register("lastName")}
 											/>
 											<p>{errors.lastName?.message}</p>
 										</span>
-										<span className="text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pb-10 md:pr-6 lg:pr-9">
+										<span className="text-paragraph h-fit w-full pb-5 text-[16px] md:w-1/2 md:pr-6 md:pb-10 lg:pr-9">
 											<input
 												type="number"
 												id="number"
-												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-hidden"
 												placeholder="Your Number"
 												{...register("number")}
 											/>
@@ -285,17 +285,17 @@ const ContactUs = (): React.JSX.Element => {
 											<input
 												type="email"
 												id="email"
-												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-hidden"
 												placeholder="Your Email"
 												{...register("email")}
 											/>
 											<p>{errors.email?.message}</p>
 										</span>
-										<span className="text-paragraph  h-fit w-full pb-5 text-[16px] md:pb-10">
+										<span className="text-paragraph h-fit w-full pb-5 text-[16px] md:pb-10">
 											<input
 												type="text"
 												id="companyName"
-												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-none"
+												className="border-paragraph w-full border-b-2 bg-transparent py-[15px] focus:outline-hidden"
 												placeholder="Company Name"
 												{...register("companyName")}
 											/>
@@ -306,15 +306,15 @@ const ContactUs = (): React.JSX.Element => {
 											cols={4}
 											rows={4}
 											placeholder="Additional Message"
-											className="h-26 border-paragraph text-paragraph w-full resize-y border-b-2 bg-transparent py-[15px] text-[16px] focus:outline-none lg:h-32"
+											className="border-paragraph text-paragraph h-26 w-full resize-y border-b-2 bg-transparent py-[15px] text-[16px] focus:outline-hidden lg:h-32"
 											{...register("additionalMessage")}
 										/>
 										<p>{errors.additionalMessage?.message}</p>
 										<button
 											type="submit"
-											className="group mt-16 flex h-fit w-fit items-center gap-3 border border-secondary px-10 py-3 text-secondary transition duration-500 ease-in-out hover:border-primary hover:text-primary lg:mt-20"
+											className="group border-secondary text-secondary hover:border-primary hover:text-primary mt-16 flex h-fit w-fit items-center gap-3 border px-10 py-3 transition duration-500 ease-in-out lg:mt-20"
 										>
-											<div className="h-2 w-2 rounded-full bg-primary  transition duration-500 ease-in-out group-hover:bg-secondary"></div>
+											<div className="bg-primary group-hover:bg-secondary h-2 w-2 rounded-full transition duration-500 ease-in-out"></div>
 											Submit
 										</button>
 									</form>
@@ -322,7 +322,7 @@ const ContactUs = (): React.JSX.Element => {
 							</section>
 						</section>
 						{/* Right Side */}
-						<section className=" relative h-fit w-full rounded-lg border border-primary p-9 md:h-[40rem] md:w-[40%] md:p-6 lg:h-full lg:w-[40%] xl:w-[32%] xl:p-14 ">
+						<section className="border-primary relative h-fit w-full rounded-lg border p-9 md:h-[40rem] md:w-[40%] md:p-6 lg:h-full lg:w-[40%] xl:w-[32%] xl:p-14">
 							<section className="flex h-auto w-full flex-col items-start gap-6">
 								<h2 className="text-[44px] leading-[52.6px]">Say Hello !</h2>
 								<p>
@@ -337,41 +337,41 @@ const ContactUs = (): React.JSX.Element => {
 									alt={""}
 								/>
 							</section>
-							<section className=" mt-10 flex h-auto w-full flex-col gap-4 xl:mt-20 ">
-								<h4 className="text-[30px] font-semibold leading-[34.8px]">
+							<section className="mt-10 flex h-auto w-full flex-col gap-4 xl:mt-20">
+								<h4 className="text-[30px] leading-[34.8px] font-semibold">
 									Enquires
 								</h4>
 								<span>webflexrr@gmail.com</span>
-								<address className="mt-4 w-full lg:w-fit ">
+								<address className="mt-4 w-full lg:w-fit">
 									<ul className="mx-auto flex w-fit flex-wrap gap-6">
 										<li>
 											<Link
 												href={"https://twitter.com/WebFlexRR"}
 												target="_blank"
-												className="border-grey1 flex  h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
+												className="border-grey1 border-secondary bg-primary text-secondary flex h-[35px] w-[35px] items-center justify-center rounded-full border transition duration-300 ease-in-out"
 												aria-label="Twitter"
 											>
-												<BsTwitterX className="h-[14px] w-[14px] " />
+												<BsTwitterX className="h-[14px] w-[14px]" />
 											</Link>
 										</li>
 										<li>
 											<Link
 												href={"https://www.youtube.com/@webflexrr"}
 												target="_blank"
-												className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
+												className="border-grey1 border-secondary bg-primary text-secondary flex h-[35px] w-[35px] items-center justify-center rounded-full border transition duration-300 ease-in-out"
 												aria-label="Linkedin"
 											>
-												<FaYoutube className="h-[16px] w-[16px] " />
+												<FaYoutube className="h-[16px] w-[16px]" />
 											</Link>
 										</li>
 										<li>
 											<Link
 												href={"https://www.linkedin.com/company/webflexrr"}
 												target="_blank"
-												className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
+												className="border-grey1 border-secondary bg-primary text-secondary flex h-[35px] w-[35px] items-center justify-center rounded-full border transition duration-300 ease-in-out"
 												aria-label="Linkedin"
 											>
-												<FaLinkedinIn className="h-[16px] w-[16px] " />
+												<FaLinkedinIn className="h-[16px] w-[16px]" />
 											</Link>
 										</li>
 										<li>
@@ -380,7 +380,7 @@ const ContactUs = (): React.JSX.Element => {
 													"https://www.facebook.com/profile.php?id=61553639945217"
 												}
 												target="_blank"
-												className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
+												className="border-grey1 border-secondary bg-primary text-secondary flex h-[35px] w-[35px] items-center justify-center rounded-full border transition duration-300 ease-in-out"
 												aria-label="Facebook"
 											>
 												<FaFacebookF className="h-[16px] w-[16px]" />
@@ -390,7 +390,7 @@ const ContactUs = (): React.JSX.Element => {
 											<Link
 												href={"https://www.instagram.com/webflexrr"}
 												target="_blank"
-												className="border-grey1 flex h-[35px] w-[35px] items-center justify-center rounded-full border border-secondary bg-primary text-secondary transition duration-300 ease-in-out"
+												className="border-grey1 border-secondary bg-primary text-secondary flex h-[35px] w-[35px] items-center justify-center rounded-full border transition duration-300 ease-in-out"
 												aria-label="Instagram"
 											>
 												<FaInstagram className="h-[17px] w-[17px]" />
@@ -404,24 +404,24 @@ const ContactUs = (): React.JSX.Element => {
 				</section>
 
 				{/* Address & Location */}
-				<section className=" mt-20 h-auto w-full lg:mt-40 ">
-					<section className=" m-auto flex h-auto w-full flex-col items-center justify-between gap-3 px-5 text-secondary">
+				<section className="mt-20 h-auto w-full lg:mt-40">
+					<section className="text-secondary m-auto flex h-auto w-full flex-col items-center justify-between gap-3 px-5">
 						<Heading
 							heading={null}
 							subHeading={"Our Affiliate Branches"}
 							para="contact"
 						/>
-						<div className=" mx-auto w-full text-center lg:max-w-[60%] ">
+						<div className="mx-auto w-full text-center lg:max-w-[60%]">
 							Et tortor consequat id porta nibh venenatis cras sed felis.
 							Pharetra diam sit amet nisl suscipit. Etiam dignissim diam quis
 							enim lobortis scelerisque fermentum. Volutpat blandit aliquam
 							etiam velit sceleris.
 						</div>
 					</section>
-					<section className="relative z-0 mb-[390px] mt-10 h-auto w-full md:mb-[500px] lg:mt-16 xl:mb-[560px]">
-						<section className=" relative z-10 mx-auto flex h-auto w-full max-w-[90rem] flex-col justify-center px-5 sm:px-20 md:max-w-full md:flex-row md:flex-wrap md:px-5 lg:max-w-[100rem]">
+					<section className="relative z-0 mt-10 mb-[390px] h-auto w-full md:mb-[500px] lg:mt-16 xl:mb-[560px]">
+						<section className="relative z-10 mx-auto flex h-auto w-full max-w-[90rem] flex-col justify-center px-5 sm:px-20 md:max-w-full md:flex-row md:flex-wrap md:px-5 lg:max-w-[100rem]">
 							<section className="my-2 h-auto w-full px-2 md:w-1/2 xl:w-1/4">
-								<div className="bg-background3 flex h-auto w-full flex-col gap-6 rounded-lg border border-secondary px-10 py-12 transition duration-700 ease-in-out hover:border-primary lg:gap-10 lg:px-14  lg:py-20 xl:px-10 xl:py-16">
+								<div className="bg-background3 border-secondary hover:border-primary flex h-auto w-full flex-col gap-6 rounded-lg border px-10 py-12 transition duration-700 ease-in-out lg:gap-10 lg:px-14 lg:py-20 xl:px-10 xl:py-16">
 									<h5 className="text-primary">Canbeera</h5>
 									<h5>45 Laggon Street, Canberra, Looloith, E1 6GL</h5>
 									<section>
@@ -431,7 +431,7 @@ const ContactUs = (): React.JSX.Element => {
 								</div>
 							</section>
 							<section className="my-2 h-auto w-full px-2 md:w-1/2 xl:w-1/4">
-								<div className="bg-background3 flex h-auto w-full flex-col gap-6 rounded-lg border border-secondary px-10 py-12 transition duration-700 ease-in-out hover:border-primary lg:gap-10 lg:px-14  lg:py-20 xl:px-10 xl:py-16">
+								<div className="bg-background3 border-secondary hover:border-primary flex h-auto w-full flex-col gap-6 rounded-lg border px-10 py-12 transition duration-700 ease-in-out lg:gap-10 lg:px-14 lg:py-20 xl:px-10 xl:py-16">
 									<h5 className="text-primary">Canbeera</h5>
 									<h5>45 Laggon Street, Canberra, Looloith, E1 6GL</h5>
 									<section>
@@ -441,7 +441,7 @@ const ContactUs = (): React.JSX.Element => {
 								</div>
 							</section>
 							<section className="my-2 h-auto w-full px-2 md:w-1/2 xl:w-1/4">
-								<div className="bg-background3 flex h-auto w-full flex-col gap-6 rounded-lg border border-secondary px-10 py-12 transition duration-700 ease-in-out hover:border-primary lg:gap-10 lg:px-14  lg:py-20 xl:px-10 xl:py-16">
+								<div className="bg-background3 border-secondary hover:border-primary flex h-auto w-full flex-col gap-6 rounded-lg border px-10 py-12 transition duration-700 ease-in-out lg:gap-10 lg:px-14 lg:py-20 xl:px-10 xl:py-16">
 									<h5 className="text-primary">Canbeera</h5>
 									<h5>45 Laggon Street, Canberra, Looloith, E1 6GL</h5>
 									<section>
@@ -452,7 +452,7 @@ const ContactUs = (): React.JSX.Element => {
 							</section>
 						</section>
 
-						<section className="absolute -bottom-[390px] -z-10 w-full lg:-bottom-[515px] xl:-bottom-[530px] ">
+						<section className="absolute -bottom-[390px] -z-10 w-full lg:-bottom-[515px] xl:-bottom-[530px]">
 							<iframe
 								src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d460.31440373094006!2d88.4096017!3d22.6345709!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef1ff6e4e3e2ac3%3A0x2ef1ce449bfd9b0c!2sWebflexrr%20Digital%20Services!5e0!3m2!1sen!2sin!4v1705682875020!5m2!1sen!2sin"
 								className="h-[400px] w-full lg:h-[550px] xl:h-[580px]"

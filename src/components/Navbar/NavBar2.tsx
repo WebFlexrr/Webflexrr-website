@@ -12,7 +12,8 @@ import {
 
 import Image from "next/image";
 
-import { Button, Link } from "@nextui-org/react";
+import { Button } from "@heroui/button";
+import { Link } from "@heroui/link";
 import { RiWhatsappFill } from "react-icons/ri";
 import { usePathname } from "next/navigation";
 
@@ -43,7 +44,7 @@ const NavBar2 = () => {
 			onMenuOpenChange={setIsMenuOpen}
 			isBordered
 			maxWidth={"xl"}
-			className={"w-full "}
+			className={"w-full"}
 		>
 			<NavbarContent>
 				<NavbarBrand>
@@ -67,7 +68,7 @@ const NavBar2 = () => {
 						href="/"
 						className={`${
 							pathname === "/" && "bg-primary text-white dark:text-white"
-						} rounded-full px-2 py-1 text-lg font-medium  text-black antialiased dark:font-normal dark:text-white  `}
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:font-normal dark:text-white`}
 					>
 						Home
 					</Link>
@@ -77,8 +78,8 @@ const NavBar2 = () => {
 						aria-current="page"
 						color="foreground"
 						className={` ${
-							pathname === "/works" && "bg-primary text-white  dark:text-white"
-						} rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white  `}
+							pathname === "/works" && "bg-primary text-white dark:text-white"
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:text-white`}
 						href="/works"
 					>
 						Works
@@ -89,8 +90,7 @@ const NavBar2 = () => {
 						color="foreground"
 						className={`${
 							pathname === "/careers" && "bg-primary text-white dark:text-white"
-						}
-							rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white `}
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:text-white`}
 						href="/careers"
 					>
 						Careers
@@ -106,12 +106,11 @@ const NavBar2 = () => {
 				<NavbarItem>
 					<Link target="_blank" href="https://wa.me/9038007312">
 						<Button
-							variant={"shadow"}
 							color={"secondary"}
 							radius="full"
-							className="hidden items-center justify-center text-lg font-medium text-black dark:text-white sm:flex"
+							className="hidden items-center justify-center text-lg font-medium text-black sm:flex dark:text-white"
 						>
-							<RiWhatsappFill className="mr-2 h-[25px] w-[25px]   text-lg text-[#25D366]" />
+							<RiWhatsappFill className="mr-2 h-[25px] w-[25px] text-lg text-[#25D366]" />
 							Contact Us
 						</Button>
 					</Link>

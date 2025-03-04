@@ -109,7 +109,7 @@ const features = [
 			"We'll Get your website out there in the world, where it belongs, with our lightning- fast deployment services.",
 		href: "/",
 		cta: "Learn more",
-		background: <div className="absolute -right-20 -top-20 opacity-60" />,
+		background: <div className="absolute -top-20 -right-20 opacity-60" />,
 		className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
 	},
 	{
@@ -120,21 +120,21 @@ const features = [
 		href: "/",
 		cta: "Learn more",
 		background: (
-			<div className="flex flex-col gap-6 rounded-xl border border-foreground/10 bg-gradient-to-br from-foreground/5 to-transparent p-6 shadow-lg transition-colors hover:border-primary/20">
-				<section className="flex flex-col space-y-4 rounded-lg border border-foreground/10 bg-background/50 p-4">
-					<section className="flex items-center gap-2 rounded-full border border-foreground/10 px-3 py-2 text-sm">
-						<Search className="h-4 w-4 text-primary" />
+			<div className="border-foreground/10 from-foreground/5 hover:border-primary/20 flex flex-col gap-6 rounded-xl border bg-linear-to-br to-transparent p-6 shadow-lg transition-colors">
+				<section className="border-foreground/10 bg-background/50 flex flex-col space-y-4 rounded-lg border p-4">
+					<section className="border-foreground/10 flex items-center gap-2 rounded-full border px-3 py-2 text-sm">
+						<Search className="text-primary h-4 w-4" />
 						<span>Best Software Development Company</span>
 					</section>
 					<section className="space-y-3 px-3">
-						<div className="text-xs text-foreground/80">
+						<div className="text-foreground/80 text-xs">
 							<span>https://www.webflexrr.com</span>
 							<div className="mt-2">
 								<span className="text-sm font-medium">
 									Transform your online presence with us
 								</span>
 							</div>
-							<div className="mt-1.5 text-foreground/60">
+							<div className="text-foreground/60 mt-1.5">
 								<span>Expert web development solutions for your business</span>
 							</div>
 						</div>
@@ -142,10 +142,10 @@ const features = [
 				</section>
 				<section className="space-y-3">
 					<h5 className="flex items-baseline">
-						<span className="mr-2 text-2xl font-bold text-primary">01.</span>
+						<span className="text-primary mr-2 text-2xl font-bold">01.</span>
 						<span className="text-xl font-semibold">SEO Optimization</span>
 					</h5>
-					<p className="text-sm text-foreground/80">
+					<p className="text-foreground/80 text-sm">
 						We ensure your website ranks higher through advanced SEO strategies,
 						driving organic traffic and improving visibility.
 					</p>
@@ -160,7 +160,7 @@ const features = [
 		description: "Supports 100+ languages and counting.",
 		href: "/",
 		cta: "Learn more",
-		background: <div className="absolute -right-20 -top-20 opacity-60" />,
+		background: <div className="absolute -top-20 -right-20 opacity-60" />,
 		className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
 	},
 	{
@@ -169,7 +169,7 @@ const features = [
 		description: "Use the calendar to filter your files by date.",
 		href: "/",
 		cta: "Learn more",
-		background: <div className="absolute -right-20 -top-20 opacity-60" />,
+		background: <div className="absolute -top-20 -right-20 opacity-60" />,
 		className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
 	},
 	{
@@ -180,18 +180,18 @@ const features = [
 		href: "/",
 		cta: "Learn more",
 		background: (
-			<section className="relative flex h-full w-full flex-col justify-between gap-5 overflow-hidden rounded-2xl  shadow-xl">
-				<section className=" mt-12 flex w-full flex-col  justify-end space-y-6 text-white   ">
-					<div className=" relative z-20 w-full overflow-hidden">
+			<section className="relative flex h-full w-full flex-col justify-between gap-5 overflow-hidden rounded-2xl shadow-xl">
+				<section className="mt-12 flex w-full flex-col justify-end space-y-6 text-white">
+					<div className="relative z-20 w-full overflow-hidden">
 						<div
 							style={{ animationDirection: "normal" }}
-							className=" flex w-max  min-w-full shrink-0 animate-left-to-right flex-nowrap gap-5 text-white  "
+							className="animate-left-to-right flex w-max min-w-full shrink-0 flex-nowrap gap-5 text-white"
 						>
-							<div className="relative z-40 mb-4 flex flex-shrink-0 space-x-4">
+							<div className="relative z-40 mb-4 flex shrink-0 space-x-4">
 								{Row1.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6 items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
+										className="bg-foreground text-background flex h-6 items-center justify-center gap-2 rounded-md border px-6 py-4 text-sm font-medium shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -204,11 +204,11 @@ const features = [
 									</div>
 								))}
 							</div>
-							<div className="relative z-40 mb-4 flex flex-shrink-0 space-x-4">
+							<div className="relative z-40 mb-4 flex shrink-0 space-x-4">
 								{Row1.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6 items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
+										className="bg-foreground text-background flex h-6 items-center justify-center gap-2 rounded-md border px-6 py-4 text-sm font-medium shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -223,16 +223,16 @@ const features = [
 							</div>
 						</div>
 					</div>
-					<div className=" relative z-20 w-full overflow-hidden">
+					<div className="relative z-20 w-full overflow-hidden">
 						<div
 							style={{ animationDirection: "reverse" }}
-							className=" flex w-max min-w-full shrink-0 animate-left-to-right flex-row-reverse flex-nowrap gap-5 "
+							className="animate-left-to-right flex w-max min-w-full shrink-0 flex-row-reverse flex-nowrap gap-5"
 						>
-							<div className="relative z-40 mb-4 flex flex-shrink-0 space-x-4">
+							<div className="relative z-40 mb-4 flex shrink-0 space-x-4">
 								{Row2.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6  items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
+										className="bg-foreground text-background flex h-6 items-center justify-center gap-2 rounded-md border px-6 py-4 text-sm font-medium shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -245,11 +245,11 @@ const features = [
 									</div>
 								))}
 							</div>
-							<div className="relative z-40 mb-4 flex flex-shrink-0 space-x-4">
+							<div className="relative z-40 mb-4 flex shrink-0 space-x-4">
 								{Row2.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6 items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
+										className="bg-foreground text-background flex h-6 items-center justify-center gap-2 rounded-md border px-6 py-4 text-sm font-medium shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -264,16 +264,16 @@ const features = [
 							</div>
 						</div>
 					</div>
-					<div className="  relative z-20 w-full overflow-hidden ">
+					<div className="relative z-20 w-full overflow-hidden">
 						<div
 							style={{ animationDirection: "normal" }}
-							className=" flex  w-max min-w-full shrink-0 animate-left-to-right flex-nowrap gap-5"
+							className="animate-left-to-right flex w-max min-w-full shrink-0 flex-nowrap gap-5"
 						>
-							<div className="relative z-40 mb-4 flex flex-shrink-0 space-x-4">
+							<div className="relative z-40 mb-4 flex shrink-0 space-x-4">
 								{Row1.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6 items-center justify-center gap-2 rounded-md border bg-foreground px-6 py-4  text-sm  font-medium text-background shadow-md"
+										className="bg-foreground text-background flex h-6 items-center justify-center gap-2 rounded-md border px-6 py-4 text-sm font-medium shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -286,11 +286,11 @@ const features = [
 									</div>
 								))}
 							</div>
-							<div className="relative z-40 mb-4 flex flex-shrink-0 space-x-4">
+							<div className="relative z-40 mb-4 flex shrink-0 space-x-4">
 								{Row1.map((item, i) => (
 									<div
 										key={i}
-										className=" flex h-6  items-center justify-center gap-2 rounded-md border px-6  py-4  text-sm font-medium shadow-md"
+										className="flex h-6 items-center justify-center gap-2 rounded-md border px-6 py-4 text-sm font-medium shadow-md"
 									>
 										<Image
 											src={item.icon}
@@ -306,19 +306,19 @@ const features = [
 						</div>
 					</div>
 				</section>
-				<section className=" mt-4 h-full w-full ">
+				<section className="mt-4 h-full w-full">
 					<div
 						id={"Website"}
 						// className=" mx-auto  h-[130px] w-[160px] rounded-lg border-x-2 border-t-2 bg-white shadow-2xl  "
-						className=" mx-auto  h-[130px] w-[160px] rounded-lg border-x-2 border-t-2 bg-white shadow-2xl  "
+						className="mx-auto h-[130px] w-[160px] rounded-lg border-x-2 border-t-2 bg-white shadow-2xl"
 					>
-						<div className="flex h-2 w-full items-center gap-1 rounded-t-md  px-2">
+						<div className="flex h-2 w-full items-center gap-1 rounded-t-md px-2">
 							<div className="h-[4px] w-[4px] rounded-full bg-red-600"></div>
 							<div className="h-[4px] w-[4px] rounded-full bg-yellow-300"></div>
 							<div className="h-[4px] w-[4px] rounded-full bg-green-700"></div>
 						</div>
-						<section className=" flex h-full w-full items-center justify-center gap-2">
-							<div className="flex h-10 w-10 items-center justify-center rounded-full border bg-black  ">
+						<section className="flex h-full w-full items-center justify-center gap-2">
+							<div className="flex h-10 w-10 items-center justify-center rounded-full border bg-black">
 								<FaCode className="text-lg text-white" />
 							</div>
 							{/* <div className="flex h-10 w-10 items-center justify-center rounded-full border bg-black  ">
@@ -326,7 +326,7 @@ const features = [
 									</div> */}
 						</section>
 					</div>
-					<div className="absolute  -bottom-16 left-28 -z-10 h-44 w-44 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 blur-2xl"></div>
+					<div className="absolute -bottom-16 left-28 -z-10 h-44 w-44 rounded-full bg-linear-to-r from-cyan-500 to-blue-500 blur-2xl"></div>
 				</section>
 			</section>
 		),
@@ -343,7 +343,7 @@ import { FaCode } from "react-icons/fa";
 
 const FeatureSection = () => {
 	return (
-		<section className="w-full bg-background py-16 md:py-24">
+		<section className="bg-background w-full py-16 md:py-24">
 			<section className="mx-auto w-full max-w-7xl px-4 md:px-6">
 				<Heading
 					heading="Why Choose Us"

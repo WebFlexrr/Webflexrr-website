@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const Services = (): JSX.Element => {
 	return (
-		<main className="bg-background2 relative z-30 h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth dark:bg-black">
+		<main className="bg-background2 relative z-30 h-screen w-full overflow-x-hidden overflow-y-auto scroll-smooth dark:bg-black">
 			<NavbarSection />
 			<MainTitle heading={"Services"} />
 			<HeroServices />

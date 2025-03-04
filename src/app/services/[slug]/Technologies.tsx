@@ -30,17 +30,17 @@ const Technologies: FC<TechnologiesProps> = ({ weAreUsing }) => {
 
 	return (
 		// <section ref={technologies} className="h-auto w-full bg-background ">
-		<section className="h-auto w-full bg-background ">
-			<section className="h-auto w-full px-5 py-20 xl:py-28 ">
+		<section className="bg-background h-auto w-full">
+			<section className="h-auto w-full px-5 py-20 xl:py-28">
 				<Heading heading={"Technology"} subHeading={"We are Using "} />
-				<section className="bg-background3 mx-auto h-fit w-full max-w-[70rem] border-2 border-primary p-3 ">
-					<section className="grid h-full w-full grid-cols-2 gap-5 md:grid-cols-3  xl:grid-cols-6 ">
+				<section className="bg-background3 border-primary mx-auto h-fit w-full max-w-[70rem] border-2 p-3">
+					<section className="grid h-full w-full grid-cols-2 gap-5 md:grid-cols-3 xl:grid-cols-6">
 						{weAreUsing?.map((item) => (
 							<div
 								key={item._key}
-								className="technologiesSection flex h-[9rem] w-full items-center justify-center border-2 border-primary"
+								className="technologiesSection border-primary flex h-[9rem] w-full items-center justify-center border-2"
 							>
-								<span className="flex flex-col items-center justify-center gap-3 p-3.5 text-center font-semibold leading-[26px] text-secondary">
+								<span className="text-secondary flex flex-col items-center justify-center gap-3 p-3.5 text-center leading-[26px] font-semibold">
 									<Image
 										src={item.iconImage}
 										width={50}

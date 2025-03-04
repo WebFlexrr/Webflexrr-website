@@ -10,11 +10,11 @@ const NotFound = (): JSX.Element => {
 	return (
 		<main className="relative h-full w-full">
 			<div
-				className="absolute h-full w-full  bg-black bg-cover opacity-10"
+				className="absolute h-full w-full bg-black bg-cover opacity-10"
 				style={{ backgroundImage: "url('/assets/background.jpg')" }}
 			/>
 			<section className="relative flex h-full w-full items-center justify-center px-5">
-				<section className="flex flex-col items-center ">
+				<section className="flex flex-col items-center">
 					<Image
 						src={"/assets/404-image.png"}
 						width={"750"}
@@ -26,9 +26,9 @@ const NotFound = (): JSX.Element => {
 					<h1>Page Not Found</h1>
 					<Link
 						href={"/"}
-						className="group mt-10 flex h-fit w-fit items-center gap-3 border border-secondary px-7 py-3 text-secondary transition duration-500 ease-in-out hover:border-primary hover:text-primary"
+						className="group border-secondary text-secondary hover:border-primary hover:text-primary mt-10 flex h-fit w-fit items-center gap-3 border px-7 py-3 transition duration-500 ease-in-out"
 					>
-						<div className="h-2 w-2 rounded-full bg-primary  transition duration-500 ease-in-out group-hover:bg-secondary"></div>
+						<div className="bg-primary group-hover:bg-secondary h-2 w-2 rounded-full transition duration-500 ease-in-out"></div>
 						Back Home
 					</Link>
 				</section>

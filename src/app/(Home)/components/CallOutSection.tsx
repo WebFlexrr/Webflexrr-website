@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/button";
 import React from "react";
 
 // const people = [
@@ -48,9 +48,9 @@ import React from "react";
 
 const CallOutSection = (): React.JSX.Element => {
 	return (
-		<section className=" h-auto w-full">
-			<section className=" overflow-y-none z-20 mx-auto my-40  flex h-[36rem] w-full max-w-7xl rounded-2xl border-5 border-slate-400 bg-black bg-gradient-to-r from-purple-500 to-pink-500">
-				<section className="flex h-full w-1/2 flex-col gap-5 p-28 ">
+		<section className="h-auto w-full">
+			<section className="overflow-y-none z-20 mx-auto my-40 flex h-[36rem] w-full max-w-7xl rounded-2xl border-5 border-slate-400 bg-black bg-linear-to-r from-purple-500 to-pink-500">
+				<section className="flex h-full w-1/2 flex-col gap-5 p-28">
 					<section className="h-auto w-full">
 						<h4 className="text-white">
 							Want a website that converts? Get in touch!
@@ -67,17 +67,17 @@ const CallOutSection = (): React.JSX.Element => {
 							radius="full"
 							size="lg"
 							color="primary"
-							className=" text-lg font-medium"
+							className="text-lg font-medium"
 						>
 							Book a Call
 						</Button>
 					</section>
-					<div className=" flex  flex-row ">
+					<div className="flex flex-row">
 						{/* <AnimatedTooltip items={people} /> */}
 					</div>
 				</section>
-				<section className="relative h-full w-1/2  ">
-					<section className=" absolute grid w-full grid-cols-2">
+				<section className="relative h-full w-1/2">
+					<section className="absolute grid w-full grid-cols-2">
 						<section className="z-0 space-y-5 overflow-auto">
 							{/* <Image
 								src={"/assets/pixelperfect.png"}

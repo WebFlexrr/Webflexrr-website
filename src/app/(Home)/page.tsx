@@ -5,14 +5,16 @@ import FaqSection from "./components/FaqSection";
 import Services from "./components/Services";
 import About from "./components/About";
 import FeatureSection from "./components/FeatureSection";
-import NavBar3 from "@/components/NavBar3";
+import NavBar3 from "@/components/Navbar/NavBar3";
+import AnnouncementBar from "@/components/AnnouncementBar";
+import Hero from "./components/Hero";
 
 const Home = () => {
 	return (
 		<main className="p-0">
-			{/* <AnnouncementBar/> */}
+			<AnnouncementBar />
 			<NavBar3 />
-			{/* <Hero /> */}
+			<Hero />
 			<About />
 			<FeatureSection />
 			{/* <WhyChooseUs /> */}

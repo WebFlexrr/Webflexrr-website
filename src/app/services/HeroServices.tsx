@@ -4,19 +4,19 @@
 const HeroServices = async (): Promise<JSX.Element> => {
 	// const services = await getAllServices();
 	return (
-		<section className="h-auto w-full ">
+		<section className="h-auto w-full">
 			<section className="h-auto w-full px-8 py-20 md:px-5 xl:py-28">
-				<section className=" mx-auto flex h-auto w-full max-w-[100rem] flex-col gap-20">
+				<section className="mx-auto flex h-auto w-full max-w-[100rem] flex-col gap-20">
 					{/* Heading */}
-					<section className=" m-auto flex h-auto w-full max-w-[80rem] flex-col items-center justify-between gap-3 text-secondary  md:flex-row md:gap-0   ">
-						<section className="h-full w-full md:w-[15%] lg:w-[13%] ">
-							<section className=" flex h-full w-full items-center">
+					<section className="text-secondary m-auto flex h-auto w-full max-w-[80rem] flex-col items-center justify-between gap-3 md:flex-row md:gap-0">
+						<section className="h-full w-full md:w-[15%] lg:w-[13%]">
+							<section className="flex h-full w-full items-center">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="100"
 									height="93"
 									viewBox="0 0 100 93"
-									className=" relative block h-[90px] w-[90px] leading-[90px]"
+									className="relative block h-[90px] w-[90px] leading-[90px]"
 								>
 									<g id="Group_773" transform="translate(-1935.085 -655)">
 										{" "}
@@ -136,7 +136,7 @@ const HeroServices = async (): Promise<JSX.Element> => {
 							</section>
 						</section>
 						<section className="h-full w-full md:w-[48%] lg:w-[46%]">
-							<section className=" text-start text-[44px] font-semibold leading-[52px] text-primary xl:text-[47px] xl:leading-[57px]  2xl:text-[52.6px] 2xl:leading-[63px]">
+							<section className="text-primary text-start text-[44px] leading-[52px] font-semibold xl:text-[47px] xl:leading-[57px] 2xl:text-[52.6px] 2xl:leading-[63px]">
 								<span>We Provide A Digital Platform</span>
 							</section>
 						</section>
@@ -153,7 +153,7 @@ const HeroServices = async (): Promise<JSX.Element> => {
 						</section>
 					</section>
 
-					<section className=" grid h-auto w-full grid-cols-1 gap-y-14 md:grid-cols-2 md:gap-x-20  lg:gap-14 xl:grid-cols-3 xl:gap-x-[5rem] xl:gap-y-28 ">
+					<section className="grid h-auto w-full grid-cols-1 gap-y-14 md:grid-cols-2 md:gap-x-20 lg:gap-14 xl:grid-cols-3 xl:gap-x-[5rem] xl:gap-y-28">
 						{/* {services.map((items) => (
 							<ServiceItems
 								key={items._id}

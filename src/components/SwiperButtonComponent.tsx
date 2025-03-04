@@ -6,7 +6,7 @@ const SwiperButtonComponent = (): React.JSX.Element => {
 	const swiper = useSwiper();
 
 	return (
-		<div className="absolute top-0 z-10 flex h-full  w-full justify-between text-secondary">
+		<div className="text-secondary absolute top-0 z-10 flex h-full w-full justify-between">
 			<button
 				title="previous"
 				className="h-full"
@@ -14,7 +14,7 @@ const SwiperButtonComponent = (): React.JSX.Element => {
 					swiper.slidePrev();
 				}}
 			>
-				<div className="h-[1px] w-5 bg-primary" />
+				<div className="bg-primary h-[1px] w-5" />
 			</button>
 			<button
 				title="next"
@@ -22,7 +22,7 @@ const SwiperButtonComponent = (): React.JSX.Element => {
 					swiper.slideNext();
 				}}
 			>
-				<div className="h-[1px] w-5 bg-primary" />
+				<div className="bg-primary h-[1px] w-5" />
 			</button>
 		</div>
 	);

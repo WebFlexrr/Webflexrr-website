@@ -8,12 +8,12 @@ interface HeadingProps {
 
 const Heading: FC<HeadingProps> = ({ heading, subHeading, para }) => {
 	return (
-		<section className="mx-auto mt-10 flex h-auto w-full  max-w-4xl flex-col items-center gap-3 text-center text-white">
+		<section className="mx-auto mt-10 flex h-auto w-full max-w-4xl flex-col items-center gap-3 text-center text-white">
 			{heading != null ? (
 				<>
-					<span className=" flex gap-3 text-xl font-semibold text-primary ">
-						<span className="flex h-7 w-7 items-center justify-center rounded-full bg-green-400 ">
-							<Star size={22} className=" fill-background text-green-400 " />
+					<span className="text-primary flex gap-3 text-xl font-semibold">
+						<span className="flex h-7 w-7 items-center justify-center rounded-full bg-green-400">
+							<Star size={22} className="fill-background text-green-400" />
 						</span>
 						{heading}
 					</span>

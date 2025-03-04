@@ -1,13 +1,13 @@
 "use client";
+import { Button } from "@heroui/button";
 import {
-	Button,
 	Drawer,
 	DrawerBody,
 	DrawerContent,
 	DrawerFooter,
 	DrawerHeader,
-	useDisclosure,
-} from "@nextui-org/react";
+} from "@heroui/drawer";
+
 import Link from "next/link";
 import React from "react";
 import { Menu } from "lucide-react";
@@ -17,11 +17,10 @@ import { RiWhatsappFill } from "react-icons/ri";
 
 const NavBar = () => {
 	const pathname = usePathname();
-	const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
 	return (
-		<nav className="relative  top-0 z-50 flex w-full justify-center border border-white px-5 md:fixed">
-			<section className=" fixed mt-10    flex h-16 w-fit  items-center justify-between rounded-full border-2 border-white  bg-background   px-8  antialiased     drop-shadow-xl  ease-in-out-expo dark:border-foreground-100 md:mx-auto md:justify-evenly  lg:w-fit">
+		<nav className="relative top-0 z-50 flex w-full justify-center border border-white px-5 md:fixed">
+			<section className="bg-background ease-in-out-expo dark:border-foreground-100 fixed mt-10 flex h-16 w-fit items-center justify-between rounded-full border-2 border-white px-8 antialiased drop-shadow-xl md:mx-auto md:justify-evenly lg:w-fit">
 				<section className="mr-20 w-fit lg:mr-0">
 					<div className="">
 						<Link href={"/"} aria-label="Home Button" className="">
@@ -40,7 +39,7 @@ const NavBar = () => {
 					<Link
 						className={`${
 							pathname === "/" && "bg-primary text-white dark:text-white"
-						} rounded-full px-2 py-1 text-lg font-medium  text-black antialiased dark:font-normal dark:text-white  `}
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:font-normal dark:text-white`}
 						href={"/"}
 					>
 						Home
@@ -48,8 +47,8 @@ const NavBar = () => {
 
 					<Link
 						className={` ${
-							pathname === "/works" && "bg-primary text-white  dark:text-white"
-						} rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white  `}
+							pathname === "/works" && "bg-primary text-white dark:text-white"
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:text-white`}
 						href={"/works"}
 					>
 						Works
@@ -58,8 +57,7 @@ const NavBar = () => {
 					<Link
 						className={`${
 							pathname === "/careers" && "bg-primary text-white dark:text-white"
-						}
-							rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white `}
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:text-white`}
 						color="foreground"
 						href={"/careers"}
 					>
@@ -69,7 +67,7 @@ const NavBar = () => {
 					<Link
 						className={` ${
 							pathname === "/blogs" && "bg-primary text-white dark:text-white"
-						} rounded-full px-2 py-1  text-lg font-medium text-black antialiased dark:text-white`}
+						} rounded-full px-2 py-1 text-lg font-medium text-black antialiased dark:text-white`}
 						color="foreground"
 						href={"/blogs"}
 					>
@@ -80,19 +78,18 @@ const NavBar = () => {
 					<section>
 						<Link href="/contact">
 							<Button
-								variant={"shadow"}
 								color={"secondary"}
 								radius="full"
 								className="flex items-center justify-center text-lg font-medium text-black dark:text-white"
 							>
-								<RiWhatsappFill className="mr-2 h-[25px] w-[25px]   text-lg text-[#25D366]" />
+								<RiWhatsappFill className="mr-2 h-[25px] w-[25px] text-lg text-[#25D366]" />
 								Contact Us
 							</Button>
 						</Link>
 					</section>
 				</section>
 				<section className="ml-20 lg:hidden">
-					<Button onPress={onOpen}>
+					<Button>
 						<Menu />
 					</Button>
 					{/* <Dropdown>
@@ -111,7 +108,7 @@ const NavBar = () => {
 							</DropdownItem>
 						</DropdownMenu>
 					</Dropdown> */}
-					<Drawer isOpen={isOpen} onOpenChange={onOpenChange}>
+					<Drawer>
 						<DrawerContent>
 							{(onClose) => (
 								<>

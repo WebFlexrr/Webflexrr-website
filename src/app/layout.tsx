@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 	return (
-		<html lang="en" className="!scroll-smooth">
+		<html lang="en" className="scroll-smooth!">
 			<GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER ?? ""} />
 			<body className="dark">{children}</body>
 		</html>

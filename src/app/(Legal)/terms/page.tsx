@@ -1,11 +1,11 @@
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
-import { Divider } from "@nextui-org/react";
+import { Divider } from "@heroui/divider";
 import { PortableText } from "@portabletext/react";
 import { PortableTextComponents } from "@/components/PortableText";
 import { sanityFetch } from "@/sanity/lib/client";
 import { TERMS_CONDITIONS_QUERY } from "@/sanity/actions/queries";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/Navbar/NavBar";
 
 export const metadata: Metadata = {
 	title: "Term & Condition",
@@ -18,7 +18,7 @@ const Terms = async (): Promise<JSX.Element> => {
 	return (
 		<main className="pt-16">
 			<NavBar />
-			<section className="mx-auto h-auto w-full max-w-2xl  px-5 py-28">
+			<section className="mx-auto h-auto w-full max-w-2xl px-5 py-28">
 				<section className="flex w-full flex-col justify-start space-y-5">
 					<h4>{policy.title}</h4>
 					<span className="dark:text-white">
