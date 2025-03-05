@@ -1,6 +1,6 @@
 import React, { type FC } from "react";
 
-import { Card, CardBody, CardHeader, CardFooter } from "@heroui/card";
+import { Card, CardBody, CardHeader, CardFooter } from "@heroui/react";
 import { Divider } from "@heroui/divider";
 import { Chip } from "@heroui/chip";
 import Link from "next/link";
@@ -22,7 +22,9 @@ const PlansCard: FC<PlansCardProps> = ({
 }): React.JSX.Element => {
 	return (
 		<Card
-			className={`border ${type === "Recommended" ? "bg-primary-200 z-10 lg:scale-110" : "border-foreground-200"} px-3 py-5`}
+			isPressable
+			shadow="sm"
+			className={`bg-grey-200 rounded-xl border shadow-xl ${type === "Recommended" ? "bg-primary-200 shadow-secondary z-10 lg:scale-110" : "border-foreground-200 shadow-primary"} px-3 py-5`}
 		>
 			{/* heading */}
 			<CardHeader className="flex w-full flex-col items-center justify-center pb-[2rem] text-white">

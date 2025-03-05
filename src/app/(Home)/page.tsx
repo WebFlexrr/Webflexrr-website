@@ -9,6 +9,7 @@ import BlurredHero from "@/components/BlurredHero";
 import Hero2 from "./components/heroSection/Hero2";
 import IconsCarousal from "./components/IconsCarousal";
 import About2 from "./components/About Section/About2";
+import PlanSection from "./components/PlanSection";
 
 const Home = () => {
 	return (
@@ -21,7 +22,7 @@ const Home = () => {
 			<About2 />
 			<Services />
 			<ProjectsSection />
-			{/* <PlanSection /> */}
+			<PlanSection />
 			<FaqSection />
 			{/*
 			<WorksFlowSection />

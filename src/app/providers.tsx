@@ -1,3 +1,4 @@
+"use client";
 import { HeroUIProvider } from "@heroui/react";
 // import SmoothScrolling from "@/components/SmoothScrolling";
 

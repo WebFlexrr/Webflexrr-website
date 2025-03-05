@@ -73,9 +73,9 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
 	return (
 		<html lang="en" className="scroll-smooth!">
 			<GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER ?? ""} />
-			<body className="dark">
-				<Providers>{children}</Providers>
-			</body>
+			<Providers>
+				<body className="dark">{children}</body>
+			</Providers>
 		</html>
 	);
 };

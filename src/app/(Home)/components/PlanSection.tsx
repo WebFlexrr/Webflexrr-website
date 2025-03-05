@@ -49,8 +49,8 @@ const PlanSection = (): React.JSX.Element => {
 			<section className="mx-auto flex h-auto w-full max-w-7xl flex-col px-5 py-20 xl:py-36">
 				{/* Heading */}
 				<Heading
-					heading={"Our Prices"}
-					subHeading={"Simple pricing for Startups"}
+					heading={"Our Best Offering for new Statups"}
+					subHeading={"Our Pricing"}
 					para="We offer a range of flexible pricing plans tailored to suit businesses of all sizes."
 				/>
 
